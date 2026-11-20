@@ -1,6 +1,6 @@
 {
  "as_of": "2026-11-20",
- "generated_at": "2026-11-20T22:45:52+00:00",
+ "generated_at": "2026-11-20T23:48:55+00:00",
  "verdict": "No",
  "count": 2,
  "total": 5,
@@ -27,15 +27,27 @@
   "data_date": "2026-11-19"
  },
  "digest": {
-  "summary": "US stocks fell sharply on 2026-11-20 as an AI chip rout deepened and the Nasdaq erased its 2026 gains. Headlines cite Nvidia's seven-session slide after a Reuters report of an SEC accounting probe, a California subpoena to Nvidia, and weak trading in Anthropic after its record IPO. Expectations of another Fed rate hike were also cited as weighing on tech shares, and the S&P 500 and Dow were reported in correction territory.",
+  "summary": "US stocks fell sharply in the week, with the S&P 500 about 11.5% below its one-year high and the Nasdaq erasing its 2026 gains. Headlines tie the selloff mainly to an AI and chip rout, including a Reuters report that the SEC is looking at Nvidia's accounting, which sent Nvidia down 14% on Friday, and a weak reception to the Anthropic IPO. Some headlines also cite rising expectations for another Fed rate hike and a broader retreat from lofty AI valuations. Defensive sectors have held up better, with consumer staples (XLP) outperforming the S&P 500 by 11.7 points.",
   "fed_tone": "hawkish",
-  "fed_note": "A headline cites rising expectations for another Federal Reserve rate hike, and the October FOMC minutes were released on 2026-11-18 without further detail in the headlines.",
-  "sector_note": "Headlines say investors have moved into Treasuries and defensive positions, but they do not specifically explain why consumer staples are holding up.",
+  "fed_note": "A Nasdaq-focused headline says investors are responding to rising expectations for another Federal Reserve rate hike, while the Fed's own releases today are routine and do not address policy.",
+  "sector_note": "The headlines do not explain why the leading sector is holding up.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": false,
   "huang_note": "",
   "sources": [
+   {
+    "title": "Intensifying AI rout wipes out Nasdaq's 2026 gains. Alphabet is a tech bright spot",
+    "url": "https://www.cnbc.com/investingclub/2026/11/20/ai-rout-wipes-out-nasdaqs-2026-gains-alphabet-is-a-tech-bright-spot.html",
+    "source": "CNBC",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Anthropic defies the odds, holding record IPO despite \u2018massively disruptive\u2019 market",
+    "url": "https://www.cnbc.com/2026/11/20/anthropic-defies-odds-holding-ipo-despite-massively-disruptive-market.html",
+    "source": "CNBC",
+    "date": "2026-11-20"
+   },
    {
     "title": "Dow Jones Futures: Market Has Worst Week Since Covid Amid Nvidia, Anthropic. Does Fear Gauge Offer Hope?",
     "url": "https://finnhub.io/api/news?id=a461bf9206b72f4ed5bbda580ba12f32748c5dc1fc3ce52df1fae999182f1a09",
@@ -43,14 +55,14 @@
     "date": "2026-11-20"
    },
    {
-    "title": "Update: S&P 500, Dow Sink Into Correction Territory as Investors Seek Treasury Cover Amid Plunging Big-Tech",
-    "url": "https://finnhub.io/api/news?id=2bc014c5d63454ba1322e654370ffe43dbf2c6187bcc56732880bc4e100839a7",
+    "title": "Nvidia\u2019s Stock Slide Deepens After Report of SEC Accounting Probe",
+    "url": "https://finnhub.io/api/news?id=8ea45aa89b25bf662ec532ef89c9c04f096153d6e9dc711db4f16a9cd9d560e8",
     "source": "Yahoo",
     "date": "2026-11-20"
    },
    {
-    "title": "Nasdaq turns negative: Why Anthropic & other tech stocks are getting crushed",
-    "url": "https://finnhub.io/api/news?id=3727581ad505816946886143beae7cc306984789dc03346171bca34594c5a843",
+    "title": "Update: S&P 500, Dow Sink Into Correction Territory as Investors Seek Treasury Cover Amid Plunging Big-Tech",
+    "url": "https://finnhub.io/api/news?id=2bc014c5d63454ba1322e654370ffe43dbf2c6187bcc56732880bc4e100839a7",
     "source": "Yahoo",
     "date": "2026-11-20"
    },
@@ -67,21 +79,9 @@
     "date": "2026-11-20"
    },
    {
-    "title": "Navitas Sinks 15%, Western Down 12%, Everpure Down 13% as AI Chip Rout Deepens",
-    "url": "https://finnhub.io/api/news?id=e575b463a0d8fb52d476dd9c255620fe722e05485e954bffcec001fc61d4ea5d",
+    "title": "Nvidia Stock Plunge Wipes Out Nearly $500 Billion in One Day as SEC Reportedly Probes Its Accounting",
+    "url": "https://finnhub.io/api/news?id=bc17a33c625343eb7d005f1053c7bfa732c2fdd2443875f513f0e503219f32e6",
     "source": "Yahoo",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Nvidia\u2019s Stock Slide Deepens After Report of SEC Accounting Probe",
-    "url": "https://finnhub.io/api/news?id=8ea45aa89b25bf662ec532ef89c9c04f096153d6e9dc711db4f16a9cd9d560e8",
-    "source": "Yahoo",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Anthropic defies the odds, holding record IPO despite \u2018massively disruptive\u2019 market",
-    "url": "https://www.cnbc.com/2026/11/20/anthropic-defies-odds-holding-ipo-despite-massively-disruptive-market.html",
-    "source": "CNBC",
     "date": "2026-11-20"
    }
   ]
@@ -1477,7 +1477,7 @@
      ],
      [
       "2026-05-26",
-      -4.8038
+      -4.8039
      ],
      [
       "2026-05-27",
@@ -1521,7 +1521,7 @@
      ],
      [
       "2026-06-10",
-      3.1828
+      3.1829
      ],
      [
       "2026-06-11",
@@ -2364,7 +2364,7 @@
   ],
   [
    "2025-02-12",
-   591.73,
+   591.74,
    -1.05
   ],
   [

@@ -6,6 +6,7 @@
    "count": 2,
    "catalyst": false,
    "capped": false,
+   "archived": true,
    "in_drawdown": true,
    "drawdown_pct": -11.4595,
    "met": {
