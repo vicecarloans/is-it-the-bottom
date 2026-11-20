@@ -22,6 +22,7 @@
   <main class="page">
     <header class="hero">
       <aside class="banner banner-catalyst" id="catalyst" hidden></aside>
+      <p class="banner banner-past" id="viewing" hidden></p>
       <h1 class="question">Is it the bottom?</h1>
       <p class="answer" id="answer" aria-live="polite">Checking&hellip;</p>
       <p class="summary" id="summary"></p>
@@ -51,6 +52,12 @@
       <h2 id="news-title">Today's news</h2>
       <p class="lede">Written by Claude Haiku from the headlines linked below. News explains the day; it never decides a condition.</p>
       <div id="news"></div>
+    </section>
+
+    <section class="block" aria-labelledby="log-title">
+      <h2 id="log-title">Daily log</h2>
+      <p class="lede">The result of every daily run. Pick a date to see that day's full page.</p>
+      <div id="log"></div>
     </section>
 
     <section class="block" aria-labelledby="signals-title">

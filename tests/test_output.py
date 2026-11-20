@@ -98,3 +98,20 @@ def test_cftc_history_is_saved(tmp_path):
     write_cftc(tmp_path, lev)
     saved = json.loads((tmp_path / "cftc.json").read_text())
     assert saved["rows"][-1] == ["2026-11-10", 2, 4]
+
+
+def test_every_run_is_archived_by_date(tmp_path):
+    latest = {
+        "as_of": "2026-11-20",
+        "verdict": "No",
+        "count": 2,
+        "drawdown": {"in_drawdown": True, "pct": -11.5},
+        "conditions": [],
+    }
+    output.write_outputs(tmp_path, latest)
+    output.write_outputs(tmp_path, {**latest, "as_of": "2026-11-23", "count": 3})
+    assert json.loads((tmp_path / "days" / "2026-11-20.json").read_text())["count"] == 2
+    assert json.loads((tmp_path / "days" / "2026-11-23.json").read_text())["count"] == 3
+    days = json.loads((tmp_path / "history.json").read_text())["days"]
+    assert [d["date"] for d in days] == ["2026-11-20", "2026-11-23"]
+    assert all(d["archived"] for d in days)

@@ -118,6 +118,7 @@ a:hover { text-decoration-thickness: 2px; }
 .banner-catalyst { margin: 0 0 28px; border-left: 4px solid var(--met); background: var(--met-wash); }
 .banner-catalyst strong { font-stretch: 112%; }
 .banner-catalyst blockquote { margin: 6px 0; font-style: italic; }
+.banner-past { margin: 0 0 28px; border-left: 4px solid var(--ink); background: var(--rule); }
 .banner-cap { border-left: 4px solid var(--missed); background: var(--missed-wash); }
 .watch { margin: 12px 0 0; max-width: 40em; color: var(--muted); }
 
@@ -271,3 +272,24 @@ td.num, th.num { text-align: right; padding-right: 0; padding-left: 12px; }
 .theme button:hover { color: var(--ink); }
 .theme button[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
 .theme button:focus-visible { outline: 2px solid var(--met); outline-offset: 2px; }
+
+/* Daily log */
+.log td.verdict { font-weight: 650; white-space: nowrap; }
+.log td:first-child, .log td.count { white-space: nowrap; }
+.log .which { color: var(--muted); white-space: normal; }
+.log tr[aria-current="date"] td { background: var(--met-wash); }
+.log-more {
+  margin-top: 16px;
+  font: inherit;
+  color: var(--ink);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 4px 14px;
+  cursor: pointer;
+}
+.log-more:focus-visible { outline: 2px solid var(--met); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .log .which { display: none; }
+  .log th, .log td { font-size: 0.9rem; padding-right: 8px; }
+}
