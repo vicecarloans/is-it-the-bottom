@@ -14,9 +14,12 @@
 <body>
   <main class="page">
     <header class="hero">
+      <aside class="banner banner-catalyst" id="catalyst" hidden></aside>
       <h1 class="question">Is it the bottom?</h1>
       <p class="answer" id="answer" aria-live="polite">Checking&hellip;</p>
       <p class="summary" id="summary"></p>
+      <p class="banner banner-cap" id="cap" hidden></p>
+      <p class="watch" id="watch" hidden></p>
       <p class="caveat" id="caveat"></p>
       <p class="hero-links"><a href="#how">How this works</a></p>
     </header>
@@ -36,6 +39,12 @@
       <ul class="checks" id="checks"></ul>
     </section>
 
+    <section class="block" id="news-section" aria-labelledby="news-title" hidden>
+      <h2 id="news-title">Today's news</h2>
+      <p class="lede">Written by Claude Haiku from the headlines linked below. News explains the day; it never decides a condition.</p>
+      <div id="news"></div>
+    </section>
+
     <section class="block" aria-labelledby="signals-title">
       <h2 id="signals-title">Past signals</h2>
       <p class="lede">Days when all five conditions held for the first time in a run, and what the S&amp;P 500 did next.</p>
@@ -50,6 +59,7 @@
         <div><dt>Getting closer</dt><dd>3 or 4 hold.</dd></div>
         <div><dt>Looks like a bottom</dt><dd>All 5 hold.</dd></div>
       </dl>
+      <p><strong>Two adjustments.</strong> If NVIDIA confirms in an SEC filing that Jensen Huang is its CEO again, the verdict moves up one level for 30 trading days. If credit markets break (high-yield bond spreads jump more than 3 points in 60 trading days) or the news reports a systemic failure such as a large bank collapse, the verdict can go no higher than "Getting closer".</p>
       <div class="explainers" id="explainers"></div>
     </section>
 

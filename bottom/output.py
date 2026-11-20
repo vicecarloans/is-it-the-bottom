@@ -126,9 +126,32 @@ def build_latest(
             "threshold_pct": dd.threshold_pct,
             "data_date": _iso(dd.data_date),
         },
+        "base_verdict": report.base_verdict,
+        "catalyst": _catalyst(report),
+        "override": _override(report),
+        "digest": report.digest,
         "conditions": conditions,
         "market": market_series(snap, report.as_of, cfg),
         "errors": report.errors,
+    }
+
+
+def _catalyst(report: Report) -> dict[str, Any]:
+    status = dict(report.catalyst or {"active": False, "event": None})
+    status["lifted_verdict"] = report.catalyst_lift
+    return status
+
+
+def _override(report: Report) -> dict[str, Any]:
+    o = report.override
+    if o is None:
+        return {"capped": False, "reasons": []}
+    return {
+        "capped": o.capped,
+        "reasons": o.reasons,
+        "hy_level": o.hy_level,
+        "hy_change": o.hy_change,
+        "data_date": _iso(o.data_date),
     }
 
 
@@ -138,6 +161,8 @@ def update_history(history: dict[str, Any] | None, latest: dict[str, Any]) -> di
         "date": latest["as_of"],
         "verdict": latest["verdict"],
         "count": latest["count"],
+        "catalyst": bool(latest.get("catalyst", {}).get("lifted_verdict")),
+        "capped": bool(latest.get("override", {}).get("capped")),
         "in_drawdown": latest["drawdown"]["in_drawdown"],
         "drawdown_pct": latest["drawdown"]["pct"],
         "met": {

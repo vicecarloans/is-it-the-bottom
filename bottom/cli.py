@@ -8,7 +8,9 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from bottom import override
 from bottom.config import load_config
+from bottom.extras import enrich
 from bottom.output import build_latest, write_outputs
 from bottom.snapshot import load_snapshot
 from bottom.store import RawStore
@@ -51,11 +53,18 @@ def render(report: Report) -> str:
         lines += ["", "Data problems:"]
         lines += [f"  - {source}: {message}" for source, message in report.errors.items()]
 
-    lines += [
-        "",
-        f"Conditions met: {report.count} of {len(report.results)}",
-        f"Verdict: {report.verdict}",
-    ]
+    if report.digest:
+        lines += ["", "News digest:", f"  {report.digest['summary']}"]
+        if report.digest.get("huang_return_reported"):
+            lines.append(f"  Watch: {report.digest['huang_note']}")
+
+    lines += ["", f"Conditions met: {report.count} of {len(report.results)}"]
+    if report.catalyst_lift:
+        event = report.catalyst["event"]
+        lines.append(f"Catalyst: Jensen Huang named NVIDIA CEO ({event['date']}), +1 level")
+    if report.capped:
+        lines += [f"Cap: {reason}" for reason in report.override.reasons]
+    lines.append(f"Verdict: {report.verdict}")
     return "\n".join(lines)
 
 
@@ -81,6 +90,10 @@ def main(argv: list[str] | None = None) -> int:
     store = RawStore(Path("data/raw"), today, enabled=not args.no_save)
     snapshot = load_snapshot(cfg, os.environ, today, store)
     report = evaluate(snapshot, as_of, cfg, apply_lag=as_of < today)
+    if args.command == "run":
+        enrich(report, snapshot, cfg, os.environ, today, store, Path(args.out) / "catalyst.json")
+    else:  # the terminal check skips the news and filings, which need the model
+        report.override = override.check(snapshot.hy_spread, as_of, cfg, None)
     print(render(report))
 
     if args.command == "run":

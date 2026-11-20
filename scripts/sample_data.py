@@ -16,6 +16,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from bottom import override  # noqa: E402
 from bottom.config import load_config  # noqa: E402
 from bottom.output import build_latest, write_outputs  # noqa: E402
 from bottom.snapshot import Snapshot  # noqa: E402
@@ -66,6 +67,45 @@ def main() -> None:
         ],
     )
     report = evaluate(snap, AS_OF, cfg, apply_lag=False)
+    report.override = override.check(pd.Series(3.2, index=days), AS_OF, cfg, None)
+    report.digest = {
+        "summary": "Sample text: stocks fell for a third day as investors weighed NVIDIA's "
+        "leadership change and firmer-than-expected inflation data.",
+        "fed_tone": "hawkish",
+        "fed_note": "Sample text: two Fed officials said rate cuts are not on the table yet.",
+        "sector_note": "Sample text: consumer staples held up as investors sought steady earners.",
+        "systemic_flag": False,
+        "systemic_event": "",
+        "huang_return_reported": "--catalyst" not in sys.argv,
+        "huang_note": "Sample text: a report says NVIDIA's board has discussed Huang's return.",
+        "sources": [
+            {
+                "title": "Sample headline one",
+                "url": "https://example.com/1",
+                "source": "Wire",
+                "date": "2026-11-20",
+            },
+            {
+                "title": "Sample headline two",
+                "url": "https://example.com/2",
+                "source": "Fed",
+                "date": "2026-11-19",
+            },
+        ],
+    }
+    if "--catalyst" in sys.argv:
+        report.catalyst = {
+            "active": True,
+            "trading_days_since": 3,
+            "window_trading_days": 30,
+            "event": {
+                "date": "2026-11-17",
+                "url": "https://www.sec.gov/",
+                "quote": "Sample text: the Board appointed Jen-Hsun Huang as President and "
+                "Chief Executive Officer, effective immediately.",
+                "accession": "sample",
+            },
+        }
     out = ROOT / "site/sample"
     for name in ("latest.json", "history.json"):
         (out / name).unlink(missing_ok=True)
