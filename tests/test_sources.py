@@ -4,7 +4,7 @@ from datetime import date, datetime
 import openpyxl
 import pytest
 
-from bottom.sources import earnings, finra, fred, prices
+from bottom.sources import cftc, earnings, finra, fred, prices
 
 
 def make_xlsx(rows: list[list[object]]) -> bytes:
@@ -143,3 +143,27 @@ def test_stooq_csv():
 def test_stooq_has_no_indexes():
     assert prices.stooq_symbol("^VIX") is None
     assert prices.stooq_symbol("XLRE") == "xlre.us"
+
+
+def test_cftc_parses_rows_and_skips_bad_ones():
+    rows = [
+        {
+            "report_date_as_yyyy_mm_dd": "2026-11-10T00:00:00.000",
+            "lev_money_positions_long": "145755",
+            "lev_money_positions_short": "448815",
+        },
+        {
+            "report_date_as_yyyy_mm_dd": "2026-11-03T00:00:00.000",
+            "lev_money_positions_long": "125269",
+            "lev_money_positions_short": "497587",
+        },
+        {"report_date_as_yyyy_mm_dd": "2026-10-27T00:00:00.000"},
+    ]
+    frame = cftc.parse_tff(rows)
+    assert list(frame.index.strftime("%Y-%m-%d")) == ["2026-11-03", "2026-11-10"]
+    assert frame.loc["2026-11-10", "short"] == 448815.0
+
+
+def test_cftc_empty_response_raises():
+    with pytest.raises(RuntimeError):
+        cftc.parse_tff([])

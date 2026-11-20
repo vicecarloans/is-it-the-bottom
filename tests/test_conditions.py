@@ -120,6 +120,66 @@ def test_margin_publication_lag_for_past_dates(cfg):
     assert without.data_date == date(2026, 10, 31)
 
 
+def weeks(gross: list[float], last: str = "2026-11-10") -> pd.DataFrame:
+    index = pd.date_range(end=last, periods=len(gross), freq="7D")
+    return pd.DataFrame(
+        {"long": [g * 0.25 for g in gross], "short": [g * 0.75 for g in gross]}, index=index
+    )
+
+
+def flat_margin() -> pd.Series:
+    return months([100.0] * 12)  # FINRA shows no drop
+
+
+def test_funds_drop_alone_passes_margin(cfg):
+    # 4-report average falls from 100 to 80: 20% below its high.
+    lev = weeks([100.0] * 26 + [80.0] * 4)
+    result = c.margin_condition(flat_margin(), AS_OF, cfg, leverage=lev)
+    assert result.met is True
+    assert "fund futures" in result.value
+    assert result.data_date == date(2026, 11, 10)
+
+
+def test_funds_small_drop_does_not_pass(cfg):
+    lev = weeks([100.0] * 26 + [90.0] * 4)  # 10% below, threshold is 15%
+    result = c.margin_condition(flat_margin(), AS_OF, cfg, leverage=lev)
+    assert result.met is False
+
+
+def test_one_expiry_week_dip_is_smoothed(cfg):
+    # Positions drop 30% for one week around a contract expiry, then recover.
+    lev = weeks([100.0] * 29 + [70.0])
+    result = c.margin_condition(flat_margin(), AS_OF, cfg, leverage=lev)
+    assert result.met is False  # 4-week average is only 7.5% below
+
+
+def test_finra_drop_passes_without_funds_data(cfg):
+    result = c.margin_condition(months([100.0] * 11 + [85.0]), AS_OF, cfg, leverage=pd.DataFrame())
+    assert result.met is True
+
+
+def test_stale_funds_reading_does_not_count(cfg):
+    lev = weeks([100.0] * 26 + [80.0] * 4, last="2026-10-13")  # 38 days old
+    result = c.margin_condition(flat_margin(), AS_OF, cfg, leverage=lev)
+    assert result.met is False
+    assert not result.stale  # FINRA is still fresh
+
+
+def test_both_stale_marks_condition_stale(cfg):
+    lev = weeks([100.0] * 30, last="2026-10-13")
+    series = months([100.0] * 12, last_month_end="2026-08-31")
+    result = c.margin_condition(series, AS_OF, cfg, leverage=lev)
+    assert result.stale
+    assert not result.counts
+
+
+def test_funds_publication_lag_for_past_dates(cfg):
+    lev = weeks([100.0] * 30, last="2026-11-17")  # Tuesday; published Friday Nov 20
+    as_of = date(2026, 11, 18)
+    with_lag = c.margin_condition(flat_margin(), as_of, cfg, apply_lag=True, leverage=lev)
+    assert with_lag.data_date == date(2026, 11, 10)
+
+
 # --- 4. Leading sector ------------------------------------------------------------------
 
 

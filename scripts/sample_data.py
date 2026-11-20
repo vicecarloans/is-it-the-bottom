@@ -55,6 +55,14 @@ def main() -> None:
         dgs2=pd.Series(np.linspace(3.9, 4.76, len(calendar)), index=calendar),
         fed_upper=pd.Series(4.0, index=calendar),
         margin=margin,
+        leverage=pd.DataFrame(
+            {
+                "long": 150_000 + rng.normal(0, 8_000, 104),
+                "short": np.r_[np.full(96, 560_000.0), np.linspace(540_000, 430_000, 8)]
+                + rng.normal(0, 12_000, 104),
+            },
+            index=pd.date_range(end=AS_OF - timedelta(days=10), periods=104, freq="7D"),
+        ),
         earnings=[
             EarningsReport(AS_OF - timedelta(days=d), a, e, p)
             for d, a, e, p in [

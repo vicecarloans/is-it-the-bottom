@@ -16,8 +16,8 @@
   },
   "margin": {
     "name": "Margin debt deleveraging",
-    "measures": "Money investors have borrowed from brokers to buy stocks, reported monthly by FINRA.",
-    "why": "A sharp drop means forced selling has mostly happened, and fewer leveraged holders are left to sell."
+    "measures": "Two readings of how much borrowed money is in stocks. FINRA's monthly total of what investors owe their brokers, which arrives about three weeks after each month ends. And a weekly CFTC count of S&P 500 futures held by hedge funds and other leveraged traders, which is about three days old.",
+    "why": "A sharp drop in either means forced selling has mostly happened, and fewer leveraged holders are left to sell. The weekly reading spots it sooner; the monthly one is the broader measure."
   },
   "sector": {
     "name": "A clear leading sector",

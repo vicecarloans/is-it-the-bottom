@@ -9,7 +9,7 @@ from typing import Any, TypeVar
 
 import pandas as pd
 
-from bottom.sources import earnings, finra, fred, prices
+from bottom.sources import cftc, earnings, finra, fred, prices
 from bottom.sources.earnings import EarningsReport
 from bottom.store import RawStore
 
@@ -24,6 +24,7 @@ class Snapshot:
     fed_upper: pd.Series = field(default_factory=lambda: pd.Series(dtype=float))
     hy_spread: pd.Series = field(default_factory=lambda: pd.Series(dtype=float))
     margin: pd.Series = field(default_factory=lambda: pd.Series(dtype=float))
+    leverage: pd.DataFrame = field(default_factory=pd.DataFrame)
     earnings: list[EarningsReport] = field(default_factory=list)
     errors: dict[str, str] = field(default_factory=dict)
 
@@ -64,6 +65,7 @@ def load_snapshot(
     snap.hy_spread = attempt("fred BAMLH0A0HYM2", lambda: from_fred("BAMLH0A0HYM2"), empty)
 
     snap.margin = attempt("finra", lambda: finra.fetch_margin(store), empty)
+    snap.leverage = attempt("cftc", lambda: cftc.fetch_leverage(start, store), pd.DataFrame())
 
     def nvda() -> list[EarningsReport]:
         key = env.get("FINNHUB_API_KEY")

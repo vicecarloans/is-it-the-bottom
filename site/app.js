@@ -214,6 +214,25 @@ function sparkline(spark, state) {
   return wrap;
 }
 
+function checkMeta(cond) {
+  const when = cond.data_date ? fmtDate(cond.data_date) : null;
+  const dated = when && !(cond.detail || "").includes(when) ? `Data from ${when}` : null;
+  return [cond.detail, dated].filter(Boolean).join(". ") + ".";
+}
+
+// Most checks have one sparkline; margin debt adds the weekly futures reading under it.
+function sparkGroup(cond, state) {
+  const extra = (cond.spark && cond.spark.also) || [];
+  if (!extra.length) return sparkline(cond.spark, state);
+  const group = el("div", { class: "spark spark-group" });
+  for (const spark of [cond.spark, ...extra]) {
+    const one = sparkline(spark, state);
+    one.className = "spark-item";
+    group.append(one);
+  }
+  return group;
+}
+
 function newsNote(cond, news) {
   if (!news) return null;
   const text = cond.key === "fed" ? news.fed_note : cond.key === "sector" ? news.sector_note : "";
@@ -243,10 +262,10 @@ function renderChecks(latest, explainers) {
       el("div", {},
         el("p", { class: "check-name", text: cond.name }),
         el("p", { class: "check-value", text: cond.value }),
-        el("p", { class: "check-meta", text: [cond.detail, cond.data_date ? `Data from ${fmtDate(cond.data_date)}` : null].filter(Boolean).join(". ") + "." }),
+        el("p", { class: "check-meta", text: checkMeta(cond) }),
         newsNote(cond, latest.digest),
       ),
-      sparkline(cond.spark, status.state),
+      sparkGroup(cond, status.state),
       details,
     );
     list.append(row);
