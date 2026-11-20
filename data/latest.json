@@ -1,8 +1,8 @@
 {
  "as_of": "2026-11-20",
- "generated_at": "2026-11-20T22:43:07+00:00",
- "verdict": "Getting closer",
- "count": 3,
+ "generated_at": "2026-11-20T22:45:52+00:00",
+ "verdict": "No",
+ "count": 2,
  "total": 5,
  "backtested": false,
  "drawdown": {
@@ -12,7 +12,7 @@
   "threshold_pct": -10.0,
   "data_date": "2026-11-20"
  },
- "base_verdict": "Getting closer",
+ "base_verdict": "No",
  "catalyst": {
   "active": false,
   "event": null,
@@ -27,30 +27,18 @@
   "data_date": "2026-11-19"
  },
  "digest": {
-  "summary": "US stocks fell sharply on Nov 20, 2026, with the S&P 500 about 11.5% below its one-year high and the Dow and S&P 500 in correction territory. Headlines tie the drop mainly to an AI chip rout that began in Asia, with Nvidia down 14% on the day after a Reuters report that the SEC was examining its accounting, and Anthropic's record IPO shares sliding. Reports also cite expectations of another Federal Reserve rate hike and investors moving into Treasuries. Nasdaq has turned negative for 2026 and the week was its worst since March 2020.",
+  "summary": "US stocks fell sharply on 2026-11-20 as an AI chip rout deepened and the Nasdaq erased its 2026 gains. Headlines cite Nvidia's seven-session slide after a Reuters report of an SEC accounting probe, a California subpoena to Nvidia, and weak trading in Anthropic after its record IPO. Expectations of another Fed rate hike were also cited as weighing on tech shares, and the S&P 500 and Dow were reported in correction territory.",
   "fed_tone": "hawkish",
-  "fed_note": "A Yahoo headline says rising expectations for another Fed rate hike weighed on tech shares, while the Fed's own releases this week were routine items such as meeting minutes and surveys.",
-  "sector_note": "The headlines do not explain why consumer staples (XLP) are holding up, so no reason is given.",
+  "fed_note": "A headline cites rising expectations for another Federal Reserve rate hike, and the October FOMC minutes were released on 2026-11-18 without further detail in the headlines.",
+  "sector_note": "Headlines say investors have moved into Treasuries and defensive positions, but they do not specifically explain why consumer staples are holding up.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": false,
   "huang_note": "",
   "sources": [
    {
-    "title": "Navitas Sinks 15%, Western Down 12%, Everpure Down 13% as AI Chip Rout Deepens",
-    "url": "https://finnhub.io/api/news?id=e575b463a0d8fb52d476dd9c255620fe722e05485e954bffcec001fc61d4ea5d",
-    "source": "Yahoo",
-    "date": "2026-11-20"
-   },
-   {
     "title": "Dow Jones Futures: Market Has Worst Week Since Covid Amid Nvidia, Anthropic. Does Fear Gauge Offer Hope?",
     "url": "https://finnhub.io/api/news?id=a461bf9206b72f4ed5bbda580ba12f32748c5dc1fc3ce52df1fae999182f1a09",
-    "source": "Yahoo",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Nvidia\u2019s Stock Slide Deepens After Report of SEC Accounting Probe",
-    "url": "https://finnhub.io/api/news?id=8ea45aa89b25bf662ec532ef89c9c04f096153d6e9dc711db4f16a9cd9d560e8",
     "source": "Yahoo",
     "date": "2026-11-20"
    },
@@ -79,9 +67,21 @@
     "date": "2026-11-20"
    },
    {
-    "title": "Nvidia Stock Plunge Wipes Out Nearly $500 Billion in One Day as SEC Reportedly Probes Its Accounting",
-    "url": "https://finnhub.io/api/news?id=bc17a33c625343eb7d005f1053c7bfa732c2fdd2443875f513f0e503219f32e6",
+    "title": "Navitas Sinks 15%, Western Down 12%, Everpure Down 13% as AI Chip Rout Deepens",
+    "url": "https://finnhub.io/api/news?id=e575b463a0d8fb52d476dd9c255620fe722e05485e954bffcec001fc61d4ea5d",
     "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Nvidia\u2019s Stock Slide Deepens After Report of SEC Accounting Probe",
+    "url": "https://finnhub.io/api/news?id=8ea45aa89b25bf662ec532ef89c9c04f096153d6e9dc711db4f16a9cd9d560e8",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Anthropic defies the odds, holding record IPO despite \u2018massively disruptive\u2019 market",
+    "url": "https://www.cnbc.com/2026/11/20/anthropic-defies-odds-holding-ipo-despite-massively-disruptive-market.html",
+    "source": "CNBC",
     "date": "2026-11-20"
    }
   ]
@@ -1130,11 +1130,11 @@
   {
    "key": "margin",
    "name": "Margin debt deleveraging",
-   "met": true,
+   "met": false,
    "value": "-3.6% margin debt, -23.2% fund futures",
-   "threshold": "margin debt 10% or more below its 12-month high, or leveraged funds' S&P 500 futures 15% or more below their 26-week high",
-   "data_date": "2026-11-17",
-   "detail": "FINRA: $1.448T in October 2026; CFTC: leveraged funds, 4-week average to Nov 17, 2026",
+   "threshold": "margin debt 10% or more below its 12-month high",
+   "data_date": "2026-10-31",
+   "detail": "FINRA: $1.448T in October 2026; CFTC: leveraged funds, 4-week average to Nov 17, 2026 (shown for reference, does not count yet)",
    "stale": false,
    "spark": {
     "label": "Margin debt vs its 12-month high, %",
@@ -1477,7 +1477,7 @@
      ],
      [
       "2026-05-26",
-      -4.8039
+      -4.8038
      ],
      [
       "2026-05-27",
@@ -1521,7 +1521,7 @@
      ],
      [
       "2026-06-10",
-      3.1829
+      3.1828
      ],
      [
       "2026-06-11",
@@ -2409,7 +2409,7 @@
   ],
   [
    "2025-02-26",
-   583.09,
+   583.08,
    -3.0
   ],
   [
