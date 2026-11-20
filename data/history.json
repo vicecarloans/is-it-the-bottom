@@ -2,8 +2,8 @@
  "days": [
   {
    "date": "2026-11-20",
-   "verdict": "No",
-   "count": 2,
+   "verdict": "Getting closer",
+   "count": 3,
    "catalyst": false,
    "capped": false,
    "in_drawdown": true,
@@ -11,7 +11,7 @@
    "met": {
     "vix": true,
     "fed": false,
-    "margin": false,
+    "margin": true,
     "sector": false,
     "nvda": true
    }

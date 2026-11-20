@@ -1,8 +1,8 @@
 {
  "as_of": "2026-11-20",
- "generated_at": "2026-11-20T22:11:13+00:00",
- "verdict": "No",
- "count": 2,
+ "generated_at": "2026-11-20T22:43:07+00:00",
+ "verdict": "Getting closer",
+ "count": 3,
  "total": 5,
  "backtested": false,
  "drawdown": {
@@ -12,7 +12,7 @@
   "threshold_pct": -10.0,
   "data_date": "2026-11-20"
  },
- "base_verdict": "No",
+ "base_verdict": "Getting closer",
  "catalyst": {
   "active": false,
   "event": null,
@@ -27,56 +27,62 @@
   "data_date": "2026-11-19"
  },
  "digest": {
-  "summary": "US stocks fell on November 20, 2026, with the S&P 500 about 11.5% below its one-year high. Headlines point to an intensifying AI-led selloff that has erased Nasdaq's 2026 gains, with Nvidia's record slide deepening after a reported SEC accounting probe and chip stocks drawing bearish options bets. Consumer staples were the leading sector, with XLP outperforming SPY by 11.7 points, though the headlines do not explain that strength beyond the sell-off backdrop. Anthropic's record IPO at $83 per share was reported to have held up despite the market selloff.",
-  "fed_tone": "unclear",
-  "fed_note": "The latest Fed items are the October 27-28 FOMC minutes and routine releases, and the headlines do not give a clear read on the policy direction.",
-  "sector_note": "The headlines do not say why consumer staples are holding up; they only report the sector's outperformance alongside the broader AI-led selloff.",
+  "summary": "US stocks fell sharply on Nov 20, 2026, with the S&P 500 about 11.5% below its one-year high and the Dow and S&P 500 in correction territory. Headlines tie the drop mainly to an AI chip rout that began in Asia, with Nvidia down 14% on the day after a Reuters report that the SEC was examining its accounting, and Anthropic's record IPO shares sliding. Reports also cite expectations of another Federal Reserve rate hike and investors moving into Treasuries. Nasdaq has turned negative for 2026 and the week was its worst since March 2020.",
+  "fed_tone": "hawkish",
+  "fed_note": "A Yahoo headline says rising expectations for another Fed rate hike weighed on tech shares, while the Fed's own releases this week were routine items such as meeting minutes and surveys.",
+  "sector_note": "The headlines do not explain why consumer staples (XLP) are holding up, so no reason is given.",
   "systemic_flag": false,
   "systemic_event": "",
-  "huang_return_reported": true,
-  "huang_note": "Headlines report that President Trump said former Nvidia CEO Jensen Huang should be given a second chance and allowed to return to the company, and called on Nvidia to rehire him; no company decision is reported.",
+  "huang_return_reported": false,
+  "huang_note": "",
   "sources": [
    {
-    "title": "Intensifying AI rout wipes out Nasdaq's 2026 gains. Alphabet is a tech bright spot",
-    "url": "https://www.cnbc.com/investingclub/2026/11/20/ai-rout-wipes-out-nasdaqs-2026-gains-alphabet-is-a-tech-bright-spot.html",
-    "source": "CNBC",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "A massive bearish trade just happened in the chip stocks",
-    "url": "https://www.cnbc.com/2026/11/20/a-massive-bearish-trade-just-happened-in-the-chip-stocks.html",
-    "source": "CNBC",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Anthropic defies the odds, holding record IPO despite \u2018massively disruptive\u2019 market",
-    "url": "https://www.cnbc.com/2026/11/20/anthropic-defies-odds-holding-ipo-despite-massively-disruptive-market.html",
-    "source": "CNBC",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Trump Calls for Nvidia to Rehire Jensen Huang",
-    "url": "https://finnhub.io/api/news?id=8bf35df9b608e7d1b579ee8d3b971dda191bb5aaba59d5f980e28543c26fd627",
+    "title": "Navitas Sinks 15%, Western Down 12%, Everpure Down 13% as AI Chip Rout Deepens",
+    "url": "https://finnhub.io/api/news?id=e575b463a0d8fb52d476dd9c255620fe722e05485e954bffcec001fc61d4ea5d",
     "source": "Yahoo",
     "date": "2026-11-20"
    },
    {
-    "title": "Nvidia stock extends $2.5 trillion rout as SEC probe reportedly investigates its accounting",
-    "url": "https://finnhub.io/api/news?id=658afeb85fc89c828bdc17aaf2e99a9f54cc87f943de0d13c127aa97cab50c69",
+    "title": "Dow Jones Futures: Market Has Worst Week Since Covid Amid Nvidia, Anthropic. Does Fear Gauge Offer Hope?",
+    "url": "https://finnhub.io/api/news?id=a461bf9206b72f4ed5bbda580ba12f32748c5dc1fc3ce52df1fae999182f1a09",
     "source": "Yahoo",
     "date": "2026-11-20"
    },
    {
-    "title": "Trump on Jensen Huang: 'We're a country of second chances'",
-    "url": "https://finnhub.io/api/news?id=246b1956fdd1cd64f541782412ae855ec23e9766e9dfa869bf3eb780f3a01a17",
+    "title": "Nvidia\u2019s Stock Slide Deepens After Report of SEC Accounting Probe",
+    "url": "https://finnhub.io/api/news?id=8ea45aa89b25bf662ec532ef89c9c04f096153d6e9dc711db4f16a9cd9d560e8",
     "source": "Yahoo",
     "date": "2026-11-20"
    },
    {
-    "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
-    "source": "Federal Reserve",
-    "date": "2026-11-18"
+    "title": "Update: S&P 500, Dow Sink Into Correction Territory as Investors Seek Treasury Cover Amid Plunging Big-Tech",
+    "url": "https://finnhub.io/api/news?id=2bc014c5d63454ba1322e654370ffe43dbf2c6187bcc56732880bc4e100839a7",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Nasdaq turns negative: Why Anthropic & other tech stocks are getting crushed",
+    "url": "https://finnhub.io/api/news?id=3727581ad505816946886143beae7cc306984789dc03346171bca34594c5a843",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "From Nvidia To Amazon, Tech Giants Face Stunning Reversal As Nasdaq Erases 2026 Gains",
+    "url": "https://finnhub.io/api/news?id=82b1087a33c565801cefa3a4d554a8431fd5bc9079d7e60d9fa0cfbfb68a32d4",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Nvidia Stock Just Lost $900 Billion in Its Worst Week Since 2008. The Last Time the SEC Examined Nvidia\u2019s Accounting, the Stock Fell 81% in a Year",
+    "url": "https://finnhub.io/api/news?id=3ff19aa91a49076b226988c9f43ce8cbbe0f9f824511cc68bf94eee8b772576a",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Nvidia Stock Plunge Wipes Out Nearly $500 Billion in One Day as SEC Reportedly Probes Its Accounting",
+    "url": "https://finnhub.io/api/news?id=bc17a33c625343eb7d005f1053c7bfa732c2fdd2443875f513f0e503219f32e6",
+    "source": "Yahoo",
+    "date": "2026-11-20"
    }
   ]
  },
@@ -1124,11 +1130,11 @@
   {
    "key": "margin",
    "name": "Margin debt deleveraging",
-   "met": false,
-   "value": "-3.6% vs high",
-   "threshold": "10% or more below its 12-month high",
-   "data_date": "2026-10-31",
-   "detail": "$1.448T in October 2026 data",
+   "met": true,
+   "value": "-3.6% margin debt, -23.2% fund futures",
+   "threshold": "margin debt 10% or more below its 12-month high, or leveraged funds' S&P 500 futures 15% or more below their 26-week high",
+   "data_date": "2026-11-17",
+   "detail": "FINRA: $1.448T in October 2026; CFTC: leveraged funds, 4-week average to Nov 17, 2026",
    "stale": false,
    "spark": {
     "label": "Margin debt vs its 12-month high, %",
@@ -1230,7 +1236,223 @@
       -3.5759
      ]
     ],
-    "threshold": -10.0
+    "threshold": -10.0,
+    "also": [
+     {
+      "label": "Leveraged funds' S&P 500 futures vs 26-week high, %",
+      "points": [
+       [
+        "2025-11-25",
+        0.0
+       ],
+       [
+        "2025-12-02",
+        0.0
+       ],
+       [
+        "2025-12-09",
+        0.0
+       ],
+       [
+        "2025-12-16",
+        0.0
+       ],
+       [
+        "2025-12-23",
+        -3.1374
+       ],
+       [
+        "2025-12-30",
+        -7.7888
+       ],
+       [
+        "2026-01-06",
+        -11.3871
+       ],
+       [
+        "2026-01-13",
+        -16.4512
+       ],
+       [
+        "2026-01-20",
+        -17.8842
+       ],
+       [
+        "2026-01-27",
+        -17.9968
+       ],
+       [
+        "2026-02-03",
+        -16.7562
+       ],
+       [
+        "2026-02-10",
+        -16.5505
+       ],
+       [
+        "2026-02-17",
+        -14.8595
+       ],
+       [
+        "2026-02-24",
+        -12.9759
+       ],
+       [
+        "2026-03-03",
+        -12.7465
+       ],
+       [
+        "2026-03-10",
+        -13.0056
+       ],
+       [
+        "2026-03-17",
+        -14.9197
+       ],
+       [
+        "2026-03-24",
+        -17.8732
+       ],
+       [
+        "2026-03-31",
+        -22.8629
+       ],
+       [
+        "2026-04-07",
+        -26.6457
+       ],
+       [
+        "2026-04-14",
+        -25.816
+       ],
+       [
+        "2026-04-21",
+        -24.3759
+       ],
+       [
+        "2026-04-28",
+        -21.6296
+       ],
+       [
+        "2026-05-05",
+        -17.0855
+       ],
+       [
+        "2026-05-12",
+        -15.1302
+       ],
+       [
+        "2026-05-19",
+        -13.0214
+       ],
+       [
+        "2026-05-26",
+        -9.665
+       ],
+       [
+        "2026-06-02",
+        -5.5269
+       ],
+       [
+        "2026-06-09",
+        -3.7023
+       ],
+       [
+        "2026-06-16",
+        0.0
+       ],
+       [
+        "2026-06-23",
+        -0.3998
+       ],
+       [
+        "2026-06-30",
+        -5.3593
+       ],
+       [
+        "2026-07-07",
+        -10.2536
+       ],
+       [
+        "2026-07-14",
+        -16.3273
+       ],
+       [
+        "2026-07-21",
+        -20.3046
+       ],
+       [
+        "2026-07-28",
+        -21.938
+       ],
+       [
+        "2026-08-04",
+        -18.4839
+       ],
+       [
+        "2026-08-11",
+        -16.7301
+       ],
+       [
+        "2026-08-18",
+        -16.8099
+       ],
+       [
+        "2026-08-25",
+        -16.5954
+       ],
+       [
+        "2026-09-01",
+        -19.5346
+       ],
+       [
+        "2026-09-08",
+        -20.7804
+       ],
+       [
+        "2026-09-15",
+        -20.7331
+       ],
+       [
+        "2026-09-22",
+        -20.7462
+       ],
+       [
+        "2026-09-29",
+        -21.5223
+       ],
+       [
+        "2026-10-06",
+        -21.8542
+       ],
+       [
+        "2026-10-13",
+        -20.726
+       ],
+       [
+        "2026-10-20",
+        -19.9286
+       ],
+       [
+        "2026-10-27",
+        -20.5119
+       ],
+       [
+        "2026-11-03",
+        -21.0966
+       ],
+       [
+        "2026-11-10",
+        -22.8799
+       ],
+       [
+        "2026-11-17",
+        -23.2139
+       ]
+      ],
+      "threshold": -15.0
+     }
+    ]
    }
   },
   {
@@ -1255,7 +1477,7 @@
      ],
      [
       "2026-05-26",
-      -4.8038
+      -4.8039
      ],
      [
       "2026-05-27",
@@ -1299,7 +1521,7 @@
      ],
      [
       "2026-06-10",
-      3.1828
+      3.1829
      ],
      [
       "2026-06-11",
@@ -2127,7 +2349,7 @@
   ],
   [
    "2025-02-07",
-   589.2,
+   589.19,
    -1.47
   ],
   [
@@ -2187,7 +2409,7 @@
   ],
   [
    "2025-02-26",
-   583.08,
+   583.09,
    -3.0
   ],
   [
@@ -2627,7 +2849,7 @@
   ],
   [
    "2025-07-03",
-   616.96,
+   616.95,
    0.0
   ],
   [
@@ -3102,7 +3324,7 @@
   ],
   [
    "2025-11-17",
-   658.57,
+   658.56,
    -3.16
   ],
   [
