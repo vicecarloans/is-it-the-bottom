@@ -5,6 +5,23 @@ from __future__ import annotations
 from typing import Any, Protocol
 
 
+def describe_error(exc: Exception) -> str:
+    """A short, readable reason for a failed model call, safe to show on the page."""
+    status = getattr(exc, "status_code", None)
+    body = getattr(exc, "body", None)
+    message = ""
+    if isinstance(body, dict):
+        error = body.get("error")
+        if isinstance(error, dict):
+            message = str(error.get("message") or "")
+    if not message:
+        message = type(exc).__name__
+    message = message.split(". Please")[0].strip().rstrip(".")
+    if len(message) > 120:
+        message = message[:117] + "..."
+    return f"Claude API {status}: {message}" if status else f"Claude API: {message}"
+
+
 class ToolCaller(Protocol):
     def __call__(self, system: str, prompt: str, tool: dict[str, Any]) -> dict[str, Any]: ...
 

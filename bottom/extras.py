@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from bottom import catalyst, digest, override
-from bottom.llm import Claude, ToolCaller
+from bottom.llm import Claude, ToolCaller, describe_error
 from bottom.snapshot import Snapshot
 from bottom.sources import news, sec
 from bottom.store import RawStore
@@ -49,8 +49,10 @@ def enrich(
         try:
             report.digest = digest.make_digest(headlines, digest_context(report), llm)
             store.save_json("digest.json", report.digest)
+        except RuntimeError as exc:  # no headlines, or no structured reply
+            report.errors["digest"] = str(exc)
         except Exception as exc:  # the digest is optional; the verdict stands without it
-            report.errors["digest"] = str(exc) or type(exc).__name__
+            report.errors["digest"] = describe_error(exc)
 
     # Systemic-break cap
     report.override = override.check(snap.hy_spread, report.as_of, cfg, report.digest)
