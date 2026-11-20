@@ -118,36 +118,90 @@ def fed_condition(
     )
 
 
+def funds_drawdown(leverage: pd.DataFrame, cfg: dict[str, Any]) -> pd.Series:
+    """Leveraged funds' gross S&P 500 futures positions vs their recent high, in %.
+
+    Gross is long plus short contracts. It is averaged over a few reports first,
+    because positions swing for a week around each quarterly contract expiry.
+    """
+    f = cfg["margin"]["funds"]
+    if leverage is None or leverage.empty:
+        return pd.Series(dtype=float)
+    gross = (leverage["long"] + leverage["short"]).dropna().sort_index()
+    n = int(f["average_reports"])
+    avg = gross.rolling(n, min_periods=n).mean().dropna()
+    high = avg.rolling(int(f["window_weeks"]), min_periods=1).max()
+    return (avg / high - 1) * 100
+
+
 def margin_condition(
-    margin: pd.Series, as_of: date, cfg: dict[str, Any], apply_lag: bool = False
+    margin: pd.Series,
+    as_of: date,
+    cfg: dict[str, Any],
+    apply_lag: bool = False,
+    leverage: pd.DataFrame | None = None,
 ) -> ConditionResult:
-    c = cfg["margin"]
+    """Holds when either reading shows deleveraging: FINRA margin debt (monthly, slow)
+    or leveraged funds' S&P 500 futures (weekly, about three days old)."""
+    c, f = cfg["margin"], cfg["margin"]["funds"]
     drop, months = float(c["drop_pct"]), int(c["window_months"])
-    rule = f"{abs(drop):g}% or more below its {months}-month high"
+    f_drop, weeks = float(f["drop_pct"]), int(f["window_weeks"])
+    rule = (
+        f"margin debt {abs(drop):g}% or more below its {months}-month high, or leveraged "
+        f"funds' S&P 500 futures {abs(f_drop):g}% or more below their {weeks}-week high"
+    )
     name = "Margin debt deleveraging"
+    readings: list[tuple[bool, bool]] = []  # (met, stale) per source
+    values: list[str] = []
+    notes: list[str] = []
+    dates: list[date] = []
+
     series = margin.dropna().sort_index()
-    if series.empty:
-        return _missing("margin", name, rule, "no FINRA margin data")
     cutoff = pd.Timestamp(as_of)
     if apply_lag:  # for past dates, only count months FINRA had published by then
         cutoff -= pd.Timedelta(days=int(c["publication_lag_days"]))
-    series = series[series.index <= cutoff]
-    if series.empty:
-        return _missing("margin", name, rule, "no FINRA margin data")
+    if not series.empty:
+        series = series[series.index <= cutoff]
+    if not series.empty:
+        latest, month = series.iloc[-1], series.index[-1]
+        change = round((latest / series.iloc[-months:].max() - 1) * 100, 4)
+        stale = (as_of - month.date()).days > int(c["stale_after_days"])
+        readings.append((change <= drop, stale))
+        values.append(f"{change:+.1f}% margin debt")
+        notes.append(
+            f"FINRA: ${latest / 1e6:.3f}T in {month:%B %Y}" + (" (stale)" if stale else "")
+        )
+        dates.append(month.date())
 
-    latest, month = series.iloc[-1], series.index[-1]
-    change = round((latest / series.iloc[-months:].max() - 1) * 100, 4)
-    stale = (as_of - month.date()).days > int(c["stale_after_days"])
+    funds = funds_drawdown(leverage, cfg) if leverage is not None else pd.Series(dtype=float)
+    f_cutoff = pd.Timestamp(as_of)
+    if apply_lag:  # measured Tuesday, published Friday
+        f_cutoff -= pd.Timedelta(days=int(f["publication_lag_days"]))
+    if not funds.empty:
+        funds = funds[funds.index <= f_cutoff]
+    if not funds.empty:
+        change, week = round(float(funds.iloc[-1]), 4), funds.index[-1]
+        stale = (as_of - week.date()).days > int(f["stale_after_days"])
+        readings.append((change <= f_drop, stale))
+        values.append(f"{change:+.1f}% fund futures")
+        notes.append(
+            f"CFTC: leveraged funds, {int(f['average_reports'])}-week average to "
+            f"{week:%b %-d, %Y}" + (" (stale)" if stale else "")
+        )
+        dates.append(week.date())
+
+    if not readings:
+        return _missing("margin", name, rule, "no FINRA or CFTC data")
+    all_stale = all(stale for _, stale in readings)
     return ConditionResult(
         key="margin",
         name=name,
-        met=bool(change <= drop and not stale),
-        value=f"{change:+.1f}% vs high",
+        met=bool(any(met and not stale for met, stale in readings)),
+        value=", ".join(values),
         threshold=rule,
-        data_date=month.date(),
-        detail=f"${latest / 1e6:.3f}T in {month:%B %Y} data"
-        + (" (stale: counts as not met)" if stale else ""),
-        stale=stale,
+        data_date=max(dates),
+        detail="; ".join(notes) + (" (stale: counts as not met)" if all_stale else ""),
+        stale=all_stale,
     )
 
 

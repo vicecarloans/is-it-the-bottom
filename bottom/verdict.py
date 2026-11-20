@@ -77,7 +77,7 @@ def evaluate(snap: Snapshot, as_of: date, cfg: dict[str, Any], apply_lag: bool) 
     results = [
         c.vix_condition(snap.vix, as_of, cfg),
         c.fed_condition(snap.dgs2, snap.fed_upper, as_of, cfg),
-        c.margin_condition(snap.margin, as_of, cfg, apply_lag=apply_lag),
+        c.margin_condition(snap.margin, as_of, cfg, apply_lag=apply_lag, leverage=snap.leverage),
         c.sector_condition(snap.closes, as_of, cfg),
         c.nvda_condition(snap.earnings, as_of, dd, cfg),
     ]

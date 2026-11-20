@@ -198,6 +198,7 @@ h2 {
 .spark .s-threshold { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
 .spark .s-end { stroke: var(--paper); stroke-width: 2; }
 .spark .s-bar { fill: var(--ink); }
+.spark-group { display: grid; gap: 12px; align-content: start; }
 .spark-label { margin: 2px 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.3; }
 
 .check details { grid-column: 2 / span 2; margin-top: 6px; }

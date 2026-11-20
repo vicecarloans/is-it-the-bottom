@@ -16,6 +16,7 @@ from bottom.verdict import Report
 
 SPARK_DAYS = 126  # about six months of trading days
 SPARK_MONTHS = 24
+SPARK_WEEKS = 52
 SPARK_REPORTS = 8
 MARKET_DAYS = 520  # about two years for the drawdown chart
 
@@ -59,6 +60,14 @@ def sparklines(snap: Snapshot, as_of: date, cfg: dict[str, Any]) -> dict[str, di
         "label": "Margin debt vs its 12-month high, %",
         "points": _points(margin_pct, as_of, SPARK_MONTHS),
         "threshold": float(cfg["margin"]["drop_pct"]),
+        "also": [
+            {
+                "label": "Leveraged funds' S&P 500 futures vs "
+                f"{cfg['margin']['funds']['window_weeks']}-week high, %",
+                "points": _points(c.funds_drawdown(snap.leverage, cfg), as_of, SPARK_WEEKS),
+                "threshold": float(cfg["margin"]["funds"]["drop_pct"]),
+            }
+        ],
     }
 
     leader_series = pd.Series(dtype=float)

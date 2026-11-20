@@ -36,6 +36,7 @@ def test_sparkline_thresholds_follow_config(cfg):
     spark = {c["key"]: c["spark"] for c in latest_for(cfg)["conditions"]}
     assert spark["vix"]["threshold"] == 30
     assert spark["margin"]["threshold"] == -10
+    assert spark["margin"]["also"][0]["threshold"] == -15
     assert spark["nvda"]["points"] == [["2026-11-15", 20.0]]
     assert spark["sector"]["label"].startswith("XLE")
 

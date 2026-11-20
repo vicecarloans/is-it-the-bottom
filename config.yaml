@@ -27,12 +27,21 @@ fed:
   max_spread_pts: 0.10
   hike_lookback_days: 56  # calendar days, about one FOMC cycle
 
-# Condition 3: margin debt deleveraging (FINRA, monthly).
+# Condition 3: margin debt deleveraging. Holds when either reading shows it.
 margin:
+  # FINRA margin debt: monthly, published about three weeks after the month ends.
   drop_pct: -10           # latest month vs its trailing high
   window_months: 12
   stale_after_days: 60    # from the end of the data month
   publication_lag_days: 21  # used only for past dates (backtests)
+  # CFTC: leveraged funds' long plus short E-mini S&P 500 futures. Weekly, about
+  # three days old. The trigger level is a starting guess until the backtest.
+  funds:
+    drop_pct: -15         # 4-report average vs its trailing high
+    average_reports: 4    # smooths the swing around quarterly contract expiry
+    window_weeks: 26
+    stale_after_days: 14  # from the Tuesday the positions were measured
+    publication_lag_days: 3  # used only for past dates (backtests)
 
 # Condition 4: a clear leading sector.
 sector:
