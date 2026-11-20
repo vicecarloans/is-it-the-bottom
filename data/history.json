@@ -4,6 +4,8 @@
    "date": "2026-11-20",
    "verdict": "No",
    "count": 2,
+   "catalyst": false,
+   "capped": false,
    "in_drawdown": true,
    "drawdown_pct": -11.4595,
    "met": {

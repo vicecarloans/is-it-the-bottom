@@ -1,6 +1,6 @@
 {
  "as_of": "2026-11-20",
- "generated_at": "2026-11-20T21:49:41+00:00",
+ "generated_at": "2026-11-20T22:02:37+00:00",
  "verdict": "No",
  "count": 2,
  "total": 5,
@@ -12,6 +12,21 @@
   "threshold_pct": -10.0,
   "data_date": "2026-11-20"
  },
+ "base_verdict": "No",
+ "catalyst": {
+  "active": false,
+  "event": null,
+  "window_trading_days": 30,
+  "lifted_verdict": false
+ },
+ "override": {
+  "capped": false,
+  "reasons": [],
+  "hy_level": 3.52,
+  "hy_change": 0.92,
+  "data_date": "2026-11-19"
+ },
+ "digest": null,
  "conditions": [
   {
    "key": "vix",
@@ -1187,7 +1202,7 @@
      ],
      [
       "2026-05-26",
-      -4.8039
+      -4.8038
      ],
      [
       "2026-05-27",
@@ -1231,7 +1246,7 @@
      ],
      [
       "2026-06-10",
-      3.1829
+      3.1828
      ],
      [
       "2026-06-11",
@@ -2059,7 +2074,7 @@
   ],
   [
    "2025-02-07",
-   589.2,
+   589.19,
    -1.47
   ],
   [
@@ -2074,7 +2089,7 @@
   ],
   [
    "2025-02-12",
-   591.74,
+   591.73,
    -1.05
   ],
   [
@@ -4308,5 +4323,8 @@
    -11.46
   ]
  ],
- "errors": {}
+ "errors": {
+  "digest": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChEwBaw7JuVnfjKGTDR9i'}",
+  "sec": "0001045810-26-000082: BadRequestError"
+ }
 }
