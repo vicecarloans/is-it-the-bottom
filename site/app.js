@@ -34,6 +34,16 @@ function svg(tag, attrs = {}) {
   return node;
 }
 
+// The daily job runs on weekdays at 22:30 UTC and needs a few minutes to finish.
+// Returns the date (YYYY-MM-DD, UTC) of the latest run that should exist by `now`.
+function lastExpectedRun(now) {
+  const day = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  const minutes = now.getUTCHours() * 60 + now.getUTCMinutes();
+  if (minutes < 23 * 60 + 15) day.setUTCDate(day.getUTCDate() - 1); // allow 45 minutes to finish
+  while (day.getUTCDay() === 0 || day.getUTCDay() === 6) day.setUTCDate(day.getUTCDate() - 1);
+  return day.toISOString().slice(0, 10);
+}
+
 // ---- Hero -----------------------------------------------------------------------------
 
 function renderHero(latest) {
@@ -84,6 +94,13 @@ function renderHero(latest) {
     const watch = document.getElementById("watch");
     watch.textContent = `Watching: ${news.huang_note} This changes nothing until NVIDIA confirms it in an SEC filing.`;
     watch.hidden = false;
+  }
+
+  const expected = lastExpectedRun(new Date());
+  if (latest.as_of < expected) {
+    const stale = document.getElementById("stale");
+    stale.textContent = `This page shows data from ${fmtDate(latest.as_of)}. The daily update did not run on ${fmtDate(expected)}, so the verdict may be out of date.`;
+    stale.hidden = false;
   }
 
   document.getElementById("caveat").textContent =

@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Is it the bottom?</title>
   <meta name="description" content="A daily check of five conditions that marked past stock market bottoms.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Is it the bottom?">
+  <meta property="og:description" content="A daily check of five conditions that marked past stock market bottoms. Not financial advice.">
+  <meta property="og:url" content="https://is-it-the-bottom.vercel.app/">
+  <meta property="og:image" content="https://is-it-the-bottom.vercel.app/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#edf1ec">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314212b'/%3E%3Cpath d='M5 9 L12 20 L17 15 L27 26' fill='none' stroke='%23edf1ec' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +25,7 @@
       <p class="summary" id="summary"></p>
       <p class="banner banner-cap" id="cap" hidden></p>
       <p class="watch" id="watch" hidden></p>
+      <p class="banner banner-cap" id="stale" hidden></p>
       <p class="caveat" id="caveat"></p>
       <p class="hero-links"><a href="#how">How this works</a></p>
     </header>
