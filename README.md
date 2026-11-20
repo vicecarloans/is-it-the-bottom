@@ -21,7 +21,7 @@ They are checked only while the S&P 500 (SPY) is at least 10% below its 52-week 
 | --- | --- | --- |
 | 1 | VIX above 30 | VIX closed above 30 in the last 10 trading days |
 | 2 | Fed not signaling hikes | 2-year Treasury yield minus the upper fed funds target is at most +0.10 pts, and no hike in the last 56 days |
-| 3 | Margin debt deleveraging | FINRA margin debt is 10% or more below its 12-month high, **or** leveraged funds' E-mini S&P 500 futures (long plus short, 4-week average) are 15% or more below their 26-week high. Stale data counts as not met |
+| 3 | Margin debt deleveraging | FINRA margin debt is 10% or more below its 12-month high (stale data counts as not met). The page also shows leveraged funds' E-mini S&P 500 futures from the CFTC each week, for reference only until that rule is tuned: holdings also rise and fall with each quarterly contract expiry |
 | 4 | A clear leading sector | The top sector ETF beats SPY by 5+ pts over 20 days and has led on 10 of the last 15 days |
 | 5 | NVIDIA beats earnings | NVIDIA beat EPS consensus in a report from the drawdown or the last 90 days |
 
@@ -78,7 +78,7 @@ python -m http.server -d site 8000
 
 ### Updating the margin data
 
-FINRA offers no data feed and may refuse automated downloads. When it does, the job reads the copy at `data/finra/margin-statistics.xlsx`. FINRA publishes a new month around the third week of the following month; to update, download the spreadsheet from the [FINRA page](https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics) and replace that file. If the copy is more than 60 days past its latest month, the FINRA reading counts as not met. The weekly CFTC reading is fetched automatically and can still pass condition 3 on its own, so a late FINRA update no longer blinds the check.
+FINRA offers no data feed and may refuse automated downloads. When it does, the job reads the copy at `data/finra/margin-statistics.xlsx`. FINRA publishes a new month around the third week of the following month; to update, download the spreadsheet from the [FINRA page](https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics) and replace that file. If the copy is more than 60 days past its latest month, the FINRA reading counts as not met. The weekly CFTC reading is fetched automatically and its history is kept in `data/cftc.json`; it does not count toward condition 3 yet (`margin.funds.counts` in `config.yaml`).
 
 ## Development
 

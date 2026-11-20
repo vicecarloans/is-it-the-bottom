@@ -35,8 +35,12 @@ margin:
   stale_after_days: 60    # from the end of the data month
   publication_lag_days: 21  # used only for past dates (backtests)
   # CFTC: leveraged funds' long plus short E-mini S&P 500 futures. Weekly, about
-  # three days old. The trigger level is a starting guess until the backtest.
+  # three days old. Shown on the page but not counted: the first live run showed
+  # this rule tracks the quarterly futures cycle, not deleveraging. Set counts to
+  # true only after a cycle-proof version is tested against data/cftc.json.
   funds:
+    counts: false
+    history_start: "2010-01-01"  # the weekly history saved to data/cftc.json
     drop_pct: -15         # 4-report average vs its trailing high
     average_reports: 4    # smooths the swing around quarterly contract expiry
     window_weeks: 26

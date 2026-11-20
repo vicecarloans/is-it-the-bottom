@@ -196,6 +196,20 @@ def signals(days: list[dict[str, Any]]) -> list[dict[str, str]]:
     return found
 
 
+def write_cftc(out_dir: Path, leverage: pd.DataFrame) -> None:
+    """Keeps the weekly CFTC history in the repo, for tuning the futures rule later."""
+    if leverage is None or leverage.empty:
+        return
+    rows = [[d.strftime("%Y-%m-%d"), int(r.long), int(r.short)] for d, r in leverage.iterrows()]
+    payload = {
+        "source": "CFTC Traders in Financial Futures, E-mini S&P 500, leveraged funds",
+        "columns": ["date", "long", "short"],
+        "rows": rows,
+    }
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "cftc.json").write_text(json.dumps(payload, separators=(",", ":")) + "\n")
+
+
 def write_outputs(out_dir: Path, latest: dict[str, Any]) -> dict[str, Any]:
     out_dir.mkdir(parents=True, exist_ok=True)
     history_path = out_dir / "history.json"

@@ -11,7 +11,7 @@ from pathlib import Path
 from bottom import override
 from bottom.config import load_config
 from bottom.extras import enrich
-from bottom.output import build_latest, write_outputs
+from bottom.output import build_latest, write_cftc, write_outputs
 from bottom.snapshot import load_snapshot
 from bottom.store import RawStore
 from bottom.verdict import Report, evaluate
@@ -99,6 +99,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "run":
         latest = build_latest(report, snapshot, cfg)
         history = write_outputs(Path(args.out), latest)
+        write_cftc(Path(args.out), snapshot.leverage)
         print(
             f"\nWrote {args.out}/latest.json and {args.out}/history.json "
             f"({len(history['days'])} days, {len(history['signals'])} signals)"
