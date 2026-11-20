@@ -38,8 +38,12 @@ uv run bottom check
 | --- | --- |
 | SPY, sector ETFs, VIX | yfinance, with Stooq as a fallback for ETFs |
 | 2-year yield, Fed target, VIX fallback, high-yield spread | [FRED](https://fred.stlouisfed.org/) |
-| Margin debt | [FINRA margin statistics](https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics) |
+| Margin debt | [FINRA margin statistics](https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics), see below |
 | NVIDIA earnings | [Finnhub](https://finnhub.io/) |
+
+### Updating the margin data
+
+FINRA offers no data feed and may refuse automated downloads. When it does, the job reads the copy at `data/finra/margin-statistics.xlsx`. FINRA publishes a new month around the third week of the following month; to update, download the spreadsheet from the [FINRA page](https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics) and replace that file. If the copy is more than 60 days past its latest month, condition 3 shows as stale and counts as not met.
 
 ## Development
 

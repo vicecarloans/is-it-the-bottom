@@ -5,6 +5,7 @@ from __future__ import annotations
 import io
 import re
 from datetime import datetime
+from pathlib import Path
 from urllib.parse import urljoin
 
 import httpx
@@ -16,43 +17,62 @@ from bottom.store import RawStore
 FINRA_PAGE = "https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics"
 FINRA_XLSX = "https://www.finra.org/sites/default/files/2021-03/margin-statistics.xlsx"
 
+# A copy of FINRA's spreadsheet kept in the repo, used when the download is refused.
+# FINRA publishes no data feed, so this file is updated by hand once a month.
+LOCAL_COPY = Path("data/finra/margin-statistics.xlsx")
 
-def fetch_margin(store: RawStore | None = None) -> pd.Series:
+
+def fetch_margin(store: RawStore | None = None, local_copy: Path = LOCAL_COPY) -> pd.Series:
     """Debit balances in $ millions, indexed by the last day of each month."""
-    content = _download(FINRA_XLSX)
+    reasons: list[str] = []
+    with httpx.Client(
+        headers={"User-Agent": USER_AGENT}, timeout=60, follow_redirects=True
+    ) as client:
+        content = _download(client, FINRA_XLSX, "download", reasons)
+        if content is None:
+            link = _find_xlsx_link(client, reasons)
+            if link and link != FINRA_XLSX:
+                content = _download(client, link, "linked download", reasons)
+    if content is None and local_copy.exists():
+        content = local_copy.read_bytes()
     if content is None:
-        content = _download(_find_xlsx_link())
-    if content is None:
-        raise RuntimeError("FINRA margin spreadsheet could not be downloaded")
+        reasons.append(f"no copy at {local_copy}")
+        raise RuntimeError(f"FINRA margin data unavailable ({'; '.join(reasons)})")
     if store is not None:
         store.save_bytes("finra_margin.xlsx", content)
     return parse_margin_xlsx(content)
 
 
-def _download(url: str | None) -> bytes | None:
-    if not url:
-        return None
+def _download(client: httpx.Client, url: str, label: str, reasons: list[str]) -> bytes | None:
     try:
-        response = httpx.get(
-            url, headers={"User-Agent": USER_AGENT}, timeout=60, follow_redirects=True
-        )
-    except httpx.HTTPError:
+        response = client.get(url)
+    except httpx.HTTPError as exc:
+        reasons.append(f"{label}: {type(exc).__name__}")
         return None
-    if response.status_code != 200 or not response.content.startswith(b"PK"):
-        return None  # .xlsx files are zip archives and start with "PK"
+    if response.status_code != 200:
+        reasons.append(f"{label}: HTTP {response.status_code}")
+        return None
+    if not response.content.startswith(b"PK"):  # .xlsx files are zip archives
+        reasons.append(f"{label}: not a spreadsheet ({response.headers.get('content-type')})")
+        return None
     return response.content
 
 
-def _find_xlsx_link() -> str | None:
+def _find_xlsx_link(client: httpx.Client, reasons: list[str]) -> str | None:
     """FINRA has moved the file before; look for it on the statistics page."""
     try:
-        response = httpx.get(
-            FINRA_PAGE, headers={"User-Agent": USER_AGENT}, timeout=30, follow_redirects=True
-        )
-    except httpx.HTTPError:
+        response = client.get(FINRA_PAGE)
+    except httpx.HTTPError as exc:
+        reasons.append(f"page: {type(exc).__name__}")
+        return None
+    if response.status_code != 200:
+        reasons.append(f"page: HTTP {response.status_code}")
         return None
     match = re.search(r'href="([^"]*margin[^"]*\.xlsx)"', response.text, re.IGNORECASE)
-    return urljoin(FINRA_PAGE, match.group(1)) if match else None
+    if not match:
+        reasons.append("page: no spreadsheet link found")
+        return None
+    return urljoin(FINRA_PAGE, match.group(1))
 
 
 def parse_margin_xlsx(content: bytes) -> pd.Series:

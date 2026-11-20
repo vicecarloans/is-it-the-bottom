@@ -47,6 +47,25 @@ def test_finra_date_cells():
     assert series.index[0].date() == date(2026, 10, 31)
 
 
+def test_finra_falls_back_to_local_copy(tmp_path, monkeypatch):
+    monkeypatch.setattr(finra, "_download", lambda client, url, label, reasons: None)
+    monkeypatch.setattr(finra, "_find_xlsx_link", lambda client, reasons: None)
+    copy = tmp_path / "margin-statistics.xlsx"
+    copy.write_bytes(make_xlsx([HEADER, ["Oct-26", 1448360, 1, 1]]))
+    series = finra.fetch_margin(local_copy=copy)
+    assert series.iloc[-1] == 1448360
+
+
+def test_finra_reports_why_it_failed(tmp_path, monkeypatch):
+    def refused(client, url, label, reasons):
+        reasons.append(f"{label}: HTTP 403")
+
+    monkeypatch.setattr(finra, "_download", refused)
+    monkeypatch.setattr(finra, "_find_xlsx_link", lambda client, reasons: None)
+    with pytest.raises(RuntimeError, match="HTTP 403"):
+        finra.fetch_margin(local_copy=tmp_path / "missing.xlsx")
+
+
 def test_finra_missing_header():
     with pytest.raises(ValueError):
         finra.parse_margin_xlsx(make_xlsx([["nothing", "here"], [1, 2]]))
