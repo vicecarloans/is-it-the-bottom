@@ -1,10 +1,17 @@
 # Is it the bottom?
 
 [![CI](https://github.com/vicecarloans/is-it-the-bottom/actions/workflows/ci.yml/badge.svg)](https://github.com/vicecarloans/is-it-the-bottom/actions/workflows/ci.yml)
+[![Daily](https://github.com/vicecarloans/is-it-the-bottom/actions/workflows/daily.yml/badge.svg)](https://github.com/vicecarloans/is-it-the-bottom/actions/workflows/daily.yml)
 
-A daily check of five conditions that have marked past stock market bottoms, turned into one verdict: **No**, **Getting closer**, or **Looks like a bottom**.
+**[is-it-the-bottom.vercel.app](https://is-it-the-bottom.vercel.app)**
+
+A daily check of five conditions that have marked past stock market bottoms, turned into one verdict: **No**, **Getting closer**, or **Looks like a bottom**. Every weekday after the US close, a GitHub Actions job pulls market data, checks the conditions, has Claude summarize the day's news, and watches NVIDIA's SEC filings for Jensen Huang's return.
 
 > A hobby project, not financial advice. The rules have not been backtested yet.
+
+<a href="https://is-it-the-bottom.vercel.app"><img src="docs/screenshot.png" alt="The page on November 20, 2026: the verdict 'No', a chart of the S&P 500 falling 11.5% below its high, and the first two conditions" width="600"></a>
+
+*The page on November 20, 2026.*
 
 ## The five conditions
 
@@ -82,3 +89,7 @@ uv run ruff check .
 ## License
 
 MIT
+
+## Credits
+
+The page uses [Archivo](https://github.com/Omnibus-Type/Archivo) by Omnibus-Type, under the SIL Open Font License 1.1 (`site/fonts/OFL.txt`).
