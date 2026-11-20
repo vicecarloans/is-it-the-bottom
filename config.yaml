@@ -1,0 +1,47 @@
+# Thresholds and inputs for "Is it the bottom?".
+# Every number here is a starting point from the design doc and can be tuned.
+
+tickers:
+  index: SPY
+  sectors: [XLK, XLF, XLE, XLV, XLY, XLP, XLI, XLB, XLU, XLRE, XLC]
+  vix: "^VIX"
+
+# How much daily history to load, in calendar days.
+history_days: 760
+
+# The drawdown window: conditions only matter when the S&P 500 is this far
+# below its high over the lookback.
+drawdown:
+  lookback_days: 252      # trading days, about one year
+  threshold_pct: -10
+
+# Condition 1: VIX closed above the threshold within the lookback.
+vix:
+  threshold: 30
+  lookback_days: 10       # trading days
+
+# Condition 2: Fed not signaling hikes.
+# 2-year Treasury yield minus the upper fed funds target must be at or below
+# max_spread_pts, and the target must not have risen within hike_lookback_days.
+fed:
+  max_spread_pts: 0.10
+  hike_lookback_days: 56  # calendar days, about one FOMC cycle
+
+# Condition 3: margin debt deleveraging (FINRA, monthly).
+margin:
+  drop_pct: -10           # latest month vs its trailing high
+  window_months: 12
+  stale_after_days: 60    # from the end of the data month
+  publication_lag_days: 21  # used only for past dates (backtests)
+
+# Condition 4: a clear leading sector.
+sector:
+  return_window_days: 20  # trading days
+  min_excess_pts: 5       # leader's return minus SPY's, in percentage points
+  persistence_window: 15  # trading days
+  persistence_min: 10     # days the leader must have been on top
+
+# Condition 5: NVIDIA beats earnings during the panic.
+nvda:
+  symbol: NVDA
+  recent_days: 90         # also counts any report since the drawdown began
