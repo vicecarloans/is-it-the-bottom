@@ -11,7 +11,9 @@
   <meta property="og:url" content="https://is-it-the-bottom.vercel.app/">
   <meta property="og:image" content="https://is-it-the-bottom.vercel.app/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#edf1ec">
+  <meta name="theme-color" content="#edf1ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#11191e" media="(prefers-color-scheme: dark)">
+  <script>try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314212b'/%3E%3Cpath d='M5 9 L12 20 L17 15 L27 26' fill='none' stroke='%23edf1ec' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
@@ -74,6 +76,12 @@
       <p id="sources">Data: S&amp;P 500 and sector funds from Yahoo Finance, rates and VIX from <a href="https://fred.stlouisfed.org/">FRED</a>, margin debt from <a href="https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics">FINRA</a>, earnings from <a href="https://finnhub.io/">Finnhub</a>.</p>
       <p id="generated"></p>
       <p><a href="https://github.com/vicecarloans/is-it-the-bottom">Source code on GitHub</a></p>
+      <div class="theme" role="group" aria-label="Theme">
+        <span>Theme</span>
+        <button type="button" data-theme-choice="auto">Match system</button>
+        <button type="button" data-theme-choice="light">Light</button>
+        <button type="button" data-theme-choice="dark">Dark</button>
+      </div>
     </footer>
   </main>
   <script src="app.js" defer></script>
