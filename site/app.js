@@ -3,7 +3,17 @@
 // Add ?data=<folder>/ to the URL to read from somewhere else (for example a local copy).
 
 const DEFAULT_DATA = "https://raw.githubusercontent.com/vicecarloans/is-it-the-bottom/main/data/";
-const DATA = new URLSearchParams(location.search).get("data") || DEFAULT_DATA;
+const PARAMS = new URLSearchParams(location.search);
+const DATA = PARAMS.get("data") || DEFAULT_DATA;
+// Add ?day=YYYY-MM-DD to show the saved result of a past day instead of today's.
+const DAY = /^\d{4}-\d{2}-\d{2}$/.test(PARAMS.get("day") || "") ? PARAMS.get("day") : null;
+
+function dayLink(day) {
+  const params = new URLSearchParams(location.search);
+  if (day) params.set("day", day); else params.delete("day");
+  const query = params.toString();
+  return location.pathname + (query ? `?${query}` : "");
+}
 const SVG = "http://www.w3.org/2000/svg";
 
 const dateFmt = new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
@@ -96,8 +106,14 @@ function renderHero(latest) {
     watch.hidden = false;
   }
 
+  if (DAY) {
+    const viewing = document.getElementById("viewing");
+    viewing.append(`You're looking at the result for ${fmtDate(latest.as_of)}. `, el("a", { href: dayLink(null), text: "See today's result" }), ".");
+    viewing.hidden = false;
+  }
+
   const expected = lastExpectedRun(new Date());
-  if (latest.as_of < expected) {
+  if (!DAY && latest.as_of < expected) {
     const stale = document.getElementById("stale");
     stale.textContent = `This page shows data from ${fmtDate(latest.as_of)}. The daily update did not run on ${fmtDate(expected)}, so the verdict may be out of date.`;
     stale.hidden = false;
@@ -344,6 +360,57 @@ function renderSignals(latest, history) {
   host.append(table);
 }
 
+// ---- Daily log -------------------------------------------------------------------------
+
+const SHORT_NAMES = { vix: "VIX", fed: "Fed", margin: "Margin debt", sector: "Sector", nvda: "NVIDIA" };
+const LOG_ROWS = 20;
+
+function renderLog(latest, history) {
+  const host = document.getElementById("log");
+  const days = [...(history.days || [])].reverse();
+  if (!days.length) {
+    host.append(el("p", { class: "empty", text: "No runs saved yet." }));
+    return;
+  }
+  const table = el("table", { class: "log" },
+    el("thead", {}, el("tr", {},
+      el("th", { scope: "col", text: "Date" }),
+      el("th", { scope: "col", text: "Verdict" }),
+      el("th", { scope: "col", text: "Conditions held" }),
+      el("th", { scope: "col", class: "num", text: "S&P 500 vs high" }),
+    )),
+  );
+  const body = el("tbody");
+  days.forEach((day, i) => {
+    const held = Object.entries(day.met || {}).filter(([, met]) => met).map(([key]) => SHORT_NAMES[key] || key);
+    const date = day.archived
+      ? el("a", { href: dayLink(day.date), text: fmtDate(day.date) })
+      : fmtDate(day.date);
+    let verdict = day.verdict;
+    if (day.catalyst) verdict += " (Huang +1)";
+    if (day.capped) verdict += " (capped)";
+    const row = el("tr", {},
+      el("td", {}, date),
+      el("td", { class: "verdict", text: verdict }),
+      el("td", { class: "count" }, `${day.count} of 5`, held.length ? el("span", { class: "which", text: ` (${held.join(", ")})` }) : ""),
+      el("td", { class: "num", text: day.drawdown_pct === null ? "no data" : `${day.drawdown_pct.toFixed(1)}%` }),
+    );
+    if (day.date === latest.as_of) row.setAttribute("aria-current", "date");
+    if (i >= LOG_ROWS) row.hidden = true;
+    body.append(row);
+  });
+  table.append(body);
+  host.append(table);
+  if (days.length > LOG_ROWS) {
+    const more = el("button", { type: "button", class: "log-more", text: `Show all ${days.length} days` });
+    more.addEventListener("click", () => {
+      body.querySelectorAll("tr[hidden]").forEach((row) => { row.hidden = false; });
+      more.remove();
+    });
+    host.append(more);
+  }
+}
+
 // ---- How this works ---------------------------------------------------------------------
 
 function renderExplainers(explainers) {
@@ -358,20 +425,23 @@ async function main() {
   renderExplainers(explainers);
   try {
     const [latest, history] = await Promise.all([
-      getJSON(`${DATA}latest.json`),
+      getJSON(DAY ? `${DATA}days/${DAY}.json` : `${DATA}latest.json`),
       getJSON(`${DATA}history.json`).catch(() => ({ days: [], signals: [] })),
     ]);
     renderHero(latest);
     renderDepth(latest, history);
     renderChecks(latest, explainers);
     renderNews(latest);
+    if (DAY) document.getElementById("news-title").textContent = "News that day";
+    renderLog(latest, history);
     renderSignals(latest, history);
     document.getElementById("generated").textContent =
       `Last run ${new Date(latest.generated_at).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}.`;
   } catch (error) {
     document.getElementById("answer").textContent = "No data yet";
-    document.getElementById("summary").textContent =
-      "Today's data could not be loaded. The daily job may not have run yet; try again after the US market close.";
+    document.getElementById("summary").textContent = DAY
+      ? `There is no saved result for ${fmtDate(DAY)}. Results are saved for weekdays from the first date in the daily log.`
+      : "Today's data could not be loaded. The daily job may not have run yet; try again after the US market close.";
     console.error(error);
   }
 }

@@ -1,4 +1,5 @@
-"""Writes the page's data: data/latest.json for today, data/history.json for every run."""
+"""Writes the page's data: data/latest.json for today, data/days/<date>.json for every
+day, and data/history.json with one summary row per day."""
 
 from __future__ import annotations
 
@@ -172,6 +173,7 @@ def update_history(history: dict[str, Any] | None, latest: dict[str, Any]) -> di
         "count": latest["count"],
         "catalyst": bool(latest.get("catalyst", {}).get("lifted_verdict")),
         "capped": bool(latest.get("override", {}).get("capped")),
+        "archived": True,  # the full result is saved in days/<date>.json
         "in_drawdown": latest["drawdown"]["in_drawdown"],
         "drawdown_pct": latest["drawdown"]["pct"],
         "met": {
@@ -216,6 +218,9 @@ def write_outputs(out_dir: Path, latest: dict[str, Any]) -> dict[str, Any]:
     history = json.loads(history_path.read_text()) if history_path.exists() else None
     history = update_history(history, latest)
     (out_dir / "latest.json").write_text(_dump(latest))
+    days_dir = out_dir / "days"  # every day's full result, so the page can show any past day
+    days_dir.mkdir(exist_ok=True)
+    (days_dir / f"{latest['as_of']}.json").write_text(_dump(latest))
     history_path.write_text(_dump(history))
     return history
 
