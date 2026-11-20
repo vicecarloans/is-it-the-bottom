@@ -25,8 +25,43 @@
   --missed: #b4432c;
   --unknown: #8a948d;
   --zone: rgba(180, 67, 44, 0.07);
+  --met-wash: rgba(46, 125, 91, 0.09);
+  --missed-wash: rgba(180, 67, 44, 0.07);
+  --on-status: #fff;
   --font: "Archivo", system-ui, sans-serif;
   color-scheme: light;
+}
+
+/* Dark: the same slate-and-sage palette, lights off. Follows the system unless the reader picks a theme. */
+:root[data-theme="dark"] {
+  --paper: #11191e;
+  --ink: #e2e9e3;
+  --muted: #94a49b;
+  --rule: #2b3934;
+  --met: #5dbb8c;
+  --missed: #e57d62;
+  --unknown: #7d8983;
+  --zone: rgba(229, 125, 98, 0.10);
+  --met-wash: rgba(93, 187, 140, 0.12);
+  --missed-wash: rgba(229, 125, 98, 0.11);
+  --on-status: #11191e;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #11191e;
+    --ink: #e2e9e3;
+    --muted: #94a49b;
+    --rule: #2b3934;
+    --met: #5dbb8c;
+    --missed: #e57d62;
+    --unknown: #7d8983;
+    --zone: rgba(229, 125, 98, 0.10);
+    --met-wash: rgba(93, 187, 140, 0.12);
+    --missed-wash: rgba(229, 125, 98, 0.11);
+    --on-status: #11191e;
+    color-scheme: dark;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -80,10 +115,10 @@ a:hover { text-decoration-thickness: 2px; }
 .banner { margin: 16px 0 0; padding: 12px 16px; max-width: 40em; }
 .banner p { margin: 0; }
 .banner p + p { margin-top: 6px; }
-.banner-catalyst { margin: 0 0 28px; border-left: 4px solid var(--met); background: rgba(46, 125, 91, 0.09); }
+.banner-catalyst { margin: 0 0 28px; border-left: 4px solid var(--met); background: var(--met-wash); }
 .banner-catalyst strong { font-stretch: 112%; }
 .banner-catalyst blockquote { margin: 6px 0; font-style: italic; }
-.banner-cap { border-left: 4px solid var(--missed); background: rgba(180, 67, 44, 0.07); }
+.banner-cap { border-left: 4px solid var(--missed); background: var(--missed-wash); }
 .watch { margin: 12px 0 0; max-width: 40em; color: var(--muted); }
 
 .news-summary { margin: 0 0 12px; font-size: 1.1rem; max-width: 36em; }
@@ -146,7 +181,7 @@ h2 {
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 650;
-  color: #fff;
+  color: var(--on-status);
   background: var(--unknown);
   white-space: nowrap;
 }
@@ -179,7 +214,7 @@ h2 {
   margin: 0 0 16px;
   padding: 10px 14px;
   border-left: 3px solid var(--missed);
-  background: rgba(180, 67, 44, 0.06);
+  background: var(--missed-wash);
 }
 
 /* Signals table */
@@ -218,3 +253,20 @@ td.num, th.num { text-align: right; padding-right: 0; padding-left: 12px; }
   .levels { grid-template-columns: 1fr; }
   .levels div { padding: 10px 0; border-bottom: 1px solid var(--rule); }
 }
+
+/* Theme picker */
+.theme { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.theme span { color: var(--muted); margin-right: 4px; }
+.theme button {
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 2px 12px;
+  cursor: pointer;
+}
+.theme button:hover { color: var(--ink); }
+.theme button[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.theme button:focus-visible { outline: 2px solid var(--met); outline-offset: 2px; }

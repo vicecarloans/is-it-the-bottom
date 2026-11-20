@@ -358,3 +358,18 @@ async function main() {
 }
 
 main();
+
+// Theme picker. "auto" follows the system setting; the choice is remembered in this browser only.
+(function themePicker() {
+  const root = document.documentElement;
+  const buttons = document.querySelectorAll("[data-theme-choice]");
+  const show = (choice) => buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.themeChoice === choice)));
+  let current = root.dataset.theme || "auto";
+  show(current);
+  buttons.forEach((b) => b.addEventListener("click", () => {
+    current = b.dataset.themeChoice;
+    if (current === "auto") delete root.dataset.theme; else root.dataset.theme = current;
+    try { if (current === "auto") localStorage.removeItem("theme"); else localStorage.setItem("theme", current); } catch (e) { /* storage unavailable */ }
+    show(current);
+  }));
+})();
