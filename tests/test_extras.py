@@ -340,8 +340,8 @@ def test_model_errors_are_short_and_readable():
             "type": "error",
             "error": {
                 "type": "invalid_request_error",
-                "message": "Your credit balance is too low to access the Anthropic API. Please go to "
-                "Plans & Billing to upgrade or purchase credits.",
+                "message": "Your credit balance is too low to access the Anthropic API. "
+                "Please go to Plans & Billing to upgrade or purchase credits.",
             },
         }
 
