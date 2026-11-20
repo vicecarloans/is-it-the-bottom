@@ -14,7 +14,7 @@ from typing import Any
 
 import pandas as pd
 
-from bottom.llm import ToolCaller
+from bottom.llm import ToolCaller, describe_error
 from bottom.sources.sec import Filing
 
 SYSTEM = (
@@ -97,7 +97,9 @@ def update(
             try:
                 answer = llm(SYSTEM, PROMPT.format(text=text[:MAX_FILING_CHARS]), TOOL)
             except Exception as exc:  # retry tomorrow
-                problems.append(f"{filing.accession}: {type(exc).__name__}")
+                problems.append(
+                    f"filing {filing.accession} not checked yet ({describe_error(exc)})"
+                )
                 continue
             quote = str(answer.get("quote") or "").strip()
             verified = (

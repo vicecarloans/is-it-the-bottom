@@ -329,3 +329,23 @@ def test_sample_8k_turns_the_banner_on(cfg, tmp_path, monkeypatch):
     assert "Catalyst: Jensen Huang named NVIDIA CEO" in cli.render(report)
     saved = json.loads((tmp_path / "catalyst.json").read_text())
     assert saved["event"]["date"] == "2026-12-01"
+
+
+def test_model_errors_are_short_and_readable():
+    from bottom.llm import describe_error
+
+    class APIError(Exception):
+        status_code = 400
+        body = {
+            "type": "error",
+            "error": {
+                "type": "invalid_request_error",
+                "message": "Your credit balance is too low to access the Anthropic API. Please go to "
+                "Plans & Billing to upgrade or purchase credits.",
+            },
+        }
+
+    assert describe_error(APIError()) == (
+        "Claude API 400: Your credit balance is too low to access the Anthropic API"
+    )
+    assert describe_error(TimeoutError()) == "Claude API: TimeoutError"
