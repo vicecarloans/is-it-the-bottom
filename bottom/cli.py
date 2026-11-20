@@ -9,6 +9,7 @@ from datetime import date
 from pathlib import Path
 
 from bottom.config import load_config
+from bottom.output import build_latest, write_outputs
 from bottom.snapshot import load_snapshot
 from bottom.store import RawStore
 from bottom.verdict import Report, evaluate
@@ -63,21 +64,32 @@ def main(argv: list[str] | None = None) -> int:
     commands = parser.add_subparsers(dest="command", required=True)
 
     check = commands.add_parser("check", help="print today's checklist in the terminal")
-    check.add_argument("--config", default="config.yaml", help="path to config.yaml")
+    run = commands.add_parser("run", help="write latest.json and update history.json")
+    run.add_argument("--out", default="data", help="folder for latest.json and history.json")
+    for sub in (check, run):
+        sub.add_argument("--config", default="config.yaml", help="path to config.yaml")
+        sub.add_argument("--no-save", action="store_true", help="do not save raw responses")
     check.add_argument(
         "--as-of", type=date.fromisoformat, help="evaluate as of this date (YYYY-MM-DD)"
     )
-    check.add_argument("--no-save", action="store_true", help="do not save raw responses")
 
     args = parser.parse_args(argv)
     cfg = load_config(args.config)
     today = date.today()
-    as_of = args.as_of or today
+    as_of = getattr(args, "as_of", None) or today
 
     store = RawStore(Path("data/raw"), today, enabled=not args.no_save)
     snapshot = load_snapshot(cfg, os.environ, today, store)
     report = evaluate(snapshot, as_of, cfg, apply_lag=as_of < today)
     print(render(report))
+
+    if args.command == "run":
+        latest = build_latest(report, snapshot, cfg)
+        history = write_outputs(Path(args.out), latest)
+        print(
+            f"\nWrote {args.out}/latest.json and {args.out}/history.json "
+            f"({len(history['days'])} days, {len(history['signals'])} signals)"
+        )
     return 0
 
 

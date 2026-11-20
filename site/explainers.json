@@ -1,0 +1,32 @@
+{
+  "drawdown": {
+    "name": "Drawdown",
+    "measures": "How far the S&P 500 is below its high of the past year.",
+    "why": "There is no bottom to call until the market has fallen at least 10%. Below that line, the five checks start to count."
+  },
+  "vix": {
+    "name": "VIX above 30",
+    "measures": "The volatility traders expect over the next 30 days, priced from S&P 500 options. Above 30 signals fear.",
+    "why": "Bottoms tend to form when fear peaks and sellers run out."
+  },
+  "fed": {
+    "name": "Fed not signaling hikes",
+    "measures": "The 2-year Treasury yield minus the Fed's upper target rate. Above zero means traders expect the Fed to raise rates.",
+    "why": "Selloffs recover more easily when the Fed is not tightening into them."
+  },
+  "margin": {
+    "name": "Margin debt deleveraging",
+    "measures": "Money investors have borrowed from brokers to buy stocks, reported monthly by FINRA.",
+    "why": "A sharp drop means forced selling has mostly happened, and fewer leveraged holders are left to sell."
+  },
+  "sector": {
+    "name": "A clear leading sector",
+    "measures": "The sector fund beating the S&P 500 by the most over the last 20 trading days.",
+    "why": "New uptrends usually have a leader that money moves into early."
+  },
+  "nvda": {
+    "name": "NVIDIA beats earnings",
+    "measures": "Whether NVIDIA's latest earnings per share beat Wall Street's estimate.",
+    "why": "NVIDIA is the bellwether of the AI trade. A beat during a selloff shows the core story still holds."
+  }
+}

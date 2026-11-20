@@ -41,6 +41,15 @@ def test_finra_text_months_with_title_row():
     assert series.iloc[1] == 1480054
 
 
+def test_finra_spreadsheet_format():
+    """The downloaded file has a Year-Month header and months like 2026-10, newest first."""
+    header = ["Year-Month", *HEADER[1:]]
+    content = make_xlsx([header, ["2026-10", 1448360, 1, 1], ["2026-09", 1480054, 1, 1]])
+    series = finra.parse_margin_xlsx(content)
+    assert [d.isoformat() for d in series.index.date] == ["2026-09-30", "2026-10-31"]
+    assert series.iloc[-1] == 1448360
+
+
 def test_finra_date_cells():
     content = make_xlsx([HEADER, [datetime(2026, 10, 1), 1448360, 1, 1]])
     series = finra.parse_margin_xlsx(content)

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Is it the bottom?</title>
+  <meta name="description" content="A daily check of five conditions that marked past stock market bottoms.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314212b'/%3E%3Cpath d='M5 9 L12 20 L17 15 L27 26' fill='none' stroke='%23edf1ec' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <h1 class="question">Is it the bottom?</h1>
+      <p class="answer" id="answer" aria-live="polite">Checking&hellip;</p>
+      <p class="summary" id="summary"></p>
+      <p class="caveat" id="caveat"></p>
+      <p class="hero-links"><a href="#how">How this works</a></p>
+    </header>
+
+    <section class="block" aria-labelledby="fall-title">
+      <h2 id="fall-title">How far the market has fallen</h2>
+      <p class="lede" id="fall-lede"></p>
+      <figure class="depth" id="depth">
+        <figcaption class="visually-hidden" id="depth-caption"></figcaption>
+      </figure>
+    </section>
+
+    <section class="block" aria-labelledby="checks-title">
+      <h2 id="checks-title">The five conditions</h2>
+      <p class="lede" id="checks-lede"></p>
+      <p class="problems" id="problems" hidden></p>
+      <ul class="checks" id="checks"></ul>
+    </section>
+
+    <section class="block" aria-labelledby="signals-title">
+      <h2 id="signals-title">Past signals</h2>
+      <p class="lede">Days when all five conditions held for the first time in a run, and what the S&amp;P 500 did next.</p>
+      <div id="signals"></div>
+    </section>
+
+    <section class="block how" id="how" aria-labelledby="how-title">
+      <h2 id="how-title">How this works</h2>
+      <p>Every weekday after the US close, a job reads market data, checks five conditions, and counts how many hold. The conditions only count while the S&amp;P 500 is at least 10% below its high of the past year.</p>
+      <dl class="levels">
+        <div><dt>No</dt><dd>0 to 2 conditions hold.</dd></div>
+        <div><dt>Getting closer</dt><dd>3 or 4 hold.</dd></div>
+        <div><dt>Looks like a bottom</dt><dd>All 5 hold.</dd></div>
+      </dl>
+      <div class="explainers" id="explainers"></div>
+    </section>
+
+    <footer class="footer">
+      <p><strong>Not financial advice.</strong> This is a hobby project that tracks a rule of thumb. It can be wrong, and the rules have not been tested against history yet.</p>
+      <p id="sources">Data: S&amp;P 500 and sector funds from Yahoo Finance, rates and VIX from <a href="https://fred.stlouisfed.org/">FRED</a>, margin debt from <a href="https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics">FINRA</a>, earnings from <a href="https://finnhub.io/">Finnhub</a>.</p>
+      <p id="generated"></p>
+      <p><a href="https://github.com/vicecarloans/is-it-the-bottom">Source code on GitHub</a></p>
+    </footer>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

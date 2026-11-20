@@ -32,6 +32,22 @@ uv run bottom check
 
 `bottom check --as-of 2026-03-02` evaluates a past date with the data available today. Raw responses are saved under `data/raw/<date>/`; pass `--no-save` to skip that.
 
+`bottom run` does the same checks and writes `data/latest.json` and `data/history.json`, which the page reads.
+
+## How it runs
+
+- **Daily job:** [`.github/workflows/daily.yml`](.github/workflows/daily.yml) runs `bottom run` on weekdays at 22:30 UTC and commits the two JSON files. It also runs when the code, `config.yaml` or the FINRA spreadsheet changes on `main`. Each run's checklist is in its GitHub Actions summary.
+- **Page:** a static page in [`site/`](site/), hosted on Vercel (`vercel.json` points it at `site/`). It loads the JSON straight from this repo, so new data shows up without a redeploy.
+- **Secrets:** `FRED_API_KEY` and `FINNHUB_API_KEY`, set as GitHub Actions secrets.
+
+To preview the page locally with made-up data:
+
+```bash
+uv run python scripts/sample_data.py
+python -m http.server -d site 8000
+# open http://localhost:8000/?data=sample/
+```
+
 ## Data sources
 
 | Input | Source |
