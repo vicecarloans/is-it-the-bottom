@@ -131,7 +131,24 @@ def flat_margin() -> pd.Series:
     return months([100.0] * 12)  # FINRA shows no drop
 
 
-def test_funds_drop_alone_passes_margin(cfg):
+@pytest.fixture
+def counting(cfg):
+    """The futures rule switched on, as it will be once it is tuned."""
+    cfg["margin"]["funds"]["counts"] = True
+    return cfg
+
+
+def test_funds_reading_is_shown_but_does_not_count_by_default(cfg):
+    lev = weeks([100.0] * 26 + [80.0] * 4)
+    result = c.margin_condition(flat_margin(), AS_OF, cfg, leverage=lev)
+    assert result.met is False
+    assert "fund futures" in result.value
+    assert "does not count yet" in result.detail
+    assert "futures" not in result.threshold
+
+
+def test_funds_drop_alone_passes_margin(counting):
+    cfg = counting
     # 4-report average falls from 100 to 80: 20% below its high.
     lev = weeks([100.0] * 26 + [80.0] * 4)
     result = c.margin_condition(flat_margin(), AS_OF, cfg, leverage=lev)
@@ -140,13 +157,15 @@ def test_funds_drop_alone_passes_margin(cfg):
     assert result.data_date == date(2026, 11, 10)
 
 
-def test_funds_small_drop_does_not_pass(cfg):
+def test_funds_small_drop_does_not_pass(counting):
+    cfg = counting
     lev = weeks([100.0] * 26 + [90.0] * 4)  # 10% below, threshold is 15%
     result = c.margin_condition(flat_margin(), AS_OF, cfg, leverage=lev)
     assert result.met is False
 
 
-def test_one_expiry_week_dip_is_smoothed(cfg):
+def test_one_expiry_week_dip_is_smoothed(counting):
+    cfg = counting
     # Positions drop 30% for one week around a contract expiry, then recover.
     lev = weeks([100.0] * 29 + [70.0])
     result = c.margin_condition(flat_margin(), AS_OF, cfg, leverage=lev)
@@ -158,14 +177,16 @@ def test_finra_drop_passes_without_funds_data(cfg):
     assert result.met is True
 
 
-def test_stale_funds_reading_does_not_count(cfg):
+def test_stale_funds_reading_does_not_count(counting):
+    cfg = counting
     lev = weeks([100.0] * 26 + [80.0] * 4, last="2026-10-13")  # 38 days old
     result = c.margin_condition(flat_margin(), AS_OF, cfg, leverage=lev)
     assert result.met is False
     assert not result.stale  # FINRA is still fresh
 
 
-def test_both_stale_marks_condition_stale(cfg):
+def test_both_stale_marks_condition_stale(counting):
+    cfg = counting
     lev = weeks([100.0] * 30, last="2026-10-13")
     series = months([100.0] * 12, last_month_end="2026-08-31")
     result = c.margin_condition(series, AS_OF, cfg, leverage=lev)
@@ -173,7 +194,8 @@ def test_both_stale_marks_condition_stale(cfg):
     assert not result.counts
 
 
-def test_funds_publication_lag_for_past_dates(cfg):
+def test_funds_publication_lag_for_past_dates(counting):
+    cfg = counting
     lev = weeks([100.0] * 30, last="2026-11-17")  # Tuesday; published Friday Nov 20
     as_of = date(2026, 11, 18)
     with_lag = c.margin_condition(flat_margin(), as_of, cfg, apply_lag=True, leverage=lev)

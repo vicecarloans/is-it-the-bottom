@@ -146,10 +146,13 @@ def margin_condition(
     c, f = cfg["margin"], cfg["margin"]["funds"]
     drop, months = float(c["drop_pct"]), int(c["window_months"])
     f_drop, weeks = float(f["drop_pct"]), int(f["window_weeks"])
-    rule = (
-        f"margin debt {abs(drop):g}% or more below its {months}-month high, or leveraged "
-        f"funds' S&P 500 futures {abs(f_drop):g}% or more below their {weeks}-week high"
-    )
+    counts = bool(f.get("counts", True))
+    rule = f"margin debt {abs(drop):g}% or more below its {months}-month high"
+    if counts:
+        rule += (
+            f", or leveraged funds' S&P 500 futures {abs(f_drop):g}% or more below "
+            f"their {weeks}-week high"
+        )
     name = "Margin debt deleveraging"
     readings: list[tuple[bool, bool]] = []  # (met, stale) per source
     values: list[str] = []
@@ -182,16 +185,24 @@ def margin_condition(
     if not funds.empty:
         change, week = round(float(funds.iloc[-1]), 4), funds.index[-1]
         stale = (as_of - week.date()).days > int(f["stale_after_days"])
-        readings.append((change <= f_drop, stale))
         values.append(f"{change:+.1f}% fund futures")
-        notes.append(
-            f"CFTC: leveraged funds, {int(f['average_reports'])}-week average to "
-            f"{week:%b %-d, %Y}" + (" (stale)" if stale else "")
+        note = (
+            f"CFTC: leveraged funds, {int(f['average_reports'])}-week average to {week:%b %-d, %Y}"
         )
-        dates.append(week.date())
+        if counts:
+            readings.append((change <= f_drop, stale))
+            notes.append(note + (" (stale)" if stale else ""))
+            dates.append(week.date())
+        else:
+            notes.append(note + " (shown for reference, does not count yet)")
 
     if not readings:
-        return _missing("margin", name, rule, "no FINRA or CFTC data")
+        return _missing(
+            "margin",
+            name,
+            rule,
+            "no data that counts; " + "; ".join(notes) if notes else "no FINRA or CFTC data",
+        )
     all_stale = all(stale for _, stale in readings)
     return ConditionResult(
         key="margin",

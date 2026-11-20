@@ -84,3 +84,17 @@ def test_run_writes_both_files(cfg, tmp_path, monkeypatch):
     history = json.loads((tmp_path / "history.json").read_text())
     assert latest["as_of"] == "2026-11-20"
     assert [d["date"] for d in history["days"]] == ["2026-11-20"]
+
+
+def test_cftc_history_is_saved(tmp_path):
+    import pandas as pd
+
+    from bottom.output import write_cftc
+
+    lev = pd.DataFrame(
+        {"long": [1.0, 2.0], "short": [3.0, 4.0]},
+        index=pd.to_datetime(["2026-11-03", "2026-11-10"]),
+    )
+    write_cftc(tmp_path, lev)
+    saved = json.loads((tmp_path / "cftc.json").read_text())
+    assert saved["rows"][-1] == ["2026-11-10", 2, 4]

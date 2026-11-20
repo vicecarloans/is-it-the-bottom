@@ -17,7 +17,7 @@
   "margin": {
     "name": "Margin debt deleveraging",
     "measures": "Two readings of how much borrowed money is in stocks. FINRA's monthly total of what investors owe their brokers, which arrives about three weeks after each month ends. And a weekly CFTC count of S&P 500 futures held by hedge funds and other leveraged traders, which is about three days old.",
-    "why": "A sharp drop in either means forced selling has mostly happened, and fewer leveraged holders are left to sell. The weekly reading spots it sooner; the monthly one is the broader measure."
+    "why": "A sharp drop in either means forced selling has mostly happened, and fewer leveraged holders are left to sell. For now only FINRA decides this check. The weekly futures reading is shown for reference while its rule is tuned, because futures holdings also rise and fall with each quarterly contract expiry."
   },
   "sector": {
     "name": "A clear leading sector",

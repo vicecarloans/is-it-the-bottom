@@ -65,7 +65,8 @@ def load_snapshot(
     snap.hy_spread = attempt("fred BAMLH0A0HYM2", lambda: from_fred("BAMLH0A0HYM2"), empty)
 
     snap.margin = attempt("finra", lambda: finra.fetch_margin(store), empty)
-    snap.leverage = attempt("cftc", lambda: cftc.fetch_leverage(start, store), pd.DataFrame())
+    cftc_start = date.fromisoformat(str(cfg["margin"]["funds"]["history_start"]))
+    snap.leverage = attempt("cftc", lambda: cftc.fetch_leverage(cftc_start, store), pd.DataFrame())
 
     def nvda() -> list[EarningsReport]:
         key = env.get("FINNHUB_API_KEY")
