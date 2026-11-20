@@ -38,7 +38,18 @@ uv run bottom check
 
 - **Daily job:** [`.github/workflows/daily.yml`](.github/workflows/daily.yml) runs `bottom run` on weekdays at 22:30 UTC and commits the two JSON files. It also runs when the code, `config.yaml` or the FINRA spreadsheet changes on `main`. Each run's checklist is in its GitHub Actions summary.
 - **Page:** a static page in [`site/`](site/), hosted on Vercel (`vercel.json` points it at `site/`). It loads the JSON straight from this repo, so new data shows up without a redeploy.
-- **Secrets:** `FRED_API_KEY` and `FINNHUB_API_KEY`, set as GitHub Actions secrets.
+- **Secrets:** set as GitHub Actions secrets.
+  - `FRED_API_KEY`, `FINNHUB_API_KEY`: market data and news.
+  - `ANTHROPIC_API_KEY`: the news digest and the filing check (Claude Haiku).
+  - `SEC_USER_AGENT`: a name and contact email, which SEC asks every automated client to send.
+
+## On top of the five conditions
+
+`bottom run` adds three layers that `bottom check` skips:
+
+- **News digest.** Claude Haiku summarizes the day's headlines from Finnhub and the Federal Reserve's press releases. It explains the day; it never sets a condition. Each digest links the headlines it used.
+- **Systemic-break cap.** If high-yield credit spreads widen more than 3 points within 60 trading days, or the digest reports a systemic event (such as a large bank failure) with a source, the verdict goes no higher than "Getting closer".
+- **Huang catalyst.** The job reads NVIDIA's new 8-K filings on SEC EDGAR. If one names Jensen Huang CEO again, and the sentence Claude quotes appears word for word in the filing, the verdict moves up one level for 30 trading days. News reports alone only show as a "watching" note. Checked filings are recorded in `data/catalyst.json`.
 
 To preview the page locally with made-up data:
 

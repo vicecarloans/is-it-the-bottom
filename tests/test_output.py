@@ -69,6 +69,7 @@ def test_history_replaces_a_rerun_of_the_same_day(cfg):
 
 def test_run_writes_both_files(cfg, tmp_path, monkeypatch):
     monkeypatch.setattr(cli, "load_snapshot", lambda *args: panic_snapshot(cfg))
+    monkeypatch.setattr(cli, "enrich", lambda report, *args: report)  # no network in tests
     monkeypatch.setattr(
         cli,
         "date",

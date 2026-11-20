@@ -50,7 +50,42 @@ function renderHero(latest) {
   } else {
     summary = `${latest.count} of the ${latest.total} conditions hold, with the S&P 500 ${Math.abs(dd.pct).toFixed(1)}% below its ${fmtDate(dd.peak_date)} high.`;
   }
+  if (latest.base_verdict && latest.base_verdict !== latest.verdict) {
+    summary += ` The five conditions alone say "${latest.base_verdict}".`;
+  }
   document.getElementById("summary").textContent = summary;
+
+  const override = latest.override || {};
+  if (override.capped) {
+    const cap = document.getElementById("cap");
+    cap.textContent = `Held at "Getting closer" at most: ${override.reasons.join("; ")}.`;
+    cap.hidden = false;
+  }
+
+  const catalyst = latest.catalyst || {};
+  const news = latest.digest || {};
+  if (catalyst.active && catalyst.event) {
+    const event = catalyst.event;
+    const left = catalyst.window_trading_days - catalyst.trading_days_since;
+    const box = document.getElementById("catalyst");
+    box.append(
+      el("p", {}, el("strong", { text: "Jensen Huang is NVIDIA's CEO again." })),
+      el("blockquote", { text: `“${event.quote}”` }),
+      el("p", {},
+        "From ",
+        el("a", { href: event.url, text: `NVIDIA's SEC filing of ${fmtDate(event.date)}` }),
+        catalyst.lifted_verdict
+          ? `. This moves the verdict up one level for ${left} more trading days.`
+          : ". It moves the verdict up one level once the market is in a drawdown.",
+      ),
+    );
+    box.hidden = false;
+  } else if (news.huang_return_reported && news.huang_note) {
+    const watch = document.getElementById("watch");
+    watch.textContent = `Watching: ${news.huang_note} This changes nothing until NVIDIA confirms it in an SEC filing.`;
+    watch.hidden = false;
+  }
+
   document.getElementById("caveat").textContent =
     `Updated for ${fmtDate(latest.as_of)}.` + (latest.backtested ? "" : " These rules have not been tested against history yet.");
   document.title = `${latest.verdict} · Is it the bottom?`;
@@ -162,6 +197,12 @@ function sparkline(spark, state) {
   return wrap;
 }
 
+function newsNote(cond, news) {
+  if (!news) return null;
+  const text = cond.key === "fed" ? news.fed_note : cond.key === "sector" ? news.sector_note : "";
+  return text ? el("p", { class: "check-news", text: `In the news: ${text}` }) : null;
+}
+
 function renderChecks(latest, explainers) {
   const list = document.getElementById("checks");
   const counted = latest.drawdown.in_drawdown;
@@ -186,6 +227,7 @@ function renderChecks(latest, explainers) {
         el("p", { class: "check-name", text: cond.name }),
         el("p", { class: "check-value", text: cond.value }),
         el("p", { class: "check-meta", text: [cond.detail, cond.data_date ? `Data from ${fmtDate(cond.data_date)}` : null].filter(Boolean).join(". ") + "." }),
+        newsNote(cond, latest.digest),
       ),
       sparkline(cond.spark, status.state),
       details,
@@ -199,6 +241,33 @@ function renderChecks(latest, explainers) {
     box.textContent = "Some data could not be loaded today: " + errors.map(([source, message]) => `${source} (${message})`).join("; ") + ".";
     box.hidden = false;
   }
+}
+
+// ---- News -------------------------------------------------------------------------------
+
+const TONES = {
+  hawkish: "Fed tone in the news: leaning toward higher rates.",
+  dovish: "Fed tone in the news: leaning toward lower rates.",
+  neutral: "Fed tone in the news: neither raising nor cutting.",
+};
+
+function renderNews(latest) {
+  const news = latest.digest;
+  if (!news || !news.summary) return;
+  const host = document.getElementById("news");
+  host.append(el("p", { class: "news-summary", text: news.summary }));
+  if (TONES[news.fed_tone]) host.append(el("p", { class: "news-fed", text: TONES[news.fed_tone] }));
+  if (news.sources && news.sources.length) {
+    const list = el("ul", { class: "news-sources" });
+    for (const source of news.sources) {
+      list.append(el("li", {},
+        el("a", { href: source.url, rel: "noopener", text: source.title }),
+        el("span", { text: ` ${source.source}, ${fmtDate(source.date)}` }),
+      ));
+    }
+    host.append(list);
+  }
+  document.getElementById("news-section").hidden = false;
 }
 
 // ---- Signals ----------------------------------------------------------------------------
@@ -259,6 +328,7 @@ async function main() {
     renderHero(latest);
     renderDepth(latest, history);
     renderChecks(latest, explainers);
+    renderNews(latest);
     renderSignals(latest, history);
     document.getElementById("generated").textContent =
       `Last run ${new Date(latest.generated_at).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}.`;

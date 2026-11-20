@@ -9,6 +9,7 @@ from typing import Any
 import pandas as pd
 
 from bottom import conditions as c
+from bottom.override import Override
 from bottom.snapshot import Snapshot
 
 NOT_IN_DRAWDOWN = "No panic, no bottom to call"
@@ -23,14 +24,36 @@ class Report:
     drawdown: c.Drawdown
     results: list[c.ConditionResult]
     errors: dict[str, str] = field(default_factory=dict)
+    override: Override | None = None
+    catalyst: dict[str, Any] | None = None
+    digest: dict[str, Any] | None = None
 
     @property
     def count(self) -> int:
         return sum(r.counts for r in self.results)
 
     @property
-    def verdict(self) -> str:
+    def base_verdict(self) -> str:
+        """The verdict from the five conditions alone."""
         return level(self.drawdown.in_drawdown, self.count)
+
+    @property
+    def catalyst_lift(self) -> bool:
+        return bool(self.catalyst and self.catalyst.get("active") and self.drawdown.in_drawdown)
+
+    @property
+    def capped(self) -> bool:
+        return bool(self.override and self.override.capped)
+
+    @property
+    def verdict(self) -> str:
+        """The base verdict, lifted one level by the catalyst, then capped by a systemic break."""
+        result = self.base_verdict
+        if self.catalyst_lift:
+            result = raise_one(result)
+        if self.capped and result == BOTTOM:
+            result = CLOSER
+        return result
 
 
 def level(in_drawdown: bool, count: int) -> str:
@@ -41,6 +64,10 @@ def level(in_drawdown: bool, count: int) -> str:
     if count >= 3:
         return CLOSER
     return NO
+
+
+def raise_one(verdict: str) -> str:
+    return {NO: CLOSER, CLOSER: BOTTOM}.get(verdict, verdict)
 
 
 def evaluate(snap: Snapshot, as_of: date, cfg: dict[str, Any], apply_lag: bool) -> Report:
