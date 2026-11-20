@@ -13,3 +13,6 @@ build/
 
 # Raw API responses saved by each run
 data/raw/
+
+# Sample data for local previews (scripts/sample_data.py)
+site/sample/

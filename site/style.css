@@ -1,0 +1,186 @@
+:root {
+  --paper: #edf1ec;
+  --ink: #14212b;
+  --muted: #5f6e66;
+  --rule: #cfd9d1;
+  --met: #2e7d5b;
+  --missed: #b4432c;
+  --unknown: #8a948d;
+  --zone: rgba(180, 67, 44, 0.07);
+  --font: "Archivo", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--paper); }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.55;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+/* The answer is the one loud thing on the page. */
+.hero { padding-bottom: 40px; border-bottom: 2px solid var(--ink); }
+
+.question {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-stretch: 100%;
+  color: var(--muted);
+}
+
+.answer {
+  margin: 4px 0 12px;
+  font-size: clamp(4rem, 15vw, 8.75rem);
+  line-height: 0.92;
+  font-weight: 850;
+  font-stretch: 125%;
+  letter-spacing: -0.02em;
+}
+.answer[data-level="closer"] { color: var(--ink); }
+.answer[data-level="bottom"] { color: var(--met); }
+
+.summary { margin: 0; font-size: 1.25rem; max-width: 34em; }
+.caveat { margin: 8px 0 0; color: var(--muted); font-size: 0.95rem; }
+.hero-links { margin: 16px 0 0; }
+
+.block { padding-top: 48px; }
+
+h2 {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 750;
+  font-stretch: 112%;
+}
+
+.lede { margin: 0 0 20px; max-width: 38em; color: var(--muted); }
+
+/* Depth chart: the fall drawn downward from the year's high. */
+.depth { margin: 0; }
+.depth svg { display: block; width: 100%; height: auto; overflow: visible; }
+.depth .axis text { fill: var(--muted); font-size: 12px; }
+.depth .grid { stroke: var(--rule); stroke-width: 1; }
+.depth .zero { stroke: var(--ink); stroke-width: 1.5; }
+.depth .zone { fill: var(--zone); }
+.depth .line-10 { stroke: var(--missed); stroke-width: 1.25; stroke-dasharray: 5 4; }
+.depth .label-10 { fill: var(--missed); font-size: 12px; font-weight: 600; stroke: var(--paper); stroke-width: 4px; paint-order: stroke; }
+.depth .now-label { stroke: var(--paper); stroke-width: 4px; paint-order: stroke; }
+.depth .area { fill: var(--ink); opacity: 0.08; }
+.depth .trace { fill: none; stroke: var(--ink); stroke-width: 1.75; stroke-linejoin: round; }
+.depth .now { fill: var(--ink); }
+.depth .now-label { fill: var(--ink); font-size: 13px; font-weight: 700; }
+.depth .signal { fill: var(--met); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .depth .trace.draw { animation: draw 1.4s ease-out both; }
+}
+@keyframes draw { from { stroke-dashoffset: var(--len); } to { stroke-dashoffset: 0; } }
+
+/* Checklist rows */
+.checks { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+
+.check {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr 150px;
+  gap: 4px 20px;
+  align-items: start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.status {
+  justify-self: start;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 650;
+  color: #fff;
+  background: var(--unknown);
+  white-space: nowrap;
+}
+.status[data-state="met"] { background: var(--met); }
+.status[data-state="missed"] { background: var(--missed); }
+
+.check-name { margin: 0; font-size: 1.1rem; font-weight: 700; line-height: 1.3; }
+.check-value { margin: 2px 0 0; font-size: 1.05rem; }
+.check-meta { margin: 2px 0 0; color: var(--muted); font-size: 0.875rem; }
+
+.spark { grid-column: 3; grid-row: 1 / span 2; }
+.spark svg { display: block; width: 150px; height: 44px; overflow: visible; }
+.spark .s-line { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.spark .s-threshold { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.spark .s-end { stroke: var(--paper); stroke-width: 2; }
+.spark .s-bar { fill: var(--ink); }
+.spark-label { margin: 2px 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.3; }
+
+.check details { grid-column: 2 / span 2; margin-top: 6px; }
+.check summary {
+  cursor: pointer;
+  width: fit-content;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.check summary:hover { color: var(--ink); }
+.check details p { margin: 8px 0 0; max-width: 36em; }
+
+.problems {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--missed);
+  background: rgba(180, 67, 44, 0.06);
+}
+
+/* Signals table */
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px 12px 10px 0; text-align: left; border-bottom: 1px solid var(--rule); }
+th { font-size: 0.85rem; font-weight: 650; color: var(--muted); }
+td.num, th.num { text-align: right; padding-right: 0; padding-left: 12px; }
+.up { color: var(--met); }
+.down { color: var(--missed); }
+.empty { margin: 0; padding: 18px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+
+/* How this works */
+.how p { max-width: 38em; }
+.levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 20px 0 28px; border-top: 2px solid var(--ink); }
+.levels div { padding: 12px 16px 0 0; }
+.levels dt { font-weight: 800; font-stretch: 112%; }
+.levels dd { margin: 2px 0 0; color: var(--muted); }
+.explainers h3 { margin: 24px 0 4px; font-size: 1.05rem; font-weight: 700; }
+.explainers p { margin: 0 0 4px; }
+
+.footer { margin-top: 64px; padding-top: 20px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 0.9rem; }
+.footer p { margin: 0 0 10px; max-width: 42em; }
+.footer strong { color: var(--ink); }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .page { padding-top: 32px; }
+  .check { grid-template-columns: 1fr; }
+  .spark { grid-column: 1; grid-row: auto; }
+  .check details { grid-column: 1; }
+  .levels { grid-template-columns: 1fr; }
+  .levels div { padding: 10px 0; border-bottom: 1px solid var(--rule); }
+}

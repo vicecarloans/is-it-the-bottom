@@ -1,0 +1,72 @@
+name: Daily
+
+# Runs the checks after the US close on weekdays, then commits data/latest.json and
+# data/history.json. The page reads those files from the repo, so no redeploy is needed.
+# Also runs when the code, the config or the FINRA spreadsheet changes on main.
+
+on:
+  schedule:
+    - cron: "30 22 * * 1-5"  # 22:30 UTC: 5:30 pm Toronto in winter, 6:30 pm in summer
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "bottom/**"
+      - "config.yaml"
+      - "uv.lock"
+      - "data/finra/**"
+      - ".github/workflows/daily.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+
+      - name: Run the checks
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: uv run bottom run --out data | tee checklist.txt
+
+      - name: Add the checklist to the run summary
+        run: |
+          {
+            echo '```'
+            cat checklist.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit the new data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/latest.json data/history.json
+          if git diff --cached --quiet; then
+            echo "No change in the data."
+            exit 0
+          fi
+          git commit -m "Update data for $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0
+            sleep 5
+          done
+          echo "Could not push the data after 3 attempts." >&2
+          exit 1
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: raw-data
+          path: data/raw/
+          retention-days: 14
+          if-no-files-found: ignore

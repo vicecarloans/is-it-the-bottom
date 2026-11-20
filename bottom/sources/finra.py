@@ -105,8 +105,14 @@ def _month_end(value: object) -> pd.Timestamp:
     if isinstance(value, datetime | pd.Timestamp):
         stamp = pd.Timestamp(value)
     else:
-        try:
-            stamp = pd.to_datetime(str(value).strip(), format="%b-%y")
-        except (ValueError, TypeError):
+        # The web page shows "Oct-26"; the downloaded spreadsheet uses "2026-10".
+        text = str(value).strip()
+        for fmt in ("%Y-%m", "%b-%y", "%b-%Y", "%m/%Y"):
+            try:
+                stamp = pd.to_datetime(text, format=fmt)
+                break
+            except (ValueError, TypeError):
+                continue
+        else:
             return pd.NaT
     return (stamp + pd.offsets.MonthEnd(0)).normalize()

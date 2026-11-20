@@ -159,6 +159,18 @@ def leader_stats(excess: pd.DataFrame) -> tuple[str, float, int]:
     return leader, float(excess.iloc[-1][leader]), int((leaders == leader).sum())
 
 
+def sector_excess(closes: pd.DataFrame, as_of: date, cfg: dict[str, Any]) -> pd.DataFrame | None:
+    """Each sector's return over the window minus the index's, in percentage points."""
+    index = cfg["tickers"]["index"]
+    sectors = [s for s in cfg["tickers"]["sectors"] if s in closes.columns]
+    if index not in closes.columns or not sectors:
+        return None
+    window = int(cfg["sector"]["return_window_days"])
+    frame = closes[closes.index <= pd.Timestamp(as_of)][[index, *sectors]]
+    returns = frame / frame.shift(window) - 1
+    return returns[sectors].sub(returns[index], axis=0).mul(100).dropna(how="all")
+
+
 def sector_condition(closes: pd.DataFrame, as_of: date, cfg: dict[str, Any]) -> ConditionResult:
     c, tickers = cfg["sector"], cfg["tickers"]
     window, min_excess = int(c["return_window_days"]), float(c["min_excess_pts"])
@@ -169,13 +181,9 @@ def sector_condition(closes: pd.DataFrame, as_of: date, cfg: dict[str, Any]) -> 
     )
     name = "A clear leading sector"
     index = tickers["index"]
-    sectors = [s for s in tickers["sectors"] if s in closes.columns]
-    if index not in closes.columns or not sectors:
+    excess = sector_excess(closes, as_of, cfg)
+    if excess is None:
         return _missing("sector", name, rule, "no sector price data")
-
-    frame = closes[closes.index <= pd.Timestamp(as_of)][[index, *sectors]]
-    returns = frame / frame.shift(window) - 1
-    excess = returns[sectors].sub(returns[index], axis=0).mul(100).dropna(how="all")
     if len(excess) < persist:
         return _missing("sector", name, rule, "not enough price history")
 
