@@ -1,6 +1,6 @@
 {
  "as_of": "2026-11-20",
- "generated_at": "2026-11-20T22:08:30+00:00",
+ "generated_at": "2026-11-20T22:11:13+00:00",
  "verdict": "No",
  "count": 2,
  "total": 5,
@@ -26,7 +26,60 @@
   "hy_change": 0.92,
   "data_date": "2026-11-19"
  },
- "digest": null,
+ "digest": {
+  "summary": "US stocks fell on November 20, 2026, with the S&P 500 about 11.5% below its one-year high. Headlines point to an intensifying AI-led selloff that has erased Nasdaq's 2026 gains, with Nvidia's record slide deepening after a reported SEC accounting probe and chip stocks drawing bearish options bets. Consumer staples were the leading sector, with XLP outperforming SPY by 11.7 points, though the headlines do not explain that strength beyond the sell-off backdrop. Anthropic's record IPO at $83 per share was reported to have held up despite the market selloff.",
+  "fed_tone": "unclear",
+  "fed_note": "The latest Fed items are the October 27-28 FOMC minutes and routine releases, and the headlines do not give a clear read on the policy direction.",
+  "sector_note": "The headlines do not say why consumer staples are holding up; they only report the sector's outperformance alongside the broader AI-led selloff.",
+  "systemic_flag": false,
+  "systemic_event": "",
+  "huang_return_reported": true,
+  "huang_note": "Headlines report that President Trump said former Nvidia CEO Jensen Huang should be given a second chance and allowed to return to the company, and called on Nvidia to rehire him; no company decision is reported.",
+  "sources": [
+   {
+    "title": "Intensifying AI rout wipes out Nasdaq's 2026 gains. Alphabet is a tech bright spot",
+    "url": "https://www.cnbc.com/investingclub/2026/11/20/ai-rout-wipes-out-nasdaqs-2026-gains-alphabet-is-a-tech-bright-spot.html",
+    "source": "CNBC",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "A massive bearish trade just happened in the chip stocks",
+    "url": "https://www.cnbc.com/2026/11/20/a-massive-bearish-trade-just-happened-in-the-chip-stocks.html",
+    "source": "CNBC",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Anthropic defies the odds, holding record IPO despite \u2018massively disruptive\u2019 market",
+    "url": "https://www.cnbc.com/2026/11/20/anthropic-defies-odds-holding-ipo-despite-massively-disruptive-market.html",
+    "source": "CNBC",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Trump Calls for Nvidia to Rehire Jensen Huang",
+    "url": "https://finnhub.io/api/news?id=8bf35df9b608e7d1b579ee8d3b971dda191bb5aaba59d5f980e28543c26fd627",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Nvidia stock extends $2.5 trillion rout as SEC probe reportedly investigates its accounting",
+    "url": "https://finnhub.io/api/news?id=658afeb85fc89c828bdc17aaf2e99a9f54cc87f943de0d13c127aa97cab50c69",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Trump on Jensen Huang: 'We're a country of second chances'",
+    "url": "https://finnhub.io/api/news?id=246b1956fdd1cd64f541782412ae855ec23e9766e9dfa869bf3eb780f3a01a17",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+    "source": "Federal Reserve",
+    "date": "2026-11-18"
+   }
+  ]
+ },
  "conditions": [
   {
    "key": "vix",
@@ -1202,7 +1255,7 @@
      ],
      [
       "2026-05-26",
-      -4.8039
+      -4.8038
      ],
      [
       "2026-05-27",
@@ -1246,7 +1299,7 @@
      ],
      [
       "2026-06-10",
-      3.1829
+      3.1828
      ],
      [
       "2026-06-11",
@@ -2074,7 +2127,7 @@
   ],
   [
    "2025-02-07",
-   589.19,
+   589.2,
    -1.47
   ],
   [
@@ -2089,7 +2142,7 @@
   ],
   [
    "2025-02-12",
-   591.74,
+   591.73,
    -1.05
   ],
   [
@@ -3049,7 +3102,7 @@
   ],
   [
    "2025-11-17",
-   658.56,
+   658.57,
    -3.16
   ],
   [
@@ -4323,8 +4376,5 @@
    -11.46
   ]
  ],
- "errors": {
-  "digest": "Claude API 400: Your credit balance is too low to access the Anthropic API",
-  "sec": "filing 0001045810-26-000082 not checked yet (Claude API 400: Your credit balance is too low to access the Anthropic API)"
- }
+ "errors": {}
 }
