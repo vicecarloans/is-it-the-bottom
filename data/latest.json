@@ -1,6 +1,6 @@
 {
  "as_of": "2026-11-20",
- "generated_at": "2026-11-20T23:48:55+00:00",
+ "generated_at": "2026-11-21T02:53:26+00:00",
  "verdict": "No",
  "count": 2,
  "total": 5,
@@ -17,6 +17,12 @@
   "active": false,
   "event": null,
   "window_trading_days": 30,
+  "watch": {
+   "note": "Headlines report that Trump called for Nvidia to rehire Jensen Huang and said Huang deserves a second chance, while a Reuters report says Huang agreed to testify at a Senate hearing and a commentator speculated he could join Intel; none confirms a return as CEO.",
+   "first_seen": "2026-11-20",
+   "last_seen": "2026-11-20",
+   "days_since_seen": 0
+  },
   "lifted_verdict": false
  },
  "override": {
@@ -27,61 +33,61 @@
   "data_date": "2026-11-19"
  },
  "digest": {
-  "summary": "US stocks fell sharply in the week, with the S&P 500 about 11.5% below its one-year high and the Nasdaq erasing its 2026 gains. Headlines tie the selloff mainly to an AI and chip rout, including a Reuters report that the SEC is looking at Nvidia's accounting, which sent Nvidia down 14% on Friday, and a weak reception to the Anthropic IPO. Some headlines also cite rising expectations for another Fed rate hike and a broader retreat from lofty AI valuations. Defensive sectors have held up better, with consumer staples (XLP) outperforming the S&P 500 by 11.7 points.",
-  "fed_tone": "hawkish",
-  "fed_note": "A Nasdaq-focused headline says investors are responding to rising expectations for another Federal Reserve rate hike, while the Fed's own releases today are routine and do not address policy.",
-  "sector_note": "The headlines do not explain why the leading sector is holding up.",
+  "summary": "US stocks fell sharply on November 20, 2026, with the S&P 500 about 11.5% below its one-year high. Headlines point to a broad AI-linked selloff: Nvidia had its worst week in 18 years after reports that the SEC is probing its accounting, and the Nasdaq's 2026 gains were wiped out. Investors also cited the departure of Jensen Huang as Nvidia CEO and Anthropic's shares slipping after its IPO. Defensive sectors drew buyers, which is consistent with the consumer staples fund (XLP) running about 11.7 points ahead of the S&P 500 (SPY).",
+  "fed_tone": "unclear",
+  "fed_note": "The Fed headlines are routine releases (October FOMC minutes, reserve-balance survey, enforcement actions) and do not state a policy direction.",
+  "sector_note": "Headlines say defensive sectors drew buyers as AI-linked names sold off, but they do not give a detailed reason beyond that.",
   "systemic_flag": false,
   "systemic_event": "",
-  "huang_return_reported": false,
-  "huang_note": "",
+  "huang_return_reported": true,
+  "huang_note": "Headlines report that Trump called for Nvidia to rehire Jensen Huang and said Huang deserves a second chance, while a Reuters report says Huang agreed to testify at a Senate hearing and a commentator speculated he could join Intel; none confirms a return as CEO.",
   "sources": [
+   {
+    "title": "NVDA Stock Clocks Worst Week In 18 Years As SEC Reportedly Probes Its Accounting Practices",
+    "url": "https://finnhub.io/api/news?id=fe85428ac252f2f71c02ad6b9d581ebd740aaf7f4f5e9da38c5158286056f3ff",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Stock Market Today, Nov. 20: Stocks Plunge as AI Trade Unwinds",
+    "url": "https://finnhub.io/api/news?id=6db0b5ea38168b31537fe8795759a1dfa1bd385ef3ac42934f57f320fe7e3418",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Anthropic\u2019s Day Two Drop Fuels Broader Tech Rout; Dan Ives Points To \u2018Perfect Storm\u2019",
+    "url": "https://finnhub.io/api/news?id=459e1777c77c96d04d4753b6228cf44ed34cb76329f0e83764592f2d0e918c20",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Navitas Sinks 15%, Western Down 12%, Everpure Down 13% as AI Chip Rout Deepens",
+    "url": "https://finnhub.io/api/news?id=e575b463a0d8fb52d476dd9c255620fe722e05485e954bffcec001fc61d4ea5d",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Trump Calls for Nvidia to Rehire Jensen Huang",
+    "url": "https://finnhub.io/api/news?id=8bf35df9b608e7d1b579ee8d3b971dda191bb5aaba59d5f980e28543c26fd627",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Trump on Jensen Huang: 'We're a country of second chances'",
+    "url": "https://finnhub.io/api/news?id=246b1956fdd1cd64f541782412ae855ec23e9766e9dfa869bf3eb780f3a01a17",
+    "source": "Yahoo",
+    "date": "2026-11-20"
+   },
+   {
+    "title": "Former Nvidia CEO Huang agreed to testify at public US Senate hearing, senator's aide says - Reuters",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPVXRKZGYxUkVSVnNCbGJHOG9wWjFSY1puTVMtdUMyeGg4VTFXR2xhRXd1ZmxYZ1g5QlBZRzljX1F0V1R5WERUOGdhb09IWXE0MTJXWXl3Z0F1czYyck1OT1NHc012Rm1PaDdXR1BQSkVRTkNqQkpCVUZZSUdTMnY1S1Zsa0kwYV8tai16c1Z3QnBwb0JZNjA5QXA1TkllMFhacFZMcm9MNHoyYU1LNHBlY2ZiN1lHUElQSURVSFo5aw?oc=5",
+    "source": "Reuters",
+    "date": "2026-11-20"
+   },
    {
     "title": "Intensifying AI rout wipes out Nasdaq's 2026 gains. Alphabet is a tech bright spot",
     "url": "https://www.cnbc.com/investingclub/2026/11/20/ai-rout-wipes-out-nasdaqs-2026-gains-alphabet-is-a-tech-bright-spot.html",
     "source": "CNBC",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Anthropic defies the odds, holding record IPO despite \u2018massively disruptive\u2019 market",
-    "url": "https://www.cnbc.com/2026/11/20/anthropic-defies-odds-holding-ipo-despite-massively-disruptive-market.html",
-    "source": "CNBC",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Dow Jones Futures: Market Has Worst Week Since Covid Amid Nvidia, Anthropic. Does Fear Gauge Offer Hope?",
-    "url": "https://finnhub.io/api/news?id=a461bf9206b72f4ed5bbda580ba12f32748c5dc1fc3ce52df1fae999182f1a09",
-    "source": "Yahoo",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Nvidia\u2019s Stock Slide Deepens After Report of SEC Accounting Probe",
-    "url": "https://finnhub.io/api/news?id=8ea45aa89b25bf662ec532ef89c9c04f096153d6e9dc711db4f16a9cd9d560e8",
-    "source": "Yahoo",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Update: S&P 500, Dow Sink Into Correction Territory as Investors Seek Treasury Cover Amid Plunging Big-Tech",
-    "url": "https://finnhub.io/api/news?id=2bc014c5d63454ba1322e654370ffe43dbf2c6187bcc56732880bc4e100839a7",
-    "source": "Yahoo",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "From Nvidia To Amazon, Tech Giants Face Stunning Reversal As Nasdaq Erases 2026 Gains",
-    "url": "https://finnhub.io/api/news?id=82b1087a33c565801cefa3a4d554a8431fd5bc9079d7e60d9fa0cfbfb68a32d4",
-    "source": "Yahoo",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Nvidia Stock Just Lost $900 Billion in Its Worst Week Since 2008. The Last Time the SEC Examined Nvidia\u2019s Accounting, the Stock Fell 81% in a Year",
-    "url": "https://finnhub.io/api/news?id=3ff19aa91a49076b226988c9f43ce8cbbe0f9f824511cc68bf94eee8b772576a",
-    "source": "Yahoo",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "Nvidia Stock Plunge Wipes Out Nearly $500 Billion in One Day as SEC Reportedly Probes Its Accounting",
-    "url": "https://finnhub.io/api/news?id=bc17a33c625343eb7d005f1053c7bfa732c2fdd2443875f513f0e503219f32e6",
-    "source": "Yahoo",
     "date": "2026-11-20"
    }
   ]
