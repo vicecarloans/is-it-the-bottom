@@ -14,5 +14,10 @@
    "read_by_model": true
   }
  },
- "event": null
+ "event": null,
+ "watch": {
+  "note": "Headlines report that President Trump said former Nvidia CEO Jensen Huang should be given a second chance and allowed to return to the company, and called on Nvidia to rehire him; no company decision is reported.",
+  "first_seen": "2026-11-20",
+  "last_seen": "2026-11-20"
+ }
 }

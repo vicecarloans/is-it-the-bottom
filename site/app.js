@@ -100,10 +100,18 @@ function renderHero(latest) {
       ),
     );
     box.hidden = false;
-  } else if (news.huang_return_reported && news.huang_note) {
-    const watch = document.getElementById("watch");
-    watch.textContent = `Watching: ${news.huang_note} This changes nothing until NVIDIA confirms it in an SEC filing.`;
-    watch.hidden = false;
+  } else {
+    // Remembered across runs, so the note stays while the story drops out of the day's headlines.
+    const seen = catalyst.watch || (news.huang_return_reported && news.huang_note
+      ? { note: news.huang_note, first_seen: latest.as_of, last_seen: latest.as_of } : null);
+    if (seen) {
+      const when = seen.last_seen === latest.as_of
+        ? (seen.first_seen === latest.as_of ? "" : ` First reported ${fmtDate(seen.first_seen)}.`)
+        : ` Last seen in headlines ${fmtDate(seen.last_seen)}.`;
+      const watch = document.getElementById("watch");
+      watch.textContent = `Watching: ${seen.note}${when} This changes nothing until NVIDIA confirms it in an SEC filing.`;
+      watch.hidden = false;
+    }
   }
 
   if (DAY) {

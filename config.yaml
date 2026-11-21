@@ -69,6 +69,7 @@ override:
 catalyst:
   lookback_days: 60       # how far back to read NVIDIA's 8-K filings
   window_trading_days: 30 # how long the +1 level lasts after the filing
+  watch_days: 14          # keep a news report of his return on the page this long after it was last seen
 
 # The model used for the news digest and the filing check.
 llm:

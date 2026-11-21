@@ -52,7 +52,11 @@ def fetch_headlines(
             nvda = _finnhub("/company-news", params, api_key)
             if store is not None:
                 store.save_json("news_nvda.json", nvda)
-            headlines += parse_finnhub(nvda, "nvda", since)[:15]
+            nvda_items = parse_finnhub(nvda, "nvda", since)
+            # The 15 newest, plus any older ones about Huang: a busy news day can
+            # otherwise push the catalyst story out of view.
+            huang = [h for h in nvda_items[15:] if "huang" in f"{h.title} {h.summary}".lower()]
+            headlines += nvda_items[:15] + huang[:10]
         except RuntimeError as exc:
             errors["news nvda"] = str(exc)
     else:
