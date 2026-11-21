@@ -1,6 +1,6 @@
 {
  "as_of": "2026-11-20",
- "generated_at": "2026-11-21T02:53:26+00:00",
+ "generated_at": "2026-11-21T03:19:43+00:00",
  "verdict": "No",
  "count": 2,
  "total": 5,
@@ -18,7 +18,7 @@
   "event": null,
   "window_trading_days": 30,
   "watch": {
-   "note": "Headlines report that Trump called for Nvidia to rehire Jensen Huang and said Huang deserves a second chance, while a Reuters report says Huang agreed to testify at a Senate hearing and a commentator speculated he could join Intel; none confirms a return as CEO.",
+   "note": "Headlines say Trump called for Nvidia to rehire Jensen Huang, who was ousted as CEO, and Trump said he deserved a second chance. Other headlines say Huang agreed to testify at a Senate hearing, and one speculates he could join Intel.",
    "first_seen": "2026-11-20",
    "last_seen": "2026-11-20",
    "days_since_seen": 0
@@ -33,14 +33,14 @@
   "data_date": "2026-11-19"
  },
  "digest": {
-  "summary": "US stocks fell sharply on November 20, 2026, with the S&P 500 about 11.5% below its one-year high. Headlines point to a broad AI-linked selloff: Nvidia had its worst week in 18 years after reports that the SEC is probing its accounting, and the Nasdaq's 2026 gains were wiped out. Investors also cited the departure of Jensen Huang as Nvidia CEO and Anthropic's shares slipping after its IPO. Defensive sectors drew buyers, which is consistent with the consumer staples fund (XLP) running about 11.7 points ahead of the S&P 500 (SPY).",
+  "summary": "US stocks fell sharply on November 20, 2026, with the S&P 500 about 11.5% below its one-year high. Headlines point to an AI-led selloff: a Reuters report that the SEC is probing Nvidia's accounting, NVDA's worst week in 18 years, and chip-stock weakness, with Anthropic's IPO trading also sliding on its second day. Defensive sectors drew buyers, and the leading sector fund XLP was reported up 11.7 points versus SPY. Headlines on Jensen Huang's exit from Nvidia and Trump's comments on a possible return add to the uncertainty.",
   "fed_tone": "unclear",
-  "fed_note": "The Fed headlines are routine releases (October FOMC minutes, reserve-balance survey, enforcement actions) and do not state a policy direction.",
-  "sector_note": "Headlines say defensive sectors drew buyers as AI-linked names sold off, but they do not give a detailed reason beyond that.",
+  "fed_note": "The headlines include the October FOMC minutes, but they do not say how the Fed's policy outlook is shaping market moves.",
+  "sector_note": "Defensive sectors drew buyers as AI-linked names sold off, according to the Yahoo market wrap.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": true,
-  "huang_note": "Headlines report that Trump called for Nvidia to rehire Jensen Huang and said Huang deserves a second chance, while a Reuters report says Huang agreed to testify at a Senate hearing and a commentator speculated he could join Intel; none confirms a return as CEO.",
+  "huang_note": "Headlines say Trump called for Nvidia to rehire Jensen Huang, who was ousted as CEO, and Trump said he deserved a second chance. Other headlines say Huang agreed to testify at a Senate hearing, and one speculates he could join Intel.",
   "sources": [
    {
     "title": "NVDA Stock Clocks Worst Week In 18 Years As SEC Reportedly Probes Its Accounting Practices",
@@ -85,9 +85,9 @@
     "date": "2026-11-20"
    },
    {
-    "title": "Intensifying AI rout wipes out Nasdaq's 2026 gains. Alphabet is a tech bright spot",
-    "url": "https://www.cnbc.com/investingclub/2026/11/20/ai-rout-wipes-out-nasdaqs-2026-gains-alphabet-is-a-tech-bright-spot.html",
-    "source": "CNBC",
+    "title": "EXCLUSIVE: Nvidia's accounting is a focus of US SEC investigation, sources say - Reuters",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMzlPdFVTT2cyVkhmMFVKNWZ1MnpNT0NLcURnblg4THMwUWNuYTRBLWUxU0ZSSUR5bk1zNnBmVlhIUjByNkN6TzVBNC1uaXQxM0dwY2FkMzZQdm00a0xyMXo3NFNpSUNPdERZWU82aGZLa0lNZHpMOXVnVDBVQW9lMmNrWEVRczVYS1Racm1NNlNERDBJeTFJRG1pZVRfTC1LTy1pNjhpVzRaeGRrY25kSzQ1aDNUUQ?oc=5",
+    "source": "Reuters",
     "date": "2026-11-20"
    }
   ]
@@ -105,6 +105,10 @@
    "spark": {
     "label": "VIX close",
     "points": [
+     [
+      "2026-05-26",
+      17.01
+     ],
      [
       "2026-05-27",
       16.29
@@ -388,10 +392,6 @@
      [
       "2026-09-04",
       14.53
-     ],
-     [
-      "2026-09-07",
-      15.3
      ],
      [
       "2026-09-08",
@@ -1474,88 +1474,84 @@
     "label": "XLP return minus SPY over 20 days, pts",
     "points": [
      [
-      "2026-05-21",
-      -3.4238
-     ],
-     [
-      "2026-05-22",
-      -2.5538
-     ],
-     [
       "2026-05-26",
-      -4.8039
+      -3.386
      ],
      [
       "2026-05-27",
-      -3.462
+      -3.6421
      ],
      [
       "2026-05-28",
-      -4.8586
+      -4.2247
      ],
      [
       "2026-05-29",
-      -6.4689
+      -6.9231
      ],
      [
       "2026-06-01",
-      -7.4523
+      -7.8002
      ],
      [
       "2026-06-02",
-      -7.5992
+      -7.8351
      ],
      [
       "2026-06-03",
-      -5.2504
+      -6.4702
      ],
      [
       "2026-06-04",
-      -5.797
+      -5.7813
      ],
      [
       "2026-06-05",
-      -0.8696
+      -1.459
      ],
      [
       "2026-06-08",
-      -0.349
+      -1.5355
      ],
      [
       "2026-06-09",
-      -0.2496
+      1.18
      ],
      [
       "2026-06-10",
-      3.1829
+      2.9707
      ],
      [
       "2026-06-11",
-      1.7326
+      1.2621
      ],
      [
       "2026-06-12",
-      1.0451
+      1.8465
      ],
      [
       "2026-06-15",
-      -2.6794
+      -1.1261
      ],
      [
       "2026-06-16",
-      -2.8432
+      -1.9422
      ],
      [
       "2026-06-17",
-      -2.1124
+      -3.7848
      ],
      [
       "2026-06-18",
-      -2.4067
+      -3.596
      ],
      [
       "2026-06-22",
-      -2.5068
+      -2.7389
+     ],
+     [
+      "2026-06-23",
+      0.7754
      ],
      [
       "2026-06-24",
@@ -1767,79 +1763,83 @@
      ],
      [
       "2026-09-08",
-      -0.1942
+      -0.1802
      ],
      [
       "2026-09-09",
-      -1.0798
+      -0.8775
      ],
      [
       "2026-09-10",
-      -0.8062
+      -0.4412
      ],
      [
       "2026-09-11",
-      -1.5957
+      -1.2994
      ],
      [
       "2026-09-14",
-      1.2188
+      0.0516
      ],
      [
       "2026-09-15",
-      -0.8509
+      0.8557
      ],
      [
       "2026-09-16",
-      -1.7575
+      -0.8831
      ],
      [
       "2026-09-17",
-      -2.1449
+      -2.6844
      ],
      [
       "2026-09-18",
-      -3.4304
+      -3.0823
      ],
      [
       "2026-09-21",
-      -7.2729
+      -5.3734
      ],
      [
       "2026-09-22",
-      -4.9777
+      -6.3248
      ],
      [
       "2026-09-23",
-      -4.2974
+      -4.5976
      ],
      [
       "2026-09-24",
-      -3.0799
+      -5.0668
      ],
      [
       "2026-09-25",
-      -3.8446
+      -3.1961
      ],
      [
       "2026-09-28",
-      -2.6006
+      -2.8375
      ],
      [
       "2026-09-29",
-      -3.9236
+      -2.9256
      ],
      [
       "2026-09-30",
-      -5.0611
+      -5.1929
      ],
      [
       "2026-10-01",
-      -4.2207
+      -5.5571
      ],
      [
       "2026-10-02",
-      -4.3389
+      -4.7172
+     ],
+     [
+      "2026-10-05",
+      -4.4075
      ],
      [
       "2026-10-06",
@@ -2355,7 +2355,7 @@
   ],
   [
    "2025-02-07",
-   589.19,
+   589.2,
    -1.47
   ],
   [
@@ -2370,7 +2370,7 @@
   ],
   [
    "2025-02-12",
-   591.74,
+   591.73,
    -1.05
   ],
   [
@@ -2855,7 +2855,7 @@
   ],
   [
    "2025-07-03",
-   616.95,
+   616.96,
    0.0
   ],
   [
