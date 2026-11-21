@@ -385,3 +385,13 @@ def test_watch_note_expires(cfg):
 
     state = catalyst.update_watch({}, _digest("Old story."), date(2026, 11, 1))
     assert catalyst.status(state, date(2026, 11, 20), cfg)["watch"] is None  # 19 days > 14
+
+
+def test_filing_check_keeps_the_watch_note():
+    state = {
+        "checked": {},
+        "event": None,
+        "watch": {"note": "n", "first_seen": "2026-11-20", "last_seen": "2026-11-20"},
+    }
+    new_state, _ = catalyst.update(state, [], lambda f: "", None)
+    assert new_state["watch"]["first_seen"] == "2026-11-20"

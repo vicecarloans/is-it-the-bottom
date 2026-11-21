@@ -57,7 +57,7 @@ jobs:
             echo "No change in the data."
             exit 0
           fi
-          git commit -m "Update data for $(date -u +%Y-%m-%d)"
+          git commit -m "Update data for $(jq -r .as_of data/latest.json)"
           for attempt in 1 2 3; do
             git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0
             sleep 5

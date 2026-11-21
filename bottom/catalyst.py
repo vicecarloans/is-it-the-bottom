@@ -118,7 +118,11 @@ def update(
                 "accession": filing.accession,
             }
 
-    return {"checked": checked, "event": event}, problems
+    return {
+        **state,
+        "checked": checked,
+        "event": event,
+    }, problems  # keep other keys, like the watch note
 
 
 def update_watch(
