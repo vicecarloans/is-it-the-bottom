@@ -83,17 +83,13 @@ def test_evening_utc_run_is_dated_by_new_york():
     from datetime import datetime
 
     # 01:56 UTC on Saturday Nov 21 is 8:56 pm Friday in New York.
-    assert cli.market_today(datetime(2026, 11, 21, 1, 56, tzinfo=UTC)) == date(
-        2026, 11, 20
-    )
+    assert cli.market_today(datetime(2026, 11, 21, 1, 56, tzinfo=UTC)) == date(2026, 11, 20)
 
 
 def test_weekend_run_belongs_to_friday():
     from datetime import datetime
 
-    assert cli.market_today(datetime(2026, 11, 22, 18, 0, tzinfo=UTC)) == date(
-        2026, 11, 20
-    )
+    assert cli.market_today(datetime(2026, 11, 22, 18, 0, tzinfo=UTC)) == date(2026, 11, 20)
 
 
 def test_run_with_older_prices_does_not_replace_saved_result(tmp_path):
