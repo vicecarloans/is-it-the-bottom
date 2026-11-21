@@ -121,18 +121,49 @@ def update(
     return {"checked": checked, "event": event}, problems
 
 
+def update_watch(
+    state: dict[str, Any], digest: dict[str, Any] | None, as_of: date
+) -> dict[str, Any]:
+    """Remember news of Huang's return across runs.
+
+    Each run's digest only sees that day's headlines, so a story can drop out of the
+    feed while it still matters. The note is kept from the run that last saw it.
+    """
+    if digest and digest.get("huang_return_reported") and digest.get("huang_note"):
+        previous = state.get("watch") or {}
+        state["watch"] = {
+            "note": digest["huang_note"],
+            "first_seen": previous.get("first_seen") or as_of.isoformat(),
+            "last_seen": as_of.isoformat(),
+        }
+    return state
+
+
+def watch_status(state: dict[str, Any], as_of: date, cfg: dict[str, Any]) -> dict[str, Any] | None:
+    """The remembered note, while it is less than watch_days old."""
+    watch = state.get("watch")
+    if not watch:
+        return None
+    age = (as_of - date.fromisoformat(watch["last_seen"])).days
+    if age < 0 or age > int(cfg["catalyst"]["watch_days"]):
+        return None
+    return {**watch, "days_since_seen": age}
+
+
 def status(state: dict[str, Any], as_of: date, cfg: dict[str, Any]) -> dict[str, Any]:
     window = int(cfg["catalyst"]["window_trading_days"])
+    watch = watch_status(state, as_of, cfg)
     event = state.get("event")
     if not event:
-        return {"active": False, "event": None, "window_trading_days": window}
+        return {"active": False, "event": None, "window_trading_days": window, "watch": watch}
     event_date = date.fromisoformat(event["date"])
     if event_date > as_of:
-        return {"active": False, "event": None, "window_trading_days": window}
+        return {"active": False, "event": None, "window_trading_days": window, "watch": watch}
     elapsed = len(pd.bdate_range(event_date, as_of)) - 1
     return {
         "active": elapsed <= window,
         "event": event,
         "trading_days_since": elapsed,
         "window_trading_days": window,
+        "watch": watch,
     }

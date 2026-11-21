@@ -72,6 +72,7 @@ def enrich(
                 report.errors["sec"] = "; ".join(problems)
         except RuntimeError as exc:
             report.errors["sec"] = str(exc)
+    state = catalyst.update_watch(state, report.digest, report.as_of)
     state_path.parent.mkdir(parents=True, exist_ok=True)
     state_path.write_text(json.dumps(state, indent=1) + "\n")
     report.catalyst = catalyst.status(state, report.as_of, cfg)

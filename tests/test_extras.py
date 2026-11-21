@@ -349,3 +349,39 @@ def test_model_errors_are_short_and_readable():
         "Claude API 400: Your credit balance is too low to access the Anthropic API"
     )
     assert describe_error(TimeoutError()) == "Claude API: TimeoutError"
+
+
+# --- Remembered Huang news ------------------------------------------------------------
+
+
+def _digest(note: str) -> dict:
+    return {"huang_return_reported": bool(note), "huang_note": note}
+
+
+def test_watch_note_survives_a_run_that_does_not_see_the_story(cfg):
+
+    state = catalyst.update_watch(
+        {}, _digest("Trump calls for Huang's return."), date(2026, 11, 20)
+    )
+    state = catalyst.update_watch(state, _digest(""), date(2026, 11, 23))
+    status = catalyst.status(state, date(2026, 11, 23), cfg)
+    assert status["watch"]["note"] == "Trump calls for Huang's return."
+    assert status["watch"]["last_seen"] == "2026-11-20"
+
+
+def test_watch_note_keeps_first_seen_and_updates_last_seen(cfg):
+
+    state = catalyst.update_watch({}, _digest("First report."), date(2026, 11, 20))
+    state = catalyst.update_watch(state, _digest("Board discusses it."), date(2026, 11, 24))
+    watch = catalyst.status(state, date(2026, 11, 24), cfg)["watch"]
+    assert (watch["first_seen"], watch["last_seen"], watch["note"]) == (
+        "2026-11-20",
+        "2026-11-24",
+        "Board discusses it.",
+    )
+
+
+def test_watch_note_expires(cfg):
+
+    state = catalyst.update_watch({}, _digest("Old story."), date(2026, 11, 1))
+    assert catalyst.status(state, date(2026, 11, 20), cfg)["watch"] is None  # 19 days > 14

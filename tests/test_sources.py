@@ -1,10 +1,10 @@
 import io
-from datetime import date, datetime
+from datetime import UTC, date, datetime
 
 import openpyxl
 import pytest
 
-from bottom.sources import cftc, earnings, finra, fred, prices
+from bottom.sources import cftc, earnings, finra, fred, news, prices
 
 
 def make_xlsx(rows: list[list[object]]) -> bytes:
@@ -167,3 +167,39 @@ def test_cftc_parses_rows_and_skips_bad_ones():
 def test_cftc_empty_response_raises():
     with pytest.raises(RuntimeError):
         cftc.parse_tff([])
+
+
+def test_huang_headlines_beyond_the_newest_15_are_kept(monkeypatch):
+    from datetime import datetime
+
+    now = int(datetime(2026, 11, 20, 12, tzinfo=UTC).timestamp())
+    items = [
+        {
+            "headline": f"Accounting story {i}",
+            "url": f"https://e.com/{i}",
+            "source": "X",
+            "datetime": now - i * 60,
+            "summary": "",
+        }
+        for i in range(20)
+    ] + [
+        {
+            "headline": "Trump says Nvidia should rehire Jensen Huang",
+            "url": "https://e.com/h",
+            "source": "X",
+            "datetime": now - 7200,
+            "summary": "",
+        }
+    ]
+
+    def fake(path, params, key):
+        return items if path == "/company-news" else []
+
+    monkeypatch.setattr(news, "_finnhub", fake)
+    monkeypatch.setattr(
+        news.httpx, "get", lambda *a, **k: (_ for _ in ()).throw(news.httpx.HTTPError("offline"))
+    )
+    headlines, _ = news.fetch_headlines("key", date(2026, 11, 20))
+    titles = [h.title for h in headlines]
+    assert "Trump says Nvidia should rehire Jensen Huang" in titles
+    assert "Accounting story 16" not in titles
