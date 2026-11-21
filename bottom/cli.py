@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import sys
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from bottom import override
 from bottom.config import load_config
@@ -15,6 +17,34 @@ from bottom.output import build_latest, write_cftc, write_outputs
 from bottom.snapshot import load_snapshot
 from bottom.store import RawStore
 from bottom.verdict import Report, evaluate
+
+NEW_YORK = ZoneInfo("America/New_York")
+
+
+def market_today(now: datetime | None = None) -> date:
+    """The latest weekday in New York. The job runs in UTC, where evening runs fall on the
+    next day, and a weekend run belongs to Friday's close."""
+    day = (now or datetime.now(NEW_YORK)).astimezone(NEW_YORK).date()
+    while day.weekday() > 4:
+        day -= timedelta(days=1)
+    return day
+
+
+def went_backwards(previous_path: Path, latest: dict) -> str | None:
+    """A run whose prices end earlier than the saved result's must not replace it.
+
+    Yahoo sometimes leaves out the latest close; saving then would undo a correct day.
+    """
+    if not previous_path.exists():
+        return None
+    try:
+        before = json.loads(previous_path.read_text())["drawdown"]["data_date"]
+    except (ValueError, KeyError, TypeError):
+        return None
+    now = latest["drawdown"]["data_date"]
+    if before and now and now < before:
+        return f"S&P 500 prices end {now}, older than the saved result's {before}. Try again later."
+    return None
 
 
 def render(report: Report) -> str:
@@ -84,7 +114,7 @@ def main(argv: list[str] | None = None) -> int:
 
     args = parser.parse_args(argv)
     cfg = load_config(args.config)
-    today = date.today()
+    today = market_today()
     as_of = getattr(args, "as_of", None) or today
 
     store = RawStore(Path("data/raw"), today, enabled=not args.no_save)
@@ -98,6 +128,10 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "run":
         latest = build_latest(report, snapshot, cfg)
+        problem = went_backwards(Path(args.out) / "latest.json", latest)
+        if problem:
+            print(f"\nNot saving: {problem}", file=sys.stderr)
+            return 1
         history = write_outputs(Path(args.out), latest)
         write_cftc(Path(args.out), snapshot.leverage)
         print(

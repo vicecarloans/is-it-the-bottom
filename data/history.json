@@ -16,23 +16,6 @@
     "sector": false,
     "nvda": true
    }
-  },
-  {
-   "date": "2026-11-21",
-   "verdict": "No panic, no bottom to call",
-   "count": 2,
-   "catalyst": false,
-   "capped": false,
-   "archived": true,
-   "in_drawdown": false,
-   "drawdown_pct": -8.1146,
-   "met": {
-    "vix": true,
-    "fed": false,
-    "margin": false,
-    "sector": false,
-    "nvda": true
-   }
   }
  ],
  "signals": []
