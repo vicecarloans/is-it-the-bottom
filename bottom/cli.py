@@ -13,7 +13,7 @@ from zoneinfo import ZoneInfo
 from bottom import override
 from bottom.config import load_config
 from bottom.extras import enrich
-from bottom.output import build_latest, write_cftc, write_outputs
+from bottom.output import build_latest, write_cftc, write_news, write_outputs
 from bottom.snapshot import load_snapshot
 from bottom.store import RawStore
 from bottom.verdict import Report, evaluate
@@ -134,6 +134,7 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         history = write_outputs(Path(args.out), latest)
         write_cftc(Path(args.out), snapshot.leverage)
+        write_news(Path(args.out), latest["as_of"], cfg["news"]["lines"], report.tagged_news)
         print(
             f"\nWrote {args.out}/latest.json and {args.out}/history.json "
             f"({len(history['days'])} days, {len(history['signals'])} signals)"

@@ -29,7 +29,7 @@ class ToolCaller(Protocol):
 class Claude:
     """Forces the model to answer by calling one tool, so the reply is always structured."""
 
-    def __init__(self, api_key: str, model: str, max_tokens: int = 1200) -> None:
+    def __init__(self, api_key: str, model: str, max_tokens: int = 4096) -> None:
         import anthropic
 
         self.client = anthropic.Anthropic(api_key=api_key)

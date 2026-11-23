@@ -52,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/latest.json data/history.json data/catalyst.json data/cftc.json data/days
+          git add data/latest.json data/history.json data/catalyst.json data/cftc.json data/days data/news
           if git diff --cached --quiet; then
             echo "No change in the data."
             exit 0

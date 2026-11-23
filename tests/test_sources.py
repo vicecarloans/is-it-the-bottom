@@ -203,3 +203,34 @@ def test_huang_headlines_beyond_the_newest_15_are_kept(monkeypatch):
     titles = [h.title for h in headlines]
     assert "Trump says Nvidia should rehire Jensen Huang" in titles
     assert "Accounting story 16" not in titles
+
+
+def test_company_news_is_grouped_by_line(monkeypatch):
+    now = int(datetime(2026, 11, 23, 12).timestamp())
+
+    def fake(path, params, key):
+        if params["symbol"] == "BAD":
+            raise RuntimeError("HTTP 429")
+        return [
+            {
+                "headline": f"{params['symbol']} news {i}",
+                "url": f"https://e.com/{params['symbol']}/{i}",
+                "source": "X",
+                "datetime": now - i,
+                "summary": "",
+            }
+            for i in range(6)
+        ]
+
+    monkeypatch.setattr(news, "_finnhub", fake)
+    items, errors = news.fetch_company_headlines(
+        "key", date(2026, 11, 23), {"XLK": ["AAPL", "BAD"], "XLE": ["XOM"]}, per_company=2
+    )
+    assert [(h.group, h.title) for h in items] == [
+        ("XLK", "AAPL news 0"),
+        ("XLK", "AAPL news 1"),
+        ("XLE", "XOM news 0"),
+        ("XLE", "XOM news 1"),
+    ]
+    assert errors == {"news companies": "no news for BAD"}
+    assert news.fetch_company_headlines(None, date(2026, 11, 23), {"XLK": ["AAPL"]}) == ([], {})

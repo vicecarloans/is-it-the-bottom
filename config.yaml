@@ -72,5 +72,39 @@ catalyst:
   watch_days: 14          # keep a news report of his return on the page this long after it was last seen
 
 # The model used for the news digest and the filing check.
+# News tags: each headline's likely effect on the market and on these lines.
+# Context for the page only; they never set a condition or change the verdict.
+news:
+  lines:
+    XLK: Technology
+    XLF: Financials
+    XLE: Energy
+    XLV: Health care
+    XLY: Consumer discretionary
+    XLP: Consumer staples
+    XLI: Industrials
+    XLB: Materials
+    XLU: Utilities
+    XLRE: Real estate
+    XLC: Communication services
+    SMH: Semiconductors
+  # Two large companies per line; their recent news is added to the headlines.
+  # NVIDIA news is already fetched on its own.
+  companies:
+    XLK: [AAPL, MSFT]
+    XLF: [JPM, BAC]
+    XLE: [XOM, CVX]
+    XLV: [LLY, UNH]
+    XLY: [AMZN, TSLA]
+    XLP: [PG, COST]
+    XLI: [GE, CAT]
+    XLB: [LIN, SHW]
+    XLU: [NEE, SO]
+    XLRE: [PLD, AMT]
+    XLC: [META, GOOGL]
+    SMH: [AVGO, TSM]
+  per_company: 4          # newest headlines kept per company
+  batch_size: 40          # headlines per model call
+
 llm:
   model: claude-haiku-5-5
