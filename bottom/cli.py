@@ -30,6 +30,16 @@ def market_today(now: datetime | None = None) -> date:
     return day
 
 
+def market_session(now: datetime | None = None) -> str:
+    """Where the run falls in the New York trading day."""
+    local = (now or datetime.now(NEW_YORK)).astimezone(NEW_YORK)
+    if local.weekday() > 4 or local.hour >= 16:
+        return "after_close"
+    if (local.hour, local.minute) < (9, 30):
+        return "before_open"
+    return "during_trading"
+
+
 def went_backwards(previous_path: Path, latest: dict) -> str | None:
     """A run whose prices end earlier than the saved result's must not replace it.
 
@@ -128,6 +138,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "run":
         latest = build_latest(report, snapshot, cfg)
+        latest["session"] = market_session()
         problem = went_backwards(Path(args.out) / "latest.json", latest)
         if problem:
             print(f"\nNot saving: {problem}", file=sys.stderr)

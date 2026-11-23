@@ -1,12 +1,19 @@
 name: Daily
 
-# Runs the checks after the US close on weekdays, then commits data/latest.json and
-# data/history.json. The page reads those files from the repo, so no redeploy is needed.
-# Also runs when the code, the config or the FINRA spreadsheet changes on main.
+# Runs the checks twice on weekdays, at 9:00 am (before the open) and 5:00 pm (after
+# the close) New York time, then commits the data files. The page reads them from the
+# repo, so no redeploy is needed. Also runs when the code, the config or the FINRA
+# spreadsheet changes on main.
+#
+# GitHub schedules are in UTC and New York moves between UTC-5 and UTC-4, so each time
+# is listed for both offsets and the gate job drops the one that does not match today.
 
 on:
   schedule:
-    - cron: "30 22 * * 1-5"  # 22:30 UTC: 5:30 pm Toronto in winter, 6:30 pm in summer
+    - cron: "0 14 * * 1-5"  # 9:00 am New York in winter (UTC-5)
+    - cron: "0 13 * * 1-5"  # 9:00 am New York in summer (UTC-4)
+    - cron: "0 22 * * 1-5"  # 5:00 pm New York in winter
+    - cron: "0 21 * * 1-5"  # 5:00 pm New York in summer
   workflow_dispatch:
   push:
     branches: [main]
@@ -25,7 +32,29 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.check.outputs.go }}
+    steps:
+      - id: check
+        env:
+          CRON: ${{ github.event.schedule }}
+        run: |
+          go=true
+          if [ -n "$CRON" ]; then
+            hour=$(echo "$CRON" | awk '{print $2}')
+            offset=$(TZ=America/New_York date +%z)  # -0500 in winter, -0400 in summer
+            case "$offset:$hour" in
+              -0500:14|-0500:22|-0400:13|-0400:21) ;;
+              *) go=false; echo "Skipping: $CRON is for the other UTC offset." ;;
+            esac
+          fi
+          echo "go=$go" >> "$GITHUB_OUTPUT"
+
   run:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -38,7 +67,9 @@ jobs:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
-        run: uv run bottom run --out data | tee checklist.txt
+        run: |
+          set -o pipefail  # so a refused run fails the job instead of being hidden by tee
+          uv run bottom run --out data | tee checklist.txt
 
       - name: Add the checklist to the run summary
         run: |

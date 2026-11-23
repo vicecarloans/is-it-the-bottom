@@ -174,6 +174,7 @@ def update_history(history: dict[str, Any] | None, latest: dict[str, Any]) -> di
         "catalyst": bool(latest.get("catalyst", {}).get("lifted_verdict")),
         "capped": bool(latest.get("override", {}).get("capped")),
         "archived": True,  # the full result is saved in days/<date>.json
+        "session": latest.get("session"),
         "in_drawdown": latest["drawdown"]["in_drawdown"],
         "drawdown_pct": latest["drawdown"]["pct"],
         "met": {

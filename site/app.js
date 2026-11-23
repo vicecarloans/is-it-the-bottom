@@ -46,13 +46,22 @@ function svg(tag, attrs = {}) {
 
 // The daily job runs on weekdays at 22:30 UTC and needs a few minutes to finish.
 // Returns the date (YYYY-MM-DD, UTC) of the latest run that should exist by `now`.
+// The newest result the page should have by now: today's once the 9:00 am New York run
+// has had time to finish (GitHub can start it late, so allow until noon), otherwise the
+// previous weekday's.
 function lastExpectedRun(now) {
-  const day = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-  const minutes = now.getUTCHours() * 60 + now.getUTCMinutes();
-  if (minutes < 23 * 60 + 15) day.setUTCDate(day.getUTCDate() - 1); // allow 45 minutes to finish
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", hourCycle: "h23",
+    }).formatToParts(now).map((p) => [p.type, p.value]),
+  );
+  const day = new Date(Date.UTC(+parts.year, +parts.month - 1, +parts.day));
+  if (+parts.hour < 12) day.setUTCDate(day.getUTCDate() - 1);
   while (day.getUTCDay() === 0 || day.getUTCDay() === 6) day.setUTCDate(day.getUTCDate() - 1);
   return day.toISOString().slice(0, 10);
 }
+
+const SESSIONS = { before_open: "before the open", during_trading: "during trading", after_close: "after the close" };
 
 // ---- Hero -----------------------------------------------------------------------------
 
@@ -128,7 +137,10 @@ function renderHero(latest) {
   }
 
   document.getElementById("caveat").textContent =
-    `Updated for ${fmtDate(latest.as_of)}.` + (latest.backtested ? "" : " These rules have not been tested against history yet.");
+    (latest.session && SESSIONS[latest.session]
+      ? `Updated ${SESSIONS[latest.session]} on ${fmtDate(latest.as_of)}` +
+        (latest.session === "before_open" && latest.drawdown.data_date ? `, using the ${fmtDate(latest.drawdown.data_date)} close.` : ".")
+      : `Updated for ${fmtDate(latest.as_of)}.`) + (latest.backtested ? "" : " These rules have not been tested against history yet.");
   document.title = `${latest.verdict} · Is it the bottom?`;
 }
 
@@ -391,9 +403,10 @@ function renderLog(latest, history) {
   const body = el("tbody");
   days.forEach((day, i) => {
     const held = Object.entries(day.met || {}).filter(([, met]) => met).map(([key]) => SHORT_NAMES[key] || key);
-    const date = day.archived
-      ? el("a", { href: dayLink(day.date), text: fmtDate(day.date) })
-      : fmtDate(day.date);
+    const date = el("span", {},
+      day.archived ? el("a", { href: dayLink(day.date), text: fmtDate(day.date) }) : fmtDate(day.date),
+      day.session && day.session !== "after_close" ? el("span", { class: "which", text: ` (${SESSIONS[day.session]})` }) : "",
+    );
     let verdict = day.verdict;
     if (day.catalyst) verdict += " (Huang +1)";
     if (day.capped) verdict += " (capped)";
