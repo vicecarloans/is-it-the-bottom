@@ -370,6 +370,7 @@ const DIVERGENCE = {
 };
 
 function signed(value, digits = 1) {
+  if (!Number.isFinite(value)) return "no data";
   return `${value > 0 ? "+" : value < 0 ? "\u2212" : ""}${Math.abs(value).toFixed(digits)}`;
 }
 
@@ -393,7 +394,7 @@ function renderNewsScores(latest) {
     el("thead", {}, el("tr", {},
       el("th", { scope: "col", text: "Sector" }),
       el("th", { scope: "col", text: "News" }),
-      el("th", { scope: "col", class: "num", text: `${scores.window_days}-day vs S&P` }),
+      el("th", { scope: "col", class: "num", text: `${scores.window_days || 20}-day vs S&P` }),
       el("th", { scope: "col", class: "num reacted", text: "Prices agreed" }),
     )),
   );
@@ -411,13 +412,15 @@ function renderNewsScores(latest) {
       el("span", { class: `bar-fill ${l.score >= 0 ? "pos" : "neg"}`, style: l.score >= 0 ? `left:50%;width:${width}%` : `left:${50 - width}%;width:${width}%` }),
     );
     const news = el("td", { class: "news-cell" }, bar, el("span", { class: "news-tone", text: l.stories ? `${l.tone} (${signed(l.score)})` : "no news" }));
-    const ex = l.excess_pct;
-    const reacted = l.reactions.confirmed + l.reactions.faded + l.reactions.muted;
+    const ex = Number.isFinite(l.excess_pct) ? l.excess_pct : null;  // missing in data from older runs
+    const r = l.reactions || {};
+    const agreed = r.confirmed || 0;
+    const reacted = agreed + (r.faded || 0) + (r.muted || 0);
     body.append(el("tr", {},
       name,
       news,
       el("td", { class: `num ${ex === null ? "" : ex >= 0 ? "up" : "down"}`, text: ex === null ? "no data" : `${signed(ex)} pts` }),
-      el("td", { class: "num reacted", text: reacted ? `${l.reactions.confirmed} of ${reacted}` : "none yet" }),
+      el("td", { class: "num reacted", text: reacted ? `${agreed} of ${reacted}` : "none yet" }),
     ));
   }
   table.append(body);
