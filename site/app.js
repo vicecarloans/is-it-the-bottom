@@ -44,8 +44,6 @@ function svg(tag, attrs = {}) {
   return node;
 }
 
-// The daily job runs on weekdays at 22:30 UTC and needs a few minutes to finish.
-// Returns the date (YYYY-MM-DD, UTC) of the latest run that should exist by `now`.
 // The newest result the page should have by now: today's once the 9:00 am New York run
 // has had time to finish (GitHub can start it late, so allow until noon), otherwise the
 // previous weekday's.
@@ -69,6 +67,8 @@ function renderHero(latest) {
   const answer = document.getElementById("answer");
   answer.textContent = latest.verdict;
   answer.dataset.level = LEVELS[latest.verdict] || "none";
+  const length = latest.verdict.length;
+  answer.dataset.size = length <= 3 ? "short" : length <= 14 ? "medium" : "long";
 
   const dd = latest.drawdown;
   let summary;
@@ -323,7 +323,7 @@ const TONES = {
   neutral: "Fed tone in the news: neither raising nor cutting.",
 };
 
-function renderNews(latest) {
+function renderNews(latest, tagged) {
   const news = latest.digest;
   if (!news || !news.summary) return;
   const host = document.getElementById("news");
@@ -332,14 +332,97 @@ function renderNews(latest) {
   if (news.sources && news.sources.length) {
     const list = el("ul", { class: "news-sources" });
     for (const source of news.sources) {
+      const tags = tagText(tagged, source.url);
       list.append(el("li", {},
         el("a", { href: source.url, rel: "noopener", text: source.title }),
         el("span", { text: ` ${source.source}, ${fmtDate(source.date)}` }),
+        tags ? el("span", { class: "news-tags", text: tags }) : null,
       ));
     }
     host.append(list);
   }
   document.getElementById("news-section").hidden = false;
+}
+
+// A short reading of one headline's tags, such as "Market: positive. Technology up, Energy down."
+function tagText(tagged, url) {
+  if (!tagged) return "";
+  const item = (tagged.headlines || []).find((h) => h.url === url);
+  if (!item || !item.tags) return "";
+  const t = item.tags;
+  const parts = [];
+  if (t.macro !== "neutral") parts.push(`Market: ${t.macro}.`);
+  const sectors = t.sectors.map((s) => `${(tagged.lines || {})[s.line] || s.line} ${s.direction === "positive" ? "up" : "down"}`);
+  if (sectors.length) parts.push(`${sectors.join(", ")}.`);
+  if (t.novelty === "rehash") parts.push("Old news.");
+  return parts.join(" ");
+}
+
+// ---- News by sector ---------------------------------------------------------------------
+
+const CHANNEL_NAMES = {
+  rates: "interest rates", inflation: "inflation", growth: "growth", credit: "credit",
+  policy: "policy", geopolitics: "geopolitics", earnings: "earnings",
+};
+const DIVERGENCE = {
+  good_news_lagging: "Good news, but lagging the market",
+  bad_news_leading: "Bad news, but beating the market",
+};
+
+function signed(value, digits = 1) {
+  return `${value > 0 ? "+" : value < 0 ? "\u2212" : ""}${Math.abs(value).toFixed(digits)}`;
+}
+
+function renderNewsScores(latest) {
+  const scores = latest.news_scores;
+  if (!scores || !scores.lines) return;
+  const host = document.getElementById("sectors");
+
+  const macro = scores.macro;
+  const channels = Object.entries(macro.channels || {}).filter(([key, value]) => CHANNEL_NAMES[key] && Math.abs(value) >= 0.5);
+  const up = channels.filter(([, v]) => v > 0).map(([k]) => CHANNEL_NAMES[k]);
+  const down = channels.filter(([, v]) => v < 0).map(([k]) => CHANNEL_NAMES[k]);
+  let line = `Market overall: ${macro.tone} (${signed(macro.score)}).`;
+  if (up.length) line += ` Helping: ${up.join(", ")}.`;
+  if (down.length) line += ` Weighing: ${down.join(", ")}.`;
+  host.append(el("p", { class: "macro-line", text: line }));
+
+  const rows = Object.entries(scores.lines).sort((a, b) => b[1].score - a[1].score);
+  const scale = Math.max(4, ...rows.map(([, l]) => Math.abs(l.score)));
+  const table = el("table", { class: "sectors" },
+    el("thead", {}, el("tr", {},
+      el("th", { scope: "col", text: "Sector" }),
+      el("th", { scope: "col", text: "News" }),
+      el("th", { scope: "col", class: "num", text: `${scores.window_days}-day vs S&P` }),
+      el("th", { scope: "col", class: "num reacted", text: "Prices agreed" }),
+    )),
+  );
+  const body = el("tbody");
+  for (const [code, l] of rows) {
+    const top = l.top && l.top[0];
+    const name = el("td", {},
+      el("span", { class: "sector-name", text: l.name }),
+      el("span", { class: "sector-code", text: ` ${code}` }),
+      top ? el("a", { class: "sector-top", href: top.url, rel: "noopener", text: top.title }) : null,
+      l.divergence ? el("span", { class: "sector-flag", text: DIVERGENCE[l.divergence] }) : null,
+    );
+    const width = Math.min(Math.abs(l.score) / scale, 1) * 50;
+    const bar = el("span", { class: "bar", "aria-hidden": "true" },
+      el("span", { class: `bar-fill ${l.score >= 0 ? "pos" : "neg"}`, style: l.score >= 0 ? `left:50%;width:${width}%` : `left:${50 - width}%;width:${width}%` }),
+    );
+    const news = el("td", { class: "news-cell" }, bar, el("span", { class: "news-tone", text: l.stories ? `${l.tone} (${signed(l.score)})` : "no news" }));
+    const ex = l.excess_pct;
+    const reacted = l.reactions.confirmed + l.reactions.faded + l.reactions.muted;
+    body.append(el("tr", {},
+      name,
+      news,
+      el("td", { class: `num ${ex === null ? "" : ex >= 0 ? "up" : "down"}`, text: ex === null ? "no data" : `${signed(ex)} pts` }),
+      el("td", { class: "num reacted", text: reacted ? `${l.reactions.confirmed} of ${reacted}` : "none yet" }),
+    ));
+  }
+  table.append(body);
+  host.append(table);
+  document.getElementById("sectors-section").hidden = false;
 }
 
 // ---- Signals ----------------------------------------------------------------------------
@@ -452,7 +535,9 @@ async function main() {
     renderHero(latest);
     renderDepth(latest, history);
     renderChecks(latest, explainers);
-    renderNews(latest);
+    const tagged = DAY || !latest.news_scores ? null : await getJSON(`${DATA}news/${latest.as_of}.json`).catch(() => null);
+    renderNews(latest, tagged);
+    renderNewsScores(latest);
     if (DAY) document.getElementById("news-title").textContent = "News that day";
     renderLog(latest, history);
     renderSignals(latest, history);

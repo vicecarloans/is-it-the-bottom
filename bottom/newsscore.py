@@ -172,6 +172,18 @@ def score(
                  "points": points, "reaction": reaction, "change": change}
             )  # fmt: skip
 
+    window = int(cfg["sector"]["return_window_days"])
+
+    def excess(code: str) -> float | None:
+        """The line's return over the sector window minus the S&P 500's, in points."""
+        if code not in frame.columns or index not in frame.columns:
+            return None
+        pair = frame[[code, index]].dropna()
+        if len(pair) <= window:
+            return None
+        start, end = pair.iloc[-1 - window], pair.iloc[-1]
+        return float(((end[code] / start[code]) - (end[index] / start[index])) * 100)
+
     def summarize(name: str, total: dict[str, Any]) -> dict[str, Any]:
         ranked = sorted(total["stories"], key=lambda x: abs(x["points"]), reverse=True)
         counts = {k: 0 for k in ("confirmed", "faded", "muted", "pending")}
@@ -190,10 +202,24 @@ def score(
     out_macro["channels"] = {
         k: round(v, 2) for k, v in sorted(macro["channels"].items(), key=lambda kv: -abs(kv[1]))
     }
+    out_lines = {}
+    mild = float(s["mild_at"])
+    for code, name in lines.items():
+        line = summarize(name, totals[code])
+        lead = excess(code)
+        line["excess_pct"] = round(lead, 2) if lead is not None else None
+        # Where news and price disagree: good news while lagging, bad news while leading.
+        line["divergence"] = None
+        if lead is not None and line["score"] >= mild and lead < 0:
+            line["divergence"] = "good_news_lagging"
+        elif lead is not None and line["score"] <= -mild and lead > 0:
+            line["divergence"] = "bad_news_leading"
+        out_lines[code] = line
     return {
         "as_of": as_of.isoformat(),
+        "window_days": window,
         "macro": out_macro,
-        "lines": {code: summarize(name, totals[code]) for code, name in lines.items()},
+        "lines": out_lines,
     }
 
 

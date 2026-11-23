@@ -158,3 +158,21 @@ def test_tone_labels(cfg):
         "negative",
         "strongly negative",
     ]
+
+
+def test_lagging_line_with_good_news_is_flagged(ncfg):
+    days = pd.bdate_range("2026-10-20", "2026-11-23")
+    frame = pd.DataFrame({"SPY": 100.0, "XLK": 100.0, "XLE": 100.0}, index=days)
+    frame.loc[days[-1], ["SPY", "XLK", "XLE"]] = [110, 105, 120]  # XLK lags by 5, XLE leads by 10
+    stories = [
+        {**story("g", "2026-11-22T15:00+00:00", sectors=[("XLK", "positive", 3)]), "count": 1},
+        {
+            **story("b", "2026-11-22T15:00+00:00", sectors=[("XLE", "negative", 3)], story_id=2),
+            "count": 1,
+        },
+    ]
+    out = newsscore.score(stories, frame, date(2026, 11, 23), ncfg)
+    assert out["lines"]["XLK"]["excess_pct"] == pytest.approx(-5.0)
+    assert out["lines"]["XLK"]["divergence"] == "good_news_lagging"
+    assert out["lines"]["XLE"]["divergence"] == "bad_news_leading"
+    assert out["window_days"] == ncfg["sector"]["return_window_days"]
