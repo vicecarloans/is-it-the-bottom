@@ -1,5 +1,5 @@
 import json
-from datetime import UTC, date, datetime
+from datetime import UTC, datetime
 
 from bottom import cli, output, verdict
 
@@ -71,11 +71,8 @@ def test_history_replaces_a_rerun_of_the_same_day(cfg):
 def test_run_writes_both_files(cfg, tmp_path, monkeypatch):
     monkeypatch.setattr(cli, "load_snapshot", lambda *args: panic_snapshot(cfg))
     monkeypatch.setattr(cli, "enrich", lambda report, *args: report)  # no network in tests
-    monkeypatch.setattr(
-        cli,
-        "date",
-        type("D", (), {"today": staticmethod(lambda: AS_OF), "fromisoformat": date.fromisoformat}),
-    )
+    monkeypatch.setattr(cli, "market_today", lambda: AS_OF)
+    monkeypatch.setattr(cli, "market_session", lambda: "after_close")
     code = cli.main(
         ["run", "--config", str(ROOT / "config.yaml"), "--out", str(tmp_path), "--no-save"]
     )
@@ -83,7 +80,9 @@ def test_run_writes_both_files(cfg, tmp_path, monkeypatch):
     latest = json.loads((tmp_path / "latest.json").read_text())
     history = json.loads((tmp_path / "history.json").read_text())
     assert latest["as_of"] == "2026-11-20"
+    assert latest["session"] == "after_close"
     assert [d["date"] for d in history["days"]] == ["2026-11-20"]
+    assert history["days"][0]["session"] == "after_close"
 
 
 def test_cftc_history_is_saved(tmp_path):

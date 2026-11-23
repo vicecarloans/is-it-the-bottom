@@ -101,3 +101,14 @@ def test_run_with_older_prices_does_not_replace_saved_result(tmp_path):
         cli.went_backwards(tmp_path / "missing.json", {"drawdown": {"data_date": "2026-11-19"}})
         is None
     )
+
+
+def test_session_follows_new_york_hours():
+    from datetime import UTC, datetime
+
+    assert cli.market_session(datetime(2026, 11, 23, 14, 0, tzinfo=UTC)) == "before_open"  # 9:00 am
+    assert (
+        cli.market_session(datetime(2026, 11, 23, 16, 0, tzinfo=UTC)) == "during_trading"
+    )  # 11:00 am
+    assert cli.market_session(datetime(2026, 11, 23, 22, 0, tzinfo=UTC)) == "after_close"  # 5:00 pm
+    assert cli.market_session(datetime(2026, 11, 22, 15, 0, tzinfo=UTC)) == "after_close"  # Sunday
