@@ -27,6 +27,7 @@ class Report:
     override: Override | None = None
     catalyst: dict[str, Any] | None = None
     digest: dict[str, Any] | None = None
+    tagged_news: list[dict[str, Any]] | None = None  # see tagging.py
 
     @property
     def count(self) -> int:

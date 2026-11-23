@@ -8,7 +8,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
-from bottom import catalyst, digest, override
+from bottom import catalyst, digest, override, tagging
 from bottom.llm import Claude, ToolCaller, describe_error
 from bottom.snapshot import Snapshot
 from bottom.sources import news, sec
@@ -53,6 +53,24 @@ def enrich(
             report.errors["digest"] = str(exc)
         except Exception as exc:  # the digest is optional; the verdict stands without it
             report.errors["digest"] = describe_error(exc)
+
+    # Tags for every headline, plus news on large companies in each sector
+    n = cfg["news"]
+    company, problems = news.fetch_company_headlines(
+        env.get("FINNHUB_API_KEY"), today, n["companies"], int(n["per_company"]), store
+    )
+    report.errors.update(problems)
+    everything = news.dedupe(headlines + company)
+    if llm is not None and everything:
+        try:
+            report.tagged_news = tagging.tag_headlines(
+                everything, n["lines"], llm, int(n["batch_size"])
+            )
+            store.save_json("tagged_news.json", report.tagged_news)
+        except RuntimeError as exc:  # no structured reply
+            report.errors["news tags"] = str(exc)
+        except Exception as exc:  # tags are context only; the verdict stands without them
+            report.errors["news tags"] = describe_error(exc)
 
     # Systemic-break cap
     report.override = override.check(snap.hy_spread, report.as_of, cfg, report.digest)

@@ -78,6 +78,35 @@ def fetch_headlines(
     return headlines, errors
 
 
+def fetch_company_headlines(
+    api_key: str | None,
+    today: date,
+    companies: dict[str, list[str]],
+    per_company: int = 4,
+    store: RawStore | None = None,
+    days: int = 3,
+) -> tuple[list[Headline], dict[str, str]]:
+    """Recent news on a few large companies in each sector, grouped under the sector code."""
+    if not api_key:
+        return [], {}
+    since = datetime.combine(today - timedelta(days=days), datetime.min.time(), UTC)
+    params = {"from": (today - timedelta(days=days)).isoformat(), "to": today.isoformat()}
+    headlines: list[Headline] = []
+    failed: list[str] = []
+    for line, symbols in companies.items():
+        for symbol in symbols:
+            try:
+                rows = _finnhub("/company-news", {**params, "symbol": symbol}, api_key)
+            except RuntimeError:
+                failed.append(symbol)
+                continue
+            if store is not None:
+                store.save_json(f"news_{symbol.lower()}.json", rows)
+            headlines += parse_finnhub(rows, line, since)[:per_company]
+    errors = {"news companies": f"no news for {', '.join(failed)}"} if failed else {}
+    return dedupe(headlines), errors
+
+
 def _finnhub(path: str, params: dict[str, str], api_key: str) -> Any:
     try:
         response = httpx.get(
@@ -109,7 +138,7 @@ def parse_finnhub(payload: list[dict[str, Any]], group: str, since: datetime) ->
             )
         )
     items.sort(key=lambda h: h.published, reverse=True)
-    return _dedupe(items)
+    return dedupe(items)
 
 
 def parse_fed_rss(content: bytes, since: datetime) -> list[Headline]:
@@ -132,7 +161,7 @@ def parse_fed_rss(content: bytes, since: datetime) -> list[Headline]:
     return items
 
 
-def _dedupe(items: list[Headline]) -> list[Headline]:
+def dedupe(items: list[Headline]) -> list[Headline]:
     seen, unique = set(), []
     for item in items:
         key = item.title.lower()

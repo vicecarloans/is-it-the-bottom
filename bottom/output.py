@@ -199,6 +199,16 @@ def signals(days: list[dict[str, Any]]) -> list[dict[str, str]]:
     return found
 
 
+def write_news(out_dir: Path, as_of: str, lines: dict[str, str], tagged: list | None) -> None:
+    """Saves the day's tagged headlines to news/<date>.json, for the page and later tests."""
+    if not tagged:
+        return
+    folder = out_dir / "news"
+    folder.mkdir(parents=True, exist_ok=True)
+    payload = {"as_of": as_of, "lines": lines, "headlines": tagged}
+    (folder / f"{as_of}.json").write_text(_dump(payload))
+
+
 def write_cftc(out_dir: Path, leverage: pd.DataFrame) -> None:
     """Keeps the weekly CFTC history in the repo, for tuning the futures rule later."""
     if leverage is None or leverage.empty:
