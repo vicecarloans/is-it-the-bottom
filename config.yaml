@@ -88,6 +88,7 @@ news:
     XLRE: Real estate
     XLC: Communication services
     SMH: Semiconductors
+    LAZR: Photonics             # Tema Photonics & Optical ETF
   # Two large companies per line; their recent news is added to the headlines.
   # NVIDIA news is already fetched on its own.
   companies:
@@ -103,8 +104,17 @@ news:
     XLRE: [PLD, AMT]
     XLC: [META, GOOGL]
     SMH: [AVGO, TSM]
+    LAZR: [LITE, COHR]          # Lumentum, Coherent
   per_company: 4          # newest headlines kept per company
   batch_size: 40          # headlines per model call
+  # News scores: each story's direction x strength x confidence x novelty, halving
+  # every few trading days. Starting values, to be tuned once there is history.
+  scoring:
+    lookback_days: 21             # calendar days of saved headlines to read
+    half_life_trading_days: 3
+    reaction_threshold_pct: 0.5   # a move smaller than this, vs the S&P 500, is "muted"
+    mild_at: 1.5                  # score for "positive" / "negative"
+    strong_at: 4                  # score for "strongly positive" / "strongly negative"
 
 llm:
   model: claude-haiku-5-5

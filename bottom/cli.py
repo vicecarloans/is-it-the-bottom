@@ -10,7 +10,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from bottom import override
+from bottom import newsscore, override
 from bottom.config import load_config
 from bottom.extras import enrich
 from bottom.output import build_latest, write_cftc, write_news, write_outputs
@@ -139,6 +139,16 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "run":
         latest = build_latest(report, snapshot, cfg)
         latest["session"] = market_session()
+        try:  # context only: a failure here must not stop the run
+            stories = newsscore.load_stories(
+                Path(args.out) / "news",
+                report.tagged_news,
+                report.as_of,
+                int(cfg["news"]["scoring"]["lookback_days"]),
+            )
+            latest["news_scores"] = newsscore.score(stories, snapshot.closes, report.as_of, cfg)
+        except Exception as exc:  # noqa: BLE001
+            latest["errors"]["news scores"] = f"{type(exc).__name__}: {exc}"[:200]
         problem = went_backwards(Path(args.out) / "latest.json", latest)
         if problem:
             print(f"\nNot saving: {problem}", file=sys.stderr)

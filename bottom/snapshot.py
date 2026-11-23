@@ -44,6 +44,7 @@ def load_snapshot(
             return default
 
     symbols = [tickers["index"], *tickers["sectors"], tickers["vix"]]
+    symbols += [code for code in cfg.get("news", {}).get("lines", {}) if code not in symbols]
     snap.closes = attempt("prices", lambda: prices.fetch_closes(symbols, start), pd.DataFrame())
     if not snap.closes.empty:
         store.save_frame("prices.csv", snap.closes)
