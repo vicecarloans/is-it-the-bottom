@@ -35,7 +35,7 @@
      }
     ],
     "novelty": "new",
-    "confidence": "medium"
+    "confidence": "low"
    }
   },
   {
@@ -51,7 +51,7 @@
     "channel": "policy",
     "sectors": [],
     "novelty": "new",
-    "confidence": "high"
+    "confidence": "medium"
    }
   },
   {
@@ -121,7 +121,7 @@
      }
     ],
     "novelty": "new",
-    "confidence": "medium"
+    "confidence": "low"
    }
   },
   {
@@ -143,7 +143,7 @@
      }
     ],
     "novelty": "rehash",
-    "confidence": "medium"
+    "confidence": "low"
    }
   },
   {
@@ -172,10 +172,10 @@
    "published": "2026-11-20T21:15+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "other",
+    "channel": "policy",
     "sectors": [],
     "novelty": "new",
-    "confidence": "high"
+    "confidence": "medium"
    }
   },
   {
@@ -203,10 +203,20 @@
      {
       "line": "XLC",
       "direction": "negative",
-      "strength": 1
+      "strength": 2
      },
      {
       "line": "XLY",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLF",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLI",
       "direction": "negative",
       "strength": 1
      }
@@ -270,13 +280,7 @@
    "tags": {
     "macro": "neutral",
     "channel": "other",
-    "sectors": [
-     {
-      "line": "XLU",
-      "direction": "positive",
-      "strength": 1
-     }
-    ],
+    "sectors": [],
     "novelty": "rehash",
     "confidence": "low"
    }
@@ -295,7 +299,7 @@
     "sectors": [
      {
       "line": "SMH",
-      "direction": "positive",
+      "direction": "negative",
       "strength": 1
      }
     ],
@@ -316,19 +320,14 @@
     "channel": "growth",
     "sectors": [
      {
-      "line": "XLK",
+      "line": "SMH",
       "direction": "negative",
       "strength": 2
      },
      {
-      "line": "SMH",
+      "line": "XLK",
       "direction": "negative",
-      "strength": 3
-     },
-     {
-      "line": "XLC",
-      "direction": "negative",
-      "strength": 1
+      "strength": 2
      }
     ],
     "novelty": "follow_up",
@@ -346,13 +345,7 @@
    "tags": {
     "macro": "neutral",
     "channel": "other",
-    "sectors": [
-     {
-      "line": "XLU",
-      "direction": "positive",
-      "strength": 1
-     }
-    ],
+    "sectors": [],
     "novelty": "rehash",
     "confidence": "low"
    }
@@ -370,14 +363,14 @@
     "channel": "rates",
     "sectors": [
      {
-      "line": "XLK",
-      "direction": "negative",
-      "strength": 2
-     },
-     {
       "line": "SMH",
       "direction": "negative",
-      "strength": 2
+      "strength": 1
+     },
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
      }
     ],
     "novelty": "rehash",
@@ -386,7 +379,7 @@
   },
   {
    "id": 18,
-   "story": 18,
+   "story": 10,
    "feed": "SMH",
    "title": "ASML Stock Fell 25% In The AI Selloff, But Its Outlook Hasn't Budged",
    "url": "https://finnhub.io/api/news?id=b3fdb14a7c548357fa7d200917e65154d7b87dce413b46747080d701b497f05a",
@@ -394,15 +387,15 @@
    "published": "2026-11-23T09:26+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "earnings",
+    "channel": "growth",
     "sectors": [
      {
       "line": "SMH",
-      "direction": "positive",
+      "direction": "negative",
       "strength": 1
      }
     ],
-    "novelty": "rehash",
+    "novelty": "follow_up",
     "confidence": "medium"
    }
   },
@@ -418,7 +411,7 @@
     "macro": "neutral",
     "channel": "other",
     "sectors": [],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -433,20 +426,14 @@
    "tags": {
     "macro": "neutral",
     "channel": "other",
-    "sectors": [
-     {
-      "line": "XLI",
-      "direction": "negative",
-      "strength": 1
-     }
-    ],
-    "novelty": "new",
+    "sectors": [],
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
   {
    "id": 21,
-   "story": 20,
+   "story": 21,
    "feed": "XLI",
    "title": "State Street Industrial Select SPDR (XLI) Sells $12.5 Million More GE on Nov. 19",
    "url": "https://finnhub.io/api/news?id=cca33d94cd63b8acf42970c84cd07a793b54bbed2e46dbcfa9bb09dd5cbb30c9",
@@ -455,13 +442,7 @@
    "tags": {
     "macro": "neutral",
     "channel": "other",
-    "sectors": [
-     {
-      "line": "XLI",
-      "direction": "negative",
-      "strength": 1
-     }
-    ],
+    "sectors": [],
     "novelty": "rehash",
     "confidence": "low"
    }
@@ -476,26 +457,26 @@
    "published": "2026-11-23T11:52+00:00",
    "tags": {
     "macro": "negative",
-    "channel": "other",
+    "channel": "growth",
     "sectors": [
-     {
-      "line": "XLRE",
-      "direction": "negative",
-      "strength": 1
-     },
      {
       "line": "XLK",
       "direction": "negative",
       "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 1
      }
     ],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
   {
    "id": 23,
-   "story": 22,
+   "story": 23,
    "feed": "XLB",
    "title": "What Moved Bloom Energy Stock?",
    "url": "https://finnhub.io/api/news?id=4cff44a144087c3cb2f0acc7d23b45cfce96931abcef3b0f075906066153892f",
@@ -505,7 +486,7 @@
     "macro": "neutral",
     "channel": "other",
     "sectors": [],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -518,15 +499,9 @@
    "source": "Reuters",
    "published": "2026-11-23T12:15+00:00",
    "tags": {
-    "macro": "negative",
+    "macro": "neutral",
     "channel": "other",
-    "sectors": [
-     {
-      "line": "XLK",
-      "direction": "negative",
-      "strength": 1
-     }
-    ],
+    "sectors": [],
     "novelty": "new",
     "confidence": "medium"
    }
@@ -544,18 +519,18 @@
     "channel": "growth",
     "sectors": [
      {
-      "line": "XLK",
+      "line": "SMH",
       "direction": "negative",
       "strength": 2
      },
      {
-      "line": "SMH",
+      "line": "XLK",
       "direction": "negative",
       "strength": 2
      }
     ],
     "novelty": "follow_up",
-    "confidence": "high"
+    "confidence": "medium"
    }
   },
   {
@@ -571,7 +546,7 @@
     "channel": "geopolitics",
     "sectors": [],
     "novelty": "new",
-    "confidence": "high"
+    "confidence": "medium"
    }
   },
   {
@@ -587,7 +562,7 @@
     "channel": "geopolitics",
     "sectors": [],
     "novelty": "new",
-    "confidence": "high"
+    "confidence": "medium"
    }
   },
   {
@@ -600,7 +575,7 @@
    "published": "2026-11-23T12:40+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "other",
+    "channel": "policy",
     "sectors": [
      {
       "line": "XLC",
@@ -609,7 +584,7 @@
      }
     ],
     "novelty": "new",
-    "confidence": "medium"
+    "confidence": "low"
    }
   },
   {
@@ -630,7 +605,7 @@
       "strength": 1
      }
     ],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -646,7 +621,7 @@
     "macro": "neutral",
     "channel": "other",
     "sectors": [],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -660,7 +635,7 @@
    "published": "2026-11-23T13:00+00:00",
    "tags": {
     "macro": "positive",
-    "channel": "other",
+    "channel": "earnings",
     "sectors": [
      {
       "line": "XLRE",
@@ -690,7 +665,7 @@
     "channel": "geopolitics",
     "sectors": [],
     "novelty": "new",
-    "confidence": "high"
+    "confidence": "medium"
    }
   },
   {
@@ -703,7 +678,7 @@
    "published": "2026-11-23T13:33+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "other",
+    "channel": "geopolitics",
     "sectors": [
      {
       "line": "XLB",
@@ -742,13 +717,7 @@
    "tags": {
     "macro": "positive",
     "channel": "geopolitics",
-    "sectors": [
-     {
-      "line": "XLE",
-      "direction": "positive",
-      "strength": 1
-     }
-    ],
+    "sectors": [],
     "novelty": "new",
     "confidence": "low"
    }
@@ -763,9 +732,9 @@
    "published": "2026-11-23T13:39+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "other",
+    "channel": "growth",
     "sectors": [],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -779,7 +748,7 @@
    "published": "2026-11-23T13:39+00:00",
    "tags": {
     "macro": "positive",
-    "channel": "other",
+    "channel": "earnings",
     "sectors": [
      {
       "line": "XLRE",
@@ -792,7 +761,7 @@
       "strength": 1
      }
     ],
-    "novelty": "rehash",
+    "novelty": "follow_up",
     "confidence": "medium"
    }
   },
@@ -809,7 +778,7 @@
     "channel": "rates",
     "sectors": [],
     "novelty": "new",
-    "confidence": "low"
+    "confidence": "medium"
    }
   },
   {
@@ -825,7 +794,7 @@
     "channel": "other",
     "sectors": [],
     "novelty": "rehash",
-    "confidence": "high"
+    "confidence": "low"
    }
   },
   {
@@ -932,7 +901,7 @@
       "strength": 1
      }
     ],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -967,12 +936,12 @@
      {
       "line": "XLK",
       "direction": "positive",
-      "strength": 1
+      "strength": 2
      },
      {
-      "line": "XLC",
+      "line": "SMH",
       "direction": "positive",
-      "strength": 1
+      "strength": 2
      }
     ],
     "novelty": "follow_up",
@@ -1005,7 +974,7 @@
    "published": "2026-11-23T14:23+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "geopolitics",
+    "channel": "other",
     "sectors": [],
     "novelty": "new",
     "confidence": "high"
@@ -1056,7 +1025,7 @@
       "strength": 1
      }
     ],
-    "novelty": "follow_up",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -1070,7 +1039,7 @@
    "published": "2026-11-23T14:30+00:00",
    "tags": {
     "macro": "positive",
-    "channel": "other",
+    "channel": "inflation",
     "sectors": [
      {
       "line": "XLE",
@@ -1145,7 +1114,7 @@
    "source": "Reuters",
    "published": "2026-11-23T14:58+00:00",
    "tags": {
-    "macro": "negative",
+    "macro": "neutral",
     "channel": "geopolitics",
     "sectors": [],
     "novelty": "new",
@@ -1154,7 +1123,7 @@
   },
   {
    "id": 57,
-   "story": 57,
+   "story": 55,
    "feed": "XLV",
    "title": "UnitedHealth and Humana Stocks Keep Sliding. Why They\u2019re Not Taking Part in Today\u2019s Rally.",
    "url": "https://finnhub.io/api/news?id=3213d8d47c8224c3893fca2ef08bea7f75ccb043ee3f430b88fe2c3ab993f5ee",
@@ -1194,7 +1163,7 @@
      {
       "line": "XLK",
       "direction": "positive",
-      "strength": 1
+      "strength": 2
      },
      {
       "line": "LAZR",
@@ -1203,7 +1172,7 @@
      }
     ],
     "novelty": "new",
-    "confidence": "high"
+    "confidence": "medium"
    }
   },
   {
@@ -1295,12 +1264,12 @@
      }
     ],
     "novelty": "rehash",
-    "confidence": "low"
+    "confidence": "medium"
    }
   },
   {
    "id": 64,
-   "story": 64,
+   "story": 58,
    "feed": "LAZR",
    "title": "Applied Optoelectronics and Lumentum Soar 22% as Jensen Huang\u2019s Return to NVIDIA Sparks AI Optics Rebound; Coherent Jumps 19%",
    "url": "https://finnhub.io/api/news?id=0fa3bc2818ca19361123e599e12707b33f511b8aab21e842630f3de16cb49cc4",
@@ -1323,7 +1292,7 @@
      {
       "line": "XLK",
       "direction": "positive",
-      "strength": 1
+      "strength": 2
      }
     ],
     "novelty": "follow_up",
@@ -1341,7 +1310,13 @@
    "tags": {
     "macro": "neutral",
     "channel": "earnings",
-    "sectors": [],
+    "sectors": [
+     {
+      "line": "XLV",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
     "novelty": "rehash",
     "confidence": "medium"
    }
@@ -1364,7 +1339,7 @@
   },
   {
    "id": 67,
-   "story": 67,
+   "story": 59,
    "feed": "XLV",
    "title": "Lilly buys Huntington\u2019s drug developer LoQus23 in potentially $725M deal",
    "url": "https://finnhub.io/api/news?id=860f05a7ee9dd48a961ab6ba7eadaf3102db536da18618d7c6d774202a3020e6",
@@ -1380,7 +1355,7 @@
       "strength": 1
      }
     ],
-    "novelty": "new",
+    "novelty": "follow_up",
     "confidence": "high"
    }
   },
@@ -1431,7 +1406,7 @@
    "source": "Yahoo",
    "published": "2026-11-23T16:27+00:00",
    "tags": {
-    "macro": "neutral",
+    "macro": "positive",
     "channel": "policy",
     "sectors": [
      {
@@ -1470,8 +1445,18 @@
    "published": "2026-11-23T16:30+00:00",
    "tags": {
     "macro": "positive",
-    "channel": "other",
+    "channel": "policy",
     "sectors": [
+     {
+      "line": "XLK",
+      "direction": "positive",
+      "strength": 2
+     },
+     {
+      "line": "XLF",
+      "direction": "positive",
+      "strength": 1
+     },
      {
       "line": "XLE",
       "direction": "negative",
@@ -1532,7 +1517,7 @@
   },
   {
    "id": 76,
-   "story": 76,
+   "story": 58,
    "feed": "LAZR",
    "title": "Harmonic Stock Jumps 10.4% in Tech Rally, No Company News on Monday",
    "url": "https://finnhub.io/api/news?id=38e1e00c4301e762e3702a4acdb59d8ee04aab8d54bc58c5c97614e2b08e275a",
@@ -1567,7 +1552,7 @@
    "published": "2026-11-23T17:01+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "other",
+    "channel": "earnings",
     "sectors": [
      {
       "line": "SMH",
@@ -1608,7 +1593,7 @@
   },
   {
    "id": 79,
-   "story": 79,
+   "story": 58,
    "feed": "LAZR",
    "title": "Keysight Surges 10.4% in Tech Rally Led by Nvidia on Monday",
    "url": "https://finnhub.io/api/news?id=db8bb98fb38fe01891d776608323668d21004c3b707d1fd237f06321de8ae4a8",
@@ -1816,21 +1801,21 @@
      {
       "line": "XLK",
       "direction": "positive",
-      "strength": 2
-     },
-     {
-      "line": "SMH",
-      "direction": "positive",
-      "strength": 2
+      "strength": 1
      },
      {
       "line": "XLC",
       "direction": "positive",
       "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 2
      }
     ],
     "novelty": "follow_up",
-    "confidence": "medium"
+    "confidence": "high"
    }
   },
   {
@@ -1848,7 +1833,7 @@
      {
       "line": "XLK",
       "direction": "positive",
-      "strength": 3
+      "strength": 2
      },
      {
       "line": "SMH",
@@ -1900,11 +1885,6 @@
     "channel": "other",
     "sectors": [
      {
-      "line": "XLK",
-      "direction": "positive",
-      "strength": 1
-     },
-     {
       "line": "SMH",
       "direction": "positive",
       "strength": 1
@@ -1933,7 +1913,7 @@
      }
     ],
     "novelty": "new",
-    "confidence": "low"
+    "confidence": "medium"
    }
   },
   {
@@ -2000,12 +1980,7 @@
      {
       "line": "XLK",
       "direction": "positive",
-      "strength": 2
-     },
-     {
-      "line": "SMH",
-      "direction": "positive",
-      "strength": 2
+      "strength": 1
      }
     ],
     "novelty": "follow_up",
@@ -2031,7 +2006,7 @@
      }
     ],
     "novelty": "new",
-    "confidence": "low"
+    "confidence": "medium"
    }
   },
   {
@@ -2096,7 +2071,7 @@
      }
     ],
     "novelty": "rehash",
-    "confidence": "low"
+    "confidence": "medium"
    }
   },
   {
@@ -2109,9 +2084,15 @@
    "published": "2026-11-23T18:36+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "policy",
-    "sectors": [],
-    "novelty": "follow_up",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -2128,7 +2109,7 @@
     "channel": "rates",
     "sectors": [
      {
-      "line": "XLY",
+      "line": "XLK",
       "direction": "negative",
       "strength": 1
      }
@@ -2147,14 +2128,8 @@
    "published": "2026-11-23T18:47+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "earnings",
-    "sectors": [
-     {
-      "line": "XLP",
-      "direction": "positive",
-      "strength": 1
-     }
-    ],
+    "channel": "other",
+    "sectors": [],
     "novelty": "new",
     "confidence": "low"
    }
@@ -2185,7 +2160,7 @@
    "published": "2026-11-23T18:50+00:00",
    "tags": {
     "macro": "neutral",
-    "channel": "earnings",
+    "channel": "other",
     "sectors": [],
     "novelty": "rehash",
     "confidence": "low"
@@ -2201,15 +2176,20 @@
    "published": "2026-11-23T18:52+00:00",
    "tags": {
     "macro": "positive",
-    "channel": "credit",
+    "channel": "other",
     "sectors": [
      {
       "line": "XLC",
       "direction": "positive",
       "strength": 2
+     },
+     {
+      "line": "XLK",
+      "direction": "positive",
+      "strength": 1
      }
     ],
-    "novelty": "follow_up",
+    "novelty": "new",
     "confidence": "medium"
    }
   },
@@ -2247,7 +2227,7 @@
   },
   {
    "id": 108,
-   "story": 108,
+   "story": 83,
    "feed": "SMH",
    "title": "Credo Technology\u2019s AI rebound potential versus Broadcom",
    "url": "https://finnhub.io/api/news?id=a2962f6fcf41c029c4fb058007c886eb80287113455eb7c4fd521db39989157d",
@@ -2323,13 +2303,18 @@
       "strength": 1
      },
      {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     },
+     {
       "line": "XLC",
       "direction": "positive",
       "strength": 1
      }
     ],
     "novelty": "follow_up",
-    "confidence": "medium"
+    "confidence": "high"
    }
   },
   {
@@ -2341,7 +2326,7 @@
    "source": "Yahoo",
    "published": "2026-11-23T19:05+00:00",
    "tags": {
-    "macro": "neutral",
+    "macro": "negative",
     "channel": "other",
     "sectors": [
      {
@@ -2401,7 +2386,7 @@
    "source": "Yahoo",
    "published": "2026-11-23T19:11+00:00",
    "tags": {
-    "macro": "neutral",
+    "macro": "negative",
     "channel": "other",
     "sectors": [
      {
@@ -2410,8 +2395,8 @@
       "strength": 1
      }
     ],
-    "novelty": "follow_up",
-    "confidence": "low"
+    "novelty": "new",
+    "confidence": "medium"
    }
   },
   {
@@ -2439,16 +2424,10 @@
    "source": "Yahoo",
    "published": "2026-11-23T19:13+00:00",
    "tags": {
-    "macro": "negative",
-    "channel": "credit",
-    "sectors": [
-     {
-      "line": "XLE",
-      "direction": "negative",
-      "strength": 1
-     }
-    ],
-    "novelty": "new",
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -2464,7 +2443,7 @@
     "macro": "neutral",
     "channel": "other",
     "sectors": [],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -2480,7 +2459,7 @@
     "macro": "neutral",
     "channel": "rates",
     "sectors": [],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -2496,7 +2475,7 @@
     "macro": "neutral",
     "channel": "earnings",
     "sectors": [],
-    "novelty": "new",
+    "novelty": "rehash",
     "confidence": "low"
    }
   },
@@ -2513,13 +2492,18 @@
     "channel": "geopolitics",
     "sectors": [
      {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
       "line": "XLC",
       "direction": "negative",
       "strength": 1
      }
     ],
-    "novelty": "follow_up",
-    "confidence": "low"
+    "novelty": "new",
+    "confidence": "medium"
    }
   },
   {
@@ -2557,18 +2541,18 @@
     "channel": "other",
     "sectors": [
      {
-      "line": "SMH",
+      "line": "XLK",
       "direction": "positive",
       "strength": 2
      },
      {
-      "line": "XLK",
+      "line": "SMH",
       "direction": "positive",
-      "strength": 1
+      "strength": 2
      }
     ],
     "novelty": "follow_up",
-    "confidence": "medium"
+    "confidence": "high"
    }
   },
   {
@@ -2580,11 +2564,11 @@
    "source": "Yahoo",
    "published": "2026-11-23T19:35+00:00",
    "tags": {
-    "macro": "positive",
+    "macro": "neutral",
     "channel": "other",
     "sectors": [],
     "novelty": "rehash",
-    "confidence": "medium"
+    "confidence": "high"
    }
   },
   {
@@ -2598,9 +2582,15 @@
    "tags": {
     "macro": "neutral",
     "channel": "other",
-    "sectors": [],
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
     "novelty": "rehash",
-    "confidence": "high"
+    "confidence": "low"
    }
   },
   {
@@ -2644,6 +2634,11 @@
     "sectors": [
      {
       "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     },
+     {
+      "line": "XLK",
       "direction": "negative",
       "strength": 1
      }
@@ -2667,7 +2662,7 @@
      {
       "line": "XLK",
       "direction": "negative",
-      "strength": 1
+      "strength": 2
      },
      {
       "line": "SMH",
@@ -2681,7 +2676,7 @@
   },
   {
    "id": 129,
-   "story": 129,
+   "story": 126,
    "feed": "nvda",
    "title": "Why Jensen Huang is the 'key man' behind the market rally",
    "url": "https://finnhub.io/api/news?id=146805ecb80f21b060b3c5ec2374551bcf5271da42890c7236a2d374bcad8881",
@@ -2708,7 +2703,7 @@
   },
   {
    "id": 130,
-   "story": 130,
+   "story": 126,
    "feed": "nvda",
    "title": "Should You Buy Nvidia Stock Now That Jensen Huang Is Back in Charge?",
    "url": "https://finnhub.io/api/news?id=c0c82119a5416d8b4ae623778efcf7f710014543ff0c81616fcfa90a93e91c7c",
@@ -2726,7 +2721,7 @@
      {
       "line": "XLK",
       "direction": "positive",
-      "strength": 1
+      "strength": 2
      }
     ],
     "novelty": "follow_up",
@@ -2735,7 +2730,7 @@
   },
   {
    "id": 131,
-   "story": 131,
+   "story": 126,
    "feed": "nvda",
    "title": "Jensen Huang greeted by Nvidia employees after reinstatement",
    "url": "https://finnhub.io/api/news?id=81046771d8b9a8244450f38405b56c033040e71ca62b431b6c429f4c13b9afb6",
@@ -2749,6 +2744,11 @@
       "line": "SMH",
       "direction": "positive",
       "strength": 1
+     },
+     {
+      "line": "XLK",
+      "direction": "positive",
+      "strength": 1
      }
     ],
     "novelty": "follow_up",
@@ -2757,7 +2757,7 @@
   },
   {
    "id": 132,
-   "story": 132,
+   "story": 126,
    "feed": "nvda",
    "title": "'The exact tick-tock': A prominent Democrat previews what to expect when lawmakers question Jensen Huang",
    "url": "https://finnhub.io/api/news?id=c185c4a908dbb1debb9be10924eb21d5ec5f1d8860b091ca1c442eac32372005",
@@ -2768,12 +2768,12 @@
     "channel": "policy",
     "sectors": [
      {
-      "line": "SMH",
+      "line": "XLK",
       "direction": "negative",
       "strength": 1
      },
      {
-      "line": "XLK",
+      "line": "SMH",
       "direction": "negative",
       "strength": 1
      }
@@ -2801,12 +2801,12 @@
      }
     ],
     "novelty": "rehash",
-    "confidence": "medium"
+    "confidence": "low"
    }
   },
   {
    "id": 134,
-   "story": 134,
+   "story": 126,
    "feed": "nvda",
    "title": "Nvidia gains nearly $1T as Trump says nobody could 'revive the stock like it's being revived'",
    "url": "https://finnhub.io/api/news?id=0c3e3ef2df2e53ca8e8a38a8255bc31e7f00e8092a6c267803d512b20c89573b",
@@ -2817,14 +2817,14 @@
     "channel": "other",
     "sectors": [
      {
-      "line": "SMH",
+      "line": "XLK",
       "direction": "positive",
       "strength": 3
      },
      {
-      "line": "XLK",
+      "line": "SMH",
       "direction": "positive",
-      "strength": 2
+      "strength": 3
      }
     ],
     "novelty": "follow_up",
@@ -2844,12 +2844,7 @@
     "channel": "growth",
     "sectors": [
      {
-      "line": "XLF",
-      "direction": "negative",
-      "strength": 1
-     },
-     {
-      "line": "XLB",
+      "line": "XLY",
       "direction": "negative",
       "strength": 1
      },
@@ -2857,15 +2852,20 @@
       "line": "XLI",
       "direction": "negative",
       "strength": 1
+     },
+     {
+      "line": "XLB",
+      "direction": "negative",
+      "strength": 1
      }
     ],
     "novelty": "new",
-    "confidence": "low"
+    "confidence": "medium"
    }
   },
   {
    "id": 136,
-   "story": 136,
+   "story": 126,
    "feed": "nvda",
    "title": "Nvidia reinstates Huang as CEO after Trump intervention",
    "url": "https://finnhub.io/api/news?id=2044e22c9fde7c86faf98fe1b298ee987e61313d984c4f55d4a8f6178a5702f2",
@@ -2876,17 +2876,17 @@
     "channel": "other",
     "sectors": [
      {
-      "line": "SMH",
+      "line": "XLK",
       "direction": "positive",
       "strength": 3
      },
      {
-      "line": "XLK",
+      "line": "SMH",
       "direction": "positive",
-      "strength": 2
+      "strength": 3
      }
     ],
-    "novelty": "new",
+    "novelty": "follow_up",
     "confidence": "high"
    }
   },
@@ -2909,12 +2909,12 @@
      }
     ],
     "novelty": "new",
-    "confidence": "medium"
+    "confidence": "low"
    }
   },
   {
    "id": 138,
-   "story": 136,
+   "story": 126,
    "feed": "nvda",
    "title": "Stocks Roar as the S&P 500 Jumps About 4.5% on News Jensen Huang Is Returning as NVIDIA CEO",
    "url": "https://finnhub.io/api/news?id=b12296cc6a1b7eab1a3efae40b1e794480360b0be55affa590372940f0fbbea9",
@@ -2936,11 +2936,6 @@
      },
      {
       "line": "XLF",
-      "direction": "positive",
-      "strength": 1
-     },
-     {
-      "line": "XLU",
       "direction": "positive",
       "strength": 1
      }
@@ -2973,7 +2968,7 @@
   },
   {
    "id": 140,
-   "story": 136,
+   "story": 126,
    "feed": "nvda",
    "title": "Why Nvidia Needed Jensen Huang Back\u2014And What His Return Really Changes",
    "url": "https://finnhub.io/api/news?id=be9fb1090601674b2bee7b1921e2da3459987f43c76e6ef0a745643195e6d9f8",
@@ -2984,14 +2979,14 @@
     "channel": "other",
     "sectors": [
      {
-      "line": "SMH",
+      "line": "XLK",
       "direction": "positive",
       "strength": 2
      },
      {
-      "line": "XLK",
+      "line": "SMH",
       "direction": "positive",
-      "strength": 1
+      "strength": 2
      }
     ],
     "novelty": "follow_up",
@@ -3000,7 +2995,7 @@
   },
   {
    "id": 141,
-   "story": 136,
+   "story": 126,
    "feed": "market",
    "title": "Nvidia breathes new life into the AI trade. Plus, Qnity inks a smart deal to get stronger",
    "url": "https://www.cnbc.com/investingclub/2026/11/23/nvidia-breathes-new-life-into-the-ai-trade-plus-qnity-inks-a-smart-deal-to-get-stronger.html",
@@ -3011,14 +3006,14 @@
     "channel": "other",
     "sectors": [
      {
-      "line": "SMH",
+      "line": "XLK",
       "direction": "positive",
       "strength": 2
      },
      {
-      "line": "XLK",
+      "line": "SMH",
       "direction": "positive",
-      "strength": 1
+      "strength": 2
      }
     ],
     "novelty": "follow_up",
@@ -3027,7 +3022,7 @@
   },
   {
    "id": 142,
-   "story": 136,
+   "story": 126,
    "feed": "market",
    "title": "Jensen Huang cheered by Nvidia employees after return, pledges to be a better CEO",
    "url": "https://www.cnbc.com/2026/11/23/jensen-huang-nvidia-ceo-return.html",
@@ -3038,12 +3033,12 @@
     "channel": "other",
     "sectors": [
      {
-      "line": "SMH",
+      "line": "XLK",
       "direction": "positive",
       "strength": 1
      },
      {
-      "line": "XLK",
+      "line": "SMH",
       "direction": "positive",
       "strength": 1
      }
@@ -3076,6 +3071,11 @@
      },
      {
       "line": "XLU",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLY",
       "direction": "negative",
       "strength": 1
      }
