@@ -26,7 +26,7 @@
    "archived": true,
    "session": "after_close",
    "in_drawdown": false,
-   "drawdown_pct": -7.2623,
+   "drawdown_pct": -7.2906,
    "met": {
     "vix": true,
     "fed": false,
