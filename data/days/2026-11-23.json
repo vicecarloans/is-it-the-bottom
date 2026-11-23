@@ -1,6 +1,6 @@
 {
  "as_of": "2026-11-23",
- "generated_at": "2026-11-23T21:13:03+00:00",
+ "generated_at": "2026-11-23T21:14:30+00:00",
  "verdict": "No panic, no bottom to call",
  "count": 2,
  "total": 5,
@@ -24,7 +24,7 @@
   "trading_days_since": 0,
   "window_trading_days": 30,
   "watch": {
-   "note": "Headlines report that Nvidia reinstated Jensen Huang as CEO on Monday, 11 days after his resignation, following discussions that Trump said he had with the board.",
+   "note": "Nvidia reinstated Jensen Huang as CEO on Monday, 11 days after his resignation, following reported contacts from President Trump and senior US government officials with the board.",
    "first_seen": "2026-11-20",
    "last_seen": "2026-11-23",
    "days_since_seen": 0
@@ -39,14 +39,14 @@
   "data_date": "2026-11-20"
  },
  "digest": {
-  "summary": "US stocks rallied sharply on Monday, November 23, 2026, after the S&P 500 had fallen about 7.3% below its one-year high following a brutal prior week. Headlines tie the rebound mainly to Nvidia's reinstatement of Jensen Huang as CEO, which sent chip and AI-related shares higher, with reports of the S&P 500 up about 4.5% in midday trading and Nasdaq up nearly 7%. Headlines do not give a single cause beyond that news, and the market-wide move is described as a rebound from last week's selloff.",
+  "summary": "US stocks rebounded sharply on Monday, November 23, after a brutal prior week. Headlines tie much of the rally to Nvidia reinstating Jensen Huang as CEO 11 days after his resignation, following reported contacts with the board and senior US government officials. Chip and AI-related stocks led gains, with Nvidia reported up about 30% or more and the Nasdaq reported up nearly 7% at midday. The S&P 500 is 7.3% below its one-year high.",
   "fed_tone": "unclear",
-  "fed_note": "The Fed headlines are procedural (college challenge, reserve survey, October meeting minutes, 2027 meeting schedule) and do not say anything about the policy outlook.",
-  "sector_note": "The headlines describe chip and AI-related stocks leading the rally after the Huang news, with the IT sector reported up about 8.6% in midday trading; they do not discuss consumer staples (XLP), so the headlines do not explain the staples fund's lead.",
+  "fed_note": "No headline from the set addresses Fed policy directly; the only Fed items are routine releases, including October FOMC minutes published November 18.",
+  "sector_note": "The headlines do not say why the consumer staples sector (XLP) is holding up.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": true,
-  "huang_note": "Headlines report that Nvidia reinstated Jensen Huang as CEO on Monday, 11 days after his resignation, following discussions that Trump said he had with the board.",
+  "huang_note": "Nvidia reinstated Jensen Huang as CEO on Monday, 11 days after his resignation, following reported contacts from President Trump and senior US government officials with the board.",
   "sources": [
    {
     "title": "Stocks Roar as the S&P 500 Jumps About 4.5% on News Jensen Huang Is Returning as NVIDIA CEO",
@@ -61,8 +61,20 @@
     "date": "2026-11-23"
    },
    {
+    "title": "Nvidia gains nearly $1T as Trump says nobody could 'revive the stock like it's being revived'",
+    "url": "https://finnhub.io/api/news?id=0c3e3ef2df2e53ca8e8a38a8255bc31e7f00e8092a6c267803d512b20c89573b",
+    "source": "Yahoo",
+    "date": "2026-11-23"
+   },
+   {
     "title": "Stock Market Today: Dow, Nasdaq Surge As Jensen Huang Returns To Nvidia; Chip Plays Rocket (Live Coverage)",
     "url": "https://finnhub.io/api/news?id=f781a840321cfedf6a87e5387889c3ce39b0e3331e64be1fdaa5755ba26621d5",
+    "source": "Yahoo",
+    "date": "2026-11-23"
+   },
+   {
+    "title": "Nvidia stock soars 30% after brutal selloff",
+    "url": "https://finnhub.io/api/news?id=c325de383574ac3c295ae865721690a74dd34dcdaee6537a83ed5b6d8e558cf2",
     "source": "Yahoo",
     "date": "2026-11-23"
    },
@@ -75,12 +87,6 @@
    {
     "title": "Jensen Huang\u2019s Wealth Rises $36 Billion as Nvidia Surge Burns Short Sellers for $12 Billion",
     "url": "https://finnhub.io/api/news?id=72756612afb70ef28655dfa63df55e61ad65f5b449fb12c36e3fdbdc8c6ac317",
-    "source": "Yahoo",
-    "date": "2026-11-23"
-   },
-   {
-    "title": "Nvidia Is Now Second To Apple In The World\u2019s Most Valued Companies On Jensen Huang Optimism",
-    "url": "https://finnhub.io/api/news?id=8b486e39527a7c4e27450ea2605bb70f357b6a1ad86fc1740a8cdf5c796f4070",
     "source": "Yahoo",
     "date": "2026-11-23"
    }
@@ -601,7 +607,7 @@
      ],
      [
       "2026-11-23",
-      27.0
+      26.95
      ]
     ],
     "threshold": 30.0
@@ -2344,7 +2350,7 @@
   ],
   [
    "2025-02-07",
-   589.2,
+   589.19,
    -1.47
   ],
   [
@@ -2844,7 +2850,7 @@
   ],
   [
    "2025-07-03",
-   616.96,
+   616.95,
    0.0
   ],
   [
