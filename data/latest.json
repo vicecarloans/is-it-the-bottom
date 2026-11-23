@@ -1,18 +1,18 @@
 {
  "as_of": "2026-11-23",
- "generated_at": "2026-11-23T14:21:23+00:00",
- "verdict": "Getting closer",
+ "generated_at": "2026-11-23T21:13:03+00:00",
+ "verdict": "No panic, no bottom to call",
  "count": 2,
  "total": 5,
  "backtested": false,
  "drawdown": {
-  "pct": -11.4595,
+  "pct": -7.2623,
   "peak_date": "2026-10-06",
-  "in_drawdown": true,
+  "in_drawdown": false,
   "threshold_pct": -10.0,
-  "data_date": "2026-11-20"
+  "data_date": "2026-11-23"
  },
- "base_verdict": "No",
+ "base_verdict": "No panic, no bottom to call",
  "catalyst": {
   "active": true,
   "event": {
@@ -24,76 +24,64 @@
   "trading_days_since": 0,
   "window_trading_days": 30,
   "watch": {
-   "note": "Headlines report that President Trump urged Nvidia's board to rehire Jensen Huang as CEO, and that Treasury Secretary Scott Bessent said Huang could qualify as an outside candidate; the board was reported as not currently considering his return.",
+   "note": "Headlines report that Nvidia reinstated Jensen Huang as CEO on Monday, 11 days after his resignation, following discussions that Trump said he had with the board.",
    "first_seen": "2026-11-20",
    "last_seen": "2026-11-23",
    "days_since_seen": 0
   },
-  "lifted_verdict": true
+  "lifted_verdict": false
  },
  "override": {
   "capped": false,
   "reasons": [],
-  "hy_level": 3.52,
-  "hy_change": 0.92,
-  "data_date": "2026-11-19"
+  "hy_level": 3.76,
+  "hy_change": 1.13,
+  "data_date": "2026-11-20"
  },
  "digest": {
-  "summary": "US stocks fell sharply on Friday, November 20, capping a punishing week in which investors used Anthropic's heavily anticipated IPO to lock in profits from the AI-driven rally. Headlines on November 22 describe an Asia-led AI stocks rout, with US futures bouncing as the rout slowed. Coverage on November 23 reports tech futures and Nvidia rising after the sell-off, and Capital Economics expects further declines concentrated in technology. The S&P 500 is 11.5% below its one-year high, and the headlines tie the recent weakness to AI and chip stocks.",
+  "summary": "US stocks rallied sharply on Monday, November 23, 2026, after the S&P 500 had fallen about 7.3% below its one-year high following a brutal prior week. Headlines tie the rebound mainly to Nvidia's reinstatement of Jensen Huang as CEO, which sent chip and AI-related shares higher, with reports of the S&P 500 up about 4.5% in midday trading and Nasdaq up nearly 7%. Headlines do not give a single cause beyond that news, and the market-wide move is described as a rebound from last week's selloff.",
   "fed_tone": "unclear",
-  "fed_note": "The Federal Reserve headlines are routine items (College Fed Challenge winners, a reserve-balances survey, enforcement actions, October FOMC minutes, and a 2027 meeting schedule), and none states a clear policy direction.",
-  "sector_note": "The headlines do not say why the consumer staples sector (XLP) is holding up.",
+  "fed_note": "The Fed headlines are procedural (college challenge, reserve survey, October meeting minutes, 2027 meeting schedule) and do not say anything about the policy outlook.",
+  "sector_note": "The headlines describe chip and AI-related stocks leading the rally after the Huang news, with the IT sector reported up about 8.6% in midday trading; they do not discuss consumer staples (XLP), so the headlines do not explain the staples fund's lead.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": true,
-  "huang_note": "Headlines report that President Trump urged Nvidia's board to rehire Jensen Huang as CEO, and that Treasury Secretary Scott Bessent said Huang could qualify as an outside candidate; the board was reported as not currently considering his return.",
+  "huang_note": "Headlines report that Nvidia reinstated Jensen Huang as CEO on Monday, 11 days after his resignation, following discussions that Trump said he had with the board.",
   "sources": [
    {
-    "title": "Dow Jones, Nasdaq, S&P 500 preview: Consumer spending in focus after AI rout",
-    "url": "https://finnhub.io/api/news?id=e5f490911424e28075738c4b1c11ee7422e266b0c66cea2f3f59e81667b361f2",
+    "title": "Stocks Roar as the S&P 500 Jumps About 4.5% on News Jensen Huang Is Returning as NVIDIA CEO",
+    "url": "https://finnhub.io/api/news?id=b12296cc6a1b7eab1a3efae40b1e794480360b0be55affa590372940f0fbbea9",
     "source": "Yahoo",
     "date": "2026-11-23"
    },
    {
-    "title": "Trump urges Nvidia to reinstate Jensen Huang, calling him \u2018best thing\u2019 for U.S.",
-    "url": "https://finnhub.io/api/news?id=addc7a50a95d0d5d1f446f4de7eb25f799da3540c925d302b02e6bff5e4f327c",
+    "title": "Nvidia reinstates Huang as CEO after Trump intervention",
+    "url": "https://finnhub.io/api/news?id=2044e22c9fde7c86faf98fe1b298ee987e61313d984c4f55d4a8f6178a5702f2",
     "source": "Yahoo",
     "date": "2026-11-23"
    },
    {
-    "title": "Why this analyst expects the U.S. stock market to fall further",
-    "url": "https://finnhub.io/api/news?id=dae34496bead57a7dc55369eedd7ebcd105e3cbbd2e6cd5629dc555c078166be",
+    "title": "Stock Market Today: Dow, Nasdaq Surge As Jensen Huang Returns To Nvidia; Chip Plays Rocket (Live Coverage)",
+    "url": "https://finnhub.io/api/news?id=f781a840321cfedf6a87e5387889c3ce39b0e3331e64be1fdaa5755ba26621d5",
     "source": "Yahoo",
     "date": "2026-11-23"
    },
    {
-    "title": "Stock Market Today: Tech Futures, Nvidia Surge After Market Sell-Off; CrowdStrike Plunges On Zscaler Deal (Live Coverage)",
-    "url": "https://finnhub.io/api/news?id=1b5c97bd6ff6576b06032d20a8715372ba5c04080188a2b061be9726a8c8534f",
+    "title": "Stock Market Midday, Nov. 23: Nasdaq Surges Nearly 7% as Jensen Huang's Return Sparks Historic AI Rebound",
+    "url": "https://finnhub.io/api/news?id=3461207afa305a3f1429aa315e70de3375f3acdf93524248cd9309872e05ffb3",
     "source": "Yahoo",
     "date": "2026-11-23"
    },
    {
-    "title": "Premarket Movers: Nvidia, Dell, HPE Gain; CrowdStrike, UnitedHealth Slide",
-    "url": "https://finnhub.io/api/news?id=ec07e5dc041b7fa4bdae54192db66181218072d0d93055406ae6bcae196b1f42",
-    "source": "ChartMill",
-    "date": "2026-11-23"
-   },
-   {
-    "title": "Nvidia, Broadcom, and AMD roar higher as chip stocks rebound from worst week since 2001",
-    "url": "https://finnhub.io/api/news?id=ac784fd6f901da1c89406d2f52130bd2399f07e5d8ee332493e1d5a5a23958ad",
+    "title": "Jensen Huang\u2019s Wealth Rises $36 Billion as Nvidia Surge Burns Short Sellers for $12 Billion",
+    "url": "https://finnhub.io/api/news?id=72756612afb70ef28655dfa63df55e61ad65f5b449fb12c36e3fdbdc8c6ac317",
     "source": "Yahoo",
     "date": "2026-11-23"
    },
    {
-    "title": "Nvidia Suffers Worst Weekly Rout in Years, Wiping Out $1 Trillion Since Jensen Huang's Exit",
-    "url": "https://finnhub.io/api/news?id=40ec956fa5994adbea61af7cc5aab4db4aad33ee6a98caa9958c80aebb50aafd",
+    "title": "Nvidia Is Now Second To Apple In The World\u2019s Most Valued Companies On Jensen Huang Optimism",
+    "url": "https://finnhub.io/api/news?id=8b486e39527a7c4e27450ea2605bb70f357b6a1ad86fc1740a8cdf5c796f4070",
     "source": "Yahoo",
-    "date": "2026-11-23"
-   },
-   {
-    "title": "Scott Bessent Softens Stance on Jensen Huang's Potential Nvidia Return, Says Former CEO Now Qualifies as 'Outside' Candidate",
-    "url": "https://finnhub.io/api/news?id=c19cb81db3dbf6975f83dfa0393d8634836d5172087945692747d61898eb3d4c",
-    "source": "Benzinga",
     "date": "2026-11-23"
    }
   ]
@@ -103,7 +91,7 @@
    "key": "vix",
    "name": "VIX above 30",
    "met": true,
-   "value": "28.1",
+   "value": "27.0",
    "threshold": "closed above 30 in the last 10 trading days",
    "data_date": "2026-11-23",
    "detail": "10-day peak 35.9 on 2026-11-20",
@@ -613,7 +601,7 @@
      ],
      [
       "2026-11-23",
-      28.09
+      27.0
      ]
     ],
     "threshold": 30.0
@@ -1471,18 +1459,14 @@
    "key": "sector",
    "name": "A clear leading sector",
    "met": false,
-   "value": "XLP +11.7 pts vs SPY",
+   "value": "XLP +8.4 pts vs SPY",
    "threshold": "top sector beats SPY by 5+ pts over 20 days, top on 10 of the last 15 days",
-   "data_date": "2026-11-20",
+   "data_date": "2026-11-23",
    "detail": "XLP was the top sector on 5 of the last 15 trading days",
    "stale": false,
    "spark": {
     "label": "XLP return minus SPY over 20 days, pts",
     "points": [
-     [
-      "2026-05-21",
-      -3.4238
-     ],
      [
       "2026-05-22",
       -2.5538
@@ -1982,6 +1966,10 @@
      [
       "2026-11-20",
       11.7246
+     ],
+     [
+      "2026-11-23",
+      8.3625
      ]
     ],
     "threshold": 5.0
@@ -2009,11 +1997,6 @@
   }
  ],
  "market": [
-  [
-   "2024-10-25",
-   565.98,
-   -0.03
-  ],
   [
    "2024-10-28",
    567.73,
@@ -2361,7 +2344,7 @@
   ],
   [
    "2025-02-07",
-   589.19,
+   589.2,
    -1.47
   ],
   [
@@ -2861,7 +2844,7 @@
   ],
   [
    "2025-07-03",
-   616.95,
+   616.96,
    0.0
   ],
   [
@@ -4608,7 +4591,13 @@
    "2026-11-20",
    689.81,
    -11.46
+  ],
+  [
+   "2026-11-23",
+   722.51,
+   -7.26
   ]
  ],
- "errors": {}
+ "errors": {},
+ "session": "after_close"
 }
