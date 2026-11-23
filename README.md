@@ -27,6 +27,10 @@ They are checked only while the S&P 500 (SPY) is at least 10% below its 52-week 
 
 Verdict: 0–2 met is **No**, 3–4 is **Getting closer**, 5 is **Looks like a bottom**. All thresholds live in [`config.yaml`](config.yaml).
 
+## News by sector
+
+Each run, Claude Haiku tags every headline (market, NVIDIA, Fed, and two large companies per sector) with its likely direction for the market overall and for each of 13 lines: the 11 sector funds, semiconductors (SMH) and photonics (LAZR). Stories are scored by direction, strength, confidence and novelty, and count half as much every 3 trading days. Each story is also checked against prices: did the sector then move the way the news pointed, compared with the S&P 500? The page shows the score next to each sector's 20-day performance and flags where they disagree (good news while lagging, bad news while leading). Tagged headlines are saved in `data/news/`. This is context only; it never decides a condition.
+
 ## Run it
 
 Requires Python 3.11+ and [uv](https://docs.astral.sh/uv/).
