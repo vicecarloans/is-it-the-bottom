@@ -1,7 +1,7 @@
 {
- "as_of": "2026-11-20",
- "generated_at": "2026-11-21T03:19:43+00:00",
- "verdict": "No",
+ "as_of": "2026-11-23",
+ "generated_at": "2026-11-23T14:21:23+00:00",
+ "verdict": "Getting closer",
  "count": 2,
  "total": 5,
  "backtested": false,
@@ -14,16 +14,22 @@
  },
  "base_verdict": "No",
  "catalyst": {
-  "active": false,
-  "event": null,
+  "active": true,
+  "event": {
+   "date": "2026-11-23",
+   "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000090/nvda-20261122.htm",
+   "quote": "On November 22, 2026, the Board of Directors of NVIDIA Corporation reinstated Jen-Hsun Huang as NVIDIA's President, Chief Executive Officer and member of the Board of Directors, effective immediately.",
+   "accession": "0001045810-26-000090"
+  },
+  "trading_days_since": 0,
   "window_trading_days": 30,
   "watch": {
-   "note": "Headlines say Trump called for Nvidia to rehire Jensen Huang, who was ousted as CEO, and Trump said he deserved a second chance. Other headlines say Huang agreed to testify at a Senate hearing, and one speculates he could join Intel.",
+   "note": "Headlines report that President Trump urged Nvidia's board to rehire Jensen Huang as CEO, and that Treasury Secretary Scott Bessent said Huang could qualify as an outside candidate; the board was reported as not currently considering his return.",
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-20",
+   "last_seen": "2026-11-23",
    "days_since_seen": 0
   },
-  "lifted_verdict": false
+  "lifted_verdict": true
  },
  "override": {
   "capped": false,
@@ -33,62 +39,62 @@
   "data_date": "2026-11-19"
  },
  "digest": {
-  "summary": "US stocks fell sharply on November 20, 2026, with the S&P 500 about 11.5% below its one-year high. Headlines point to an AI-led selloff: a Reuters report that the SEC is probing Nvidia's accounting, NVDA's worst week in 18 years, and chip-stock weakness, with Anthropic's IPO trading also sliding on its second day. Defensive sectors drew buyers, and the leading sector fund XLP was reported up 11.7 points versus SPY. Headlines on Jensen Huang's exit from Nvidia and Trump's comments on a possible return add to the uncertainty.",
+  "summary": "US stocks fell sharply on Friday, November 20, capping a punishing week in which investors used Anthropic's heavily anticipated IPO to lock in profits from the AI-driven rally. Headlines on November 22 describe an Asia-led AI stocks rout, with US futures bouncing as the rout slowed. Coverage on November 23 reports tech futures and Nvidia rising after the sell-off, and Capital Economics expects further declines concentrated in technology. The S&P 500 is 11.5% below its one-year high, and the headlines tie the recent weakness to AI and chip stocks.",
   "fed_tone": "unclear",
-  "fed_note": "The headlines include the October FOMC minutes, but they do not say how the Fed's policy outlook is shaping market moves.",
-  "sector_note": "Defensive sectors drew buyers as AI-linked names sold off, according to the Yahoo market wrap.",
+  "fed_note": "The Federal Reserve headlines are routine items (College Fed Challenge winners, a reserve-balances survey, enforcement actions, October FOMC minutes, and a 2027 meeting schedule), and none states a clear policy direction.",
+  "sector_note": "The headlines do not say why the consumer staples sector (XLP) is holding up.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": true,
-  "huang_note": "Headlines say Trump called for Nvidia to rehire Jensen Huang, who was ousted as CEO, and Trump said he deserved a second chance. Other headlines say Huang agreed to testify at a Senate hearing, and one speculates he could join Intel.",
+  "huang_note": "Headlines report that President Trump urged Nvidia's board to rehire Jensen Huang as CEO, and that Treasury Secretary Scott Bessent said Huang could qualify as an outside candidate; the board was reported as not currently considering his return.",
   "sources": [
    {
-    "title": "NVDA Stock Clocks Worst Week In 18 Years As SEC Reportedly Probes Its Accounting Practices",
-    "url": "https://finnhub.io/api/news?id=fe85428ac252f2f71c02ad6b9d581ebd740aaf7f4f5e9da38c5158286056f3ff",
+    "title": "Dow Jones, Nasdaq, S&P 500 preview: Consumer spending in focus after AI rout",
+    "url": "https://finnhub.io/api/news?id=e5f490911424e28075738c4b1c11ee7422e266b0c66cea2f3f59e81667b361f2",
     "source": "Yahoo",
-    "date": "2026-11-20"
+    "date": "2026-11-23"
    },
    {
-    "title": "Stock Market Today, Nov. 20: Stocks Plunge as AI Trade Unwinds",
-    "url": "https://finnhub.io/api/news?id=6db0b5ea38168b31537fe8795759a1dfa1bd385ef3ac42934f57f320fe7e3418",
+    "title": "Trump urges Nvidia to reinstate Jensen Huang, calling him \u2018best thing\u2019 for U.S.",
+    "url": "https://finnhub.io/api/news?id=addc7a50a95d0d5d1f446f4de7eb25f799da3540c925d302b02e6bff5e4f327c",
     "source": "Yahoo",
-    "date": "2026-11-20"
+    "date": "2026-11-23"
    },
    {
-    "title": "Anthropic\u2019s Day Two Drop Fuels Broader Tech Rout; Dan Ives Points To \u2018Perfect Storm\u2019",
-    "url": "https://finnhub.io/api/news?id=459e1777c77c96d04d4753b6228cf44ed34cb76329f0e83764592f2d0e918c20",
+    "title": "Why this analyst expects the U.S. stock market to fall further",
+    "url": "https://finnhub.io/api/news?id=dae34496bead57a7dc55369eedd7ebcd105e3cbbd2e6cd5629dc555c078166be",
     "source": "Yahoo",
-    "date": "2026-11-20"
+    "date": "2026-11-23"
    },
    {
-    "title": "Navitas Sinks 15%, Western Down 12%, Everpure Down 13% as AI Chip Rout Deepens",
-    "url": "https://finnhub.io/api/news?id=e575b463a0d8fb52d476dd9c255620fe722e05485e954bffcec001fc61d4ea5d",
+    "title": "Stock Market Today: Tech Futures, Nvidia Surge After Market Sell-Off; CrowdStrike Plunges On Zscaler Deal (Live Coverage)",
+    "url": "https://finnhub.io/api/news?id=1b5c97bd6ff6576b06032d20a8715372ba5c04080188a2b061be9726a8c8534f",
     "source": "Yahoo",
-    "date": "2026-11-20"
+    "date": "2026-11-23"
    },
    {
-    "title": "Trump Calls for Nvidia to Rehire Jensen Huang",
-    "url": "https://finnhub.io/api/news?id=8bf35df9b608e7d1b579ee8d3b971dda191bb5aaba59d5f980e28543c26fd627",
+    "title": "Premarket Movers: Nvidia, Dell, HPE Gain; CrowdStrike, UnitedHealth Slide",
+    "url": "https://finnhub.io/api/news?id=ec07e5dc041b7fa4bdae54192db66181218072d0d93055406ae6bcae196b1f42",
+    "source": "ChartMill",
+    "date": "2026-11-23"
+   },
+   {
+    "title": "Nvidia, Broadcom, and AMD roar higher as chip stocks rebound from worst week since 2001",
+    "url": "https://finnhub.io/api/news?id=ac784fd6f901da1c89406d2f52130bd2399f07e5d8ee332493e1d5a5a23958ad",
     "source": "Yahoo",
-    "date": "2026-11-20"
+    "date": "2026-11-23"
    },
    {
-    "title": "Trump on Jensen Huang: 'We're a country of second chances'",
-    "url": "https://finnhub.io/api/news?id=246b1956fdd1cd64f541782412ae855ec23e9766e9dfa869bf3eb780f3a01a17",
+    "title": "Nvidia Suffers Worst Weekly Rout in Years, Wiping Out $1 Trillion Since Jensen Huang's Exit",
+    "url": "https://finnhub.io/api/news?id=40ec956fa5994adbea61af7cc5aab4db4aad33ee6a98caa9958c80aebb50aafd",
     "source": "Yahoo",
-    "date": "2026-11-20"
+    "date": "2026-11-23"
    },
    {
-    "title": "Former Nvidia CEO Huang agreed to testify at public US Senate hearing, senator's aide says - Reuters",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPVXRKZGYxUkVSVnNCbGJHOG9wWjFSY1puTVMtdUMyeGg4VTFXR2xhRXd1ZmxYZ1g5QlBZRzljX1F0V1R5WERUOGdhb09IWXE0MTJXWXl3Z0F1czYyck1OT1NHc012Rm1PaDdXR1BQSkVRTkNqQkpCVUZZSUdTMnY1S1Zsa0kwYV8tai16c1Z3QnBwb0JZNjA5QXA1TkllMFhacFZMcm9MNHoyYU1LNHBlY2ZiN1lHUElQSURVSFo5aw?oc=5",
-    "source": "Reuters",
-    "date": "2026-11-20"
-   },
-   {
-    "title": "EXCLUSIVE: Nvidia's accounting is a focus of US SEC investigation, sources say - Reuters",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMzlPdFVTT2cyVkhmMFVKNWZ1MnpNT0NLcURnblg4THMwUWNuYTRBLWUxU0ZSSUR5bk1zNnBmVlhIUjByNkN6TzVBNC1uaXQxM0dwY2FkMzZQdm00a0xyMXo3NFNpSUNPdERZWU82aGZLa0lNZHpMOXVnVDBVQW9lMmNrWEVRczVYS1Racm1NNlNERDBJeTFJRG1pZVRfTC1LTy1pNjhpVzRaeGRrY25kSzQ1aDNUUQ?oc=5",
-    "source": "Reuters",
-    "date": "2026-11-20"
+    "title": "Scott Bessent Softens Stance on Jensen Huang's Potential Nvidia Return, Says Former CEO Now Qualifies as 'Outside' Candidate",
+    "url": "https://finnhub.io/api/news?id=c19cb81db3dbf6975f83dfa0393d8634836d5172087945692747d61898eb3d4c",
+    "source": "Benzinga",
+    "date": "2026-11-23"
    }
   ]
  },
@@ -97,22 +103,14 @@
    "key": "vix",
    "name": "VIX above 30",
    "met": true,
-   "value": "35.9",
+   "value": "28.1",
    "threshold": "closed above 30 in the last 10 trading days",
-   "data_date": "2026-11-20",
+   "data_date": "2026-11-23",
    "detail": "10-day peak 35.9 on 2026-11-20",
    "stale": false,
    "spark": {
     "label": "VIX close",
     "points": [
-     [
-      "2026-05-26",
-      17.01
-     ],
-     [
-      "2026-05-27",
-      16.29
-     ],
      [
       "2026-05-28",
       15.74
@@ -394,6 +392,10 @@
       14.53
      ],
      [
+      "2026-09-07",
+      15.3
+     ],
+     [
       "2026-09-08",
       15.72
      ],
@@ -608,6 +610,10 @@
      [
       "2026-11-20",
       35.89
+     ],
+     [
+      "2026-11-23",
+      28.09
      ]
     ],
     "threshold": 30.0
@@ -1474,84 +1480,88 @@
     "label": "XLP return minus SPY over 20 days, pts",
     "points": [
      [
+      "2026-05-21",
+      -3.4238
+     ],
+     [
+      "2026-05-22",
+      -2.5538
+     ],
+     [
       "2026-05-26",
-      -3.386
+      -4.8039
      ],
      [
       "2026-05-27",
-      -3.6421
+      -3.462
      ],
      [
       "2026-05-28",
-      -4.2247
+      -4.8586
      ],
      [
       "2026-05-29",
-      -6.9231
+      -6.4689
      ],
      [
       "2026-06-01",
-      -7.8002
+      -7.4523
      ],
      [
       "2026-06-02",
-      -7.8351
+      -7.5992
      ],
      [
       "2026-06-03",
-      -6.4702
+      -5.2504
      ],
      [
       "2026-06-04",
-      -5.7813
+      -5.797
      ],
      [
       "2026-06-05",
-      -1.459
+      -0.8696
      ],
      [
       "2026-06-08",
-      -1.5355
+      -0.349
      ],
      [
       "2026-06-09",
-      1.18
+      -0.2496
      ],
      [
       "2026-06-10",
-      2.9707
+      3.1829
      ],
      [
       "2026-06-11",
-      1.2621
+      1.7326
      ],
      [
       "2026-06-12",
-      1.8465
+      1.0451
      ],
      [
       "2026-06-15",
-      -1.1261
+      -2.6794
      ],
      [
       "2026-06-16",
-      -1.9422
+      -2.8432
      ],
      [
       "2026-06-17",
-      -3.7848
+      -2.1124
      ],
      [
       "2026-06-18",
-      -3.596
+      -2.4067
      ],
      [
       "2026-06-22",
-      -2.7389
-     ],
-     [
-      "2026-06-23",
-      0.7754
+      -2.5068
      ],
      [
       "2026-06-24",
@@ -1763,83 +1773,79 @@
      ],
      [
       "2026-09-08",
-      -0.1802
+      -0.1942
      ],
      [
       "2026-09-09",
-      -0.8775
+      -1.0798
      ],
      [
       "2026-09-10",
-      -0.4412
+      -0.8062
      ],
      [
       "2026-09-11",
-      -1.2994
+      -1.5957
      ],
      [
       "2026-09-14",
-      0.0516
+      1.2188
      ],
      [
       "2026-09-15",
-      0.8557
+      -0.8509
      ],
      [
       "2026-09-16",
-      -0.8831
+      -1.7575
      ],
      [
       "2026-09-17",
-      -2.6844
+      -2.1449
      ],
      [
       "2026-09-18",
-      -3.0823
+      -3.4304
      ],
      [
       "2026-09-21",
-      -5.3734
+      -7.2729
      ],
      [
       "2026-09-22",
-      -6.3248
+      -4.9777
      ],
      [
       "2026-09-23",
-      -4.5976
+      -4.2974
      ],
      [
       "2026-09-24",
-      -5.0668
+      -3.0799
      ],
      [
       "2026-09-25",
-      -3.1961
+      -3.8446
      ],
      [
       "2026-09-28",
-      -2.8375
+      -2.6006
      ],
      [
       "2026-09-29",
-      -2.9256
+      -3.9236
      ],
      [
       "2026-09-30",
-      -5.1929
+      -5.0611
      ],
      [
       "2026-10-01",
-      -5.5571
+      -4.2207
      ],
      [
       "2026-10-02",
-      -4.7172
-     ],
-     [
-      "2026-10-05",
-      -4.4075
+      -4.3389
      ],
      [
       "2026-10-06",
@@ -1985,7 +1991,7 @@
    "key": "nvda",
    "name": "NVIDIA beats earnings",
    "met": true,
-   "value": "EPS 2.68 vs 2.52 est",
+   "value": "EPS 2.68 vs 2.53 est",
    "threshold": "beat EPS consensus in a report from the drawdown or the last 90 days",
    "data_date": "2026-11-17",
    "detail": "beat in the report of 2026-11-17 (Q3 FY2027)",
@@ -1995,7 +2001,7 @@
     "points": [
      [
       "2026-11-17",
-      6.14
+      6.13
      ]
     ],
     "threshold": 0.0
@@ -2006,42 +2012,42 @@
   [
    "2024-10-25",
    565.98,
-   -0.79
+   -0.03
   ],
   [
    "2024-10-28",
    567.73,
-   -0.48
+   0.0
   ],
   [
    "2024-10-29",
    568.65,
-   -0.32
+   0.0
   ],
   [
    "2024-10-30",
    566.93,
-   -0.62
+   -0.3
   ],
   [
    "2024-10-31",
    555.81,
-   -2.57
+   -2.26
   ],
   [
    "2024-11-01",
    558.16,
-   -2.16
+   -1.84
   ],
   [
    "2024-11-04",
    556.96,
-   -2.37
+   -2.06
   ],
   [
    "2024-11-05",
    563.69,
-   -1.19
+   -0.87
   ],
   [
    "2024-11-06",
@@ -2355,7 +2361,7 @@
   ],
   [
    "2025-02-07",
-   589.2,
+   589.19,
    -1.47
   ],
   [
@@ -2855,7 +2861,7 @@
   ],
   [
    "2025-07-03",
-   616.96,
+   616.95,
    0.0
   ],
   [

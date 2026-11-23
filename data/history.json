@@ -16,6 +16,23 @@
     "sector": false,
     "nvda": true
    }
+  },
+  {
+   "date": "2026-11-23",
+   "verdict": "Getting closer",
+   "count": 2,
+   "catalyst": true,
+   "capped": false,
+   "archived": true,
+   "in_drawdown": true,
+   "drawdown_pct": -11.4595,
+   "met": {
+    "vix": true,
+    "fed": false,
+    "margin": false,
+    "sector": false,
+    "nvda": true
+   }
   }
  ],
  "signals": []
