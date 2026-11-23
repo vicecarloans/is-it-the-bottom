@@ -107,7 +107,8 @@ news:
     LAZR: [LITE, COHR]          # Lumentum, Coherent
   per_company: 4          # newest headlines kept per company
   batch_size: 40          # headlines per model call
-  # News scores: each story's direction x strength x confidence x novelty, halving
+  cache_days: 7           # reuse tags saved by runs in this many recent days
+  # News scores: each story's direction x strength x confidence x novelty x kind, halving
   # every few trading days. Starting values, to be tuned once there is history.
   scoring:
     lookback_days: 21             # calendar days of saved headlines to read

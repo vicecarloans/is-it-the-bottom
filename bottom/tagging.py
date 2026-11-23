@@ -9,6 +9,8 @@ condition or change the verdict.
 
 from __future__ import annotations
 
+import json
+from pathlib import Path
 from typing import Any
 
 from bottom.llm import ToolCaller
@@ -20,6 +22,7 @@ CHANNELS = (
 )  # fmt: skip
 NOVELTY = ("new", "follow_up", "rehash")
 CONFIDENCE = ("low", "medium", "high")
+KINDS = ("report", "opinion")  # opinion: commentary, analysis, buy/sell ideas, explainers
 
 SYSTEM = (
     "You tag financial news headlines for a public web page that tracks the US stock market. "
@@ -74,8 +77,23 @@ def tool(lines: dict[str, str]) -> dict[str, Any]:
                                 "story, or a rehash of old news",
                             },
                             "confidence": {"type": "string", "enum": list(CONFIDENCE)},
+                            "kind": {
+                                "type": "string",
+                                "enum": list(KINDS),
+                                "description": "report: news of something that happened or was "
+                                "announced. opinion: commentary, analysis, forecasts, stock "
+                                "picks or explainers.",
+                            },
                         },
-                        "required": ["id", "macro", "channel", "sectors", "novelty", "confidence"],
+                        "required": [
+                            "id",
+                            "macro",
+                            "channel",
+                            "sectors",
+                            "novelty",
+                            "confidence",
+                            "kind",
+                        ],  # fmt: skip
                     },
                 }
             },
@@ -107,6 +125,66 @@ def tag_headlines(
         raw = llm(SYSTEM, build_prompt(batch, lines), tool(lines))
         tagged += clean(raw, batch, lines, offset=len(tagged))
     return tagged
+
+
+def tag_with_cache(
+    headlines: list[Headline],
+    lines: dict[str, str],
+    llm: ToolCaller,
+    cache: dict[str, dict[str, Any]],
+    day: str,
+    batch_size: int = 40,
+) -> list[dict[str, Any]]:
+    """Tags only headlines not tagged on an earlier run, so a headline keeps one set of tags.
+
+    `cache` maps a URL to its saved record. Story keys become strings that stay the same
+    across runs: '<day>:<n>' for the run that first tagged the story.
+    """
+    fresh = [h for h in headlines if h.url not in cache]
+    new_records = tag_headlines(fresh, lines, llm, batch_size) if fresh else []
+    for record in new_records:
+        record["story"] = f"{day}:{record['story']}"
+    by_url = {r["url"]: r for r in new_records}
+    merged = []
+    for h in headlines:
+        if h.url in by_url:
+            merged.append(by_url[h.url])
+            continue
+        old = cache[h.url]
+        story = old.get("story")
+        merged.append(
+            {
+                **old,
+                "feed": h.group,
+                "story": story if isinstance(story, str) else f"{old.get('day', 'old')}:{story}",
+            }
+        )
+    merged.sort(key=lambda r: r["published"])
+    for number, record in enumerate(merged, start=1):
+        record["id"] = number
+        record.pop("day", None)
+    return merged
+
+
+def load_cache(news_dir: Path, before: str, days: int) -> dict[str, dict[str, Any]]:
+    """Saved tagged headlines from recent runs, by URL. Today's file counts too."""
+    cache: dict[str, dict[str, Any]] = {}
+    if not news_dir.exists():
+        return cache
+    files = sorted(news_dir.glob("*.json"))[-(days + 1) :]
+    for path in files:
+        if path.stem > before:
+            continue
+        try:
+            headlines = json.loads(path.read_text())["headlines"]
+        except (ValueError, KeyError):
+            continue
+        for record in headlines:
+            tags = record.get("tags")
+            # Tags saved before 'kind' existed are tagged again once, to get it.
+            if record.get("url") and tags and "kind" in tags:
+                cache.setdefault(record["url"], {**record, "day": path.stem})
+    return cache
 
 
 def clean(
@@ -155,6 +233,7 @@ def clean(
                 "sectors": sectors,
                 "novelty": _pick(item.get("novelty"), NOVELTY, "new"),
                 "confidence": _pick(item.get("confidence"), CONFIDENCE, "low"),
+                "kind": _pick(item.get("kind"), KINDS, "opinion"),
             }
         records.append(record)
     return records

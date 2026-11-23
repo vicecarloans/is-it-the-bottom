@@ -62,6 +62,7 @@ def test_tags_are_cleaned_and_kept_in_order():
         "sectors": [],
         "novelty": "new",
         "confidence": "high",
+        "kind": "opinion",
     }
     assert third["tags"] is None  # the model skipped it
 
@@ -133,3 +134,85 @@ def test_tagged_news_is_saved_by_date(tmp_path):
     assert saved["lines"] == LINES and saved["headlines"][0]["id"] == 1
     write_news(tmp_path, "2026-11-24", LINES, None)
     assert not (tmp_path / "news" / "2026-11-24.json").exists()
+
+
+def _answer_all(kind="report"):
+    def answer(prompt):
+        count = prompt.count("\n[")
+        return {
+            "items": [
+                {
+                    "id": i,
+                    "macro": "positive",
+                    "channel": "growth",
+                    "sectors": [{"line": "XLK", "direction": "positive", "strength": 2}],
+                    "novelty": "new",
+                    "confidence": "high",
+                    "kind": kind,
+                }
+                for i in range(1, count + 1)
+            ]
+        }
+
+    return answer
+
+
+def test_cached_headlines_are_not_tagged_again(tmp_path):
+    import json
+
+    llm = FakeLLM(_answer_all())
+    first = tagging.tag_with_cache([headline(1), headline(2)], LINES, llm, {}, "2026-11-23")
+    assert len(llm.prompts) == 1 and [r["story"] for r in first] == ["2026-11-23:1", "2026-11-23:2"]
+    write_news(tmp_path, "2026-11-23", LINES, first)
+
+    cache = tagging.load_cache(tmp_path / "news", "2026-11-23", 7)
+    second = tagging.tag_with_cache(
+        [headline(1), headline(2), headline(3)], LINES, llm, cache, "2026-11-23"
+    )
+    assert len(llm.prompts) == 2
+    assert "Headline 1" not in llm.prompts[1] and "Headline 3" in llm.prompts[1]  # only the new one
+    assert [r["story"] for r in second] == ["2026-11-23:1", "2026-11-23:2", "2026-11-23:1"]
+    assert second[0]["tags"] == first[0]["tags"]
+    assert [r["id"] for r in second] == [1, 2, 3]
+    saved = json.loads((tmp_path / "news" / "2026-11-23.json").read_text())
+    assert "day" not in saved["headlines"][0]
+
+
+def test_story_keys_stay_distinct_across_days():
+    llm = FakeLLM(_answer_all())
+    cache = {
+        "https://e.com/1": {
+            "id": 1,
+            "story": 1,
+            "day": "2026-11-20",
+            "feed": "market",
+            "title": "Headline 1",
+            "url": "https://e.com/1",
+            "source": "Wire",
+            "published": "2026-11-23T12:01+00:00",
+            "tags": {
+                "macro": "neutral",
+                "channel": "other",
+                "sectors": [],
+                "novelty": "new",
+                "confidence": "low",
+            },
+        }
+    }
+    out = tagging.tag_with_cache([headline(1), headline(2)], LINES, llm, cache, "2026-11-23")
+    assert [r["story"] for r in out] == ["2026-11-20:1", "2026-11-23:1"]
+
+
+def test_tags_without_kind_are_not_reused(tmp_path):
+    import json
+
+    news = tmp_path / "news"
+    news.mkdir()
+    old = {"url": "https://e.com/1", "story": 1, "tags": {"macro": "negative", "sectors": []}}
+    new = {
+        "url": "https://e.com/2",
+        "story": 2,
+        "tags": {"macro": "negative", "sectors": [], "kind": "report"},
+    }
+    (news / "2026-11-23.json").write_text(json.dumps({"headlines": [old, new]}))
+    assert list(tagging.load_cache(news, "2026-11-23", 7)) == ["https://e.com/2"]

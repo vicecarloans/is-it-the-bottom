@@ -176,3 +176,33 @@ def test_lagging_line_with_good_news_is_flagged(ncfg):
     assert out["lines"]["XLK"]["divergence"] == "good_news_lagging"
     assert out["lines"]["XLE"]["divergence"] == "bad_news_leading"
     assert out["window_days"] == ncfg["sector"]["return_window_days"]
+
+
+def test_opinion_counts_a_quarter(ncfg):
+    s = story("o", "2026-11-22T15:00+00:00", sectors=[("XLK", "negative", 3)])
+    s["tags"]["kind"] = "opinion"
+    out = newsscore.score([{**s, "count": 1}], PRICES, date(2026, 11, 23), ncfg)
+    assert out["lines"]["XLK"]["score"] == pytest.approx(-0.75)
+    assert out["lines"]["XLK"]["top"][0]["kind"] == "opinion"
+
+
+def test_top_story_agrees_with_the_line_total(ncfg):
+    big_against = story(
+        "against", "2026-11-22T15:00+00:00", sectors=[("XLK", "negative", 3)], story_id=1
+    )
+    small_with = story(
+        "with", "2026-11-22T15:00+00:00", sectors=[("XLK", "positive", 2)], story_id=2
+    )
+    more_with = story(
+        "more", "2026-11-22T15:00+00:00", sectors=[("XLK", "positive", 2)], story_id=3
+    )
+    out = newsscore.score(
+        [{**s, "count": 1} for s in (big_against, small_with, more_with)],
+        PRICES,
+        date(2026, 11, 23),
+        ncfg,
+    )
+    xlk = out["lines"]["XLK"]
+    assert xlk["score"] > 0
+    assert [t["title"] for t in xlk["top"]][:2] == ["with", "more"]
+    assert xlk["top"][2]["title"] == "against"

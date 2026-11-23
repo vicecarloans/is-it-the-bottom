@@ -63,8 +63,11 @@ def enrich(
     everything = news.dedupe(headlines + company)
     if llm is not None and everything:
         try:
-            report.tagged_news = tagging.tag_headlines(
-                everything, n["lines"], llm, int(n["batch_size"])
+            cache = tagging.load_cache(
+                state_path.parent / "news", report.as_of.isoformat(), int(n["cache_days"])
+            )
+            report.tagged_news = tagging.tag_with_cache(
+                everything, n["lines"], llm, cache, report.as_of.isoformat(), int(n["batch_size"])
             )
             store.save_json("tagged_news.json", report.tagged_news)
         except RuntimeError as exc:  # no structured reply
