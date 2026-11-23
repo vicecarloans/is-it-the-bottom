@@ -354,6 +354,7 @@ function tagText(tagged, url) {
   if (t.macro !== "neutral") parts.push(`Market: ${t.macro}.`);
   const sectors = t.sectors.map((s) => `${(tagged.lines || {})[s.line] || s.line} ${s.direction === "positive" ? "up" : "down"}`);
   if (sectors.length) parts.push(`${sectors.join(", ")}.`);
+  if (t.kind === "opinion") parts.push("Opinion, counts a quarter.");
   if (t.novelty === "rehash") parts.push("Old news.");
   return parts.join(" ");
 }
@@ -404,7 +405,7 @@ function renderNewsScores(latest) {
     const name = el("td", {},
       el("span", { class: "sector-name", text: l.name }),
       el("span", { class: "sector-code", text: ` ${code}` }),
-      top ? el("a", { class: "sector-top", href: top.url, rel: "noopener", text: top.title }) : null,
+      top ? el("a", { class: "sector-top", href: top.url, rel: "noopener", text: top.kind === "opinion" ? `Opinion: ${top.title}` : top.title }) : null,
       l.divergence ? el("span", { class: "sector-flag", text: DIVERGENCE[l.divergence] }) : null,
     );
     const width = Math.min(Math.abs(l.score) / scale, 1) * 50;

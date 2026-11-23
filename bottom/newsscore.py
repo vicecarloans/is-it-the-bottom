@@ -2,7 +2,8 @@
 whether prices moved the way the news points.
 
 Each story counts once, with the tags of its first headline. Its weight is
-direction x strength x confidence x novelty, halving every few trading days. Its
+direction x strength x confidence x novelty x kind (opinion
+pieces count a quarter), halving every few trading days. Its
 price reaction compares the line's move with the S&P 500 from the last close before the
 story to the first close after it:
 - confirmed: moved the way the news points by more than the threshold
@@ -26,6 +27,7 @@ NEW_YORK = ZoneInfo("America/New_York")
 SIGN = {"positive": 1, "negative": -1, "neutral": 0}
 CONFIDENCE_WEIGHT = {"low": 0.5, "medium": 0.75, "high": 1.0}
 NOVELTY_WEIGHT = {"new": 1.0, "follow_up": 0.5, "rehash": 0.0}
+KIND_WEIGHT = {"report": 1.0, "opinion": 0.25}  # tags saved before 'kind' count as reports
 
 
 def load_stories(
@@ -119,7 +121,11 @@ def score(
     macro = {"score": 0.0, "stories": [], "channels": {}}
     for story in stories:
         tags = story["tags"]
-        weight = CONFIDENCE_WEIGHT[tags["confidence"]] * NOVELTY_WEIGHT[tags["novelty"]]
+        weight = (
+            CONFIDENCE_WEIGHT[tags["confidence"]]
+            * NOVELTY_WEIGHT[tags["novelty"]]
+            * KIND_WEIGHT.get(tags.get("kind", "report"), 1.0)
+        )
         if not weight:
             continue
         published = published_at(story)
@@ -130,6 +136,7 @@ def score(
         decay = 0.5 ** (age / half_life)
         start, end = reaction_window(published, trading_days)
         base = {
+            "kind": tags.get("kind", "report"),
             "title": story["title"],
             "url": story["url"],
             "source": story["source"],
@@ -185,7 +192,11 @@ def score(
         return float(((end[code] / start[code]) - (end[index] / start[index])) * 100)
 
     def summarize(name: str, total: dict[str, Any]) -> dict[str, Any]:
-        ranked = sorted(total["stories"], key=lambda x: abs(x["points"]), reverse=True)
+        # Stories pushing the same way as the total first, so the top story explains it.
+        sign = 1 if total["score"] >= 0 else -1
+        ranked = sorted(
+            total["stories"], key=lambda x: (x["points"] * sign > 0, abs(x["points"])), reverse=True
+        )
         counts = {k: 0 for k in ("confirmed", "faded", "muted", "pending")}
         for item in total["stories"]:
             counts[item["reaction"]] += 1
