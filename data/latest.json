@@ -1,6 +1,6 @@
 {
- "as_of": "2026-11-23",
- "generated_at": "2026-11-23T21:50:15+00:00",
+ "as_of": "2026-11-24",
+ "generated_at": "2026-11-24T05:39:18+00:00",
  "verdict": "No panic, no bottom to call",
  "count": 2,
  "total": 5,
@@ -21,12 +21,12 @@
    "quote": "On November 22, 2026, the Board of Directors of NVIDIA Corporation reinstated Jen-Hsun Huang as NVIDIA's President, Chief Executive Officer and member of the Board of Directors, effective immediately.",
    "accession": "0001045810-26-000090"
   },
-  "trading_days_since": 0,
+  "trading_days_since": 1,
   "window_trading_days": 30,
   "watch": {
-   "note": "Headlines report Jensen Huang has returned as Nvidia CEO, reinstated by the board 11 days after he resigned on November 12.",
+   "note": "Headlines report Jensen Huang has returned as Nvidia CEO after resigning on Nov. 12, with the board reinstating him following pressure from President Trump.",
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-23",
+   "last_seen": "2026-11-24",
    "days_since_seen": 0
   },
   "lifted_verdict": false
@@ -39,14 +39,14 @@
   "data_date": "2026-11-20"
  },
  "digest": {
-  "summary": "US stocks rallied sharply on Monday, November 23, after Nvidia reinstated Jensen Huang as CEO, 11 days after his resignation. Headlines describe a broad chip-led rebound, with the Nasdaq surging nearly 7% and the S&P 500 up about 4.5% in midday trading, following a brutal prior week. The S&P 500 remains 7.3% below its one-year high. Separately, New York Fed-style commentary from Fed official John Williams suggested higher rates may be needed over time to address inflation.",
+  "summary": "US stocks rallied sharply on Monday after Nvidia's board reinstated Jensen Huang as CEO, with AI and chip stocks leading gains; Nvidia rose about 31% and several AI-related names rose more than 20%. Headlines describe the rally as a rebound from a brutal prior week, when AI stocks had fallen sharply. Oil held near a three-month low as rising supply offset Hormuz concerns. The S&P 500 remains 7.3% below its one-year high, per the market data provided.",
   "fed_tone": "hawkish",
-  "fed_note": "Fed's John Williams indicated higher interest rates are likely \"over time\" to address inflation, while expressing confidence inflation will approach the 2% target in 2027.",
-  "sector_note": "Headlines attribute the chip-led rally to Nvidia's reinstatement of Huang, with the IT sector reported up about 8.6% in one midday account; they do not specifically explain the consumer staples (XLP) lead.",
+  "fed_note": "Fed Governor... Williams indicated higher interest rates could be likely over time to address inflation, while expecting inflation to move closer to the 2% target in 2027.",
+  "sector_note": "The headlines do not explain why the leading sector is holding up; they attribute the broad rally to Nvidia and AI-related optimism instead.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": true,
-  "huang_note": "Headlines report Jensen Huang has returned as Nvidia CEO, reinstated by the board 11 days after he resigned on November 12.",
+  "huang_note": "Headlines report Jensen Huang has returned as Nvidia CEO after resigning on Nov. 12, with the board reinstating him following pressure from President Trump.",
   "sources": [
    {
     "title": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
@@ -55,40 +55,46 @@
     "date": "2026-11-23"
    },
    {
-    "title": "Jensen Huang cheered by Nvidia employees after return, pledges to be a better CEO",
-    "url": "https://www.cnbc.com/2026/11/23/jensen-huang-nvidia-ceo-return.html",
+    "title": "Oil holds near three-month low as rising supply offsets Hormuz threat - Reuters",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMDQ4RU9qMFd6TWl0WkFDUGVsdk5Gb3Q1dURMcjcwbGxUV3ItdjhZUGdQUTBZOVUyZEZlRzdmSEtjM3EwQTNUam1nRVZNdXFRbmNfeHhpUnNVQjNPbjNyOGtSZHVnNEZmbnpJdC1VdVA5X25rWndhMnZqemNGVWdVU1Y5OE8ybExyT2xLelF6dnZsNkM0OU55b1dKc1NuNF9sWkVGSGZJaUNxLXc4eEdGZTl3LUtFTDFuUUE?oc=5",
+    "source": "Reuters",
+    "date": "2026-11-24"
+   },
+   {
+    "title": "Jim Cramer's top 10 things to watch in the stock market Monday",
+    "url": "https://www.cnbc.com/investingclub/2026/11/23/jim-cramers-top-10-things-to-watch-in-the-stock-market-monday.html",
     "source": "CNBC",
     "date": "2026-11-23"
    },
    {
-    "title": "Stocks Roar as the S&P 500 Jumps About 4.5% on News Jensen Huang Is Returning as NVIDIA CEO",
-    "url": "https://finnhub.io/api/news?id=b12296cc6a1b7eab1a3efae40b1e794480360b0be55affa590372940f0fbbea9",
-    "source": "Yahoo",
+    "title": "Wall Street's 'Fear Gauge' just flashed a buy sign",
+    "url": "https://www.cnbc.com/2026/11/23/wall-streets-fear-gauge-just-flashed-a-buy-sign.html",
+    "source": "CNBC",
     "date": "2026-11-23"
    },
    {
-    "title": "Nvidia reinstates Huang as CEO after Trump intervention",
-    "url": "https://finnhub.io/api/news?id=2044e22c9fde7c86faf98fe1b298ee987e61313d984c4f55d4a8f6178a5702f2",
+    "title": "Asian stocks rally after Wall Street rebound as Jensen Huang returns as Nvidia\u2019s CEO",
+    "url": "https://finnhub.io/api/news?id=7f5d81a3a41a511f97040b73e0259305cee5b85e387e0edf9f8d7de2928acb61",
     "source": "Yahoo",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    {
-    "title": "Nvidia stock soars 30% after brutal selloff",
-    "url": "https://finnhub.io/api/news?id=c325de383574ac3c295ae865721690a74dd34dcdaee6537a83ed5b6d8e558cf2",
+    "title": "Nvidia rejoices at Jensen Huang\u2019s second coming as White House takes victory lap",
+    "url": "https://finnhub.io/api/news?id=3bce5429bb3a9363fc06be3d9b52f7923fd691bb7bf44a14cf3ca0687bddca63",
     "source": "Yahoo",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    {
-    "title": "Stock Market Midday, Nov. 23: Nasdaq Surges Nearly 7% as Jensen Huang's Return Sparks Historic AI Rebound",
-    "url": "https://finnhub.io/api/news?id=3461207afa305a3f1429aa315e70de3375f3acdf93524248cd9309872e05ffb3",
+    "title": "U.S. stock futures steady after Nvidia-led Wall Street rally",
+    "url": "https://finnhub.io/api/news?id=7fc51a946d65eafc33df67eb5e193347c7e65ed5bd4ef4ffaf51cf8af7eb617b",
     "source": "Yahoo",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    {
-    "title": "Jensen Huang\u2019s Wealth Rises $36 Billion as Nvidia Surge Burns Short Sellers for $12 Billion",
-    "url": "https://finnhub.io/api/news?id=72756612afb70ef28655dfa63df55e61ad65f5b449fb12c36e3fdbdc8c6ac317",
+    "title": "Nvidia's Stock Surges More Than 30% on Jensen Huang's Return. Will It Get Back to $200?",
+    "url": "https://finnhub.io/api/news?id=f9c0922a26aba7ba9550e945177241c3e90200d0db2c486e6f0df58bd15ce442",
     "source": "Yahoo",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    }
   ]
  },
@@ -2350,7 +2356,7 @@
   ],
   [
    "2025-02-07",
-   589.2,
+   589.19,
    -1.47
   ],
   [
@@ -2410,7 +2416,7 @@
   ],
   [
    "2025-02-26",
-   583.08,
+   583.09,
    -3.0
   ],
   [
@@ -3325,7 +3331,7 @@
   ],
   [
    "2025-11-17",
-   658.57,
+   658.56,
    -3.16
   ],
   [
@@ -4605,20 +4611,20 @@
   ]
  ],
  "errors": {},
- "session": "after_close",
+ "session": "before_open",
  "news_scores": {
-  "as_of": "2026-11-23",
+  "as_of": "2026-11-24",
   "window_days": 20,
   "macro": {
    "name": "Market overall",
-   "score": 14.22,
+   "score": 19.31,
    "tone": "strongly positive",
-   "stories": 43,
+   "stories": 62,
    "reactions": {
-    "confirmed": 34,
+    "confirmed": 36,
     "faded": 8,
     "muted": 0,
-    "pending": 1
+    "pending": 18
    },
    "top": [
     {
@@ -4662,27 +4668,27 @@
     }
    ],
    "channels": {
-    "growth": 10.59,
-    "earnings": 2.62,
-    "rates": -1.5,
-    "other": 1.0,
+    "growth": 13.47,
+    "earnings": 4.12,
+    "other": 2.78,
+    "policy": -1.69,
+    "rates": -1.62,
     "inflation": 0.75,
-    "credit": 0.75,
-    "geopolitics": 0.5,
-    "policy": -0.5
+    "geopolitics": 0.75,
+    "credit": 0.75
    }
   },
   "lines": {
    "XLK": {
     "name": "Technology",
-    "score": 15.53,
+    "score": 21.72,
     "tone": "strongly positive",
-    "stories": 31,
+    "stories": 41,
     "reactions": {
-     "confirmed": 25,
+     "confirmed": 26,
      "faded": 6,
      "muted": 0,
-     "pending": 0
+     "pending": 9
     },
     "top": [
      {
@@ -4700,23 +4706,23 @@
      },
      {
       "kind": "report",
+      "title": "Dow Jones Futures: Tech Stocks, Nvidia Snap Back On Jensen Huang Return; Elon Musk-Led SpaceX, Tesla Rally",
+      "url": "https://finnhub.io/api/news?id=6093e5f4f6713eee1baa1765ad2aa64b03c3c173778d021cc38740496cb04ebc",
+      "source": "Yahoo",
+      "published": "2026-11-23T23:40+00:00",
+      "headlines": 21,
+      "direction": "positive",
+      "strength": 2,
+      "points": 2.0,
+      "reaction": "pending",
+      "change": null
+     },
+     {
+      "kind": "report",
       "title": "Stock Market Today: Dow, Nasdaq Surge As Jensen Huang Returns To Nvidia; Chip Plays Rocket (Live Coverage)",
       "url": "https://finnhub.io/api/news?id=f781a840321cfedf6a87e5387889c3ce39b0e3331e64be1fdaa5755ba26621d5",
       "source": "Yahoo",
       "published": "2026-11-23T19:37+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 3,
-      "points": 1.5,
-      "reaction": "confirmed",
-      "change": 4.26
-     },
-     {
-      "kind": "report",
-      "title": "Nvidia gains nearly $1T as Trump says nobody could 'revive the stock like it's being revived'",
-      "url": "https://finnhub.io/api/news?id=0c3e3ef2df2e53ca8e8a38a8255bc31e7f00e8092a6c267803d512b20c89573b",
-      "source": "Yahoo",
-      "published": "2026-11-23T19:46+00:00",
       "headlines": 1,
       "direction": "positive",
       "strength": 3,
@@ -4730,14 +4736,14 @@
    },
    "XLF": {
     "name": "Financials",
-    "score": -0.43,
+    "score": -0.62,
     "tone": "mixed or quiet",
-    "stories": 5,
+    "stories": 7,
     "reactions": {
      "confirmed": 1,
      "faded": 1,
      "muted": 3,
-     "pending": 0
+     "pending": 2
     },
     "top": [
      {
@@ -4754,6 +4760,19 @@
       "change": 0.47
      },
      {
+      "kind": "opinion",
+      "title": "Forget JPMorgan: Upstart Has More to Lose From a 10% Card Rate Cap",
+      "url": "https://finnhub.io/api/news?id=db20f7d038322e11046aa5d286675b9e91681549cd7b50b17741018ccb23d701",
+      "source": "Yahoo",
+      "published": "2026-11-23T23:31+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 2,
+      "points": -0.38,
+      "reaction": "pending",
+      "change": null
+     },
+     {
       "kind": "report",
       "title": "Why Is Goldman Sachs Stock Falling?",
       "url": "https://finnhub.io/api/news?id=b813fec8a5eb6c9a2fa046b1fa1f105a200a8445d84f54fa5f92ec864593c025",
@@ -4765,19 +4784,6 @@
       "points": -0.25,
       "reaction": "confirmed",
       "change": -2.73
-     },
-     {
-      "kind": "report",
-      "title": "Federal Reserve Board issues enforcement action with former employee of United Community Bank",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm",
-      "source": "Federal Reserve",
-      "published": "2026-11-12T16:00+00:00",
-      "headlines": 1,
-      "direction": "negative",
-      "strength": 1,
-      "points": -0.2,
-      "reaction": "muted",
-      "change": -0.36
      }
     ],
     "excess_pct": 4.97,
@@ -4785,14 +4791,14 @@
    },
    "XLE": {
     "name": "Energy",
-    "score": -1.31,
-    "tone": "mixed or quiet",
-    "stories": 5,
+    "score": -2.69,
+    "tone": "negative",
+    "stories": 7,
     "reactions": {
      "confirmed": 2,
      "faded": 3,
      "muted": 0,
-     "pending": 0
+     "pending": 2
     },
     "top": [
      {
@@ -4810,6 +4816,19 @@
      },
      {
       "kind": "report",
+      "title": "Oil holds near three-month low as rising supply offsets Hormuz threat - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMDQ4RU9qMFd6TWl0WkFDUGVsdk5Gb3Q1dURMcjcwbGxUV3ItdjhZUGdQUTBZOVUyZEZlRzdmSEtjM3EwQTNUam1nRVZNdXFRbmNfeHhpUnNVQjNPbjNyOGtSZHVnNEZmbnpJdC1VdVA5X25rWndhMnZqemNGVWdVU1Y5OE8ybExyT2xLelF6dnZsNkM0OU55b1dKc1NuNF9sWkVGSGZJaUNxLXc4eEdGZTl3LUtFTDFuUUE?oc=5",
+      "source": "Reuters",
+      "published": "2026-11-24T02:56+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 2,
+      "points": -1.5,
+      "reaction": "pending",
+      "change": null
+     },
+     {
+      "kind": "report",
       "title": "Wall Street Opens Sharply Higher After the S&P 500's Seven-Day Slide",
       "url": "https://finnhub.io/api/news?id=06d648e7fa7bd2d839eb0e2331ac2988180dec6e61337ee1d3cc2163d7f0075d",
       "source": "Yahoo",
@@ -4820,19 +4839,6 @@
       "points": -1.0,
       "reaction": "confirmed",
       "change": -5.77
-     },
-     {
-      "kind": "report",
-      "title": "Most Gulf bourses end higher, buoyed by diplomatic momentum - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUzZMZWl5YjFRMm5kU1RDNUNkRHkyT1Q3b05xRndBMUs2eGhWQUZONGhudnpiQUdrWlNjNHVkcVJscy1VbHhRbWhVZUxNLV9ZU3l2b1NRTUhQd2JnMEFCYkRYMkwtNFh3U01KLTJFaUVxV01DVlFGbHl6VElHbnRRY3BKUHlNZ2tJakRVTVJnanQxVEJraWRodnpjWDgzNXpkZklFNUQwWDEteVdN?oc=5",
-      "source": "Reuters",
-      "published": "2026-11-23T13:34+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 1,
-      "points": 0.5,
-      "reaction": "faded",
-      "change": -5.77
      }
     ],
     "excess_pct": -8.4,
@@ -4840,14 +4846,14 @@
    },
    "XLV": {
     "name": "Health care",
-    "score": -0.62,
+    "score": -1.12,
     "tone": "mixed or quiet",
-    "stories": 6,
+    "stories": 9,
     "reactions": {
      "confirmed": 2,
-     "faded": 4,
+     "faded": 5,
      "muted": 0,
-     "pending": 0
+     "pending": 2
     },
     "top": [
      {
@@ -4865,6 +4871,19 @@
      },
      {
       "kind": "report",
+      "title": "Not Good: Medicare Proposes $107 Billion in Bonus Cuts. That\u2019s a Big Risk for UnitedHealth and Humana",
+      "url": "https://finnhub.io/api/news?id=8e74a307135181f9db57843bd6f640f360768911295a5d8f1c20ea421c793ddc",
+      "source": "Yahoo",
+      "published": "2026-11-23T21:35+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 2,
+      "points": -2.0,
+      "reaction": "pending",
+      "change": null
+     },
+     {
+      "kind": "report",
       "title": "UnitedHealth and Humana Stocks Keep Sliding. Why They\u2019re Not Taking Part in Today\u2019s Rally.",
       "url": "https://finnhub.io/api/news?id=3213d8d47c8224c3893fca2ef08bea7f75ccb043ee3f430b88fe2c3ab993f5ee",
       "source": "Yahoo",
@@ -4875,19 +4894,6 @@
       "points": -1.0,
       "reaction": "confirmed",
       "change": -3.48
-     },
-     {
-      "kind": "report",
-      "title": "Eli Lilly Makes $725 Million Huntington's Disease Bet as Drug Pipeline Expands",
-      "url": "https://finnhub.io/api/news?id=0a7cb66e00283d1ca862bdcf36874366ca7c9b608fde7c1d441467876d5006f9",
-      "source": "Yahoo",
-      "published": "2026-11-23T15:15+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 1,
-      "points": 1.0,
-      "reaction": "faded",
-      "change": -3.48
      }
     ],
     "excess_pct": 5.71,
@@ -4895,16 +4901,29 @@
    },
    "XLY": {
     "name": "Consumer discretionary",
-    "score": 0.5,
-    "tone": "mixed or quiet",
-    "stories": 2,
+    "score": 2.38,
+    "tone": "positive",
+    "stories": 5,
     "reactions": {
      "confirmed": 1,
      "faded": 1,
      "muted": 0,
-     "pending": 0
+     "pending": 3
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "Dow Jones Futures: Tech Stocks, Nvidia Snap Back On Jensen Huang Return; Elon Musk-Led SpaceX, Tesla Rally",
+      "url": "https://finnhub.io/api/news?id=6093e5f4f6713eee1baa1765ad2aa64b03c3c173778d021cc38740496cb04ebc",
+      "source": "Yahoo",
+      "published": "2026-11-23T23:40+00:00",
+      "headlines": 21,
+      "direction": "positive",
+      "strength": 1,
+      "points": 1.0,
+      "reaction": "pending",
+      "change": null
+     },
      {
       "kind": "report",
       "title": "Why Tesla Stock Stepped on the Gas Today",
@@ -4919,17 +4938,17 @@
       "change": -0.73
      },
      {
-      "kind": "opinion",
-      "title": "A Correction Without A Cushion",
-      "url": "https://finnhub.io/api/news?id=88d4d2423adc1a799b45f4068c5fe288f4c4e6645093d26be25b8f92e30b5c2f",
-      "source": "SeekingAlpha",
-      "published": "2026-11-22T09:00+00:00",
-      "headlines": 5,
-      "direction": "negative",
+      "kind": "report",
+      "title": "Tariffs Strike Again: 343 Companies Report $28.5 Billion in Trump Tariff Refunds. Retail Beats Need a Second Look",
+      "url": "https://finnhub.io/api/news?id=3d28f323b30ff1d112f09d470bab3ef2a61dd186f79abc428cc98ceea414f150",
+      "source": "Yahoo",
+      "published": "2026-11-23T23:36+00:00",
+      "headlines": 1,
+      "direction": "positive",
       "strength": 1,
-      "points": -0.25,
-      "reaction": "confirmed",
-      "change": -0.73
+      "points": 0.75,
+      "reaction": "pending",
+      "change": null
      }
     ],
     "excess_pct": 7.97,
@@ -4937,16 +4956,29 @@
    },
    "XLP": {
     "name": "Consumer staples",
-    "score": 0.12,
+    "score": 0.44,
     "tone": "mixed or quiet",
-    "stories": 1,
+    "stories": 3,
     "reactions": {
      "confirmed": 0,
      "faded": 1,
      "muted": 0,
-     "pending": 0
+     "pending": 2
     },
     "top": [
+     {
+      "kind": "opinion",
+      "title": "BofA spots opportunities in these nine consumer staples stocks for 2027",
+      "url": "https://finnhub.io/api/news?id=dcf8d3a7be5903ec94485a9224153db8240fab0a59fe61620f33553c33224942",
+      "source": "Yahoo",
+      "published": "2026-11-24T03:04+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 1,
+      "points": 0.19,
+      "reaction": "pending",
+      "change": null
+     },
      {
       "kind": "opinion",
       "title": "\u2018They were all gone\u2019: Costco generator sellouts fuel prepper fears. Is America headed for a crash?",
@@ -4959,6 +4991,19 @@
       "points": 0.12,
       "reaction": "faded",
       "change": -4.8
+     },
+     {
+      "kind": "opinion",
+      "title": "PG vs. CL: value, quality, and pair-trade setup compared",
+      "url": "https://finnhub.io/api/news?id=d111be11babb3da8c09ecd07066c1e3765f44281b08421ca4805d7663151e892",
+      "source": "Yahoo",
+      "published": "2026-11-23T21:19+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 1,
+      "points": 0.12,
+      "reaction": "pending",
+      "change": null
      }
     ],
     "excess_pct": 8.38,
@@ -4966,14 +5011,14 @@
    },
    "XLI": {
     "name": "Industrials",
-    "score": -0.25,
+    "score": -0.06,
     "tone": "mixed or quiet",
-    "stories": 5,
+    "stories": 6,
     "reactions": {
      "confirmed": 2,
      "faded": 3,
      "muted": 0,
-     "pending": 0
+     "pending": 1
     },
     "top": [
      {
@@ -5131,29 +5176,16 @@
    },
    "XLRE": {
     "name": "Real estate",
-    "score": 0.0,
+    "score": -0.38,
     "tone": "mixed or quiet",
-    "stories": 2,
+    "stories": 3,
     "reactions": {
      "confirmed": 0,
      "faded": 1,
      "muted": 0,
-     "pending": 1
+     "pending": 2
     },
     "top": [
-     {
-      "kind": "report",
-      "title": "American Tower Announces Proposed Settlement of DISH/EchoStar Litigation",
-      "url": "https://finnhub.io/api/news?id=1bf43758c11253f988b9a7d550f984ca19da471f98b33aecdcccc11a7ad209ce",
-      "source": "Yahoo",
-      "published": "2026-11-23T13:00+00:00",
-      "headlines": 2,
-      "direction": "positive",
-      "strength": 1,
-      "points": 0.75,
-      "reaction": "faded",
-      "change": -3.67
-     },
      {
       "kind": "report",
       "title": "Fed's John Williams indicates higher interest rates likely 'over time' to address inflation",
@@ -5166,6 +5198,32 @@
       "points": -0.75,
       "reaction": "pending",
       "change": null
+     },
+     {
+      "kind": "opinion",
+      "title": "Forget AT&T and Verizon: Crown Castle Has More to Lose From Starlink\u2019s 40x Upgrade",
+      "url": "https://finnhub.io/api/news?id=7f23cd8bd8e7b2e4ce10c8e9a44423c69cf39920d5591ca1745309d69d2b300a",
+      "source": "Yahoo",
+      "published": "2026-11-23T23:28+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 2,
+      "points": -0.38,
+      "reaction": "pending",
+      "change": null
+     },
+     {
+      "kind": "report",
+      "title": "American Tower Announces Proposed Settlement of DISH/EchoStar Litigation",
+      "url": "https://finnhub.io/api/news?id=1bf43758c11253f988b9a7d550f984ca19da471f98b33aecdcccc11a7ad209ce",
+      "source": "Yahoo",
+      "published": "2026-11-23T13:00+00:00",
+      "headlines": 2,
+      "direction": "positive",
+      "strength": 1,
+      "points": 0.75,
+      "reaction": "faded",
+      "change": -3.67
      }
     ],
     "excess_pct": 5.86,
@@ -5173,14 +5231,14 @@
    },
    "XLC": {
     "name": "Communication services",
-    "score": 4.66,
+    "score": 5.72,
     "tone": "strongly positive",
-    "stories": 12,
+    "stories": 16,
     "reactions": {
      "confirmed": 4,
      "faded": 8,
      "muted": 0,
-     "pending": 0
+     "pending": 4
     },
     "top": [
      {
@@ -5228,14 +5286,14 @@
    },
    "SMH": {
     "name": "Semiconductors",
-    "score": 16.56,
+    "score": 21.62,
     "tone": "strongly positive",
-    "stories": 27,
+    "stories": 35,
     "reactions": {
-     "confirmed": 22,
+     "confirmed": 23,
      "faded": 5,
      "muted": 0,
-     "pending": 0
+     "pending": 7
     },
     "top": [
      {
@@ -5266,16 +5324,16 @@
      },
      {
       "kind": "report",
-      "title": "Stock Market Midday, Nov. 23: Nasdaq Surges Nearly 7% as Jensen Huang's Return Sparks Historic AI Rebound",
-      "url": "https://finnhub.io/api/news?id=3461207afa305a3f1429aa315e70de3375f3acdf93524248cd9309872e05ffb3",
+      "title": "Dow Jones Futures: Tech Stocks, Nvidia Snap Back On Jensen Huang Return; Elon Musk-Led SpaceX, Tesla Rally",
+      "url": "https://finnhub.io/api/news?id=6093e5f4f6713eee1baa1765ad2aa64b03c3c173778d021cc38740496cb04ebc",
       "source": "Yahoo",
-      "published": "2026-11-23T17:32+00:00",
-      "headlines": 1,
+      "published": "2026-11-23T23:40+00:00",
+      "headlines": 21,
       "direction": "positive",
-      "strength": 3,
-      "points": 1.5,
-      "reaction": "confirmed",
-      "change": 10.32
+      "strength": 2,
+      "points": 2.0,
+      "reaction": "pending",
+      "change": null
      }
     ],
     "excess_pct": -9.41,
@@ -5283,14 +5341,14 @@
    },
    "LAZR": {
     "name": "Photonics",
-    "score": 6.75,
+    "score": 9.0,
     "tone": "strongly positive",
-    "stories": 4,
+    "stories": 6,
     "reactions": {
      "confirmed": 4,
      "faded": 0,
      "muted": 0,
-     "pending": 0
+     "pending": 2
     },
     "top": [
      {
