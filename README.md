@@ -5,7 +5,7 @@
 
 **[is-it-the-bottom.vercel.app](https://is-it-the-bottom.vercel.app)**
 
-A daily check of five conditions that have marked past stock market bottoms, turned into one verdict: **No**, **Getting closer**, or **Looks like a bottom**. Every weekday at 9:00 am and 5:00 pm New York time, a GitHub Actions job pulls market data, checks the conditions, has Claude summarize the day's news, and watches NVIDIA's SEC filings for Jensen Huang's return.
+A daily check of five conditions that have marked past stock market bottoms, turned into one verdict: **No**, **Getting closer**, or **Looks like a bottom**. Every weekday at 8:50 am and 4:50 pm New York time, a GitHub Actions job pulls market data, checks the conditions, has Claude summarize the day's news, and watches NVIDIA's SEC filings for Jensen Huang's return.
 
 > A hobby project, not financial advice. The rules have not been backtested yet.
 
@@ -47,7 +47,7 @@ uv run bottom check
 
 ## How it runs
 
-- **Daily job:** [`.github/workflows/daily.yml`](.github/workflows/daily.yml) runs `bottom run` on weekdays at 9:00 am (before the open, using the previous close) and 5:00 pm (after the close) New York time, and commits the data files. The 5:00 pm result replaces the morning one for that day. GitHub can start scheduled runs late, sometimes by hours; the page warns when today's result is missing after noon. It also runs when the code, `config.yaml` or the FINRA spreadsheet changes on `main`. Each run's checklist is in its GitHub Actions summary.
+- **Daily job:** [`.github/workflows/daily.yml`](.github/workflows/daily.yml) runs `bottom run` on weekdays at 8:50 am (before the open, using the previous close) and 4:50 pm (after the close) New York time, and commits the data files. The afternoon result replaces the morning one for that day. Both runs are started through `workflow_dispatch` by two scheduled Claude tasks, because GitHub's own schedule started runs 6 to 9 hours late on this repo. You can also start a run from the Actions tab. The page warns when today's result is missing after noon. It also runs when the code, `config.yaml` or the FINRA spreadsheet changes on `main`. Each run's checklist is in its GitHub Actions summary.
 - **Page:** a static page in [`site/`](site/), hosted on Vercel (`vercel.json` points it at `site/`). It loads the JSON straight from this repo, so new data shows up without a redeploy.
 - **Secrets:** set as GitHub Actions secrets.
   - `FRED_API_KEY`, `FINNHUB_API_KEY`: market data and news.
