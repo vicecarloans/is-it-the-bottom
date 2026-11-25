@@ -1,18 +1,18 @@
 {
- "as_of": "2026-11-24",
- "generated_at": "2026-11-25T04:40:00+00:00",
- "verdict": "No panic, no bottom to call",
+ "as_of": "2026-11-25",
+ "generated_at": "2026-11-25T16:50:12+00:00",
+ "verdict": "Getting closer",
  "count": 2,
  "total": 5,
  "backtested": false,
  "drawdown": {
-  "pct": -7.7411,
+  "pct": -10.3107,
   "peak_date": "2026-10-06",
-  "in_drawdown": false,
+  "in_drawdown": true,
   "threshold_pct": -10.0,
-  "data_date": "2026-11-24"
+  "data_date": "2026-11-25"
  },
- "base_verdict": "No panic, no bottom to call",
+ "base_verdict": "No",
  "catalyst": {
   "active": true,
   "event": {
@@ -21,68 +21,80 @@
    "quote": "On November 22, 2026, the Board of Directors of NVIDIA Corporation reinstated Jen-Hsun Huang as NVIDIA's President, Chief Executive Officer and member of the Board of Directors, effective immediately.",
    "accession": "0001045810-26-000090"
   },
-  "trading_days_since": 1,
+  "trading_days_since": 2,
   "window_trading_days": 30,
   "watch": {
-   "note": "Headlines report that Jensen Huang has been reinstated as Nvidia CEO after a period of disorder, and that he returned to cheers in China.",
+   "note": "Nvidia reinstated Jensen Huang as President, CEO, and Board Director after unanimous board approval, 12 days after he resigned.",
    "first_seen": "2026-11-20",
-   "last_seen": "2026-11-24",
+   "last_seen": "2026-11-25",
    "days_since_seen": 0
   },
-  "lifted_verdict": false
+  "lifted_verdict": true
  },
  "override": {
   "capped": false,
   "reasons": [],
-  "hy_level": 3.63,
-  "hy_change": 0.98,
-  "data_date": "2026-11-23"
+  "hy_level": 3.72,
+  "hy_change": 1.07,
+  "data_date": "2026-11-24"
  },
  "digest": {
-  "summary": "US stocks were pressured by a sell-off in AI and chip names tied to Nvidia's leadership turmoil, with headlines noting Nvidia, Anthropic and Sandisk leading the AI retreat while medical, retail and other sectors fared better. The S&P 500 is reported at 7.7% below its one-year high. Market commentary also cites oil supply-glut concerns and a Nvidia board and CEO reinstatement saga that drove sharp swings in the stock.",
-  "fed_tone": "unclear",
-  "fed_note": "The only Fed items are routine releases, including minutes of the October 27-28 FOMC meeting, and the headlines do not characterize policy direction.",
-  "sector_note": "Headlines say consumer-oriented and defensive areas such as medicals and retailers held up while AI names sold off, but they do not give a specific reason beyond that.",
+  "summary": "US stocks fell sharply on Wednesday, with the Dow down about 800 points and Nasdaq futures sliding over 2%. Headlines point to renewed AI-related selling, including Anthropic trading below its IPO price, weak sentiment after the Nvidia leadership turmoil faded, and CoreWeave debt concerns. A surprise inflation reading, with prices up 3.8% over the last year and the highest since May, also weighed on the market ahead of a Fed meeting. Tariff worries and oil-price pressure from Middle East disruptions were also cited in world-stock coverage.",
+  "fed_tone": "hawkish",
+  "fed_note": "A hot inflation reading ahead of a crucial Fed board meeting, with Fed Chairman Kevin Warsh described as facing a dilemma in reading market signals, points to inflation pressure that could limit rate cuts.",
+  "sector_note": "The headlines do not say why the leading consumer staples sector is holding up.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": true,
-  "huang_note": "Headlines report that Jensen Huang has been reinstated as Nvidia CEO after a period of disorder, and that he returned to cheers in China.",
+  "huang_note": "Nvidia reinstated Jensen Huang as President, CEO, and Board Director after unanimous board approval, 12 days after he resigned.",
   "sources": [
    {
-    "title": "Dow Jones Futures Fall: Nvidia, Anthropic Lead AI Retreat But Many Sectors Strong; Fed Inflation Data Due",
-    "url": "https://finnhub.io/api/news?id=d9353a96e3607b36c1925ae7cd8e2e1a3dbe312864c395e673bd805b3450f463",
-    "source": "Yahoo",
-    "date": "2026-11-24"
-   },
-   {
-    "title": "Nasdaq Drops As NVDA, ANT, SPCX Slide: Mohamed El-Erian Says Market Warning Signals Go Well Beyond Nvidia",
-    "url": "https://finnhub.io/api/news?id=dfe9b2fb2914add995a4451137db820082427ba5d30439ea714089950c9493db",
-    "source": "Yahoo",
-    "date": "2026-11-24"
-   },
-   {
-    "title": "How Much Is Nvidia Stock Worth Now That Jensen Huang Is Back?",
-    "url": "https://finnhub.io/api/news?id=b56d3fdab7fb6aa43189754bda9335930d4f8cd746578ad47df75feb9e8d964a",
-    "source": "Yahoo",
-    "date": "2026-11-24"
-   },
-   {
-    "title": "Why the Jensen Huang rally faded so quickly",
-    "url": "https://finnhub.io/api/news?id=c74d9d12a82b5c61e0ea9883c05952e9d3b6850e9e520b6ad4e12d1b2b168485",
-    "source": "Yahoo",
-    "date": "2026-11-24"
-   },
-   {
-    "title": "Nvidia's Huang returns to cheers in China, but political hurdles mount - Reuters",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd2I2bERDWFVzTGY0OFhwaE0xVHRxaFFWM0REVzVOVjBsRkIyQjdwTlVEdnBzSmtqc2FlRFlJOERuOTc1Q1ZDV2U4SWRFa01fQTNHMnZJTjRXOW5VOUVMcjA1WDI4eW5vZ0FFbmRiNEc4aGdsSDQ0Zm1TNFBiVE5Pb0tIVm1SSzRIa3BVTk5GQ2NPY0JhMG1HLVpHamtrVWswd09ONFJCN3JSZDlBd0pYdGxwTE9tNm5sQ0FB?oc=5",
+    "title": "Nasdaq futures slide over 2% as AI losses deepen; inflation data in focus - Reuters",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdUdBTGhVT2V5cDcydUZMX2NTdTkxVDBJSHdCMUgwNXBibGhQc28zdktpLXA2dGVUYzRzV3hpMld1U29KempSNUswd2dNYVdITlFxV2NycEkwbnlpZkdPSDNicVRKM3NCU2l0M0hoWU13UTZkbTAtX2JFempxaUtFbjdTZGMxT2lXM2g3dkR4cy1UYnVfZ09kOWpTNGxtUEZZOTRPaXhENlZ6OGt2ZF94d0RCVjdOSldfc0E?oc=5",
     "source": "Reuters",
-    "date": "2026-11-24"
+    "date": "2026-11-25"
    },
    {
-    "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
-    "source": "Federal Reserve",
-    "date": "2026-11-18"
+    "title": "World stocks fall as new US tariffs loom, AI rebound fizzles - Reuters",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRFVsTjFROGtER0loSkZOcnF2NDRLUWFmcjBHZ01ybE51N19idjFFMXI1dnFqZ21JYS1HVVpicTJ1V1RfVU4zd3pkVEZMWHdqMUJWRENOQWJ2VjFqT1Y3WS0xYTV3bzd2RnRraFhtOVpzVE9yYThzdV9tdWxJbUpjNzFraw?oc=5",
+    "source": "Reuters",
+    "date": "2026-11-25"
+   },
+   {
+    "title": "US inflation hits highest since May after prices climb 3.8% over the last year",
+    "url": "https://finnhub.io/api/news?id=1289a702b5447ba34214d7842025bf78fc6181e5c26f2a4782d397546a056bbb",
+    "source": "Yahoo",
+    "date": "2026-11-25"
+   },
+   {
+    "title": "Stock Market Today: Dow Slammed 800 Points; Dell Falls Hard Despite Big Earnings (Live Coverage)",
+    "url": "https://finnhub.io/api/news?id=32dbe44cd35450438593830eb9179f1b4df2f96943f6e1fd14cf6fce08bb2223",
+    "source": "Yahoo",
+    "date": "2026-11-25"
+   },
+   {
+    "title": "Nasdaq Futures Tumble as AI Selloff Returns",
+    "url": "https://finnhub.io/api/news?id=e95a169591e8a1a7cda57998c95d07b32cd6725ce5abb3a69382d7404463248f",
+    "source": "Yahoo",
+    "date": "2026-11-25"
+   },
+   {
+    "title": "AI Chips Update - NVIDIA Reinstates Huang Amid Compliance and Leadership Focus",
+    "url": "https://finnhub.io/api/news?id=715df2fd9dfcd04b3b0b578e5c2746331bd9596534ec6d0901f02faf7c90bac8",
+    "source": "Yahoo",
+    "date": "2026-11-25"
+   },
+   {
+    "title": "Nvidia Shares Extend Losses as Rally Following Jensen Huang\u2019s Return Loses Momentum",
+    "url": "https://finnhub.io/api/news?id=268c31c1c81665d5e55ae113bd9d8d17e612f731f427e3c260b9a0f23346b8f1",
+    "source": "Yahoo",
+    "date": "2026-11-25"
+   },
+   {
+    "title": "Anthropic's stock has been a clunker post-IPO. Why that matters for the AI trade",
+    "url": "https://www.cnbc.com/investingclub/2026/11/25/anthropics-stock-has-been-a-clunker-post-ipo-why-that-matters-for-the-ai-trade.html",
+    "source": "CNBC",
+    "date": "2026-11-25"
    }
   ]
  },
@@ -91,18 +103,14 @@
    "key": "vix",
    "name": "VIX above 30",
    "met": true,
-   "value": "26.4",
+   "value": "33.5",
    "threshold": "closed above 30 in the last 10 trading days",
-   "data_date": "2026-11-24",
+   "data_date": "2026-11-25",
    "detail": "10-day peak 35.9 on 2026-11-20",
    "stale": false,
    "spark": {
     "label": "VIX close",
     "points": [
-     [
-      "2026-05-29",
-      15.32
-     ],
      [
       "2026-06-01",
       16.05
@@ -602,6 +610,10 @@
      [
       "2026-11-24",
       26.36
+     ],
+     [
+      "2026-11-25",
+      33.55
      ]
     ],
     "threshold": 30.0
@@ -1459,18 +1471,14 @@
    "key": "sector",
    "name": "A clear leading sector",
    "met": false,
-   "value": "XLP +12.0 pts vs SPY",
+   "value": "XLP +15.9 pts vs SPY",
    "threshold": "top sector beats SPY by 5+ pts over 20 days, top on 10 of the last 15 days",
-   "data_date": "2026-11-24",
+   "data_date": "2026-11-25",
    "detail": "XLP was the top sector on 6 of the last 15 trading days",
    "stale": false,
    "spark": {
     "label": "XLP return minus SPY over 20 days, pts",
     "points": [
-     [
-      "2026-05-26",
-      -4.8039
-     ],
      [
       "2026-05-27",
       -3.462
@@ -1970,6 +1978,10 @@
      [
       "2026-11-24",
       12.0381
+     ],
+     [
+      "2026-11-25",
+      15.8741
      ]
     ],
     "threshold": 5.0
@@ -1997,11 +2009,6 @@
   }
  ],
  "market": [
-  [
-   "2024-10-29",
-   568.65,
-   0.0
-  ],
   [
    "2024-10-30",
    566.93,
@@ -2354,7 +2361,7 @@
   ],
   [
    "2025-02-12",
-   591.73,
+   591.74,
    -1.05
   ],
   [
@@ -4596,144 +4603,175 @@
    "2026-11-24",
    718.78,
    -7.74
+  ],
+  [
+   "2026-11-25",
+   698.76,
+   -10.31
   ]
  ],
  "errors": {},
- "session": "after_close",
+ "session": "during_trading",
  "news_scores": {
-  "as_of": "2026-11-24",
+  "as_of": "2026-11-25",
   "window_days": 20,
   "macro": {
    "name": "Market overall",
-   "score": 6.29,
-   "tone": "strongly positive",
-   "stories": 74,
+   "score": -12.28,
+   "tone": "strongly negative",
+   "stories": 119,
    "reactions": {
-    "confirmed": 34,
-    "faded": 8,
+    "confirmed": 80,
+    "faded": 18,
     "muted": 21,
-    "pending": 11
+    "pending": 0
    },
    "top": [
     {
      "kind": "report",
-     "title": "Terex (TEX) Stock Is Up 10.6% Today: Aerials Unit Sale to Linamar",
-     "url": "https://finnhub.io/api/news?id=102fcbcf7737a7ee4059f141b2bfac9352d20b783cfd4f28f598d1fd0fac2f72",
+     "title": "Why MKS (MKSI) Stock Is Down Today: Chip Stocks Slide on AI Selloff",
+     "url": "https://finnhub.io/api/news?id=0ca0ce0fb52a888ba69c012e7151d544d346cfe95b03650659b589eed71e543a",
      "source": "Yahoo",
-     "published": "2026-11-24T15:33+00:00",
-     "headlines": 2,
-     "direction": "positive",
-     "channel": "earnings",
-     "points": 1.0,
-     "reaction": "muted",
-     "change": -0.49
-    },
-    {
-     "kind": "report",
-     "title": "Earnings Surge Could Be A Game Changer For Chevron Stock (CVX)",
-     "url": "https://finnhub.io/api/news?id=e98768be5711b5be1205fc7dc154a8a77a207a09bfdbd1f3cada0d2a9e5253b5",
-     "source": "Yahoo",
-     "published": "2026-11-24T18:20+00:00",
+     "published": "2026-11-24T21:01+00:00",
      "headlines": 1,
-     "direction": "positive",
-     "channel": "earnings",
-     "points": 1.0,
-     "reaction": "muted",
-     "change": -0.49
+     "direction": "negative",
+     "channel": "growth",
+     "points": -1.0,
+     "reaction": "confirmed",
+     "change": -2.79
     },
     {
      "kind": "report",
-     "title": "Roche expects approved cancer pill to become its best-selling drug - Reuters",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQ0ZIVTBMSV9JZVhObUNuZ09CNXMwd0lHb083NUNCRmNzdWtDcTRTUVlsZjhLbUZPMm1KR0FQN0VoRW1MQUtWcUxEWllKeWU1TDdaNmlsdk95UE9oUGxOdEU0TXFpSmdXWGxuRHhOSVNidzVJbnNkNFRzTzBBblRqdkh0WU5Ra1kxa3dQRUdjMlZxWU1mVloyZnUyQ1FQLWlyNDZCeThPUk1oTER2dEtfd3RjYmhvRVk?oc=5",
+     "title": "World stocks fall as new US tariffs loom, AI rebound fizzles - Reuters",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRFVsTjFROGtER0loSkZOcnF2NDRLUWFmcjBHZ01ybE51N19idjFFMXI1dnFqZ21JYS1HVVpicTJ1V1RfVU4zd3pkVEZMWHdqMUJWRENOQWJ2VjFqT1Y3WS0xYTV3bzd2RnRraFhtOVpzVE9yYThzdV9tdWxJbUpjNzFraw?oc=5",
      "source": "Reuters",
-     "published": "2026-11-24T19:17+00:00",
+     "published": "2026-11-25T01:50+00:00",
      "headlines": 1,
-     "direction": "positive",
-     "channel": "earnings",
-     "points": 1.0,
-     "reaction": "muted",
-     "change": -0.49
+     "direction": "negative",
+     "channel": "geopolitics",
+     "points": -1.0,
+     "reaction": "confirmed",
+     "change": -2.79
+    },
+    {
+     "kind": "report",
+     "title": "Stock Market Today: Dow Slammed 800 Points; Dell Falls Hard Despite Big Earnings (Live Coverage)",
+     "url": "https://finnhub.io/api/news?id=32dbe44cd35450438593830eb9179f1b4df2f96943f6e1fd14cf6fce08bb2223",
+     "source": "Yahoo",
+     "published": "2026-11-25T15:41+00:00",
+     "headlines": 1,
+     "direction": "negative",
+     "channel": "inflation",
+     "points": -1.0,
+     "reaction": "confirmed",
+     "change": -2.79
     }
    ],
    "channels": {
-    "growth": 6.16,
-    "earnings": 5.08,
-    "geopolitics": -2.85,
-    "policy": -2.37,
-    "rates": -2.1,
-    "other": 1.36,
-    "credit": 0.6,
-    "inflation": 0.41
+    "geopolitics": -6.63,
+    "earnings": 4.41,
+    "rates": -2.94,
+    "policy": -2.63,
+    "inflation": -2.43,
+    "credit": -1.31,
+    "other": -0.79,
+    "growth": 0.04
    }
   },
   "lines": {
    "XLK": {
     "name": "Technology",
-    "score": 3.36,
-    "tone": "positive",
-    "stories": 55,
+    "score": -9.96,
+    "tone": "strongly negative",
+    "stories": 80,
     "reactions": {
-     "confirmed": 35,
-     "faded": 11,
+     "confirmed": 60,
+     "faded": 20,
      "muted": 0,
-     "pending": 9
+     "pending": 0
     },
     "top": [
      {
       "kind": "report",
-      "title": "CoreWeave, Nebius lead neocloud stocks higher as Jensen Huang's Nvidia return lifts AI trade",
-      "url": "https://finnhub.io/api/news?id=948de46c42d400fe0d905ff9c0bcb4f10e72aa8583accbfacd64fd638812c92b",
+      "title": "Stock Market Today: Dow Slammed 800 Points; Dell Falls Hard Despite Big Earnings (Live Coverage)",
+      "url": "https://finnhub.io/api/news?id=32dbe44cd35450438593830eb9179f1b4df2f96943f6e1fd14cf6fce08bb2223",
       "source": "Yahoo",
-      "published": "2026-11-23T15:14+00:00",
+      "published": "2026-11-25T15:41+00:00",
       "headlines": 1,
-      "direction": "positive",
+      "direction": "negative",
       "strength": 2,
-      "points": 1.59,
+      "points": -2.0,
       "reaction": "confirmed",
-      "change": 4.26
+      "change": -2.49
      },
      {
       "kind": "report",
-      "title": "Stock Market Today: Dow, Nasdaq Surge As Jensen Huang Returns To Nvidia; Chip Plays Rocket (Live Coverage)",
-      "url": "https://finnhub.io/api/news?id=f781a840321cfedf6a87e5387889c3ce39b0e3331e64be1fdaa5755ba26621d5",
-      "source": "Yahoo",
-      "published": "2026-11-23T19:37+00:00",
+      "title": "HPE shares tumble as shrinking AI margins overshadow upbeat forecast - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPamhxOU8weWdPQlYzdmRWR0hKdVBPdGhpcXVzUVBOcWpmNmdlTXUxSXFiSUE0SUF2Q0NWVlNUOE43TG0tYXFZYm50TnlrNDRJdGxGTUlpeUhKT0lRVjFHb3NPVS1CLS0tWmZoc1lNcEtKTDBWVDhmSVRmVlpxbWRSUmNsWkFva1czcWxXdUJBLW9mVFNLZmk3LU9ZOHZaWFZoNmlV?oc=5",
+      "source": "Reuters",
+      "published": "2026-11-24T18:50+00:00",
       "headlines": 1,
-      "direction": "positive",
-      "strength": 3,
-      "points": 1.19,
+      "direction": "negative",
+      "strength": 2,
+      "points": -1.59,
       "reaction": "confirmed",
-      "change": 4.26
+      "change": -2.77
      },
      {
       "kind": "report",
-      "title": "Nvidia gains nearly $1T as Trump says nobody could 'revive the stock like it's being revived'",
-      "url": "https://finnhub.io/api/news?id=0c3e3ef2df2e53ca8e8a38a8255bc31e7f00e8092a6c267803d512b20c89573b",
-      "source": "Yahoo",
-      "published": "2026-11-23T19:46+00:00",
-      "headlines": 1,
-      "direction": "positive",
+      "title": "Nasdaq futures slide over 2% as AI losses deepen; inflation data in focus - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdUdBTGhVT2V5cDcydUZMX2NTdTkxVDBJSHdCMUgwNXBibGhQc28zdktpLXA2dGVUYzRzV3hpMld1U29KempSNUswd2dNYVdITlFxV2NycEkwbnlpZkdPSDNicVRKM3NCU2l0M0hoWU13UTZkbTAtX2JFempxaUtFbjdTZGMxT2lXM2g3dkR4cy1UYnVfZ09kOWpTNGxtUEZZOTRPaXhENlZ6OGt2ZF94d0RCVjdOSldfc0E?oc=5",
+      "source": "Reuters",
+      "published": "2026-11-25T12:54+00:00",
+      "headlines": 3,
+      "direction": "negative",
       "strength": 3,
-      "points": 1.19,
+      "points": -1.5,
       "reaction": "confirmed",
-      "change": 4.26
+      "change": -2.49
      }
     ],
-    "excess_pct": -10.49,
-    "divergence": "good_news_lagging"
+    "excess_pct": -12.57,
+    "divergence": null
    },
    "XLF": {
     "name": "Financials",
-    "score": -1.15,
-    "tone": "mixed or quiet",
-    "stories": 9,
+    "score": -3.9,
+    "tone": "negative",
+    "stories": 16,
     "reactions": {
-     "confirmed": 3,
-     "faded": 2,
+     "confirmed": 4,
+     "faded": 9,
      "muted": 3,
-     "pending": 1
+     "pending": 0
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "Stock Market Today: Dow Slammed 800 Points; Dell Falls Hard Despite Big Earnings (Live Coverage)",
+      "url": "https://finnhub.io/api/news?id=32dbe44cd35450438593830eb9179f1b4df2f96943f6e1fd14cf6fce08bb2223",
+      "source": "Yahoo",
+      "published": "2026-11-25T15:41+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 1,
+      "points": -1.0,
+      "reaction": "faded",
+      "change": 1.89
+     },
+     {
+      "kind": "report",
+      "title": "Allstate suffers multi-day tech outage ahead of Thanksgiving",
+      "url": "https://finnhub.io/api/news?id=39242eae2fd021d367fbafb3d357e2e8d5cb9d7bacf6e48b6538716ecc3dede7",
+      "source": "Yahoo",
+      "published": "2026-11-25T15:08+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 1,
+      "points": -0.75,
+      "reaction": "faded",
+      "change": 1.89
+     },
      {
       "kind": "report",
       "title": "Quants Unwind Bond Shorts as Stock Swoon Drives Traders to Safety",
@@ -4743,50 +4781,24 @@
       "headlines": 1,
       "direction": "negative",
       "strength": 1,
-      "points": -0.75,
+      "points": -0.6,
       "reaction": "faded",
       "change": 1.31
-     },
-     {
-      "kind": "report",
-      "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
-      "source": "Federal Reserve",
-      "published": "2026-11-19T16:00+00:00",
-      "headlines": 1,
-      "direction": "negative",
-      "strength": 1,
-      "points": -0.5,
-      "reaction": "muted",
-      "change": 0.47
-     },
-     {
-      "kind": "report",
-      "title": "A week on, Chase still hasn\u2019t explained its outage",
-      "url": "https://finnhub.io/api/news?id=f19937ce16d705da0866cf71abe92e4e07dfe6ff66c4207805e36ec8c0fff0f2",
-      "source": "Yahoo",
-      "published": "2026-11-24T22:15+00:00",
-      "headlines": 1,
-      "direction": "negative",
-      "strength": 1,
-      "points": -0.38,
-      "reaction": "pending",
-      "change": null
      }
     ],
-    "excess_pct": 7.02,
-    "divergence": null
+    "excess_pct": 8.59,
+    "divergence": "bad_news_leading"
    },
    "XLE": {
     "name": "Energy",
-    "score": 2.65,
-    "tone": "positive",
-    "stories": 11,
+    "score": 7.54,
+    "tone": "strongly positive",
+    "stories": 18,
     "reactions": {
-     "confirmed": 6,
-     "faded": 3,
+     "confirmed": 13,
+     "faded": 5,
      "muted": 0,
-     "pending": 2
+     "pending": 0
     },
     "top": [
      {
@@ -4798,52 +4810,65 @@
       "headlines": 1,
       "direction": "positive",
       "strength": 2,
-      "points": 2.0,
+      "points": 1.59,
       "reaction": "confirmed",
       "change": 1.45
      },
      {
       "kind": "report",
-      "title": "Houthis hit Riyadh's tallest tower, 11 wounded, Saudi Civil defense says - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNT2lRbHFjYmphSTFEMlhhRmVYd0dzWklmWmxFZFhMVG41LTJWdEZpNW9oYU5JUy1NS1ZORl80Wml6clJ6UnJOenN2TDBjSUpDbHRlVTdWNWpkdXZGejZwdTM4U1J3UWZyYnUzMzhMSGRKZWFwdjZUSFVLdTlRSWlMVVFtQ05kUDlQVGtEY1FXTHRXQmVfSmgzSndIWGxqZ2NRWXM4WjluTTgyallieG9JOXdISmlacFRUUDFiOUplaUZmNC1vUkJLSzZn?oc=5",
+      "title": "Yemen's Houthis say they attacked Saudi Arabia's Ras Tanura refinery - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOakM0aVEtei1RVzZkTUVZYlFabWlDYWpzTktyaGU2WHZqaGRkU0hJOHdsNDFUdU5GYzNOYzdZYnkwWnFYZ2daNlNvYkJ3ZWNjeDNTRm5HOUFtNW5nRjNYSVpaaGF0SF9xbjN6S1FpbVJ6MmFBYkdUeF9CMTZKRUdJT2RITmVSelAzWUJtTEIxQTN5Ry1YZEczX29iOHVuc0Q1bllidlBoN0VDNWVzYzZqU2RaNm5JRUctRDdsdGt2ZkEydWRVMV9wQUdHYw?oc=5",
       "source": "Reuters",
-      "published": "2026-11-24T20:42+00:00",
+      "published": "2026-11-25T07:24+00:00",
       "headlines": 1,
       "direction": "positive",
-      "strength": 1,
-      "points": 0.75,
+      "strength": 2,
+      "points": 1.5,
       "reaction": "confirmed",
-      "change": 1.45
+      "change": 2.59
      },
      {
       "kind": "report",
-      "title": "Saudi-led coalition issues evacuation warning for Yemen's Hodeidah port - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVG1zbDJSYngzOXYyX0pnWnBSUFB6Q0FYVzBkUzNtSVpRQm9ZZEY1S3VtMFJFWHVVbjFqQ29aeXhILVNwekVkX0Y1SUp1T3lUZXFCY2hOVWd1YWhVZVBVRFhoeWF2Y01jUkFGQTl0LWRsWUVNZU0xSGJsTE5hVjlOMm1KOVBOVlJtSGcwYm1zV3d2OE52VHJ1ZEFNeXdQRjhPTGhLMmRDNk14QVo4UHg1THdEQ2xMekJ2ZzJxXw?oc=5",
+      "title": "Iran says it is prepared to withstand US blockade, seeks to curb price rises - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQUtreFI1ZkdfaWRTMFJZWElnOFJtM2E1ZlZ6OVhiSDlVTnFOLVQtZTExQWZjbWRvRjR0SFJ3ZUotcEV5Z3RFaE5Wb1RsUEFSdUVoVUhvaXU1bFFNckhHcHdDZjdkRTNMUVlzR0ZVcUx1VWRLeV9DSnFtQjJrOUU1NjJSM1VyTEc3QUltV2p6bFpvSGVLd3dKMXRkaXpnVEJrUWcycHI5UVBNOTAwWTIzTTloYlZSeXpiUjJIcS1HOWQ?oc=5",
       "source": "Reuters",
-      "published": "2026-11-24T22:11+00:00",
+      "published": "2026-11-25T08:29+00:00",
       "headlines": 1,
       "direction": "positive",
-      "strength": 1,
-      "points": 0.5,
-      "reaction": "pending",
-      "change": null
+      "strength": 2,
+      "points": 1.5,
+      "reaction": "confirmed",
+      "change": 2.59
      }
     ],
-    "excess_pct": -4.77,
+    "excess_pct": -2.34,
     "divergence": "good_news_lagging"
    },
    "XLV": {
     "name": "Health care",
-    "score": 8.44,
+    "score": 5.43,
     "tone": "strongly positive",
-    "stories": 12,
+    "stories": 16,
     "reactions": {
-     "confirmed": 6,
-     "faded": 4,
+     "confirmed": 9,
+     "faded": 7,
      "muted": 0,
-     "pending": 2
+     "pending": 0
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "Why Is AbbVie (ABBV) Stock Up Today? Health Care Rally as Tech Slides",
+      "url": "https://finnhub.io/api/news?id=47d5f1765390f0e077bd7446d523a865f869a5600ae82c83eb145cbb9fec1063",
+      "source": "Yahoo",
+      "published": "2026-11-24T21:00+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 2,
+      "points": 2.0,
+      "reaction": "confirmed",
+      "change": 1.4
+     },
      {
       "kind": "report",
       "title": "Sanofi Bets $41 Billion on Insmed to Fuel Growth Beyond Dupixent",
@@ -4853,7 +4878,7 @@
       "headlines": 2,
       "direction": "positive",
       "strength": 2,
-      "points": 2.0,
+      "points": 1.59,
       "reaction": "confirmed",
       "change": 3.44
      },
@@ -4866,92 +4891,79 @@
       "headlines": 1,
       "direction": "positive",
       "strength": 2,
-      "points": 2.0,
-      "reaction": "confirmed",
-      "change": 3.44
-     },
-     {
-      "kind": "report",
-      "title": "Why Gilead (GILD) Stock Is Up Today: Health Care Rally and New Rating",
-      "url": "https://finnhub.io/api/news?id=dd770e1ec72670aa530fdea02eaa3314432950eb27e3da10dde4215c5ace9813",
-      "source": "Yahoo",
-      "published": "2026-11-24T20:45+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 2,
-      "points": 2.0,
+      "points": 1.59,
       "reaction": "confirmed",
       "change": 3.44
      }
     ],
-    "excess_pct": 9.7,
+    "excess_pct": 10.88,
     "divergence": null
    },
    "XLY": {
     "name": "Consumer discretionary",
-    "score": 1.4,
-    "tone": "mixed or quiet",
-    "stories": 11,
+    "score": -3.09,
+    "tone": "negative",
+    "stories": 17,
     "reactions": {
-     "confirmed": 3,
-     "faded": 3,
+     "confirmed": 6,
+     "faded": 11,
      "muted": 0,
-     "pending": 5
+     "pending": 0
     },
     "top": [
      {
       "kind": "report",
-      "title": "Retail turnarounds are taking hold just in time for the holiday season",
-      "url": "https://www.cnbc.com/2026/11/24/retail-turnarounds-holiday-season.html",
-      "source": "CNBC",
-      "published": "2026-11-24T18:21+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 2,
-      "points": 1.5,
-      "reaction": "confirmed",
-      "change": 1.16
-     },
-     {
-      "kind": "report",
-      "title": "Retailers Sanguine for Black Friday",
-      "url": "https://finnhub.io/api/news?id=2af6d55cbef371c72effab9c616a80af5548ff21881c3d735b32a964de58e38b",
+      "title": "Tesla and SpaceX stocks sink as merger concerns mount",
+      "url": "https://finnhub.io/api/news?id=a392977d129ab4f26f68aabba9a6c3bbb7b7794b067b8f680043a10b457168ce",
       "source": "Yahoo",
-      "published": "2026-11-24T22:24+00:00",
+      "published": "2026-11-25T15:41+00:00",
       "headlines": 1,
-      "direction": "positive",
+      "direction": "negative",
       "strength": 2,
-      "points": 1.5,
-      "reaction": "pending",
-      "change": null
-     },
-     {
-      "kind": "report",
-      "title": "Why Tesla Stock Stepped on the Gas Today",
-      "url": "https://finnhub.io/api/news?id=b2f374b30a07c8afcf9dae7201e2de49ccb5c6e696f2e35847cdff54039386f9",
-      "source": "Yahoo",
-      "published": "2026-11-23T19:48+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 1,
-      "points": 0.6,
+      "points": -1.5,
       "reaction": "faded",
-      "change": -0.73
+      "change": 0.53
+     },
+     {
+      "kind": "report",
+      "title": "US inflation hits highest since May after prices climb 3.8% over the last year",
+      "url": "https://finnhub.io/api/news?id=1289a702b5447ba34214d7842025bf78fc6181e5c26f2a4782d397546a056bbb",
+      "source": "Yahoo",
+      "published": "2026-11-25T15:46+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 1,
+      "points": -1.0,
+      "reaction": "faded",
+      "change": 0.53
+     },
+     {
+      "kind": "report",
+      "title": "Amazon customers may qualify for $309.5M settlement. See how",
+      "url": "https://finnhub.io/api/news?id=c90f7b0e2dd59b1329d299c4ae6611d1bb3680b12212947a94f33170c3e3907a",
+      "source": "Yahoo",
+      "published": "2026-11-24T22:32+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 1,
+      "points": -0.75,
+      "reaction": "faded",
+      "change": 0.53
      }
     ],
-    "excess_pct": 8.58,
-    "divergence": null
+    "excess_pct": 9.3,
+    "divergence": "bad_news_leading"
    },
    "XLP": {
     "name": "Consumer staples",
-    "score": 1.72,
-    "tone": "positive",
-    "stories": 4,
+    "score": 0.68,
+    "tone": "mixed or quiet",
+    "stories": 9,
     "reactions": {
-     "confirmed": 2,
-     "faded": 1,
+     "confirmed": 4,
+     "faded": 5,
      "muted": 0,
-     "pending": 1
+     "pending": 0
     },
     "top": [
      {
@@ -4963,7 +4975,7 @@
       "headlines": 2,
       "direction": "positive",
       "strength": 1,
-      "points": 0.75,
+      "points": 0.6,
       "reaction": "confirmed",
       "change": 2.15
      },
@@ -4976,85 +4988,85 @@
       "headlines": 1,
       "direction": "positive",
       "strength": 1,
-      "points": 0.75,
+      "points": 0.6,
       "reaction": "confirmed",
       "change": 2.15
      },
      {
-      "kind": "opinion",
-      "title": "Costco gives $30 gift for the holidays, but there's a catch",
-      "url": "https://finnhub.io/api/news?id=eeaa642ca45f6ee6f21ad0b8070575d86046a06426745710259b0367ae08f0a8",
-      "source": "Yahoo",
-      "published": "2026-11-24T21:33+00:00",
+      "kind": "report",
+      "title": "8 Of 11 Sectors Rise Tuesday As Defensives Lead",
+      "url": "https://finnhub.io/api/news?id=37dd8624437c8b63ae7f493f24a751f8b16d32426983b4e2362706aec7cd3525",
+      "source": "Benzinga",
+      "published": "2026-11-24T12:00+00:00",
       "headlines": 1,
       "direction": "positive",
       "strength": 1,
-      "points": 0.12,
-      "reaction": "pending",
-      "change": null
+      "points": 0.6,
+      "reaction": "confirmed",
+      "change": 2.15
      }
     ],
-    "excess_pct": 12.04,
+    "excess_pct": 15.87,
     "divergence": null
    },
    "XLI": {
     "name": "Industrials",
-    "score": -1.57,
-    "tone": "negative",
-    "stories": 13,
+    "score": 0.62,
+    "tone": "mixed or quiet",
+    "stories": 22,
     "reactions": {
-     "confirmed": 2,
-     "faded": 3,
+     "confirmed": 8,
+     "faded": 8,
      "muted": 6,
-     "pending": 2
+     "pending": 0
     },
     "top": [
      {
       "kind": "report",
-      "title": "Trump administration set to unveil new tariffs after probe on excess factory capacity, sources say - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNklFaE54bEV6OGdKT29ScUxHUlZwRDNyREJ0MzBSZzZGdnptTkVxaXNHeWx2WjFWYVMzMzdMeU92dC1PVmYyZ1BTT3lCTWVRVnJ5ODFEb0NXYWpDd1ZQUlg4bkZ5QVAyck9KQUhMbldjY2FqMmtsZGs3MTFUY0xLZm9wMWRRTFAyS3VvZUZ6Wnk0VzlxTjR3VS1GSkJ1S3VCU2xmZ09FX1E5dUVjTUhfR21wMG1pcktxdGc?oc=5",
-      "source": "Reuters",
-      "published": "2026-11-24T18:48+00:00",
-      "headlines": 1,
-      "direction": "negative",
-      "strength": 2,
-      "points": -1.5,
-      "reaction": "muted",
-      "change": -0.04
-     },
-     {
-      "kind": "report",
-      "title": "Shein to pay $100 million to settle US shipping, customer service claims - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcWhsZ000UTV1SjF3ak9ONXpxUy1JWUFjM2wtMWZTQ3dqOVhZNDBKRHFQVkFlYjZaVWRjWXFoSUY3Ry1JN1ozRk9TQTQ3R2ZFV2ZVQUx6MjF5endGeUptTU5OakRMNlVjb01qWi0ySHItb1dEUFJDc3kxNTJ0akJfbXBlSVZMdkdwb2p1b3BHWnh3aW5scllxRVg2M3BFSHc?oc=5",
-      "source": "Reuters",
-      "published": "2026-11-24T20:40+00:00",
-      "headlines": 1,
-      "direction": "negative",
-      "strength": 1,
-      "points": -0.75,
-      "reaction": "muted",
-      "change": -0.04
-     },
-     {
-      "kind": "report",
-      "title": "Howmet (HWM) Stock Is Down 5.5% Today Without Company News",
-      "url": "https://finnhub.io/api/news?id=6bb59f918c8ce0783d26071f4de4c46bb4b7372f5c84c1e1064e978682309eff",
+      "title": "Malaysia Aviation Group Selects GE Aerospace GEnx Engines to Power New 787 Dreamliners",
+      "url": "https://finnhub.io/api/news?id=71b7122b882de72384fddd45cb28d919683eebadb932e6d55db128a07ab99e34",
       "source": "Yahoo",
-      "published": "2026-11-24T20:46+00:00",
-      "headlines": 1,
-      "direction": "negative",
+      "published": "2026-11-25T12:00+00:00",
+      "headlines": 2,
+      "direction": "positive",
+      "strength": 2,
+      "points": 2.0,
+      "reaction": "confirmed",
+      "change": 1.03
+     },
+     {
+      "kind": "report",
+      "title": "Terex (TEX) Stock Is Up 10.6% Today: Aerials Unit Sale to Linamar",
+      "url": "https://finnhub.io/api/news?id=102fcbcf7737a7ee4059f141b2bfac9352d20b783cfd4f28f598d1fd0fac2f72",
+      "source": "Yahoo",
+      "published": "2026-11-24T15:33+00:00",
+      "headlines": 2,
+      "direction": "positive",
       "strength": 1,
-      "points": -0.75,
+      "points": 0.79,
       "reaction": "muted",
       "change": -0.04
+     },
+     {
+      "kind": "report",
+      "title": "GE Aerospace Says Malaysia Aviation Group Selects Genx-1B Engines To Power Up To 16 New Boeing 787 Dreamliners",
+      "url": "https://finnhub.io/api/news?id=01002c5e69ce130fdb4e81a2647eccee0be67c99cb73bc42899d26ee18665e33",
+      "source": "Benzinga",
+      "published": "2026-11-25T08:01+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 1,
+      "points": 0.75,
+      "reaction": "confirmed",
+      "change": 1.03
      }
     ],
-    "excess_pct": 2.85,
-    "divergence": "bad_news_leading"
+    "excess_pct": 3.75,
+    "divergence": null
    },
    "XLB": {
     "name": "Materials",
-    "score": 1.06,
+    "score": 0.84,
     "tone": "mixed or quiet",
     "stories": 6,
     "reactions": {
@@ -5073,7 +5085,7 @@
       "headlines": 1,
       "direction": "positive",
       "strength": 2,
-      "points": 1.19,
+      "points": 0.94,
       "reaction": "faded",
       "change": -1.48
      },
@@ -5086,7 +5098,7 @@
       "headlines": 2,
       "direction": "positive",
       "strength": 1,
-      "points": 0.5,
+      "points": 0.4,
       "reaction": "confirmed",
       "change": 1.03
      },
@@ -5099,26 +5111,39 @@
       "headlines": 2,
       "direction": "positive",
       "strength": 2,
-      "points": 0.19,
+      "points": 0.15,
       "reaction": "confirmed",
       "change": 1.03
      }
     ],
-    "excess_pct": 3.5,
+    "excess_pct": 6.0,
     "divergence": null
    },
    "XLU": {
     "name": "Utilities",
-    "score": 2.0,
-    "tone": "positive",
-    "stories": 11,
+    "score": 0.93,
+    "tone": "mixed or quiet",
+    "stories": 15,
     "reactions": {
-     "confirmed": 5,
-     "faded": 6,
+     "confirmed": 7,
+     "faded": 8,
      "muted": 0,
      "pending": 0
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "Britons face soaring energy bills after 26% price cap hike - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYWxiYkU2dDI4WjRoOUdyaDN0RDQ3MGR2b1k2aUdmQ3dseXVrQkpwSjlIb1NtbzRZbENaYnJfODJKN0pMV2VBMUx3NHZQZWEtUTh3VlRSVWNzMUhHdklzTlZlM1BmSkktbXpUVFhjTlNqY2pUdGpRbUV6bVdpdV9BWDYtQld1MDExX1BNTUt6YVRtSm81LU9VTXV3MF9GOHpMNTJHcVFSanlJWUVkWE1J?oc=5",
+      "source": "Reuters",
+      "published": "2026-11-25T07:19+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 1,
+      "points": 0.75,
+      "reaction": "confirmed",
+      "change": 2.69
+     },
      {
       "kind": "report",
       "title": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
@@ -5128,7 +5153,7 @@
       "headlines": 1,
       "direction": "positive",
       "strength": 1,
-      "points": 0.79,
+      "points": 0.63,
       "reaction": "faded",
       "change": -3.23
      },
@@ -5141,39 +5166,52 @@
       "headlines": 1,
       "direction": "positive",
       "strength": 1,
-      "points": 0.6,
+      "points": 0.47,
       "reaction": "faded",
       "change": -3.23
-     },
-     {
-      "kind": "report",
-      "title": "Why Did NRG Stock Jump?",
-      "url": "https://finnhub.io/api/news?id=51a0af3cd714c755a9cdeb95c6f187b7ac684d36de11637e58dc6790199bae95",
-      "source": "Yahoo",
-      "published": "2026-11-24T17:22+00:00",
-      "headlines": 2,
-      "direction": "positive",
-      "strength": 1,
-      "points": 0.5,
-      "reaction": "confirmed",
-      "change": 0.67
      }
     ],
-    "excess_pct": 7.89,
+    "excess_pct": 11.57,
     "divergence": null
    },
    "XLRE": {
     "name": "Real estate",
-    "score": 0.16,
+    "score": 0.63,
     "tone": "mixed or quiet",
-    "stories": 5,
+    "stories": 8,
     "reactions": {
-     "confirmed": 2,
-     "faded": 3,
+     "confirmed": 4,
+     "faded": 4,
      "muted": 0,
      "pending": 0
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "American Tower (AMT) Prices New Euro Bonds, Is It Still 20% Undervalued?",
+      "url": "https://finnhub.io/api/news?id=29986f141260c299d69fffd4b223ae1f49badc1b0ada985af52a7d4f58b3e895",
+      "source": "Yahoo",
+      "published": "2026-11-25T13:12+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 1,
+      "points": 0.75,
+      "reaction": "confirmed",
+      "change": 2.99
+     },
+     {
+      "kind": "report",
+      "title": "Azrieli Group Ltd (AZRGF) (Q3 2026) Earnings Call Highlights: Data Center Expansion and Office ...",
+      "url": "https://finnhub.io/api/news?id=f683262c954b5d08621ce93f848b3adb89c6420fd7a2cf65a602c2ccac6f0c46",
+      "source": "Yahoo",
+      "published": "2026-11-25T15:20+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 1,
+      "points": 0.75,
+      "reaction": "confirmed",
+      "change": 2.99
+     },
      {
       "kind": "report",
       "title": "American Tower Announces Proposed Settlement of DISH/EchoStar Litigation",
@@ -5183,50 +5221,24 @@
       "headlines": 2,
       "direction": "positive",
       "strength": 1,
-      "points": 0.6,
+      "points": 0.47,
       "reaction": "faded",
       "change": -3.67
-     },
-     {
-      "kind": "report",
-      "title": "Uniti (UNIT) Stock Is Up 9.6% Today Without Company News",
-      "url": "https://finnhub.io/api/news?id=9c35fbfe0435d759475718911368856c6cd6c2ebccfca3dcb5fb8b8b55bda9fc",
-      "source": "Yahoo",
-      "published": "2026-11-24T20:30+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 1,
-      "points": 0.5,
-      "reaction": "confirmed",
-      "change": 1.79
-     },
-     {
-      "kind": "opinion",
-      "title": "Better Dividend Stock for Retirees: American Tower vs. UDR",
-      "url": "https://finnhub.io/api/news?id=4e337aee6a654ce4f4f85c7d185cd290159345fa66fe1e58b7b2d006d4a58176",
-      "source": "Yahoo",
-      "published": "2026-11-23T22:25+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 1,
-      "points": 0.19,
-      "reaction": "confirmed",
-      "change": 1.79
      }
     ],
-    "excess_pct": 9.01,
+    "excess_pct": 12.89,
     "divergence": null
    },
    "XLC": {
     "name": "Communication services",
-    "score": 4.57,
-    "tone": "strongly positive",
-    "stories": 17,
+    "score": 0.59,
+    "tone": "mixed or quiet",
+    "stories": 25,
     "reactions": {
-     "confirmed": 5,
-     "faded": 8,
+     "confirmed": 7,
+     "faded": 18,
      "muted": 0,
-     "pending": 4
+     "pending": 0
     },
     "top": [
      {
@@ -5238,7 +5250,7 @@
       "headlines": 1,
       "direction": "positive",
       "strength": 2,
-      "points": 1.5,
+      "points": 1.19,
       "reaction": "confirmed",
       "change": 1.31
      },
@@ -5251,7 +5263,7 @@
       "headlines": 1,
       "direction": "positive",
       "strength": 2,
-      "points": 1.19,
+      "points": 0.94,
       "reaction": "faded",
       "change": -1.14
      },
@@ -5264,122 +5276,122 @@
       "headlines": 1,
       "direction": "positive",
       "strength": 2,
-      "points": 0.79,
+      "points": 0.63,
       "reaction": "faded",
       "change": -1.14
      }
     ],
-    "excess_pct": 7.45,
+    "excess_pct": 9.05,
     "divergence": null
    },
    "SMH": {
     "name": "Semiconductors",
-    "score": 4.86,
-    "tone": "strongly positive",
-    "stories": 46,
+    "score": -9.15,
+    "tone": "strongly negative",
+    "stories": 71,
     "reactions": {
-     "confirmed": 29,
-     "faded": 10,
+     "confirmed": 50,
+     "faded": 21,
      "muted": 0,
-     "pending": 7
+     "pending": 0
     },
     "top": [
      {
       "kind": "report",
-      "title": "CoreWeave, Nebius lead neocloud stocks higher as Jensen Huang's Nvidia return lifts AI trade",
-      "url": "https://finnhub.io/api/news?id=948de46c42d400fe0d905ff9c0bcb4f10e72aa8583accbfacd64fd638812c92b",
+      "title": "Why MKS (MKSI) Stock Is Down Today: Chip Stocks Slide on AI Selloff",
+      "url": "https://finnhub.io/api/news?id=0ca0ce0fb52a888ba69c012e7151d544d346cfe95b03650659b589eed71e543a",
       "source": "Yahoo",
-      "published": "2026-11-23T15:14+00:00",
+      "published": "2026-11-24T21:01+00:00",
       "headlines": 1,
-      "direction": "positive",
-      "strength": 2,
-      "points": 1.59,
-      "reaction": "confirmed",
-      "change": 10.32
-     },
-     {
-      "kind": "report",
-      "title": "Applied Optoelectronics and Lumentum Soar 22% as Jensen Huang\u2019s Return to NVIDIA Sparks AI Optics Rebound; Coherent Jumps 19%",
-      "url": "https://finnhub.io/api/news?id=0fa3bc2818ca19361123e599e12707b33f511b8aab21e842630f3de16cb49cc4",
-      "source": "Yahoo",
-      "published": "2026-11-23T15:57+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 2,
-      "points": 1.59,
-      "reaction": "confirmed",
-      "change": 10.32
-     },
-     {
-      "kind": "report",
-      "title": "Stock Market Midday, Nov. 23: Nasdaq Surges Nearly 7% as Jensen Huang's Return Sparks Historic AI Rebound",
-      "url": "https://finnhub.io/api/news?id=3461207afa305a3f1429aa315e70de3375f3acdf93524248cd9309872e05ffb3",
-      "source": "Yahoo",
-      "published": "2026-11-23T17:32+00:00",
-      "headlines": 1,
-      "direction": "positive",
+      "direction": "negative",
       "strength": 3,
-      "points": 1.19,
+      "points": -3.0,
       "reaction": "confirmed",
-      "change": 10.32
+      "change": -4.66
+     },
+     {
+      "kind": "report",
+      "title": "Stock Market Today: Dow Slammed 800 Points; Dell Falls Hard Despite Big Earnings (Live Coverage)",
+      "url": "https://finnhub.io/api/news?id=32dbe44cd35450438593830eb9179f1b4df2f96943f6e1fd14cf6fce08bb2223",
+      "source": "Yahoo",
+      "published": "2026-11-25T15:41+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 2,
+      "points": -2.0,
+      "reaction": "confirmed",
+      "change": -4.66
+     },
+     {
+      "kind": "report",
+      "title": "AMBA Stock Hits 8-Year Low As AI Memory Crunch Guts Guidance, Sparks Downgrades",
+      "url": "https://finnhub.io/api/news?id=999e7cfbed33ecb908e15a8d0ada8843163f77d83038394509a48ce2018ccd55",
+      "source": "Yahoo",
+      "published": "2026-11-25T15:53+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 2,
+      "points": -2.0,
+      "reaction": "confirmed",
+      "change": -4.66
      }
     ],
-    "excess_pct": -16.91,
-    "divergence": "good_news_lagging"
+    "excess_pct": -20.9,
+    "divergence": null
    },
    "LAZR": {
     "name": "Photonics",
-    "score": 0.86,
-    "tone": "mixed or quiet",
-    "stories": 7,
+    "score": -1.86,
+    "tone": "negative",
+    "stories": 9,
     "reactions": {
-     "confirmed": 6,
+     "confirmed": 9,
      "faded": 0,
      "muted": 0,
-     "pending": 1
+     "pending": 0
     },
     "top": [
      {
       "kind": "report",
-      "title": "Applied Optoelectronics and Lumentum Soar 22% as Jensen Huang\u2019s Return to NVIDIA Sparks AI Optics Rebound; Coherent Jumps 19%",
-      "url": "https://finnhub.io/api/news?id=0fa3bc2818ca19361123e599e12707b33f511b8aab21e842630f3de16cb49cc4",
+      "title": "Why MKS (MKSI) Stock Is Down Today: Chip Stocks Slide on AI Selloff",
+      "url": "https://finnhub.io/api/news?id=0ca0ce0fb52a888ba69c012e7151d544d346cfe95b03650659b589eed71e543a",
       "source": "Yahoo",
-      "published": "2026-11-23T15:57+00:00",
+      "published": "2026-11-24T21:01+00:00",
       "headlines": 1,
-      "direction": "positive",
+      "direction": "negative",
       "strength": 2,
-      "points": 1.59,
+      "points": -2.0,
       "reaction": "confirmed",
-      "change": 12.58
+      "change": -5.74
      },
      {
       "kind": "report",
-      "title": "Harmonic Stock Jumps 10.4% in Tech Rally, No Company News on Monday",
-      "url": "https://finnhub.io/api/news?id=38e1e00c4301e762e3702a4acdb59d8ee04aab8d54bc58c5c97614e2b08e275a",
+      "title": "Coherent Sinks 10% Despite $15 Million Director Buy, Applied Optoelectronics Plunges 12% as AI Selloff Deepens; Lumentum Tumbles 10%",
+      "url": "https://finnhub.io/api/news?id=4db5e321c2f7c04f74845f3462b2ac0fb709fe0d3df109d6963b6b90a3188588",
       "source": "Yahoo",
-      "published": "2026-11-23T17:01+00:00",
+      "published": "2026-11-25T15:53+00:00",
       "headlines": 1,
-      "direction": "positive",
+      "direction": "negative",
       "strength": 2,
-      "points": 1.59,
+      "points": -2.0,
       "reaction": "confirmed",
-      "change": 12.58
+      "change": -5.74
      },
      {
       "kind": "report",
-      "title": "Keysight Surges 10.4% in Tech Rally Led by Nvidia on Monday",
-      "url": "https://finnhub.io/api/news?id=db8bb98fb38fe01891d776608323668d21004c3b707d1fd237f06321de8ae4a8",
+      "title": "Sandisk Sinks 14% as Memory Stocks Give Back Nvidia\u2019s Huang Rally",
+      "url": "https://finnhub.io/api/news?id=e807449de607bb7c06ec05d29cf2131ca53dea8b14e876b86b171800331f2375",
       "source": "Yahoo",
-      "published": "2026-11-23T17:02+00:00",
-      "headlines": 1,
-      "direction": "positive",
+      "published": "2026-11-24T15:48+00:00",
+      "headlines": 3,
+      "direction": "negative",
       "strength": 2,
-      "points": 1.59,
+      "points": -1.59,
       "reaction": "confirmed",
-      "change": 12.58
+      "change": -10.0
      }
     ],
-    "excess_pct": -27.85,
+    "excess_pct": -33.02,
     "divergence": null
    }
   }

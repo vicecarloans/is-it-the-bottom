@@ -1,0 +1,3283 @@
+{
+ "as_of": "2026-11-25",
+ "lines": {
+  "XLK": "Technology",
+  "XLF": "Financials",
+  "XLE": "Energy",
+  "XLV": "Health care",
+  "XLY": "Consumer discretionary",
+  "XLP": "Consumer staples",
+  "XLI": "Industrials",
+  "XLB": "Materials",
+  "XLU": "Utilities",
+  "XLRE": "Real estate",
+  "XLC": "Communication services",
+  "SMH": "Semiconductors",
+  "LAZR": "Photonics"
+ },
+ "headlines": [
+  {
+   "id": 1,
+   "story": "2026-11-23:2",
+   "feed": "fed",
+   "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
+   "source": "Federal Reserve",
+   "published": "2026-11-12T17:45+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 2,
+   "story": "2026-11-23:3",
+   "feed": "fed",
+   "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
+   "source": "Federal Reserve",
+   "published": "2026-11-12T18:30+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [
+     {
+      "line": "XLF",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 3,
+   "story": "2026-11-23:4",
+   "feed": "fed",
+   "title": "Agencies extend comment period for proposed third-party risk management guidance",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+   "source": "Federal Reserve",
+   "published": "2026-11-13T21:15+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 4,
+   "story": "2026-11-23:5",
+   "feed": "fed",
+   "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
+   "source": "Federal Reserve",
+   "published": "2026-11-18T19:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 5,
+   "story": "2026-11-23:6",
+   "feed": "fed",
+   "title": "Federal Reserve Board issues enforcement action with former employee of First Security Bancorp",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261119a.htm",
+   "source": "Federal Reserve",
+   "published": "2026-11-19T16:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [
+     {
+      "line": "XLF",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 6,
+   "story": "2026-11-23:8",
+   "feed": "fed",
+   "title": "Federal Reserve Board releases results from survey of senior financial officers at banks about their strategies and practices for managing reserve balances",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
+   "source": "Federal Reserve",
+   "published": "2026-11-20T15:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 7,
+   "story": "2026-11-23:9",
+   "feed": "fed",
+   "title": "Federal Reserve announces College Fed Challenge winners",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm",
+   "source": "Federal Reserve",
+   "published": "2026-11-20T21:15+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 8,
+   "story": "2026-11-23:23",
+   "feed": "XLB",
+   "title": "What Moved Bloom Energy Stock?",
+   "url": "https://finnhub.io/api/news?id=4cff44a144087c3cb2f0acc7d23b45cfce96931abcef3b0f075906066153892f",
+   "source": "Yahoo",
+   "published": "2026-11-23T12:10+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 9,
+   "story": "2026-11-25:1",
+   "feed": "XLB",
+   "title": "8 Of 11 Sectors Rise Tuesday As Defensives Lead",
+   "url": "https://finnhub.io/api/news?id=37dd8624437c8b63ae7f493f24a751f8b16d32426983b4e2362706aec7cd3525",
+   "source": "Benzinga",
+   "published": "2026-11-24T12:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLV",
+      "direction": "positive",
+      "strength": 1
+     },
+     {
+      "line": "XLP",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 10,
+   "story": "2026-11-24:11",
+   "feed": "XLB",
+   "title": "What China\u2019s Critical Minerals Pause Means For Metals And Mining Funds",
+   "url": "https://finnhub.io/api/news?id=b7fb44de69254b035848b298c7371963b5483a118830a16193ebbe1f1806b4bd",
+   "source": "Yahoo",
+   "published": "2026-11-24T14:10+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "policy",
+    "sectors": [
+     {
+      "line": "XLB",
+      "direction": "positive",
+      "strength": 2
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 11,
+   "story": "2026-11-24:36",
+   "feed": "XLB",
+   "title": "Ecovyst (ECVT) Stock Is Up 6.1% Today Without Company News",
+   "url": "https://finnhub.io/api/news?id=936225f90c0dcb4774ec6e90aaaa410f0edd0ad3196c84077857fb88060ab50f",
+   "source": "Yahoo",
+   "published": "2026-11-24T17:30+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLB",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 12,
+   "story": "2026-11-24:38",
+   "feed": "XLRE",
+   "title": "The 10 Most Profitable REITs",
+   "url": "https://finnhub.io/api/news?id=a70ac1dcc3a850be85f01bc1b1accdad3d626236ad384c038715bf82a9824da1",
+   "source": "SeekingAlpha",
+   "published": "2026-11-24T17:37+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 13,
+   "story": "2026-11-24:43",
+   "feed": "XLB",
+   "title": "Best Dividend Stocks to Buy for Dependable Dividend Growth",
+   "url": "https://finnhub.io/api/news?id=ab8372ecfee687d7abf018b7dce66c686ad6cd08febf8c3946af69c275a4cd45",
+   "source": "Yahoo",
+   "published": "2026-11-24T17:48+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "high",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 14,
+   "story": "2026-11-24:60",
+   "feed": "fed",
+   "title": "Minutes of the Board's discount rate meetings on October 19 and October 28, 2026",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261124a.htm",
+   "source": "Federal Reserve",
+   "published": "2026-11-24T19:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "rates",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 15,
+   "story": "2026-11-24:63",
+   "feed": "XLB",
+   "title": "Dow Jones Leader Sherwin-Williams, Target Stock In Or Near Buy Zone",
+   "url": "https://finnhub.io/api/news?id=17a1bdb480a9382b2f4317b93df450c55147ecab71c73415aba7b95898094353",
+   "source": "Yahoo",
+   "published": "2026-11-24T19:10+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 16,
+   "story": "2026-11-24:88",
+   "feed": "XLRE",
+   "title": "Uniti (UNIT) Stock Is Up 9.6% Today Without Company News",
+   "url": "https://finnhub.io/api/news?id=9c35fbfe0435d759475718911368856c6cd6c2ebccfca3dcb5fb8b8b55bda9fc",
+   "source": "Yahoo",
+   "published": "2026-11-24T20:30+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLRE",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 17,
+   "story": "2026-11-25:2",
+   "feed": "XLRE",
+   "title": "Prologis (PLD) Is Getting Fresh Attention, What Is The Market Watching?",
+   "url": "https://finnhub.io/api/news?id=d6833ba68daad8663fb3ca29d7388e3bfbb950d1cf28333872e2c020d0e884e4",
+   "source": "Yahoo",
+   "published": "2026-11-25T00:21+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 18,
+   "story": "2026-11-25:3",
+   "feed": "market",
+   "title": "Russian strike kills two people in Ukraine's Odesa region, governor says - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVVJGWmhSeU5uWXkwNElJa0F4SFVNaGFObjNhWThIblk0dTkzeW9wVUhwZS0yVzYtQjY3NHd5V3A1MUQ4c1hzQm5WTGhmMXBoQ2R3aDNweHUwalV2bFZJNkZHWGI1akhWMW5sY0VoUVE0SXRDOXN4NWpNRTFyQmFyLUx2b1lhaG9NNWJRTkhjVHV4Z0d6NFliQklkel9SVzhUbGJGY0h0Vzg5czZaYmc?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T01:26+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "geopolitics",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 19,
+   "story": "2026-11-25:4",
+   "feed": "market",
+   "title": "World stocks fall as new US tariffs loom, AI rebound fizzles - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRFVsTjFROGtER0loSkZOcnF2NDRLUWFmcjBHZ01ybE51N19idjFFMXI1dnFqZ21JYS1HVVpicTJ1V1RfVU4zd3pkVEZMWHdqMUJWRENOQWJ2VjFqT1Y3WS0xYTV3bzd2RnRraFhtOVpzVE9yYThzdV9tdWxJbUpjNzFraw?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T01:50+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "geopolitics",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 20,
+   "story": "2026-11-24:45",
+   "feed": "market",
+   "title": "Oil prices fall as supply glut concerns offset Middle East disruption fears - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVGl4Nzdfc01ReTB5TnAxUkVLTXlaRVFvbGM5aTZDOEtVUXlrVDQtMHJwcWh2WldoMnVyb0QxU1pEQUoyN09sNU1SZXR3NVUzdTZXeWpkdGNTZW95MUtmdjV3dWFxTEZsRW5WUlF1djVTTWZxUGVxcHhPNEptMnBEcmZ0MURhX0JxTDFqc19HblpWd2hLSEs5SXRYTXB6bzFwNzZqOUFTc1ZOM3ItVDFZWmM2a0R5YkxsdnlsMTZWQ1ZEUQ?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T01:58+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "inflation",
+    "sectors": [
+     {
+      "line": "XLE",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 21,
+   "story": "2026-11-24:46",
+   "feed": "market",
+   "title": "Yemen's Houthis threaten to target Jeddah and other Saudi Red Sea ports - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbmE5cEFGWGFLVzVEUlVvWlE5NzJaT2p0MTUxclgxejJ2ZHJPbTQ5d1BLNzh6R2tFb251aWQ4dHBUTDRtaTlETkVick9uV1hKVkdZSjNPbFk5M2NBd1oxQXptdzAtLS1zVzlidDBDVXBmWFAyVnRzMGRmZHNGZVk4T3Y1aV9ycGZFcWxGejZ0T29BbG9EUks5QjZ0bzFVRG05YlVQemt4UDdDSEY5cUZrYzNsSU9VMGVX?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T02:42+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "geopolitics",
+    "sectors": [
+     {
+      "line": "XLE",
+      "direction": "positive",
+      "strength": 2
+     },
+     {
+      "line": "XLI",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 22,
+   "story": "2026-11-25:5",
+   "feed": "market",
+   "title": "Russia sends home Chinese suspected of illegally raising $2.3 billion in deposits - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPQnZkRzN6LS1BVWpiaGRocklGcmJDdmlXMHQycEZmeTlqVTBNX3BadHNGUlpBTW81NzlaTHNMVzdzT2NmMW02YXBuamZROFBHM0dZQVYyZk1qZTl4cktNWU5nUEZwOHItX1JRZFR1QjdJSDZ5TnFoejV6SXpfemlxYzJseVJ0V08xNHdLMFJpR2xFRjBzaTU4TFVERUMtZ2MtQXRUMC1OWl9LVXhQdlR1ekFhU0tPVzBMd01Pb3JB?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T04:16+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLF",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 23,
+   "story": "2026-11-25:6",
+   "feed": "market",
+   "title": "EU plans \u20ac50 billion tech fund to challenge US and China, FT reports - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUUNwSjZLMGhnbjRUT3dCanR4NUNvbFlkOHpleklINGJuU3p4X1dqQlpTZHYtYm85OTBLSlQ2ZjVudXJrQ2xvazBWN3lydjZXOUdzdjJ0amJ0Ulh5X3dXVEszdTM5QTdlMU9PbkszRmd4djFaLWh1M0FxQ1E5NzJQeDY5QTdSN2lvSGJpNUlUTGlSeVJjeGFzX0xpdlFzbS1GNzlfdDZLMTIwY0E?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T05:19+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 24,
+   "story": "2026-11-25:7",
+   "feed": "market",
+   "title": "India's Chartered Speed targets December IPO after Iran war disruption - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOV2R5MVg4M0tqTkVCb0JiREFDQW1PU2k0V2V4cV9EY3F2RUlxLVVuLVVhcFVKRzNseFZCMkFoaV9TU05ua0RMcEpLZmZBZkxrYWcwZndUQXhsR05ETmZla2dTVmpvRHFGTUppZ2pCZmpYa1NJcU1mbVFmLUYtRHlBb0NqQTBTSlBoSHFRbi13TUlwY2JSUUN6V1ZISFo5d3FpUFNVQnhrckVzUkhLWEFxbUFOSHVYZFVG?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T06:12+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 25,
+   "story": "2026-11-25:8",
+   "feed": "market",
+   "title": "EasyJet's profit plunges ahead of Apollo takeover as fuel costs soar - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOGI2RTlyaGxFazYyTHNnZXpVZkhKYk1BZTdfUWRmOEJFbGp1UUFSV253a2xZZW9WMW5oaGpScjdaMUNyeFJWQXVYdXJDZXNTak9EbFdDdTFaSFZpQVNwZFJ5dk9mVTZNQ25HMXZfSjIzc09mZUdEMUVIbFkwdnIzQTBMS0F6VmNKc0g0RTlhdHh4b1dUaEdLd1VZOExSVE91blRqWFlKTWNGZDN0aG1V?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T07:14+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "earnings",
+    "sectors": [
+     {
+      "line": "XLY",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLE",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 26,
+   "story": "2026-11-25:9",
+   "feed": "market",
+   "title": "Britons face soaring energy bills after 26% price cap hike - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYWxiYkU2dDI4WjRoOUdyaDN0RDQ3MGR2b1k2aUdmQ3dseXVrQkpwSjlIb1NtbzRZbENaYnJfODJKN0pMV2VBMUx3NHZQZWEtUTh3VlRSVWNzMUhHdklzTlZlM1BmSkktbXpUVFhjTlNqY2pUdGpRbUV6bVdpdV9BWDYtQld1MDExX1BNTUt6YVRtSm81LU9VTXV3MF9GOHpMNTJHcVFSanlJWUVkWE1J?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T07:19+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "inflation",
+    "sectors": [
+     {
+      "line": "XLU",
+      "direction": "positive",
+      "strength": 1
+     },
+     {
+      "line": "XLP",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 27,
+   "story": "2026-11-25:10",
+   "feed": "market",
+   "title": "Yemen's Houthis say they attacked Saudi Arabia's Ras Tanura refinery - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOakM0aVEtei1RVzZkTUVZYlFabWlDYWpzTktyaGU2WHZqaGRkU0hJOHdsNDFUdU5GYzNOYzdZYnkwWnFYZ2daNlNvYkJ3ZWNjeDNTRm5HOUFtNW5nRjNYSVpaaGF0SF9xbjN6S1FpbVJ6MmFBYkdUeF9CMTZKRUdJT2RITmVSelAzWUJtTEIxQTN5Ry1YZEczX29iOHVuc0Q1bllidlBoN0VDNWVzYzZqU2RaNm5JRUctRDdsdGt2ZkEydWRVMV9wQUdHYw?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T07:24+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "geopolitics",
+    "sectors": [
+     {
+      "line": "XLE",
+      "direction": "positive",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 28,
+   "story": "2026-11-25:11",
+   "feed": "XLI",
+   "title": "GE Aerospace Says Malaysia Aviation Group Selects Genx-1B Engines To Power Up To 16 New Boeing 787 Dreamliners",
+   "url": "https://finnhub.io/api/news?id=01002c5e69ce130fdb4e81a2647eccee0be67c99cb73bc42899d26ee18665e33",
+   "source": "Benzinga",
+   "published": "2026-11-25T08:01+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "earnings",
+    "sectors": [
+     {
+      "line": "XLI",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 29,
+   "story": "2026-11-25:12",
+   "feed": "market",
+   "title": "Iran says it is prepared to withstand US blockade, seeks to curb price rises - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOQUtreFI1ZkdfaWRTMFJZWElnOFJtM2E1ZlZ6OVhiSDlVTnFOLVQtZTExQWZjbWRvRjR0SFJ3ZUotcEV5Z3RFaE5Wb1RsUEFSdUVoVUhvaXU1bFFNckhHcHdDZjdkRTNMUVlzR0ZVcUx1VWRLeV9DSnFtQjJrOUU1NjJSM1VyTEc3QUltV2p6bFpvSGVLd3dKMXRkaXpnVEJrUWcycHI5UVBNOTAwWTIzTTloYlZSeXpiUjJIcS1HOWQ?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T08:29+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "geopolitics",
+    "sectors": [
+     {
+      "line": "XLE",
+      "direction": "positive",
+      "strength": 2
+     },
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 30,
+   "story": "2026-11-25:13",
+   "feed": "market",
+   "title": "Greeks strike over wages, public services - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdzZWR3lnZkk4THNXOGl1RUhBS1FWbDNPLVpDaUlaMHdsbE41TUJIWmhseUplaFV4T0w3dWhaVVVJQkNUeWV3V19DUnlYa2tHYWxXbFNxN0RjemhUUzRCYlZRblAzVmZwZUhUUm1XTnRWWHJYdTFqaWJ3MW5SOHZpT3JqX3NDTGlJeWc?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T08:54+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 31,
+   "story": "2026-11-25:14",
+   "feed": "XLB",
+   "title": "Best Dividend Aristocrats For December 2026",
+   "url": "https://finnhub.io/api/news?id=94875ef1889ac6238f9b22495500c5bbf5842927527bfe923031c7559ab1f0d0",
+   "source": "SeekingAlpha",
+   "published": "2026-11-25T09:02+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 32,
+   "story": "2026-11-25:15",
+   "feed": "XLV",
+   "title": "Skip insurance whiplash: How this surgical leader climbed 16%",
+   "url": "https://finnhub.io/api/news?id=37000d13ba22eb1a15b1e2aeb733f51614cfcad8f4fe7e5d8b849e549c39c1a3",
+   "source": "Yahoo",
+   "published": "2026-11-25T09:24+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 33,
+   "story": "2026-11-25:16",
+   "feed": "SMH",
+   "title": "Jim Cramer Backs DuPont, Says Buy Nvidia",
+   "url": "https://finnhub.io/api/news?id=9ad99d5a7b2867abf1e97936d136eb97ea8320e4c29ea01f2161541d6fa723bf",
+   "source": "Benzinga",
+   "published": "2026-11-25T09:39+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 34,
+   "story": "2026-11-25:2",
+   "feed": "XLRE",
+   "title": "Dimensional Fund Advisors Ltd. : Form 8.3 - PROLOGIS INC - Ordinary Shares",
+   "url": "https://finnhub.io/api/news?id=09db450a56ac205d36806b12c4c2e5fd54dfab7ff1cccff25ff906f4369918ea",
+   "source": "Yahoo",
+   "published": "2026-11-25T09:44+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "follow_up",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 35,
+   "story": "2026-11-25:18",
+   "feed": "XLU",
+   "title": "Truist Securities Maintains Hold on Southern, Raises Price Target to $98",
+   "url": "https://finnhub.io/api/news?id=6974983f8a8ff7bd35b9c22f0214336d95847afedd3a74a1b2c1b2feeb6ff31a",
+   "source": "Benzinga",
+   "published": "2026-11-25T09:54+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 36,
+   "story": "2026-11-25:19",
+   "feed": "LAZR",
+   "title": "Stephen Pagliuca Buys $15M of Coherent Stock Following Pullback",
+   "url": "https://finnhub.io/api/news?id=00439b4f2a80c5b91e387f09fad8d4306a259f0a97c73046b7ec470b89597bcb",
+   "source": "Benzinga",
+   "published": "2026-11-25T10:05+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 37,
+   "story": "2026-11-25:20",
+   "feed": "market",
+   "title": "Iran says ships hit mines in Hormuz, warns vessels to coordinate passage - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSmFmdlRJUnlMaVRFNERwb2YxLVVObG9leTlORFRtOTAyd2pvMTNuOGM5d0diMzNUb1NHaDVWOGlTeWg3bmcwU21BdHRHZlB6a0VDeXlNcUtYMDBiZUpyVFRyMkhIQjlpemZIeGVQNEdXb2hCOHZwYW5VZUt4V3MySnpZWUViYTA5MEp2eDlBbGNoVjB5dk5CcHdZR3NyUjZIVlV3d0s2Z3BUMTQ?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T10:11+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "geopolitics",
+    "sectors": [
+     {
+      "line": "XLE",
+      "direction": "positive",
+      "strength": 2
+     },
+     {
+      "line": "XLI",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 38,
+   "story": "2026-11-25:21",
+   "feed": "LAZR",
+   "title": "Baron Technology ETF Q3 2026 Portfolio Activity",
+   "url": "https://finnhub.io/api/news?id=75f4e8ca294fedfc71be389f54f320854e98a4556ade22ce1d69f18eec100db8",
+   "source": "SeekingAlpha",
+   "published": "2026-11-25T10:12+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 39,
+   "story": "2026-11-25:22",
+   "feed": "nvda",
+   "title": "CoreWeave Stock Slides as AI Debt Fears Return After Huang Comeback, Bond Yield Tops 17%",
+   "url": "https://finnhub.io/api/news?id=daa17e6102433c4d498feee421d169a6504d0e606542046502747ea1770f8a83",
+   "source": "Benzinga",
+   "published": "2026-11-25T10:27+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "credit",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLC",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 40,
+   "story": "2026-11-25:23",
+   "feed": "SMH",
+   "title": "TSMC Has a 'Substantially Wider Moat' Than Nvidia, Says Investor Joseph Carlson",
+   "url": "https://finnhub.io/api/news?id=57a0e64dc8e6195b868f991f408d13ef6a20f7d0fc5e29817e6e47801282a495",
+   "source": "Benzinga",
+   "published": "2026-11-25T10:28+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 41,
+   "story": "2026-11-25:24",
+   "feed": "market",
+   "title": "Italy rebukes Ukraine over attacks on Russian ships in Libya - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRGl5eGplZXIyMktvQUNpVzZ6LV84eU50Qnp6dzZiWEhScWZzaXZuVzVjdTNVZWlHQXVINHQ1SzRRZnRvZHRQWDZyLXJZRXlUQ3JZbkZZR0lTQWJ2RGE4S1pySVFSekZ3QnZWOFJOd1hwUkJKNkxMSF9oM2ZxM2s4VV9UMG5TRGkyRlIyRFFWcUd5a3RwSzZyZzR3NmQ?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T10:29+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "geopolitics",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 42,
+   "story": "2026-11-25:25",
+   "feed": "LAZR",
+   "title": "Oppenheimer Cut Its Marvell Target by $100. It Still Sees 147% Upside",
+   "url": "https://finnhub.io/api/news?id=a04d9d1a32851e8f0e4098fa22d9dca208d9face22ea722fdc86c5a4e9004abb",
+   "source": "Yahoo",
+   "published": "2026-11-25T10:49+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 43,
+   "story": "2026-11-25:26",
+   "feed": "XLP",
+   "title": "State Street Consumer Staples SPDR (XLP) Adds Walmart and Costco on Nov. 23",
+   "url": "https://finnhub.io/api/news?id=c99b67bcf8c19acce2c564dffe7164253b71ccdf4b6ecf80833c35cf828f7e83",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:05+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 44,
+   "story": "2026-11-25:28",
+   "feed": "XLI",
+   "title": "What State Street Industrial Select SPDR (XLI) Bought: GE Leads on Nov. 23",
+   "url": "https://finnhub.io/api/news?id=a2f891a188287e700bb636bc715195374d6a719489806f49c243f15148c36669",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:05+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 45,
+   "story": "2026-11-25:27",
+   "feed": "XLU",
+   "title": "State Street Utilities SPDR (XLU) Sells $32.8 Million of NextEra on Nov. 23",
+   "url": "https://finnhub.io/api/news?id=d68dd43809695516d2c04d49c663bd86e4b5e2273b931e57146c821574922f13",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:05+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 46,
+   "story": "2026-11-25:29",
+   "feed": "market",
+   "title": "Bulgaria intercepts first irregular migrant boat in months - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNb3FjbEpVX1FWQ3VCRXNpX2pFdWxPUE15ZlJycTNVRzcwQ1FVYmNrN1Z1bEVlaWttSHkxUHFCMy1WcmY0TkpuVzdaVXk5WlNnMjliTWREYlp0LXNwbURDczA3VXNDQlJ4a2RScTJXVTVwd2ZhWjRleF9KcnZMZ2JZS3RWMFBEMUl6amIyREVSWmZwU2ZPV0RPMUcwR3hLdw?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T11:08+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 47,
+   "story": "2026-11-25:30",
+   "feed": "nvda",
+   "title": "5-Star Analyst Revamps Nvidia Stock Price Target for 2027",
+   "url": "https://finnhub.io/api/news?id=81a0484ccb180346d0295b7a8166a9cc6319d91c47a90ff2b6005345428cf4ca",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:08+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "positive",
+      "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 48,
+   "story": "2026-11-25:31",
+   "feed": "nvda",
+   "title": "\u201cThe Bank of NVIDIA\u201d Is Back. Applied Digital Is the Real Winner",
+   "url": "https://finnhub.io/api/news?id=4c1ebf731ff2bc8c0aca3e65aa10aa102f08ba5db4887075d0b9f7a9fc62035a",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:20+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "positive",
+      "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     },
+     {
+      "line": "XLC",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 49,
+   "story": "2026-11-25:32",
+   "feed": "XLV",
+   "title": "How Much Could You Lose In UNH Stock?",
+   "url": "https://finnhub.io/api/news?id=c54818db6d00bba7875a708bcd0f23905088943954b718d67d6158272dc0efb7",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:21+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 50,
+   "story": "2026-11-25:33",
+   "feed": "nvda",
+   "title": "Nvidia Shares Extend Losses as Rally Following Jensen Huang\u2019s Return Loses Momentum",
+   "url": "https://finnhub.io/api/news?id=268c31c1c81665d5e55ae113bd9d8d17e612f731f427e3c260b9a0f23346b8f1",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:22+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 51,
+   "story": "2026-11-25:34",
+   "feed": "nvda",
+   "title": "Can Congress Rein In Jensen Huang And Elon Musk? 3 Rules The Constitution Allows",
+   "url": "https://finnhub.io/api/news?id=113754304843cf27e656476b7f43e61f04d85e2575443b2040f06a5fff87548b",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:25+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 52,
+   "story": "2026-11-25:35",
+   "feed": "nvda",
+   "title": "Is Elon Musk More Systemically Important Than Jensen Huang?",
+   "url": "https://finnhub.io/api/news?id=9bdc45814a30d8411d97b1858ea06a4637a87a3f38fb67c02f6556fdb9709c34",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:27+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 53,
+   "story": "2026-11-25:36",
+   "feed": "market",
+   "title": "Migrant arrivals in Spain's Canary Islands break single-day record - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSzRDQUNzZ05jRTh0OEM3cm9ubjVRZWE3Nm90dVl0XzVjT242V2xoTXdXRG1Ddzhac1pwVFhBd0tHSGxQTUJ0amlGZXYtbkE0MEFmTGE3OWx3TkhoSGVUYnRvWTJtdmw3aEt4a2dfODVUVkdmY1Q1OVIxTWpBVVY0TjdUVzEwTmNLVzh0WHVMbC0ycHhpM2MtNy1tcm9YM1RKMi1UWWdZVQ?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T11:31+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 54,
+   "story": "2026-11-25:38",
+   "feed": "market",
+   "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT0JCVU41RW50NmNGSktkQ2FNUC1qRUoycmdQdTViUkFzc0w0UnhrSXZ1R1ZaS3NRYlZCR3dqTmQ5NUl2dTNYeFlxMUNyTVl6TF85RXpkX1FsanJBMmpma2pDY2xfdFJyZXhkR3Q4eEJ3cFg2WXRhbjdOSnJiUzZEcmU2MjQwcHVqWTJUY3U3dGxXUldaYjdRMFo0bEtvRkdSSno4dllLM0dteGo0Q2laWVJzeUZ5dw?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T11:35+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLI",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 55,
+   "story": "2026-11-25:37",
+   "feed": "nvda",
+   "title": "Jensen Huang Says Nvidia's Next-Gen Vera Rubin Chips Will Generate $40 Billion in Revenue per Gigawatt, Up From $25 Billion for Grace Blackwell. What That Means for NVDA's Growth Runway.",
+   "url": "https://finnhub.io/api/news?id=cf8fb51cb6dab0b63d13acbb10365543fe09504596082b5a1c9ac068c1cc6d8f",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:35+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "positive",
+      "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 56,
+   "story": "2026-11-25:39",
+   "feed": "nvda",
+   "title": "AI Chips Update - NVIDIA Reinstates Huang Amid Compliance and Leadership Focus",
+   "url": "https://finnhub.io/api/news?id=715df2fd9dfcd04b3b0b578e5c2746331bd9596534ec6d0901f02faf7c90bac8",
+   "source": "Yahoo",
+   "published": "2026-11-25T11:37+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "positive",
+      "strength": 1
+     },
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 57,
+   "story": "2026-11-25:40",
+   "feed": "SMH",
+   "title": "Taiwan Semiconductor Manufacturing Company Limited Announces Adjustment to Cash Dividend Per Share",
+   "url": "https://finnhub.io/api/news?id=d4a0a213e02ac618665ca8085340974c594eb4601d4e35087c0b4b91656b5f8b",
+   "source": "Fintel",
+   "published": "2026-11-25T11:39+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 58,
+   "story": "2026-11-25:43",
+   "feed": "market",
+   "title": "Secondhand shopping is going mainstream this holiday season as consumers seek value",
+   "url": "https://www.cnbc.com/2026/11/25/secondhand-holiday-shopping-grows-as-shoppers-seek-value.html",
+   "source": "CNBC",
+   "published": "2026-11-25T12:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 59,
+   "story": "2026-11-25:41",
+   "feed": "XLP",
+   "title": "P&G to Webcast Fireside Chat From the Morgan Stanley Global Consumer & Retail Conference, December 2",
+   "url": "https://finnhub.io/api/news?id=03ac3c1049bde5d44c094d312440e8c584c28da27b1c2d5ef34a98929dc4cd57",
+   "source": "Yahoo",
+   "published": "2026-11-25T12:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "earnings",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 60,
+   "story": "2026-11-25:42",
+   "feed": "XLI",
+   "title": "Malaysia Aviation Group Selects GE Aerospace GEnx Engines to Power New 787 Dreamliners",
+   "url": "https://finnhub.io/api/news?id=71b7122b882de72384fddd45cb28d919683eebadb932e6d55db128a07ab99e34",
+   "source": "Yahoo",
+   "published": "2026-11-25T12:00+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "earnings",
+    "sectors": [
+     {
+      "line": "XLI",
+      "direction": "positive",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 61,
+   "story": "2026-11-25:44",
+   "feed": "XLI",
+   "title": "The AI Stock Slump Is Crushing Caterpillar. Here\u2019s Why I Like the Stock More Than Ever.",
+   "url": "https://finnhub.io/api/news?id=ea558b41e069f68a76ee04f23747ace13ab95ec701f6cf98391a2e3e13143077",
+   "source": "Yahoo",
+   "published": "2026-11-25T12:10+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLI",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 62,
+   "story": "2026-11-25:45",
+   "feed": "XLRE",
+   "title": "Form 8.3",
+   "url": "https://finnhub.io/api/news?id=99369b96b75f29de9624512519a3fdec2f3ac51de2306e4bb18c4d97ffeab8c0",
+   "source": "Yahoo",
+   "published": "2026-11-25T12:11+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 63,
+   "story": "2026-11-25:46",
+   "feed": "XLU",
+   "title": "Southern (SO) Stock Looks About Right On Current Earnings",
+   "url": "https://finnhub.io/api/news?id=4e68a52fd95e881e51d0a22367c6f6e610d847ae8045bcaba59c265baccd0acb",
+   "source": "Yahoo",
+   "published": "2026-11-25T12:14+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 64,
+   "story": "2026-11-25:47",
+   "feed": "market",
+   "title": "Catalan separatist Puigdemont to return to Spain after election - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMllTYTRRSkU3SjVsVWFMdVZFWjB1OHVQTHo4eGFRSndDY2RiNDNZS2ZLN3JZLW1Oem5lX1FRR3dsdGp1MkwzLU1jdHZTcFlyaHFWTlhKUWVBZGhzOG1TLVV1RllnLWpOdTRFRjU4YTMxMjMtMHU4ZG95RXlrcUI1U0gzeF9Ha1BFbHVNel9EWkpIcTZuRjJDV0o4Ung?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T12:15+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "geopolitics",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 65,
+   "story": "2026-11-25:48",
+   "feed": "SMH",
+   "title": "Taiwan Semiconductor Manufacturing Company Limited Reports Monthly Operational Activities for October 2026",
+   "url": "https://finnhub.io/api/news?id=6473a32e675b7aacc9659f93c3170f5b5968e15c8f44dae1e9c76e4cae12c4ef",
+   "source": "Fintel",
+   "published": "2026-11-25T12:18+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "earnings",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 66,
+   "story": "2026-11-25:49",
+   "feed": "market",
+   "title": "Liesman: Nvidia whiplash tests Kevin Warsh\u2019s push to read market signals",
+   "url": "https://www.cnbc.com/2026/11/25/nvidia-kevin-warsh-fed-market-signals.html",
+   "source": "CNBC",
+   "published": "2026-11-25T12:26+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "rates",
+    "sectors": [
+     {
+      "line": "XLF",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 67,
+   "story": "2026-11-25:50",
+   "feed": "XLP",
+   "title": "Costco Now Yields 11%, Its Highest in 5 Years. Is the Dividend Safe?",
+   "url": "https://finnhub.io/api/news?id=8c2ef5b21727e17219ef834d4030b6b3852d58fac4463b79c8d880e6bb20a687",
+   "source": "Yahoo",
+   "published": "2026-11-25T12:44+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLP",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 68,
+   "story": "2026-11-25:51",
+   "feed": "market",
+   "title": "UK moving military aircraft to hangars at night over possible drone threats, media reports say - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNXk4cTJiN1hVeGlydEtUN2JpRTVCMF9CRFVBUkh3cUs2c0NJRHNnendsV1ZjWkxicDhPZUhESnlTNy1paWtzQlNHaHlSMkpLTVRvYXVGdFVDVEFGeVFGN2tQWElwRDZwREoyaXU2QUtNSm5oaGsyZ2VoSVNtT2c0aVlhbXlabU02Mm1menJtMGpNQXdzal9lM2dYeUtxZ0xFZ3lnc0FoODhBaklCa0M3eTQzbFF4dXVyNmc?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T12:52+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "geopolitics",
+    "sectors": [
+     {
+      "line": "XLI",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 69,
+   "story": "2026-11-25:52",
+   "feed": "market",
+   "title": "Nasdaq futures slide over 2% as AI losses deepen; inflation data in focus - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdUdBTGhVT2V5cDcydUZMX2NTdTkxVDBJSHdCMUgwNXBibGhQc28zdktpLXA2dGVUYzRzV3hpMld1U29KempSNUswd2dNYVdITlFxV2NycEkwbnlpZkdPSDNicVRKM3NCU2l0M0hoWU13UTZkbTAtX2JFempxaUtFbjdTZGMxT2lXM2g3dkR4cy1UYnVfZ09kOWpTNGxtUEZZOTRPaXhENlZ6OGt2ZF94d0RCVjdOSldfc0E?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T12:54+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 3
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 3
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 70,
+   "story": "2026-11-25:53",
+   "feed": "XLF",
+   "title": "J.P. Morgan sees cost inflation limiting European staples upside in 2027",
+   "url": "https://finnhub.io/api/news?id=e1e83b0813a972945fb8abe417e7698e3723ea943f207f9db276625d983e070f",
+   "source": "Yahoo",
+   "published": "2026-11-25T12:58+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [
+     {
+      "line": "XLP",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 71,
+   "story": "2026-11-25:54",
+   "feed": "XLV",
+   "title": "Dr. Oz Warns Medicare for All Will Create a Two-Tier Healthcare System With a $47 Trillion Price Tag",
+   "url": "https://finnhub.io/api/news?id=21bf3281e5912d7b36e65ea21070f0e4bb5a8a78cd633e7542a90b7fd0e53778",
+   "source": "Yahoo",
+   "published": "2026-11-25T12:59+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [
+     {
+      "line": "XLV",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 72,
+   "story": "2026-11-25:57",
+   "feed": "XLV",
+   "title": "Eli Lilly (NYSE:LLY): High Growth Momentum With a Breakout Setup",
+   "url": "https://finnhub.io/api/news?id=310a8520e5a765ea13b29945c4b247d0d2679fb3a8eabc863d0778a70608f40d",
+   "source": "ChartMill",
+   "published": "2026-11-25T13:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLV",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 73,
+   "story": "2026-11-25:55",
+   "feed": "XLP",
+   "title": "Pre-holiday layoffs hit over 7,600 workers in trucking, logistics, manufacturing",
+   "url": "https://finnhub.io/api/news?id=072d194a49fc93286972014181a379429585c5ab3846d7402889f1794a920ce9",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:00+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLI",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 74,
+   "story": "2026-11-25:56",
+   "feed": "XLU",
+   "title": "NextEra Energy, Inc. (NEE) Is a Trending Stock: Facts to Know Before Betting on It",
+   "url": "https://finnhub.io/api/news?id=caed944f5f931b529312afa0e429cfba33f2f4a42c45b35423efa15300ba0634",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 75,
+   "story": "2026-11-25:58",
+   "feed": "XLU",
+   "title": "NextEra Energy (NEE) Stock Looks Fairly Valued On Merger Probe Closure",
+   "url": "https://finnhub.io/api/news?id=4f0fb8c8e7c6fdf983ec275cac6c1612ea3c42004488693947a0796cfe1eb032",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:09+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLU",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 76,
+   "story": "2026-11-25:42",
+   "feed": "XLI",
+   "title": "General Electric (GE) Lands First GEnx Engine Order From Malaysia Aviation Group",
+   "url": "https://finnhub.io/api/news?id=391241c433e1bef89f6a3bf38971bd135cc4b14aab561ad24ef856e65d677f99",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:10+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "earnings",
+    "sectors": [
+     {
+      "line": "XLI",
+      "direction": "positive",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 77,
+   "story": "2026-11-25:60",
+   "feed": "XLRE",
+   "title": "American Tower (AMT) Prices New Euro Bonds, Is It Still 20% Undervalued?",
+   "url": "https://finnhub.io/api/news?id=29986f141260c299d69fffd4b223ae1f49badc1b0ada985af52a7d4f58b3e895",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:12+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "rates",
+    "sectors": [
+     {
+      "line": "XLRE",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 78,
+   "story": "2026-11-25:61",
+   "feed": "XLI",
+   "title": "Caterpillar (CAT) Makes Collision Warning Standard On Most New Construction Machines",
+   "url": "https://finnhub.io/api/news?id=7a8ed2aed5717d84ed0990f767193400e73b0c38e439802366f7904146173234",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:14+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLI",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 79,
+   "story": "2026-11-25:62",
+   "feed": "XLE",
+   "title": "Chevron Pays a Bigger Dividend, but Exxon May Be the Better Retirement Stock",
+   "url": "https://finnhub.io/api/news?id=79c80c487d4566dee512f4588183c72edcb71bb91332996269c2e4f02f0920bc",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:17+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLE",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 80,
+   "story": "2026-11-25:63",
+   "feed": "nvda",
+   "title": "Nvidia Author Stephen Witt Says Huang\u2019s Return Is \u201cNot Great for AMD.\u201d Here\u2019s What AMD Loses",
+   "url": "https://finnhub.io/api/news?id=f10497b2bef7973736c380dfa775950ce367a5e801546240a73a7175d2f3b616",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:20+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 81,
+   "story": "2026-11-25:64",
+   "feed": "XLV",
+   "title": "3 Stocks With Dividend Yields of 4% or More to Buy in November",
+   "url": "https://finnhub.io/api/news?id=877e308bd4db088a6230ddf0e5bbce12067033cd9e9804e540e48d5dc2aa4959",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:21+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 82,
+   "story": "2026-11-25:65",
+   "feed": "XLV",
+   "title": "Market Chatter: Novo Nordisk and Eli Lilly Prepare New Warning Labels for GLP-1 Drugs Over Eye Condition Risk",
+   "url": "https://finnhub.io/api/news?id=69f39772cceac4a83a6a6af43809b894c34a7080dbb81061c6d7bbabbaa58b5a",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:22+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "policy",
+    "sectors": [
+     {
+      "line": "XLV",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 83,
+   "story": "2026-11-25:66",
+   "feed": "market",
+   "title": "Iraq's top court says Baghdad can deploy troops to secure borders in Kurdistan region - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeGlKWlRMLUx5SDRZY3FLU3VLM19RX2JqVko0T3dBakVEVHVldFVtQ21MbGo2WEEzUXU1clEteTVvWWh3bkdkQzZPX3RSemt5eWlBVjJQZy1RdjNjNnlpT19ZZUd0ekFDc3JuVHZKVWJfX2VtTlBzU3ZTTHlBX3dkV1NNVXA4NmJMVlRGX3FidmJsa0VacW5fQ2E1ZHBZTnJrN2pVc1BkUk1aZVliX2lMdHJBcUFaYlh5WmY3a05aSVZYN1hKemFtTGFUMG0?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T13:25+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "geopolitics",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 84,
+   "story": "2026-11-25:52",
+   "feed": "nvda",
+   "title": "Nasdaq Futures Tumble as AI Selloff Returns",
+   "url": "https://finnhub.io/api/news?id=e95a169591e8a1a7cda57998c95d07b32cd6725ce5abb3a69382d7404463248f",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:28+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 3
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 3
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 85,
+   "story": "2026-11-25:68",
+   "feed": "XLP",
+   "title": "If the Fed Hikes on Dec. 9, These 4 Dividend Stocks Are Built to Handle It",
+   "url": "https://finnhub.io/api/news?id=7a733858a596635a7992d529d1bbcf2cc9730abd49a737e3671217767fc2f42d",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:32+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "rates",
+    "sectors": [
+     {
+      "line": "XLP",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 86,
+   "story": "2026-11-25:52",
+   "feed": "LAZR",
+   "title": "S&P 500 Premarket Losers for Nov. 25, 2026",
+   "url": "https://finnhub.io/api/news?id=7158d0021406dfac134cc089b7e0c467bd759952c9ac42ae0d1222f5b448d0b7",
+   "source": "ChartMill",
+   "published": "2026-11-25T13:35+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 3
+     },
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 87,
+   "story": "2026-11-25:70",
+   "feed": "XLF",
+   "title": "Bank Bond Losses Hit $486 Billion: How Exposed Is Bank of America?",
+   "url": "https://finnhub.io/api/news?id=c2ccda2b8976780964dd305893df3eb3b055e3349fd251bd1c0c3c9a3e4ab95d",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:45+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "credit",
+    "sectors": [
+     {
+      "line": "XLF",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 88,
+   "story": "2026-11-25:71",
+   "feed": "XLF",
+   "title": "The AI paradox: How global growth\u2019s biggest engine became its greatest risk",
+   "url": "https://finnhub.io/api/news?id=f61d5135062325491008dbae243a842d5f4efec6c3bcd10a996da2a1f80be8b6",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:46+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 89,
+   "story": "2026-11-25:72",
+   "feed": "XLV",
+   "title": "Trump Says Abdul El-Sayed Is a 'Smart Guy, Warms to 'TrumpCare' Idea",
+   "url": "https://finnhub.io/api/news?id=53782ab623d9d9d07f4c2b52353dba943e647993e097c812562f8349d5b220db",
+   "source": "Yahoo",
+   "published": "2026-11-25T13:56+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 90,
+   "story": "2026-11-25:73",
+   "feed": "XLE",
+   "title": "Can Chevron Build a Lithium Business in the Smackover Formation?",
+   "url": "https://finnhub.io/api/news?id=b0ebfcf1b7dd37f3b02a583a25432958e3c773ed40b907bef9da2c1e42447395",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:12+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 91,
+   "story": "2026-11-25:74",
+   "feed": "market",
+   "title": "Our top 10 things to watch in the stock market Wednesday",
+   "url": "https://www.cnbc.com/investingclub/2026/11/25/our-top-10-things-to-watch-in-the-stock-market-wednesday.html",
+   "source": "CNBC",
+   "published": "2026-11-25T14:15+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 92,
+   "story": "2026-11-25:75",
+   "feed": "XLF",
+   "title": "This Asian market could be your portfolio\u2019s best anchor in 2027: JPM",
+   "url": "https://finnhub.io/api/news?id=0c24bf721c3591d307c1fc7aac2e3294ec504c9baa846514af3efe476c7861b8",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:16+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 93,
+   "story": "2026-11-25:77",
+   "feed": "XLK",
+   "title": "USA Rare Earth Drops 6% as China Extends Mineral Export Pause and New U.S. Tariffs Loom; Critical Metals Declines 5%, MP Materials Falls 3%",
+   "url": "https://finnhub.io/api/news?id=7de98b124812bc5eb515d85a6f8b629586bbc8db75cffa5eec037fc1074729e0",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:17+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "geopolitics",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 94,
+   "story": "2026-11-25:76",
+   "feed": "XLY",
+   "title": "SpaceX Slides 5% as Gary Black Warns a Tesla Bid Could Push It Below $100; Rocket Lab and AST SpaceMobile Drop 4%",
+   "url": "https://finnhub.io/api/news?id=39a410ddbfe6fb24414fd4f486d2a51ac7581bd0b7cf741c2988f2c86deb3ab2",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:17+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLY",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 95,
+   "story": "2026-11-25:79",
+   "feed": "market",
+   "title": "Israeli strike kills Hamas official, his wife and children - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYjNlV0dRZTd0cDZJZVBnNFl6VUpTMDFlQlFIY0tJQzR5ZmNrYm9lNS1kMTRYbEpyM2FNMWp6Qms1NGh4VTU0YkxQN0NaY1FRV1diOENoQmdIQjJ0eU12VGZfamhNWHpsZUQ0MXczanBWZW1uWUZsVXpwcElhR2RXdG80RTBIcjZ1WjVHYW94MUhfUDI5dTA0ODZWRlBiVkFYNlhwR1RSaW1OZ2M?oc=5",
+   "source": "Reuters",
+   "published": "2026-11-25T14:19+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "geopolitics",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 96,
+   "story": "2026-11-25:78",
+   "feed": "XLK",
+   "title": "Warren Buffett and Greg Abel Collect Billions From These Untouchable Berkshire Hathaway Dividend Stocks",
+   "url": "https://finnhub.io/api/news?id=72a412a5a06b578d15c366cc7041522bdb73e483c6d7439969def3a9f9273e2e",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:19+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 97,
+   "story": "2026-11-25:80",
+   "feed": "XLF",
+   "title": "Citigroup Eyes Venezuela Re-Entry: Can It Grow Cross-Border Payments?",
+   "url": "https://finnhub.io/api/news?id=94ba7212a9e89781cb49b1e335e6e73332bfc48f3f74dacce7b5e99f5ee5e585",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:20+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "earnings",
+    "sectors": [
+     {
+      "line": "XLF",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 98,
+   "story": "2026-11-25:81",
+   "feed": "XLE",
+   "title": "Global Ethyl Derivatives Market Report 2026: Executive Strategy and Forecast to 2030 | Capitalize on Bio-Based and Pharma Demand with BASF, Dow, Arkema, Clariant, and Exxon Mobil",
+   "url": "https://finnhub.io/api/news?id=097ab0e59e3774cc9f522f4c8a58c8006b9a2b6b5a176efc984f417dbed531ea",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:31+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "high",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 99,
+   "story": "2026-11-25:82",
+   "feed": "SMH",
+   "title": "What Pulled Astera Labs Stock Down?",
+   "url": "https://finnhub.io/api/news?id=9ea5b6e5dbcac5aa6eecdebe77cbb13afe5c71a9db1e157ed0ec4356df95467e",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:33+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 100,
+   "story": "2026-11-25:84",
+   "feed": "XLY",
+   "title": "Amazon, Meta reportedly in talks to remove block on Muse AI agent",
+   "url": "https://finnhub.io/api/news?id=e6fba0c3419f9e0fea9eb6c798adbd51124af78a1da184b4ecfa8251ae5034ed",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:36+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLY",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 101,
+   "story": "2026-11-25:83",
+   "feed": "XLP",
+   "title": "Global Retail Pharmacy Market Report 2026: Size, Trends, and Forecast to 2030 | Capitalize on AI and Automation as Walmart, Amazon, CVS Health, and Costco Scale Digital Care",
+   "url": "https://finnhub.io/api/news?id=3690e5adcf6a1d862782d321228f9457b93b608bc60d4f9b862a7e9e0d502f0c",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:36+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "high",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 102,
+   "story": "2026-11-25:85",
+   "feed": "XLY",
+   "title": "Amazon and Meta are negotiating the future of AI shopping. Consumers aren't quite there yet.",
+   "url": "https://finnhub.io/api/news?id=9e5311ac1d4bf173f496cc7ed30ec285d726dacdf03529235481d12dbc878335",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:42+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "follow_up",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 103,
+   "story": "2026-11-25:86",
+   "feed": "SMH",
+   "title": "The $2 trillion chip rally is getting wiped out \u2014 here's what history says comes next",
+   "url": "https://finnhub.io/api/news?id=96202811035614cde987eda79311c272b8d2986d5f232ee34774bee93a7e4c19",
+   "source": "Yahoo",
+   "published": "2026-11-25T14:53+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 3
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 104,
+   "story": "2026-11-25:87",
+   "feed": "market",
+   "title": "Wealthy investors seek tax savings from municipal bonds as yields remain elevated",
+   "url": "https://www.cnbc.com/2026/11/25/wealthy-investors-seek-tax-savings-from-municipal-bonds.html",
+   "source": "CNBC",
+   "published": "2026-11-25T15:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "rates",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "high",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 105,
+   "story": "2026-11-25:88",
+   "feed": "XLC",
+   "title": "Is Reddit Stock Priced Right Against Its Peers?",
+   "url": "https://finnhub.io/api/news?id=2d5de10be72881dc55c2f26449cad7aaca6643b2e678d6bd61f1323679a11f71",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 106,
+   "story": "2026-11-25:89",
+   "feed": "SMH",
+   "title": "Why Nvidia (NVDA) Stock Is Falling Today: Tech and Chip Selloff",
+   "url": "https://finnhub.io/api/news?id=376ea10c8cabc1eb51c016ed0c0a51a2dd4abd5e6c8c5d05cca4ff1da0a5c61a",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:00+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 3
+     },
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 107,
+   "story": "2026-11-25:90",
+   "feed": "XLE",
+   "title": "Turn $100,000 Into Lifetime Paychecks With These \u201cForever\u201d Passive Income Dividend Stocks",
+   "url": "https://finnhub.io/api/news?id=31c3efad3e0c1c523c43644255ca7a630641dbd316ce592ae9ce24f820d6e0c5",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:02+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "high",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 108,
+   "story": "2026-11-25:93",
+   "feed": "XLV",
+   "title": "Update: Market Chatter: Novo Nordisk and Eli Lilly Prepare New Warning Labels for GLP-1 Drugs Over Eye Condition Risk",
+   "url": "https://finnhub.io/api/news?id=399fa75a16d34df8cd6ebc216e1f78fcfd30d4cdf71fdb7609aad924aca359fd",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:07+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLV",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 109,
+   "story": "2026-11-25:91",
+   "feed": "XLY",
+   "title": "\u2018Big Short\u2019 investor snubs Tesla stock, echoes Buffett on $1,000 play",
+   "url": "https://finnhub.io/api/news?id=6df2272b186b96abc2ef08821157a216ede49504b4c59ed9dff94566f4860a37",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:07+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 110,
+   "story": "2026-11-25:92",
+   "feed": "XLC",
+   "title": "Google Ends $75 Million News Deal Amid Regulatory Fight",
+   "url": "https://finnhub.io/api/news?id=4cc1eadabc378f4469fb9ea802a5735ee6ecb07ea602d47f4b99f4427fe29fa6",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:07+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLC",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 111,
+   "story": "2026-11-25:94",
+   "feed": "XLK",
+   "title": "Allstate suffers multi-day tech outage ahead of Thanksgiving",
+   "url": "https://finnhub.io/api/news?id=39242eae2fd021d367fbafb3d357e2e8d5cb9d7bacf6e48b6538716ecc3dede7",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:08+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLF",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 112,
+   "story": "2026-11-25:95",
+   "feed": "XLK",
+   "title": "Nasdaq 100 on pace to enter bear market as AI trade melts down: AlphaCheck",
+   "url": "https://finnhub.io/api/news?id=dd928484bcd73bf1db9eb43bebdf23e4e05a2ab87b301076e706639dcddb24f3",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:09+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 3
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 3
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 113,
+   "story": "2026-11-25:96",
+   "feed": "XLC",
+   "title": "Cathie Wood Makes a Stunning $61.6 Million Bet on a Beaten-Down AI Stock",
+   "url": "https://finnhub.io/api/news?id=14ed65e5b24d64e6a090a86990537d982aeff1f06476f491d26507e0f1a13282",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:10+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 114,
+   "story": "2026-11-25:97",
+   "feed": "XLU",
+   "title": "Raised Outlook Might Change The Case For Investing In Southern Stock (SO)",
+   "url": "https://finnhub.io/api/news?id=eace6d0be10d6e0d7dbffe6ab6fc70eb9679b0e33b7370dbcd9b57a15b2cbaad",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:12+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 115,
+   "story": "2026-11-25:98",
+   "feed": "XLK",
+   "title": "Stirlingshire Investments Appoints Daniel Gicklhorn as Chief Technology Officer",
+   "url": "https://finnhub.io/api/news?id=8167517641a873876a9bb94f5d805b63e4a067580ec2d4c11ed38d25e34a638e",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:13+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 116,
+   "story": "2026-11-25:99",
+   "feed": "XLRE",
+   "title": "American Tower (AMT) Stock Could Be Undervalued Following Its 18% Five Year Slide",
+   "url": "https://finnhub.io/api/news?id=cfbf4d32fc0858899b9c064fca39a97e668adf9f4ef974dc8b8279b50a391552",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:16+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "rates",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 117,
+   "story": "2026-11-25:100",
+   "feed": "market",
+   "title": "Kalshi traders say the odds of states imposing data center moratoriums is more likely than not",
+   "url": "https://www.cnbc.com/2026/11/25/kalshi-traders-say-the-odds-of-states-imposing-data-center-moratoriums-is-more-likely-than-not.html",
+   "source": "CNBC",
+   "published": "2026-11-25T15:18+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "policy",
+    "sectors": [
+     {
+      "line": "XLU",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 118,
+   "story": "2026-11-25:101",
+   "feed": "nvda",
+   "title": "CoreWeave's Debt Trades Near 75 Cents on the Dollar",
+   "url": "https://finnhub.io/api/news?id=2cf4c6208a828d57dd755e8419760c34a69e4c9947e55e57cf43e747b2644556",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:19+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "credit",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 119,
+   "story": "2026-11-25:102",
+   "feed": "XLF",
+   "title": "BofA Strategist Deilvers Chilling Warning on Potential S&P 500 Crash",
+   "url": "https://finnhub.io/api/news?id=7fc2f580b659a5b2041bde605c7c354b4ee8d48c9afdaf379465906d5e46ca3d",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:20+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLF",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 120,
+   "story": "2026-11-25:103",
+   "feed": "XLC",
+   "title": "Azrieli Group Ltd (AZRGF) (Q3 2026) Earnings Call Highlights: Data Center Expansion and Office ...",
+   "url": "https://finnhub.io/api/news?id=f683262c954b5d08621ce93f848b3adb89c6420fd7a2cf65a602c2ccac6f0c46",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:20+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLRE",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 121,
+   "story": "2026-11-25:104",
+   "feed": "nvda",
+   "title": "Michael Burry Has a Urgent Message For Nvidia Stock Investors",
+   "url": "https://finnhub.io/api/news?id=e0120ca27d55eeb2fab07d249b969586954c93240a77266503a0256568d36048",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:22+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 2
+     },
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 122,
+   "story": "2026-11-25:105",
+   "feed": "nvda",
+   "title": "$10,000 In Micron At June's Record Is Now $5,190",
+   "url": "https://finnhub.io/api/news?id=bc063c9cfa498b328f5b34a9147453ea5933114317c9d406e547067a732c1a2b",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:24+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 123,
+   "story": "2026-11-25:106",
+   "feed": "nvda",
+   "title": "The Next Big Healthcare Revolution Is Already Here. This Stock Could Cash In.",
+   "url": "https://finnhub.io/api/news?id=bc4f20ce8435cada8f557d8775aef9552d3598cb2ab5df5f43d2499c2765e9f9",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:27+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLV",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 124,
+   "story": "2026-11-25:107",
+   "feed": "XLK",
+   "title": "Alphabet Is Most Beat Down AI Company",
+   "url": "https://finnhub.io/api/news?id=d741af02839596a3c118773d2290a3491aebc07d626fb9763ec36bd7ab92c2bf",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:27+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 2
+     },
+     {
+      "line": "XLC",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "rehash",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 125,
+   "story": "2026-11-25:108",
+   "feed": "LAZR",
+   "title": "Coherent\u2019s Director Bought $15 Million of Stock as It Plunged 13%",
+   "url": "https://finnhub.io/api/news?id=60663571b33fa02861fff0a68fc1771926c5edd3a4493926e910766d1ca811ff",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:28+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "LAZR",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 126,
+   "story": "2026-11-25:109",
+   "feed": "XLY",
+   "title": "Amazon Sinks 6%, Sandisk Down 12% as AI Selloff Deepens: Bear Calls AI \u201cGreatest Misallocation of Capital\u201d",
+   "url": "https://finnhub.io/api/news?id=eced00e4de57bfac006d69fc43dd2c48bdb1b0089c13c1bb97ca6333a34c1c35",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:29+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLY",
+      "direction": "negative",
+      "strength": 2
+     },
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLC",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 127,
+   "story": "2026-11-25:111",
+   "feed": "nvda",
+   "title": "BC-Most Active Stocks",
+   "url": "https://finnhub.io/api/news?id=fe96989bfe6f6d39a531de3eb748ed1d21ebbf247b169a8c301c163b057a1e9a",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:30+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 128,
+   "story": "2026-11-25:110",
+   "feed": "nvda",
+   "title": "Michael Burry Calls Nvidia \u201cMore Craven Than Even I Thought.\u201d Now He Eyes a Short Near $200",
+   "url": "https://finnhub.io/api/news?id=c045853f9ef190e3784a5a071daaf661a4416d6a5bfcb41023240771a27404f0",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:30+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "follow_up",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 129,
+   "story": "2026-11-25:113",
+   "feed": "nvda",
+   "title": "Investing rules for those checking stocks during the Thanksgiving holiday",
+   "url": "https://finnhub.io/api/news?id=64d7b494ed800ec0418210de4bbae197bb16195a2ff3e9049fa09945eb14b197",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:33+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 130,
+   "story": "2026-11-25:112",
+   "feed": "XLK",
+   "title": "The CIA, FBI, and US Treasury were all hit by cyberattacks: What to know",
+   "url": "https://finnhub.io/api/news?id=924fa63d6f74de22c90f956d5f2f1b80afd3604890160f03ee0983da6b5faada",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:33+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 131,
+   "story": "2026-11-25:114",
+   "feed": "XLY",
+   "title": "North America Automated Guided Vehicle - Market Size, Share, Trends, and Forecasts, 2026-2031 | E-Commerce and AI Drive 12.19% CAGR and a USD 3.29 Billion Market",
+   "url": "https://finnhub.io/api/news?id=0205494aef3968e2c8f425a961e10bb7403caf56031f1b89e3e78f9a7298e846",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:35+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 132,
+   "story": "2026-11-25:116",
+   "feed": "nvda",
+   "title": "Why Sandisk Stock Just Dropped Again",
+   "url": "https://finnhub.io/api/news?id=0e8e9b13e0b9db20034c797c1d231ca191241fd44b46d78f8f1f9bd765e89685",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:36+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 133,
+   "story": "2026-11-25:115",
+   "feed": "XLC",
+   "title": "TeraWulf\u2019s $19 Billion Anthropic Deal: \u201cThat Debt Is Guaranteed by Google.\u201d That\u2019s a Big Risk for Alphabet",
+   "url": "https://finnhub.io/api/news?id=b7849758c82a5482d389c15d227098cccfcc4c47747d8ba0bab7cdca9f41b932",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:36+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "credit",
+    "sectors": [
+     {
+      "line": "XLC",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 134,
+   "story": "2026-11-25:117",
+   "feed": "nvda",
+   "title": "Nvidia's $270 Wall Street upgrade has a surprising catch",
+   "url": "https://finnhub.io/api/news?id=7a26957d0c046609205cb8c6932856635ec25d5b89c2d93c6906e5eae23e2184",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:37+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 135,
+   "story": "2026-11-25:118",
+   "feed": "XLC",
+   "title": "Alphabet Falls 4% on AI Credit Fears as Strategist Warns Capex Is \u201cAs Good as It Gets\u201d",
+   "url": "https://finnhub.io/api/news?id=8bcc89a151562ae2b0c154bd760c3ed70c06b12fa8270f0e734e6d41baec8ef1",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:39+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "credit",
+    "sectors": [
+     {
+      "line": "XLC",
+      "direction": "negative",
+      "strength": 2
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 136,
+   "story": "2026-11-25:119",
+   "feed": "nvda",
+   "title": "Stock Market Today: Dow Slammed 800 Points; Dell Falls Hard Despite Big Earnings (Live Coverage)",
+   "url": "https://finnhub.io/api/news?id=32dbe44cd35450438593830eb9179f1b4df2f96943f6e1fd14cf6fce08bb2223",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:41+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "inflation",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 2
+     },
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 2
+     },
+     {
+      "line": "XLF",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 137,
+   "story": "2026-11-25:120",
+   "feed": "XLE",
+   "title": "Bad News for Exxon and Chevron: Goldman Sees Brent Falling \u201cRoughly $10\u201d Next Year on a Supply Glut",
+   "url": "https://finnhub.io/api/news?id=794d143865b80e34650ce3e2e829f2b36ef5fd0e533f0a2ba9fd794904641d31",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:41+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLE",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 138,
+   "story": "2026-11-25:121",
+   "feed": "XLY",
+   "title": "Tesla and SpaceX stocks sink as merger concerns mount",
+   "url": "https://finnhub.io/api/news?id=a392977d129ab4f26f68aabba9a6c3bbb7b7794b067b8f680043a10b457168ce",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:41+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "growth",
+    "sectors": [
+     {
+      "line": "XLY",
+      "direction": "negative",
+      "strength": 2
+     },
+     {
+      "line": "XLC",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 139,
+   "story": "2026-11-25:124",
+   "feed": "nvda",
+   "title": "What Happens to a $900,000 401(k) by the End of 2027? $1,062,300 in Wall Street\u2019s Best Case, $824,900 in Its Worst",
+   "url": "https://finnhub.io/api/news?id=692c50fdfcefb08a1a0c0c39d5b103683ece418428a50ddb6959fd87dd3bead9",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:45+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 140,
+   "story": "2026-11-25:123",
+   "feed": "nvda",
+   "title": "I\u2019m Buying SpaceX Because There\u2019s a Reasonable Case for $200 by January",
+   "url": "https://finnhub.io/api/news?id=7f8f8287a475fbc807419a0d78f382c322049379d5b0d026088b50b10e7d3edd",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:45+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 141,
+   "story": "2026-11-25:122",
+   "feed": "nvda",
+   "title": "AGNC Yields About 18%, and Main Street Capital about 6%. Only 1 of Them Covered Its Dividend With Room to Spare.",
+   "url": "https://finnhub.io/api/news?id=87c43eb821dd98281e1d1ce52c321012602f9d75f64d006eae8e43bf8fe6af5c",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:45+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 142,
+   "story": "2026-11-25:125",
+   "feed": "XLI",
+   "title": "2027 Industrial Divide: Caterpillar Monetizes AI Power While Deere Chases an Ag Bottom",
+   "url": "https://finnhub.io/api/news?id=996ab21dee00e5b8829e1b6501af4d21dc47f08fd456408915b1b88652e5da4b",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:45+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "earnings",
+    "sectors": [
+     {
+      "line": "XLI",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 143,
+   "story": "2026-11-25:126",
+   "feed": "nvda",
+   "title": "US inflation hits highest since May after prices climb 3.8% over the last year",
+   "url": "https://finnhub.io/api/news?id=1289a702b5447ba34214d7842025bf78fc6181e5c26f2a4782d397546a056bbb",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:46+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "inflation",
+    "sectors": [
+     {
+      "line": "XLY",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLU",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLRE",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 144,
+   "story": "2026-11-25:127",
+   "feed": "nvda",
+   "title": "Not a Bubble: 2 Numbers That Show Nvidia\u2019s Demand Is Real",
+   "url": "https://finnhub.io/api/news?id=80754a7bd811d1990aed30a6ed1ee184bcdfd6209aca895ac2fe0780196a770d",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:50+00:00",
+   "tags": {
+    "macro": "positive",
+    "channel": "earnings",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "positive",
+      "strength": 2
+     },
+     {
+      "line": "SMH",
+      "direction": "positive",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 145,
+   "story": "2026-11-25:128",
+   "feed": "XLF",
+   "title": "AMBA Stock Hits 8-Year Low As AI Memory Crunch Guts Guidance, Sparks Downgrades",
+   "url": "https://finnhub.io/api/news?id=999e7cfbed33ecb908e15a8d0ada8843163f77d83038394509a48ce2018ccd55",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:53+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "earnings",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 2
+     },
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 146,
+   "story": "2026-11-25:129",
+   "feed": "LAZR",
+   "title": "Coherent Sinks 10% Despite $15 Million Director Buy, Applied Optoelectronics Plunges 12% as AI Selloff Deepens; Lumentum Tumbles 10%",
+   "url": "https://finnhub.io/api/news?id=4db5e321c2f7c04f74845f3462b2ac0fb709fe0d3df109d6963b6b90a3188588",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:53+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "rates",
+    "sectors": [
+     {
+      "line": "SMH",
+      "direction": "negative",
+      "strength": 2
+     },
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "LAZR",
+      "direction": "negative",
+      "strength": 2
+     }
+    ],
+    "novelty": "new",
+    "confidence": "high",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 147,
+   "story": "2026-11-25:130",
+   "feed": "XLRE",
+   "title": "Form 8.3 Prologis, Inc",
+   "url": "https://finnhub.io/api/news?id=d400a823be4f63f16cbcc55c857e58f045b0375106086acb6df3893683e0068e",
+   "source": "Yahoo",
+   "published": "2026-11-25T15:54+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "rehash",
+    "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 148,
+   "story": "2026-11-25:131",
+   "feed": "market",
+   "title": "Investors led by U.S. billionaire Todd Boehly to buy Lukoil's oil and gas assets outside Russia, sources say",
+   "url": "https://www.cnbc.com/2026/11/25/investors-led-by-todd-boehly-to-buy-lukoil-oil-and-gas-assets-outside-russia.html",
+   "source": "CNBC",
+   "published": "2026-11-25T16:00+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "geopolitics",
+    "sectors": [
+     {
+      "line": "XLE",
+      "direction": "positive",
+      "strength": 1
+     }
+    ],
+    "novelty": "new",
+    "confidence": "medium",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 149,
+   "story": "2026-11-25:132",
+   "feed": "market",
+   "title": "Anthropic's stock has been a clunker post-IPO. Why that matters for the AI trade",
+   "url": "https://www.cnbc.com/investingclub/2026/11/25/anthropics-stock-has-been-a-clunker-post-ipo-why-that-matters-for-the-ai-trade.html",
+   "source": "CNBC",
+   "published": "2026-11-25T16:05+00:00",
+   "tags": {
+    "macro": "negative",
+    "channel": "other",
+    "sectors": [
+     {
+      "line": "XLK",
+      "direction": "negative",
+      "strength": 1
+     },
+     {
+      "line": "XLC",
+      "direction": "negative",
+      "strength": 1
+     }
+    ],
+    "novelty": "follow_up",
+    "confidence": "medium",
+    "kind": "opinion"
+   }
+  },
+  {
+   "id": 150,
+   "story": "2026-11-25:132",
+   "feed": "market",
+   "title": "There are 5,100 newly minted Anthropic millionaires\u2014here\u2019s all the stuff they don\u2019t tell you about when you suddenly get rich",
+   "url": "https://www.cnbc.com/2026/11/25/anthropic-ipo-employee-millionaires-sudden-wealth.html",
+   "source": "CNBC",
+   "published": "2026-11-25T16:32+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "follow_up",
+    "confidence": "low",
+    "kind": "opinion"
+   }
+  }
+ ]
+}
