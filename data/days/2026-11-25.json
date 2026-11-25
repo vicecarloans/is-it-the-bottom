@@ -1,12 +1,12 @@
 {
  "as_of": "2026-11-25",
- "generated_at": "2026-11-25T20:56:55+00:00",
+ "generated_at": "2026-11-25T21:51:26+00:00",
  "verdict": "No panic, no bottom to call",
  "count": 2,
  "total": 5,
  "backtested": false,
  "drawdown": {
-  "pct": -7.8284,
+  "pct": -8.0081,
   "peak_date": "2026-10-06",
   "in_drawdown": false,
   "threshold_pct": -10.0,
@@ -24,7 +24,7 @@
   "trading_days_since": 2,
   "window_trading_days": 30,
   "watch": {
-   "note": "Headlines report that Jensen Huang has returned as Nvidia's president and CEO, after a rally that has since faded.",
+   "note": "Headlines report that Jensen Huang returned as Nvidia CEO, reinstated after he resigned about 12 days earlier, and that the rally on his return has since faded.",
    "first_seen": "2026-11-20",
    "last_seen": "2026-11-25",
    "days_since_seen": 0
@@ -39,19 +39,25 @@
   "data_date": "2026-11-24"
  },
  "digest": {
-  "summary": "US stocks fell sharply on Nov 25, 2026, with Nasdaq futures down more than 2%. Headlines tie the drop to renewed worries about AI spending, with Nvidia and other AI-linked stocks giving back much of the rally that followed Jensen Huang's return as CEO. Investors also weighed inflation, higher-rate risks, and new tariff concerns. The S&P 500 is reported 7.8% below its one-year high.",
+  "summary": "US stocks fell on November 25, 2026, with the S&P 500 about 8.0% below its one-year high. Headlines point to renewed worries about AI spending after Nvidia's rally from Jensen Huang's return as CEO faded, along with concerns about inflation and possible rate increases. Nasdaq futures fell more than 2% as AI losses deepened, and the Nasdaq 100 was reported near bear-market territory, about 20% below its October highs. Headlines also cite weak sentiment around Anthropic trading below its IPO price and a new US inflation report showing broadening price pressure.",
   "fed_tone": "hawkish",
-  "fed_note": "A CNBC piece says Fed Chairman Kevin Warsh faces a dilemma reading market signals, and a sell-off item cites interest-rate hike concerns; the Fed's October meeting minutes were also released.",
-  "sector_note": "The headlines do not say why the leading sector, consumer staples (XLP), is holding up.",
+  "fed_note": "Headlines cite higher-rate risks and interest-rate hike concerns, and a CNBC piece describes a dilemma for Chair Kevin Warsh; the Fed's own releases on the day were routine regulatory items.",
+  "sector_note": "The headlines do not say why consumer staples, the leading sector fund XLP, is holding up.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": true,
-  "huang_note": "Headlines report that Jensen Huang has returned as Nvidia's president and CEO, after a rally that has since faded.",
+  "huang_note": "Headlines report that Jensen Huang returned as Nvidia CEO, reinstated after he resigned about 12 days earlier, and that the rally on his return has since faded.",
   "sources": [
    {
     "title": "Nvidia leads tech sell-off as Huang comeback rally fizzles and AI concerns return",
     "url": "https://www.cnbc.com/2026/11/25/nvidia-ai-stock-tech-selloff.html",
     "source": "CNBC",
+    "date": "2026-11-25"
+   },
+   {
+    "title": "Nasdaq futures slide over 2% as AI losses deepen; inflation data in focus - Reuters",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdUdBTGhVT2V5cDcydUZMX2NTdTkxVDBJSHdCMUgwNXBibGhQc28zdktpLXA2dGVUYzRzV3hpMld1U29KempSNUswd2dNYVdITlFxV2NycEkwbnlpZkdPSDNicVRKM3NCU2l0M0hoWU13UTZkbTAtX2JFempxaUtFbjdTZGMxT2lXM2g3dkR4cy1UYnVfZ09kOWpTNGxtUEZZOTRPaXhENlZ6OGt2ZF94d0RCVjdOSldfc0E?oc=5",
+    "source": "Reuters",
     "date": "2026-11-25"
    },
    {
@@ -67,8 +73,14 @@
     "date": "2026-11-25"
    },
    {
-    "title": "Nasdaq futures slide over 2% as AI losses deepen; inflation data in focus - Reuters",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdUdBTGhVT2V5cDcydUZMX2NTdTkxVDBJSHdCMUgwNXBibGhQc28zdktpLXA2dGVUYzRzV3hpMld1U29KempSNUswd2dNYVdITlFxV2NycEkwbnlpZkdPSDNicVRKM3NCU2l0M0hoWU13UTZkbTAtX2JFempxaUtFbjdTZGMxT2lXM2g3dkR4cy1UYnVfZ09kOWpTNGxtUEZZOTRPaXhENlZ6OGt2ZF94d0RCVjdOSldfc0E?oc=5",
+    "title": "Nasdaq Futures Tumble as AI Selloff Returns",
+    "url": "https://finnhub.io/api/news?id=e95a169591e8a1a7cda57998c95d07b32cd6725ce5abb3a69382d7404463248f",
+    "source": "Yahoo",
+    "date": "2026-11-25"
+   },
+   {
+    "title": "US third-quarter economic growth revised sharply higher; inflation broadening out - Reuters",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNalBrRjhRWHdhRDduMzduLU1kN1lGVFpzNFllX0RzdjJXMjdtajRZS1l1dms2MFJFbkhJQmx3Qzgydi1nTTJnQ1JPLUtoa1R5LWZjWjItUXJhXzhoZG51NU9ENzVBQjVSZWFpdHlqbV9PSkVncWtjUlptdXhjd0ZKRXZ6d2Y1dw?oc=5",
     "source": "Reuters",
     "date": "2026-11-25"
    },
@@ -79,16 +91,10 @@
     "date": "2026-11-25"
    },
    {
-    "title": "US third-quarter economic growth revised sharply higher; inflation broadening out - Reuters",
-    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNalBrRjhRWHdhRDduMzduLU1kN1lGVFpzNFllX0RzdjJXMjdtajRZS1l1dms2MFJFbkhJQmx3Qzgydi1nTTJnQ1JPLUtoa1R5LWZjWjItUXJhXzhoZG51NU9ENzVBQjVSZWFpdHlqbV9PSkVncWtjUlptdXhjd0ZKRXZ6d2Y1dw?oc=5",
-    "source": "Reuters",
+    "title": "Anthropic's stock has been a clunker post-IPO. Why that matters for the AI trade",
+    "url": "https://www.cnbc.com/investingclub/2026/11/25/anthropics-stock-has-been-a-clunker-post-ipo-why-that-matters-for-the-ai-trade.html",
+    "source": "CNBC",
     "date": "2026-11-25"
-   },
-   {
-    "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
-    "source": "Federal Reserve",
-    "date": "2026-11-18"
    }
   ]
  },
@@ -97,7 +103,7 @@
    "key": "vix",
    "name": "VIX above 30",
    "met": true,
-   "value": "28.8",
+   "value": "28.3",
    "threshold": "closed above 30 in the last 10 trading days",
    "data_date": "2026-11-25",
    "detail": "10-day peak 35.9 on 2026-11-20",
@@ -607,7 +613,7 @@
      ],
      [
       "2026-11-25",
-      28.8
+      28.29
      ]
     ],
     "threshold": 30.0
@@ -619,16 +625,12 @@
    "met": false,
    "value": "+0.63 pts",
    "threshold": "2y yield minus Fed upper target <= +0.10 pts, no hike in 56 days",
-   "data_date": "2026-11-23",
+   "data_date": "2026-11-24",
    "detail": "2y 4.63%, Fed upper target 4.00%",
    "stale": false,
    "spark": {
     "label": "2-year yield minus Fed target, pts",
     "points": [
-     [
-      "2026-05-22",
-      0.38
-     ],
      [
       "2026-05-26",
       0.26
@@ -1128,6 +1130,10 @@
      [
       "2026-11-23",
       0.63
+     ],
+     [
+      "2026-11-24",
+      0.63
      ]
     ],
     "threshold": 0.1
@@ -1465,7 +1471,7 @@
    "key": "sector",
    "name": "A clear leading sector",
    "met": false,
-   "value": "XLP +13.6 pts vs SPY",
+   "value": "XLP +13.5 pts vs SPY",
    "threshold": "top sector beats SPY by 5+ pts over 20 days, top on 10 of the last 15 days",
    "data_date": "2026-11-25",
    "detail": "XLP was the top sector on 6 of the last 15 trading days",
@@ -1515,7 +1521,7 @@
      ],
      [
       "2026-06-10",
-      3.1829
+      3.1828
      ],
      [
       "2026-06-11",
@@ -1975,7 +1981,7 @@
      ],
      [
       "2026-11-25",
-      13.5542
+      13.4879
      ]
     ],
     "threshold": 5.0
@@ -2355,7 +2361,7 @@
   ],
   [
    "2025-02-12",
-   591.73,
+   591.74,
    -1.05
   ],
   [
@@ -2840,7 +2846,7 @@
   ],
   [
    "2025-07-03",
-   616.96,
+   616.95,
    0.0
   ],
   [
@@ -4600,12 +4606,12 @@
   ],
   [
    "2026-11-25",
-   718.1,
-   -7.83
+   716.7,
+   -8.01
   ]
  ],
  "errors": {},
- "session": "during_trading",
+ "session": "after_close",
  "news_scores": {
   "as_of": "2026-11-25",
   "window_days": 20,
@@ -4632,7 +4638,7 @@
      "channel": "growth",
      "points": -1.0,
      "reaction": "muted",
-     "change": -0.09
+     "change": -0.29
     },
     {
      "kind": "report",
@@ -4645,7 +4651,7 @@
      "channel": "earnings",
      "points": -1.0,
      "reaction": "muted",
-     "change": -0.09
+     "change": -0.29
     },
     {
      "kind": "report",
@@ -4658,7 +4664,7 @@
      "channel": "rates",
      "points": -1.0,
      "reaction": "muted",
-     "change": -0.09
+     "change": -0.29
     }
    ],
    "channels": {
@@ -4696,7 +4702,7 @@
       "strength": 2,
       "points": -2.0,
       "reaction": "confirmed",
-      "change": -0.74
+      "change": -0.54
      },
      {
       "kind": "report",
@@ -4722,10 +4728,10 @@
       "strength": 3,
       "points": -1.5,
       "reaction": "confirmed",
-      "change": -0.74
+      "change": -0.54
      }
     ],
-    "excess_pct": -11.42,
+    "excess_pct": -11.23,
     "divergence": null
    },
    "XLF": {
@@ -4751,7 +4757,7 @@
       "strength": 2,
       "points": -1.5,
       "reaction": "faded",
-      "change": 1.05
+      "change": 1.0
      },
      {
       "kind": "report",
@@ -4764,7 +4770,7 @@
       "strength": 1,
       "points": -0.75,
       "reaction": "faded",
-      "change": 1.05
+      "change": 1.0
      },
      {
       "kind": "report",
@@ -4780,7 +4786,7 @@
       "change": 1.31
      }
     ],
-    "excess_pct": 7.94,
+    "excess_pct": 7.88,
     "divergence": "bad_news_leading"
    },
    "XLE": {
@@ -4819,7 +4825,7 @@
       "strength": 2,
       "points": 1.5,
       "reaction": "confirmed",
-      "change": 1.19
+      "change": 1.03
      },
      {
       "kind": "report",
@@ -4832,10 +4838,10 @@
       "strength": 1,
       "points": 0.75,
       "reaction": "confirmed",
-      "change": 1.19
+      "change": 1.03
      }
     ],
-    "excess_pct": -3.7,
+    "excess_pct": -3.83,
     "divergence": "good_news_lagging"
    },
    "XLV": {
@@ -4861,7 +4867,7 @@
       "strength": 2,
       "points": 2.0,
       "reaction": "muted",
-      "change": -0.19
+      "change": -0.27
      },
      {
       "kind": "report",
@@ -4890,7 +4896,7 @@
       "change": 3.44
      }
     ],
-    "excess_pct": 9.51,
+    "excess_pct": 9.4,
     "divergence": null
    },
    "XLY": {
@@ -4916,7 +4922,7 @@
       "strength": 2,
       "points": 1.5,
       "reaction": "muted",
-      "change": 0.14
+      "change": 0.09
      },
      {
       "kind": "report",
@@ -4942,10 +4948,10 @@
       "strength": 1,
       "points": 0.75,
       "reaction": "muted",
-      "change": 0.14
+      "change": 0.09
      }
     ],
-    "excess_pct": 9.14,
+    "excess_pct": 9.07,
     "divergence": null
    },
    "XLP": {
@@ -4992,7 +4998,7 @@
       "url": "https://finnhub.io/api/news?id=37dd8624437c8b63ae7f493f24a751f8b16d32426983b4e2362706aec7cd3525",
       "source": "Benzinga",
       "published": "2026-11-24T12:00+00:00",
-      "headlines": 2,
+      "headlines": 3,
       "direction": "positive",
       "strength": 1,
       "points": 0.6,
@@ -5000,7 +5006,7 @@
       "change": 2.15
      }
     ],
-    "excess_pct": 13.55,
+    "excess_pct": 13.49,
     "divergence": null
    },
    "XLI": {
@@ -5026,7 +5032,7 @@
       "strength": 2,
       "points": 2.0,
       "reaction": "confirmed",
-      "change": 1.15
+      "change": 1.12
      },
      {
       "kind": "report",
@@ -5052,10 +5058,10 @@
       "strength": 1,
       "points": 0.75,
       "reaction": "confirmed",
-      "change": 1.15
+      "change": 1.12
      }
     ],
-    "excess_pct": 3.95,
+    "excess_pct": 3.91,
     "divergence": null
    },
    "XLB": {
@@ -5110,7 +5116,7 @@
       "change": 1.03
      }
     ],
-    "excess_pct": 6.01,
+    "excess_pct": 5.95,
     "divergence": null
    },
    "XLU": {
@@ -5165,7 +5171,7 @@
       "change": 0.67
      }
     ],
-    "excess_pct": 9.93,
+    "excess_pct": 9.84,
     "divergence": null
    },
    "XLRE": {
@@ -5191,7 +5197,7 @@
       "strength": 1,
       "points": 0.75,
       "reaction": "confirmed",
-      "change": 1.28
+      "change": 1.21
      },
      {
       "kind": "report",
@@ -5220,7 +5226,7 @@
       "change": 1.79
      }
     ],
-    "excess_pct": 11.4,
+    "excess_pct": 11.31,
     "divergence": null
    },
    "XLC": {
@@ -5275,7 +5281,7 @@
       "change": -1.14
      }
     ],
-    "excess_pct": 9.43,
+    "excess_pct": 9.37,
     "divergence": null
    },
    "SMH": {
@@ -5301,7 +5307,7 @@
       "strength": 3,
       "points": -3.0,
       "reaction": "confirmed",
-      "change": -1.36
+      "change": -0.72
      },
      {
       "kind": "report",
@@ -5314,7 +5320,7 @@
       "strength": 2,
       "points": -2.0,
       "reaction": "confirmed",
-      "change": -1.36
+      "change": -0.72
      },
      {
       "kind": "report",
@@ -5327,10 +5333,10 @@
       "strength": 2,
       "points": -2.0,
       "reaction": "confirmed",
-      "change": -1.36
+      "change": -0.72
      }
     ],
-    "excess_pct": -18.9,
+    "excess_pct": -18.38,
     "divergence": null
    },
    "LAZR": {
@@ -5356,7 +5362,7 @@
       "strength": 2,
       "points": -2.0,
       "reaction": "confirmed",
-      "change": -1.75
+      "change": -1.39
      },
      {
       "kind": "report",
@@ -5369,7 +5375,7 @@
       "strength": 2,
       "points": -2.0,
       "reaction": "confirmed",
-      "change": -1.75
+      "change": -1.39
      },
      {
       "kind": "report",
@@ -5385,7 +5391,7 @@
       "change": -10.0
      }
     ],
-    "excess_pct": -31.33,
+    "excess_pct": -31.05,
     "divergence": null
    }
   }

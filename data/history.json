@@ -60,9 +60,9 @@
    "catalyst": false,
    "capped": false,
    "archived": true,
-   "session": "during_trading",
+   "session": "after_close",
    "in_drawdown": false,
-   "drawdown_pct": -7.8284,
+   "drawdown_pct": -8.0081,
    "met": {
     "vix": true,
     "fed": false,

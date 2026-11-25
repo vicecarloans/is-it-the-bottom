@@ -302,29 +302,6 @@
   },
   {
    "id": 15,
-   "story": "2026-11-24:45",
-   "feed": "market",
-   "title": "Oil prices fall as supply glut concerns offset Middle East disruption fears - Reuters",
-   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOVGl4Nzdfc01ReTB5TnAxUkVLTXlaRVFvbGM5aTZDOEtVUXlrVDQtMHJwcWh2WldoMnVyb0QxU1pEQUoyN09sNU1SZXR3NVUzdTZXeWpkdGNTZW95MUtmdjV3dWFxTEZsRW5WUlF1djVTTWZxUGVxcHhPNEptMnBEcmZ0MURhX0JxTDFqc19HblpWd2hLSEs5SXRYTXB6bzFwNzZqOUFTc1ZOM3ItVDFZWmM2a0R5YkxsdnlsMTZWQ1ZEUQ?oc=5",
-   "source": "Reuters",
-   "published": "2026-11-25T01:58+00:00",
-   "tags": {
-    "macro": "positive",
-    "channel": "inflation",
-    "sectors": [
-     {
-      "line": "XLE",
-      "direction": "negative",
-      "strength": 2
-     }
-    ],
-    "novelty": "new",
-    "confidence": "medium",
-    "kind": "report"
-   }
-  },
-  {
-   "id": 16,
    "story": "2026-11-25:13",
    "feed": "market",
    "title": "Greeks strike over wages, public services - Reuters",
@@ -341,7 +318,7 @@
    }
   },
   {
-   "id": 17,
+   "id": 16,
    "story": "2026-11-25:14",
    "feed": "XLB",
    "title": "Best Dividend Aristocrats For December 2026",
@@ -358,7 +335,7 @@
    }
   },
   {
-   "id": 18,
+   "id": 17,
    "story": "2026-11-25:16",
    "feed": "SMH",
    "title": "Jim Cramer Backs DuPont, Says Buy Nvidia",
@@ -381,7 +358,7 @@
    }
   },
   {
-   "id": 19,
+   "id": 18,
    "story": "2026-11-25:2",
    "feed": "XLRE",
    "title": "Dimensional Fund Advisors Ltd. : Form 8.3 - PROLOGIS INC - Ordinary Shares",
@@ -398,7 +375,7 @@
    }
   },
   {
-   "id": 20,
+   "id": 19,
    "story": "2026-11-25:18",
    "feed": "XLU",
    "title": "Truist Securities Maintains Hold on Southern, Raises Price Target to $98",
@@ -415,7 +392,7 @@
    }
   },
   {
-   "id": 21,
+   "id": 20,
    "story": "2026-11-25:19",
    "feed": "LAZR",
    "title": "Stephen Pagliuca Buys $15M of Coherent Stock Following Pullback",
@@ -432,7 +409,7 @@
    }
   },
   {
-   "id": 22,
+   "id": 21,
    "story": "2026-11-25:20",
    "feed": "market",
    "title": "Iran says ships hit mines in Hormuz, warns vessels to coordinate passage - Reuters",
@@ -460,7 +437,7 @@
    }
   },
   {
-   "id": 23,
+   "id": 22,
    "story": "2026-11-25:21",
    "feed": "LAZR",
    "title": "Baron Technology ETF Q3 2026 Portfolio Activity",
@@ -477,7 +454,7 @@
    }
   },
   {
-   "id": 24,
+   "id": 23,
    "story": "2026-11-25:23",
    "feed": "SMH",
    "title": "TSMC Has a 'Substantially Wider Moat' Than Nvidia, Says Investor Joseph Carlson",
@@ -500,7 +477,7 @@
    }
   },
   {
-   "id": 25,
+   "id": 24,
    "story": "2026-11-25:24",
    "feed": "market",
    "title": "Italy rebukes Ukraine over attacks on Russian ships in Libya - Reuters",
@@ -517,7 +494,7 @@
    }
   },
   {
-   "id": 26,
+   "id": 25,
    "story": "2026-11-25:1",
    "feed": "market",
    "title": "Rupee scales 8-month high after holiday as foreign flows to Indian equities persist - Reuters",
@@ -534,7 +511,7 @@
    }
   },
   {
-   "id": 27,
+   "id": 26,
    "story": "2026-11-25:25",
    "feed": "LAZR",
    "title": "Oppenheimer Cut Its Marvell Target by $100. It Still Sees 147% Upside",
@@ -557,7 +534,7 @@
    }
   },
   {
-   "id": 28,
+   "id": 27,
    "story": "2026-11-25:28",
    "feed": "XLI",
    "title": "What State Street Industrial Select SPDR (XLI) Bought: GE Leads on Nov. 23",
@@ -574,7 +551,7 @@
    }
   },
   {
-   "id": 29,
+   "id": 28,
    "story": "2026-11-25:27",
    "feed": "XLU",
    "title": "State Street Utilities SPDR (XLU) Sells $32.8 Million of NextEra on Nov. 23",
@@ -591,7 +568,7 @@
    }
   },
   {
-   "id": 30,
+   "id": 29,
    "story": "2026-11-25:29",
    "feed": "market",
    "title": "Bulgaria intercepts first irregular migrant boat in months - Reuters",
@@ -608,7 +585,7 @@
    }
   },
   {
-   "id": 31,
+   "id": 30,
    "story": "2026-11-25:36",
    "feed": "market",
    "title": "Migrant arrivals in Spain's Canary Islands break single-day record - Reuters",
@@ -625,7 +602,7 @@
    }
   },
   {
-   "id": 32,
+   "id": 31,
    "story": "2026-11-25:38",
    "feed": "market",
    "title": "'I'm going to drive': FAA outage and high fares reshape Thanksgiving travel plans - Reuters",
@@ -648,7 +625,7 @@
    }
   },
   {
-   "id": 33,
+   "id": 32,
    "story": "2026-11-25:40",
    "feed": "SMH",
    "title": "Taiwan Semiconductor Manufacturing Company Limited Announces Adjustment to Cash Dividend Per Share",
@@ -665,7 +642,7 @@
    }
   },
   {
-   "id": 34,
+   "id": 33,
    "story": "2026-11-25:2",
    "feed": "nvda",
    "title": "Former CEA chair: Huang's return signals share price can be more important than national security",
@@ -682,7 +659,7 @@
    }
   },
   {
-   "id": 35,
+   "id": 34,
    "story": "2026-11-25:43",
    "feed": "market",
    "title": "Secondhand shopping is going mainstream this holiday season as consumers seek value",
@@ -699,7 +676,7 @@
    }
   },
   {
-   "id": 36,
+   "id": 35,
    "story": "2026-11-25:44",
    "feed": "XLI",
    "title": "The AI Stock Slump Is Crushing Caterpillar. Here\u2019s Why I Like the Stock More Than Ever.",
@@ -722,7 +699,7 @@
    }
   },
   {
-   "id": 37,
+   "id": 36,
    "story": "2026-11-25:45",
    "feed": "XLRE",
    "title": "Form 8.3",
@@ -739,7 +716,7 @@
    }
   },
   {
-   "id": 38,
+   "id": 37,
    "story": "2026-11-25:46",
    "feed": "XLU",
    "title": "Southern (SO) Stock Looks About Right On Current Earnings",
@@ -756,7 +733,7 @@
    }
   },
   {
-   "id": 39,
+   "id": 38,
    "story": "2026-11-25:47",
    "feed": "market",
    "title": "Catalan separatist Puigdemont to return to Spain after election - Reuters",
@@ -773,7 +750,7 @@
    }
   },
   {
-   "id": 40,
+   "id": 39,
    "story": "2026-11-25:48",
    "feed": "SMH",
    "title": "Taiwan Semiconductor Manufacturing Company Limited Reports Monthly Operational Activities for October 2026",
@@ -796,7 +773,7 @@
    }
   },
   {
-   "id": 41,
+   "id": 40,
    "story": "2026-11-25:49",
    "feed": "market",
    "title": "Liesman: Nvidia whiplash tests Kevin Warsh\u2019s push to read market signals",
@@ -819,7 +796,7 @@
    }
   },
   {
-   "id": 42,
+   "id": 41,
    "story": "2026-11-25:51",
    "feed": "market",
    "title": "UK moving military aircraft to hangars at night over possible drone threats, media reports say - Reuters",
@@ -842,7 +819,7 @@
    }
   },
   {
-   "id": 43,
+   "id": 42,
    "story": "2026-11-25:52",
    "feed": "market",
    "title": "Nasdaq futures slide over 2% as AI losses deepen; inflation data in focus - Reuters",
@@ -870,7 +847,7 @@
    }
   },
   {
-   "id": 44,
+   "id": 43,
    "story": "2026-11-25:56",
    "feed": "XLU",
    "title": "NextEra Energy, Inc. (NEE) Is a Trending Stock: Facts to Know Before Betting on It",
@@ -887,7 +864,7 @@
    }
   },
   {
-   "id": 45,
+   "id": 44,
    "story": "2026-11-25:58",
    "feed": "XLU",
    "title": "NextEra Energy (NEE) Stock Looks Fairly Valued On Merger Probe Closure",
@@ -910,7 +887,7 @@
    }
   },
   {
-   "id": 46,
+   "id": 45,
    "story": "2026-11-25:42",
    "feed": "XLI",
    "title": "General Electric (GE) Lands First GEnx Engine Order From Malaysia Aviation Group",
@@ -933,7 +910,7 @@
    }
   },
   {
-   "id": 47,
+   "id": 46,
    "story": "2026-11-25:60",
    "feed": "XLRE",
    "title": "American Tower (AMT) Prices New Euro Bonds, Is It Still 20% Undervalued?",
@@ -956,7 +933,7 @@
    }
   },
   {
-   "id": 48,
+   "id": 47,
    "story": "2026-11-25:61",
    "feed": "XLI",
    "title": "Caterpillar (CAT) Makes Collision Warning Standard On Most New Construction Machines",
@@ -979,7 +956,7 @@
    }
   },
   {
-   "id": 49,
+   "id": 48,
    "story": "2026-11-25:63",
    "feed": "nvda",
    "title": "Nvidia Author Stephen Witt Says Huang\u2019s Return Is \u201cNot Great for AMD.\u201d Here\u2019s What AMD Loses",
@@ -1007,7 +984,7 @@
    }
   },
   {
-   "id": 50,
+   "id": 49,
    "story": "2026-11-25:66",
    "feed": "market",
    "title": "Iraq's top court says Baghdad can deploy troops to secure borders in Kurdistan region - Reuters",
@@ -1024,7 +1001,7 @@
    }
   },
   {
-   "id": 51,
+   "id": 50,
    "story": "2026-11-25:52",
    "feed": "nvda",
    "title": "Nasdaq Futures Tumble as AI Selloff Returns",
@@ -1052,7 +1029,7 @@
    }
   },
   {
-   "id": 52,
+   "id": 51,
    "story": "2026-11-25:52",
    "feed": "LAZR",
    "title": "S&P 500 Premarket Losers for Nov. 25, 2026",
@@ -1080,7 +1057,7 @@
    }
   },
   {
-   "id": 53,
+   "id": 52,
    "story": "2026-11-25:72",
    "feed": "XLV",
    "title": "Trump Says Abdul El-Sayed Is a 'Smart Guy, Warms to 'TrumpCare' Idea",
@@ -1097,7 +1074,7 @@
    }
   },
   {
-   "id": 54,
+   "id": 53,
    "story": "2026-11-25:74",
    "feed": "market",
    "title": "Our top 10 things to watch in the stock market Wednesday",
@@ -1114,7 +1091,7 @@
    }
   },
   {
-   "id": 55,
+   "id": 54,
    "story": "2026-11-25:79",
    "feed": "market",
    "title": "Israeli strike kills Hamas official, his wife and children - Reuters",
@@ -1131,7 +1108,7 @@
    }
   },
   {
-   "id": 56,
+   "id": 55,
    "story": "2026-11-25:78",
    "feed": "XLE",
    "title": "Warren Buffett and Greg Abel Collect Billions From These Untouchable Berkshire Hathaway Dividend Stocks",
@@ -1148,7 +1125,7 @@
    }
   },
   {
-   "id": 57,
+   "id": 56,
    "story": "2026-11-25:81",
    "feed": "XLE",
    "title": "Global Ethyl Derivatives Market Report 2026: Executive Strategy and Forecast to 2030 | Capitalize on Bio-Based and Pharma Demand with BASF, Dow, Arkema, Clariant, and Exxon Mobil",
@@ -1165,7 +1142,7 @@
    }
   },
   {
-   "id": 58,
+   "id": 57,
    "story": "2026-11-25:87",
    "feed": "market",
    "title": "Wealthy investors seek tax savings from municipal bonds as yields remain elevated",
@@ -1182,7 +1159,7 @@
    }
   },
   {
-   "id": 59,
+   "id": 58,
    "story": "2026-11-25:90",
    "feed": "XLE",
    "title": "Turn $100,000 Into Lifetime Paychecks With These \u201cForever\u201d Passive Income Dividend Stocks",
@@ -1199,7 +1176,7 @@
    }
   },
   {
-   "id": 60,
+   "id": 59,
    "story": "2026-11-25:3",
    "feed": "XLP",
    "title": "How Should Investors Play Target Stock After Its Q3 Earnings Beat?",
@@ -1222,7 +1199,7 @@
    }
   },
   {
-   "id": 61,
+   "id": 60,
    "story": "2026-11-25:97",
    "feed": "XLU",
    "title": "Raised Outlook Might Change The Case For Investing In Southern Stock (SO)",
@@ -1239,7 +1216,7 @@
    }
   },
   {
-   "id": 62,
+   "id": 61,
    "story": "2026-11-25:99",
    "feed": "XLRE",
    "title": "American Tower (AMT) Stock Could Be Undervalued Following Its 18% Five Year Slide",
@@ -1256,7 +1233,7 @@
    }
   },
   {
-   "id": 63,
+   "id": 62,
    "story": "2026-11-25:100",
    "feed": "market",
    "title": "Kalshi traders say the odds of states imposing data center moratoriums is more likely than not",
@@ -1279,7 +1256,7 @@
    }
   },
   {
-   "id": 64,
+   "id": 63,
    "story": "2026-11-25:4",
    "feed": "market",
    "title": "Russian government official warns of Ukrainian drone attacks on utility infrastructure this winter - Reuters",
@@ -1307,7 +1284,7 @@
    }
   },
   {
-   "id": 65,
+   "id": 64,
    "story": "2026-11-25:108",
    "feed": "LAZR",
    "title": "Coherent\u2019s Director Bought $15 Million of Stock as It Plunged 13%",
@@ -1330,7 +1307,7 @@
    }
   },
   {
-   "id": 66,
+   "id": 65,
    "story": "2026-11-25:110",
    "feed": "nvda",
    "title": "Michael Burry Calls Nvidia \u201cMore Craven Than Even I Thought.\u201d Now He Eyes a Short Near $200",
@@ -1347,7 +1324,7 @@
    }
   },
   {
-   "id": 67,
+   "id": 66,
    "story": "2026-11-25:5",
    "feed": "XLRE",
    "title": "Why Is Welltower (WELL) Up 8.1% Since Last Earnings Report?",
@@ -1370,7 +1347,7 @@
    }
   },
   {
-   "id": 68,
+   "id": 67,
    "story": "2026-11-25:113",
    "feed": "nvda",
    "title": "Investing rules for those checking stocks during the Thanksgiving holiday",
@@ -1387,7 +1364,7 @@
    }
   },
   {
-   "id": 69,
+   "id": 68,
    "story": "2026-11-25:112",
    "feed": "XLP",
    "title": "The CIA, FBI, and US Treasury were all hit by cyberattacks: What to know",
@@ -1410,7 +1387,7 @@
    }
   },
   {
-   "id": 70,
+   "id": 69,
    "story": "2026-11-25:117",
    "feed": "nvda",
    "title": "Nvidia's $270 Wall Street upgrade has a surprising catch",
@@ -1433,7 +1410,7 @@
    }
   },
   {
-   "id": 71,
+   "id": 70,
    "story": "2026-11-25:120",
    "feed": "XLE",
    "title": "Bad News for Exxon and Chevron: Goldman Sees Brent Falling \u201cRoughly $10\u201d Next Year on a Supply Glut",
@@ -1456,7 +1433,7 @@
    }
   },
   {
-   "id": 72,
+   "id": 71,
    "story": "2026-11-25:124",
    "feed": "XLF",
    "title": "What Happens to a $900,000 401(k) by the End of 2027? $1,062,300 in Wall Street\u2019s Best Case, $824,900 in Its Worst",
@@ -1473,7 +1450,7 @@
    }
   },
   {
-   "id": 73,
+   "id": 72,
    "story": "2026-11-25:125",
    "feed": "XLI",
    "title": "2027 Industrial Divide: Caterpillar Monetizes AI Power While Deere Chases an Ag Bottom",
@@ -1496,7 +1473,7 @@
    }
   },
   {
-   "id": 74,
+   "id": 73,
    "story": "2026-11-25:128",
    "feed": "XLF",
    "title": "AMBA Stock Hits 8-Year Low As AI Memory Crunch Guts Guidance, Sparks Downgrades",
@@ -1524,7 +1501,7 @@
    }
   },
   {
-   "id": 75,
+   "id": 74,
    "story": "2026-11-25:129",
    "feed": "LAZR",
    "title": "Coherent Sinks 10% Despite $15 Million Director Buy, Applied Optoelectronics Plunges 12% as AI Selloff Deepens; Lumentum Tumbles 10%",
@@ -1557,7 +1534,7 @@
    }
   },
   {
-   "id": 76,
+   "id": 75,
    "story": "2026-11-25:130",
    "feed": "XLRE",
    "title": "Form 8.3 Prologis, Inc",
@@ -1574,7 +1551,7 @@
    }
   },
   {
-   "id": 77,
+   "id": 76,
    "story": "2026-11-25:131",
    "feed": "market",
    "title": "Investors led by U.S. billionaire Todd Boehly to buy Lukoil's oil and gas assets outside Russia, sources say",
@@ -1597,7 +1574,7 @@
    }
   },
   {
-   "id": 78,
+   "id": 77,
    "story": "2026-11-25:132",
    "feed": "market",
    "title": "Anthropic's stock has been a clunker post-IPO. Why that matters for the AI trade",
@@ -1625,7 +1602,7 @@
    }
   },
   {
-   "id": 79,
+   "id": 78,
    "story": "2026-11-25:7",
    "feed": "XLF",
    "title": "How Warren Buffett Makes Billions from Dividends: Top 5 Stocks",
@@ -1642,7 +1619,7 @@
    }
   },
   {
-   "id": 80,
+   "id": 79,
    "story": "2026-11-25:6",
    "feed": "XLV",
    "title": "UnitedHealth vs. Clover Health: Which Stock Offers Better Growth?",
@@ -1665,7 +1642,7 @@
    }
   },
   {
-   "id": 81,
+   "id": 80,
    "story": "2026-11-25:8",
    "feed": "market",
    "title": "US third-quarter economic growth revised sharply higher; inflation broadening out - Reuters",
@@ -1682,7 +1659,7 @@
    }
   },
   {
-   "id": 82,
+   "id": 81,
    "story": "2026-11-25:9",
    "feed": "XLK",
    "title": "Nvidia Chipmaker TSMC Sends $22.6 Billion AI Signal",
@@ -1710,7 +1687,7 @@
    }
   },
   {
-   "id": 83,
+   "id": 82,
    "story": "2026-11-25:10",
    "feed": "XLF",
    "title": "JPMorgan Says the Biggest Risk to Stocks in 2027 Is the Fed",
@@ -1733,7 +1710,7 @@
    }
   },
   {
-   "id": 84,
+   "id": 83,
    "story": "2026-11-25:132",
    "feed": "market",
    "title": "There are 5,100 newly minted Anthropic millionaires\u2014here\u2019s all the stuff they don\u2019t tell you about when you suddenly get rich",
@@ -1750,7 +1727,7 @@
    }
   },
   {
-   "id": 85,
+   "id": 84,
    "story": "2026-11-25:11",
    "feed": "XLF",
    "title": "Robinhood, JPMorgan, Other Financial Stocks Slump Amid Broad Market Rout",
@@ -1773,7 +1750,7 @@
    }
   },
   {
-   "id": 86,
+   "id": 85,
    "story": "2026-11-25:12",
    "feed": "XLK",
    "title": "How 2 Quick Calls Sealed Berkshire Hathaway\u2019s $930M Bending Spoons Investment",
@@ -1790,7 +1767,7 @@
    }
   },
   {
-   "id": 87,
+   "id": 86,
    "story": "2026-11-25:13",
    "feed": "XLP",
    "title": "Nestle, Procter & Gamble, Unilever, L'Oreal and Danone Lead a Highly Fragmented Health and Wellness Market Worth USD 7.76 Trillion by 2035",
@@ -1807,7 +1784,7 @@
    }
   },
   {
-   "id": 88,
+   "id": 87,
    "story": "2026-11-25:14",
    "feed": "XLF",
    "title": "JPMorgan Sees S&P 500 At 8,200 In 2027 As AI Supercycle Remains Intact",
@@ -1830,7 +1807,7 @@
    }
   },
   {
-   "id": 89,
+   "id": 88,
    "story": "2026-11-25:15",
    "feed": "XLF",
    "title": "Oracle Is Down 60% From Its June High. J.P. Morgan Still Sees $200",
@@ -1853,7 +1830,7 @@
    }
   },
   {
-   "id": 90,
+   "id": 89,
    "story": "2026-11-25:16",
    "feed": "XLV",
    "title": "Here's Why Humana Stock Deserves a Place in Your Portfolio",
@@ -1876,7 +1853,7 @@
    }
   },
   {
-   "id": 91,
+   "id": 90,
    "story": "2026-11-25:17",
    "feed": "XLK",
    "title": "Broadcom vs. Qualcomm: Which Technology Stock Is a Better Buy for 2027?",
@@ -1893,7 +1870,7 @@
    }
   },
   {
-   "id": 92,
+   "id": 91,
    "story": "2026-11-25:18",
    "feed": "XLV",
    "title": "European Stocks Close Lower Wednesday; German GDP Growth Slows More Than Expected",
@@ -1910,7 +1887,7 @@
    }
   },
   {
-   "id": 93,
+   "id": 92,
    "story": "2026-11-25:19",
    "feed": "XLP",
    "title": "Japan's biggest banks pick Solana as Fidelity adds DeFi tokens",
@@ -1927,7 +1904,7 @@
    }
   },
   {
-   "id": 94,
+   "id": 93,
    "story": "2026-11-25:20",
    "feed": "SMH",
    "title": "AI Chip Stocks Extend Brutal Selloff as Nvidia, AMD and Broadcom Tumble Again",
@@ -1955,7 +1932,7 @@
    }
   },
   {
-   "id": 95,
+   "id": 94,
    "story": "2026-11-25:21",
    "feed": "SMH",
    "title": "This Is Why I Wouldn\u2019t Ignore This Stock Heading Into 2027",
@@ -1972,7 +1949,7 @@
    }
   },
   {
-   "id": 96,
+   "id": 95,
    "story": "2026-11-25:22",
    "feed": "market",
    "title": "Nvidia leads tech sell-off as Huang comeback rally fizzles and AI concerns return",
@@ -2005,7 +1982,7 @@
    }
   },
   {
-   "id": 97,
+   "id": 96,
    "story": "2026-11-25:23",
    "feed": "SMH",
    "title": "Intel Stocks Drop 7.47% as GuruFocus Flags 48.7% Premium to GF Value",
@@ -2033,7 +2010,7 @@
    }
   },
   {
-   "id": 98,
+   "id": 97,
    "story": "2026-11-25:24",
    "feed": "nvda",
    "title": "Colette Kress Scored a Win Worth Millions From Huang\u2019s Return to Nvidia",
@@ -2050,7 +2027,7 @@
    }
   },
   {
-   "id": 99,
+   "id": 98,
    "story": "2026-11-25:25",
    "feed": "nvda",
    "title": "SK hynix Falls 5%, Sandisk Down 10% as Asian Chip Stocks Give Back the Huang Rally",
@@ -2078,7 +2055,7 @@
    }
   },
   {
-   "id": 100,
+   "id": 99,
    "story": "2026-11-25:26",
    "feed": "XLY",
    "title": "Amazon to start selling cars in the UK",
@@ -2101,7 +2078,7 @@
    }
   },
   {
-   "id": 101,
+   "id": 100,
    "story": "2026-11-25:27",
    "feed": "nvda",
    "title": "Nvidia Stock Keeps Falling. It\u2019s Obvious Jensen Was Not the Only Problem.",
@@ -2129,7 +2106,7 @@
    }
   },
   {
-   "id": 102,
+   "id": 101,
    "story": "2026-11-25:28",
    "feed": "nvda",
    "title": "Nasdaq 100 Flirts With Bear Market Territory, Drops 20% From October Highs",
@@ -2162,7 +2139,7 @@
    }
   },
   {
-   "id": 103,
+   "id": 102,
    "story": "2026-11-25:30",
    "feed": "nvda",
    "title": "Polestar Automotive Holding UK PLC Q3 2026 Earnings Call Summary",
@@ -2179,7 +2156,7 @@
    }
   },
   {
-   "id": 104,
+   "id": 103,
    "story": "2026-11-25:29",
    "feed": "XLE",
    "title": "Energy Stocks Benefit From Supply Disruptions: Can Momentum Last?",
@@ -2202,7 +2179,7 @@
    }
   },
   {
-   "id": 105,
+   "id": 104,
    "story": "2026-11-25:31",
    "feed": "market",
    "title": "EXCLUSIVE: Boehly signs US-backed share swap deal to buy Lukoil global assets - Reuters",
@@ -2219,7 +2196,7 @@
    }
   },
   {
-   "id": 106,
+   "id": 105,
    "story": "2026-11-25:32",
    "feed": "XLK",
    "title": "Satya Nadella Says \u201cthe Floor of Cyber Attacks Has Fallen.\u201d Microsoft Just Declared Code Red After a 24-Hour Outage",
@@ -2242,7 +2219,7 @@
    }
   },
   {
-   "id": 107,
+   "id": 106,
    "story": "2026-11-25:33",
    "feed": "XLK",
    "title": "Will Funding Gap Change IREN Stock Narrative",
@@ -2259,7 +2236,7 @@
    }
   },
   {
-   "id": 108,
+   "id": 107,
    "story": "2026-11-25:34",
    "feed": "XLY",
    "title": "Ford Motor vs. Tesla: Which Automaker Stock Is a Better Buy for 2027?",
@@ -2276,7 +2253,7 @@
    }
   },
   {
-   "id": 109,
+   "id": 108,
    "story": "2026-11-25:36",
    "feed": "XLK",
    "title": "Amdocs (DOX) Stock Is Up 4.6% Today Without Company News",
@@ -2299,7 +2276,7 @@
    }
   },
   {
-   "id": 110,
+   "id": 109,
    "story": "2026-11-25:35",
    "feed": "XLY",
    "title": "Cathie Wood Just Bought $62 Million of Anthropic Across 6 ARK Funds",
@@ -2322,7 +2299,7 @@
    }
   },
   {
-   "id": 111,
+   "id": 110,
    "story": "2026-11-25:37",
    "feed": "XLV",
    "title": "The 3 Highest-Yielding Dividend Stocks Among Ken Fisher\u2019s Top Holdings",
@@ -2339,7 +2316,7 @@
    }
   },
   {
-   "id": 112,
+   "id": 111,
    "story": "2026-11-25:38",
    "feed": "market",
    "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
@@ -2362,7 +2339,7 @@
    }
   },
   {
-   "id": 113,
+   "id": 112,
    "story": "2026-11-25:39",
    "feed": "XLK",
    "title": "Lee Ainslie\u2019s Maverick Capital Held $844 Million in Nvidia, Its Largest Position at 6.8% of Its Stocks",
@@ -2379,7 +2356,7 @@
    }
   },
   {
-   "id": 114,
+   "id": 113,
    "story": "2026-11-25:40",
    "feed": "XLY",
    "title": "Amazon Is Backing More Than 5 Gigawatts of New Nuclear by 2039. This Reactor Developer Could Cash In.",
@@ -2407,7 +2384,7 @@
    }
   },
   {
-   "id": 115,
+   "id": 114,
    "story": "2026-11-25:42",
    "feed": "XLY",
    "title": "SpaceX stock pares losses following FCC approval for data centers in space",
@@ -2430,7 +2407,7 @@
    }
   },
   {
-   "id": 116,
+   "id": 115,
    "story": "2026-11-25:41",
    "feed": "XLY",
    "title": "Anthropic, Nvidia, Micron, HP Inc., Dell, Deere, and More Stocks That Explain Today\u2019s Market",
@@ -2458,7 +2435,7 @@
    }
   },
   {
-   "id": 117,
+   "id": 116,
    "story": "2026-11-25:43",
    "feed": "XLV",
    "title": "Sector Update: Healthcare Stocks Mixed Wednesday Afternoon",
@@ -2481,7 +2458,7 @@
    }
   },
   {
-   "id": 118,
+   "id": 117,
    "story": "2026-11-25:44",
    "feed": "XLK",
    "title": "Jim Cramer\u2019s 5 Long-Term Stock Picks",
@@ -2498,7 +2475,7 @@
    }
   },
   {
-   "id": 119,
+   "id": 118,
    "story": "2026-11-25:45",
    "feed": "XLV",
    "title": "What's Going On With Celcuity Stock?",
@@ -2515,7 +2492,7 @@
    }
   },
   {
-   "id": 120,
+   "id": 119,
    "story": "2026-11-25:46",
    "feed": "XLI",
    "title": "Why Jim Cramer Favored GE Aerospace Stock Despite a Cash Flow Drop",
@@ -2532,7 +2509,7 @@
    }
   },
   {
-   "id": 121,
+   "id": 120,
    "story": "2026-11-25:47",
    "feed": "XLC",
    "title": "Why Alphabet Stock Fell Today (Hint: It's AI-Related)",
@@ -2555,7 +2532,7 @@
    }
   },
   {
-   "id": 122,
+   "id": 121,
    "story": "2026-11-25:48",
    "feed": "XLC",
    "title": "Why Nvidia Stock Is Falling Again",
@@ -2583,7 +2560,7 @@
    }
   },
   {
-   "id": 123,
+   "id": 122,
    "story": "2026-11-25:49",
    "feed": "XLF",
    "title": "Salesforce earnings to put Bank of America\u2019s growth outlook to the test",
@@ -2606,7 +2583,7 @@
    }
   },
   {
-   "id": 124,
+   "id": 123,
    "story": "2026-11-25:50",
    "feed": "XLP",
    "title": "Dan Ives Says Nvidia\u2019s Jensen Huang Worth At Least $8 Trillion To US Economy, Calls Sell-Off A \u2018Gut Check Moment\u2019",
@@ -2634,7 +2611,7 @@
    }
   },
   {
-   "id": 125,
+   "id": 124,
    "story": "2026-11-25:51",
    "feed": "XLI",
    "title": "Loar Holdings (LOAR) Stock Is Up 5.6% Today Without Company News",
@@ -2651,7 +2628,7 @@
    }
   },
   {
-   "id": 126,
+   "id": 125,
    "story": "2026-11-25:52",
    "feed": "XLY",
    "title": "AST SpaceMobile Surges 9%, Erasing Early Losses as Space Stocks Diverge; SpaceX Eases, Rocket Lab Holds Steady",
@@ -2674,7 +2651,7 @@
    }
   },
   {
-   "id": 127,
+   "id": 126,
    "story": "2026-11-25:53",
    "feed": "XLC",
    "title": "Why SpaceX Stock Is Down Today",
@@ -2697,7 +2674,7 @@
    }
   },
   {
-   "id": 128,
+   "id": 127,
    "story": "2026-11-25:54",
    "feed": "nvda",
    "title": "Tech stock sell-off deepens as AI fears outweigh Huang\u2019s Nvidia return",
@@ -2730,7 +2707,7 @@
    }
   },
   {
-   "id": 129,
+   "id": 128,
    "story": "2026-11-25:55",
    "feed": "nvda",
    "title": "Why Did Nvidia Stock Jump So Much?",
@@ -2753,7 +2730,7 @@
    }
   },
   {
-   "id": 130,
+   "id": 129,
    "story": "2026-11-25:56",
    "feed": "XLC",
    "title": "Meta\u2019s AI shopping push could lift Instagram ad revenue, Jefferies says",
@@ -2776,7 +2753,7 @@
    }
   },
   {
-   "id": 131,
+   "id": 130,
    "story": "2026-11-25:57",
    "feed": "market",
    "title": "Bullish hopes spring as traders bet against a higher VIX: Options Action Live",
@@ -2793,7 +2770,7 @@
    }
   },
   {
-   "id": 132,
+   "id": 131,
    "story": "2026-11-25:58",
    "feed": "nvda",
    "title": "Michael Burry Loads Up on 3 Chinese Stocks; Sticks to Nvidia Bearish Bet",
@@ -2821,7 +2798,7 @@
    }
   },
   {
-   "id": 133,
+   "id": 132,
    "story": "2026-11-25:59",
    "feed": "nvda",
    "title": "Why Alphabet Stock Is Down Today",
@@ -2844,7 +2821,7 @@
    }
   },
   {
-   "id": 134,
+   "id": 133,
    "story": "2026-11-25:60",
    "feed": "XLP",
    "title": "Corporate Bonds vs. Dividend Stocks: Which Pays a Retiree More Reliably?",
@@ -2872,7 +2849,7 @@
    }
   },
   {
-   "id": 135,
+   "id": 134,
    "story": "2026-11-25:62",
    "feed": "nvda",
    "title": "David Tepper Sold All of His AMD Stock. His Biggest Position Is Micron.",
@@ -2895,7 +2872,7 @@
    }
   },
   {
-   "id": 136,
+   "id": 135,
    "story": "2026-11-25:61",
    "feed": "nvda",
    "title": "This Strategist Still Sees the S&P 500 Hitting 10,000",
@@ -2918,7 +2895,7 @@
    }
   },
   {
-   "id": 137,
+   "id": 136,
    "story": "2026-11-25:63",
    "feed": "XLC",
    "title": "Meta Says Muse \u201cRaises Conversions for Advertisers.\u201d It Already Places 51% of AI Agent Orders",
@@ -2946,7 +2923,7 @@
    }
   },
   {
-   "id": 138,
+   "id": 137,
    "story": "2026-11-25:64",
    "feed": "nvda",
    "title": "Nvidia is cheap on paper, so why won't the market buy it?",
@@ -2974,7 +2951,7 @@
    }
   },
   {
-   "id": 139,
+   "id": 138,
    "story": "2026-11-25:65",
    "feed": "XLI",
    "title": "Why Do Analysts Keep Chopping GE Vernova Stock?",
@@ -2997,7 +2974,7 @@
    }
   },
   {
-   "id": 140,
+   "id": 139,
    "story": "2026-11-25:67",
    "feed": "nvda",
    "title": "S&P puts NVIDIA on CreditWatch over governance concerns",
@@ -3025,7 +3002,7 @@
    }
   },
   {
-   "id": 141,
+   "id": 140,
    "story": "2026-11-25:66",
    "feed": "nvda",
    "title": "Goldman Sachs Sees 52 More GW of Data Center Power in 2028. These 3 Stocks Look Best Positioned to Cash In.",
@@ -3048,7 +3025,7 @@
    }
   },
   {
-   "id": 142,
+   "id": 141,
    "story": "2026-11-25:68",
    "feed": "nvda",
    "title": "Nvidia to Pay $290 Million to Settle Long-Running Crypto Mining Revenue Lawsuit",
@@ -3076,7 +3053,7 @@
    }
   },
   {
-   "id": 143,
+   "id": 142,
    "story": "2026-11-25:69",
    "feed": "nvda",
    "title": "Abercrombie & Fitch Grew Sales for the 16th Straight Quarter as Earnings Jumped 62%. Here's What's Behind the Streak.",
@@ -3099,7 +3076,7 @@
    }
   },
   {
-   "id": 144,
+   "id": 143,
    "story": "2026-11-25:70",
    "feed": "nvda",
    "title": "Why Lucid Stock Is Moving in Reverse Today",
@@ -3122,7 +3099,7 @@
    }
   },
   {
-   "id": 145,
+   "id": 144,
    "story": "2026-11-25:71",
    "feed": "XLP",
    "title": "Leaving a Roth IRA to Your Kids? Why Dividend Stocks Make the 10-Year Rule Work for Them",
@@ -3139,7 +3116,7 @@
    }
   },
   {
-   "id": 146,
+   "id": 145,
    "story": "2026-11-25:72",
    "feed": "nvda",
    "title": "Walmart+ Members Spend 4 Times As Much As Non-Members. The Retailer\u2019s New $120 Bundle Could Unlock More Growth.",
@@ -3162,7 +3139,7 @@
    }
   },
   {
-   "id": 147,
+   "id": 146,
    "story": "2026-11-25:73",
    "feed": "market",
    "title": "We're buying more of a stock down big from its July highs",
@@ -3179,7 +3156,7 @@
    }
   },
   {
-   "id": 148,
+   "id": 147,
    "story": "2026-11-25:74",
    "feed": "fed",
    "title": "Agencies announce dollar thresholds for applicability of truth in lending and consumer leasing rules for consumer credit and lease transactions",
@@ -3202,7 +3179,7 @@
    }
   },
   {
-   "id": 149,
+   "id": 148,
    "story": "2026-11-25:75",
    "feed": "fed",
    "title": "Agencies announce dollar thresholds for smaller loan exemption from appraisal requirements for higher-priced mortgage loans",
@@ -3225,7 +3202,7 @@
    }
   },
   {
-   "id": 150,
+   "id": 149,
    "story": "2026-11-25:76",
    "feed": "market",
    "title": "SpaceX, Musk pledge to donate a share each to active Trump Accounts",
@@ -3248,7 +3225,7 @@
    }
   },
   {
-   "id": 151,
+   "id": 150,
    "story": "2026-11-25:77",
    "feed": "market",
    "title": "Vance says he was assured Jensen Huang was not under DOJ investigation",
@@ -3272,6 +3249,23 @@
     ],
     "novelty": "new",
     "confidence": "low",
+    "kind": "report"
+   }
+  },
+  {
+   "id": 151,
+   "story": "2026-11-25:1",
+   "feed": "market",
+   "title": "Macy's postpones Thanksgiving Day Parade due to severe weather",
+   "url": "https://www.cnbc.com/2026/11/25/macys-thanksgiving-day-parade-postponed.html",
+   "source": "CNBC",
+   "published": "2026-11-25T21:26+00:00",
+   "tags": {
+    "macro": "neutral",
+    "channel": "other",
+    "sectors": [],
+    "novelty": "new",
+    "confidence": "high",
     "kind": "report"
    }
   }
