@@ -55,14 +55,14 @@
   },
   {
    "date": "2026-11-25",
-   "verdict": "Getting closer",
+   "verdict": "No panic, no bottom to call",
    "count": 2,
-   "catalyst": true,
+   "catalyst": false,
    "capped": false,
    "archived": true,
    "session": "during_trading",
-   "in_drawdown": true,
-   "drawdown_pct": -10.3107,
+   "in_drawdown": false,
+   "drawdown_pct": -7.8284,
    "met": {
     "vix": true,
     "fed": false,
