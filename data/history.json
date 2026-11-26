@@ -78,7 +78,7 @@
    "catalyst": false,
    "capped": false,
    "archived": true,
-   "session": "before_open",
+   "session": "after_close",
    "in_drawdown": false,
    "drawdown_pct": -8.0081,
    "met": {
