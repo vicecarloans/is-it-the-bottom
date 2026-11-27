@@ -1,16 +1,16 @@
 {
  "as_of": "2026-11-27",
- "generated_at": "2026-11-27T13:51:30+00:00",
+ "generated_at": "2026-11-27T21:51:53+00:00",
  "verdict": "No panic, no bottom to call",
  "count": 2,
  "total": 5,
  "backtested": false,
  "drawdown": {
-  "pct": -8.0081,
+  "pct": -6.5166,
   "peak_date": "2026-10-06",
   "in_drawdown": false,
   "threshold_pct": -10.0,
-  "data_date": "2026-11-25"
+  "data_date": "2026-11-27"
  },
  "base_verdict": "No panic, no bottom to call",
  "catalyst": {
@@ -24,7 +24,7 @@
   "trading_days_since": 4,
   "window_trading_days": 30,
   "watch": {
-   "note": "Headlines report that Nvidia reinstated Jensen Huang as CEO in late November, and Trump says Huang is happy to return as CEO.",
+   "note": "Headlines report that Jensen Huang returned as Nvidia CEO after a period when the company faced a future without him, and that he is set to testify before Congress on Dec. 1 and Dec. 3.",
    "first_seen": "2026-11-20",
    "last_seen": "2026-11-27",
    "days_since_seen": 0
@@ -34,30 +34,54 @@
  "override": {
   "capped": false,
   "reasons": [],
-  "hy_level": 3.72,
-  "hy_change": 1.07,
-  "data_date": "2026-11-24"
+  "hy_level": 3.77,
+  "hy_change": 1.12,
+  "data_date": "2026-11-26"
  },
  "digest": {
-  "summary": "US stocks found footing on November 27 after a bruising month, with the dollar on track for a third monthly gain and oil set to snap a three-week losing streak on supply fears. Headlines say Trump was briefly 'concerned' by Wednesday's market before stocks recovered. Renewed tech optimism lifted pre-bell futures after Nvidia reinstated Jensen Huang as CEO, though headlines also note lingering worries about AI-trade volatility and regulatory probes. The S&P 500 is reported here as 8.0% below its one-year high, and consumer staples (XLP) have led the S&P 500 by about 13.5 points.",
+  "summary": "US stocks were on pace for a strong Black Friday and the post-Thanksgiving session rose, with headlines citing a best Thanksgiving week in 18 years. The S&P 500 remains 6.5% below its one-year high after a volatile stretch tied to AI concerns. Recent gains were linked to Jensen Huang's reported return as Nvidia CEO, Anthropic's IPO trading, and a broader tech rebound, though one headline says investors still see persistent volatility.",
   "fed_tone": "unclear",
-  "fed_note": "Fed headlines are routine (discount rate minutes, FOMC minutes from October 27-28, and regulatory notices) and do not clearly signal the direction of policy.",
-  "sector_note": "The headlines do not explain why consumer staples are leading; they only note consumers hunting for value amid inflation, with retailers expecting robust holiday spending.",
+  "fed_note": "The Fed headlines are routine releases (Oct. FOMC minutes, discount rate minutes, consumer credit thresholds) and do not state a policy direction; a Reuters gold story mentions lingering Fed-hike risks.",
+  "sector_note": "Headlines name no reason for the communication services (XLC) lead; the sources mention Anthropic, Tesla and SpaceX gains and a broader tech rebound, but do not explain XLC specifically.",
   "systemic_flag": false,
   "systemic_event": "",
   "huang_return_reported": true,
-  "huang_note": "Headlines report that Nvidia reinstated Jensen Huang as CEO in late November, and Trump says Huang is happy to return as CEO.",
+  "huang_note": "Headlines report that Jensen Huang returned as Nvidia CEO after a period when the company faced a future without him, and that he is set to testify before Congress on Dec. 1 and Dec. 3.",
   "sources": [
    {
-    "title": "Shares find footing after bruising month, dollar set for third monthly gain - Reuters",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeDB1T1E2SVA0LVpuZFR6d2d5dWFobkEwdkN5aFVmZUZKN1pSVWExbEJzWlZhV0tKcklRQ09yZlFTZklkLTBNSGFwbHBfbHR2SWZoQTdXcWtFdEViWGdQamN2a0JjWjZ4M0Mydmlpc1lrQUdYaFBNVkFBdTQ4djVpbjZrRQ?oc=5",
-    "source": "Reuters",
+    "title": "Jensen Huang's return did little to ease AI jitters. We used the weakness to buy",
+    "url": "https://www.cnbc.com/investingclub/2026/11/27/jensen-huangs-return-did-little-to-ease-ai-jitters-we-bought-on-weakness.html",
+    "source": "CNBC",
     "date": "2026-11-27"
    },
    {
-    "title": "Oil on track to snap three-week losing streak over supply fears - Reuters",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTzVQVzE5aGdzbGVhNEUtVl94M0V3RjN5Rks4UDU0U0plazFDcjFnUTBMMHBvdk9BRzFaVHljSXk1ZFdzSjlRTVRXNGZ0cnRyUWRRbFJaRjBsVWNFbDZqSnQ0cHo0TW5fRDlwMWlKWDI3V2ROcnlXczVET1RqSXR6UGtZSTZ0OTQtY1YwaG1yYTRwQnZ6TW43azNGNTFqMmpkNFhtbVJwRnVkVERhR1NnSlFIMzExZw?oc=5",
-    "source": "Reuters",
+    "title": "Stock Market Today: Indexes Log Best Thanksgiving Week In 18 Years",
+    "url": "https://finnhub.io/api/news?id=126cc66e9d953c9bb16d9401242ac8190d5d0bd2982e39f54e833a14a4715a66",
+    "source": "Yahoo",
+    "date": "2026-11-27"
+   },
+   {
+    "title": "ANT Stock Ends First Full Week Of Trading Around 11% Above IPO Price: Lockup Expiry, Nasdaq 100 Entry Loom",
+    "url": "https://finnhub.io/api/news?id=6dc7c92350920efcab193e06a73dfa7208d086468d373aa5dbe1591545690c96",
+    "source": "Yahoo",
+    "date": "2026-11-27"
+   },
+   {
+    "title": "US Equity Indexes Rise as Jensen Huang's Return to Nvidia Guardrails AI Trade While Investors Slice Growth Exposure This Week",
+    "url": "https://finnhub.io/api/news?id=66986135b4c9b220e8424e7e29a498a77e30ab6eba64cf17c5162d5d5eeee730",
+    "source": "Yahoo",
+    "date": "2026-11-27"
+   },
+   {
+    "title": "Stock Market Surges As Jensen Huang Returns As Nvidia CEO; Abercrombie Leads Retail Winners: Weekly Review",
+    "url": "https://finnhub.io/api/news?id=37f7de3622c70bcd9859bb55b390cfacb70e943c36e0d44e1a47ee705ffa31ed",
+    "source": "Yahoo",
+    "date": "2026-11-27"
+   },
+   {
+    "title": "Dow Jones Futures: Stock Market Makes Bullish Move, Tesla Leads 7 New Buys; Nvidia's Jensen Huang Heads To Capitol Hill",
+    "url": "https://finnhub.io/api/news?id=daa551d96a3a7a3a1f9668075bf933140959befbc52062dc93c5be0e73509c6f",
+    "source": "Yahoo",
     "date": "2026-11-27"
    },
    {
@@ -67,34 +91,10 @@
     "date": "2026-11-27"
    },
    {
-    "title": "Renewed Tech Optimism Lifts Wall Street Pre-Bell; Asia, Europe Up",
-    "url": "https://finnhub.io/api/news?id=2fc4e40f908e32845567d278c8a1173b60a4c87d3232fba04c0e6c39c2555c04",
-    "source": "Yahoo",
-    "date": "2026-11-27"
-   },
-   {
-    "title": "President Trump Says 'Huang Is Happy to Return as Nvidia CEO'",
-    "url": "https://finnhub.io/api/news?id=faa446701c3f33c14ac241987bf197626584230788a9f31c099d818ad2f7f406",
-    "source": "Yahoo",
-    "date": "2026-11-27"
-   },
-   {
-    "title": "Nvidia, AI Fears Jolt Markets: Market Snapshot",
-    "url": "https://finnhub.io/api/news?id=1e6a06c509e87940c7a59a3d4938989362157605ae7409c590072af3bbcfa9ac",
-    "source": "Yahoo",
-    "date": "2026-11-27"
-   },
-   {
-    "title": "Inflation has shoppers hunting for value. That bodes well for Black Friday",
-    "url": "https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html",
+    "title": "Top 10 things to watch in the stock market on Black Friday",
+    "url": "https://www.cnbc.com/investingclub/2026/11/27/top-10-things-to-watch-in-the-stock-market-on-black-friday.html",
     "source": "CNBC",
     "date": "2026-11-27"
-   },
-   {
-    "title": "Minutes of the Federal Open Market Committee, October 27-28, 2026",
-    "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm",
-    "source": "Federal Reserve",
-    "date": "2026-11-18"
    }
   ]
  },
@@ -103,7 +103,7 @@
    "key": "vix",
    "name": "VIX above 30",
    "met": true,
-   "value": "25.3",
+   "value": "23.8",
    "threshold": "closed above 30 in the last 10 trading days",
    "data_date": "2026-11-27",
    "detail": "10-day peak 35.9 on 2026-11-20",
@@ -613,7 +613,7 @@
      ],
      [
       "2026-11-27",
-      25.29
+      23.81
      ]
     ],
     "threshold": 30.0
@@ -623,18 +623,14 @@
    "key": "fed",
    "name": "Fed not signaling hikes",
    "met": false,
-   "value": "+0.63 pts",
+   "value": "+0.61 pts",
    "threshold": "2y yield minus Fed upper target <= +0.10 pts, no hike in 56 days",
-   "data_date": "2026-11-24",
-   "detail": "2y 4.63%, Fed upper target 4.00%",
+   "data_date": "2026-11-25",
+   "detail": "2y 4.61%, Fed upper target 4.00%",
    "stale": false,
    "spark": {
     "label": "2-year yield minus Fed target, pts",
     "points": [
-     [
-      "2026-05-26",
-      0.26
-     ],
      [
       "2026-05-27",
       0.25
@@ -1134,6 +1130,10 @@
      [
       "2026-11-24",
       0.63
+     ],
+     [
+      "2026-11-25",
+      0.61
      ]
     ],
     "threshold": 0.1
@@ -1471,517 +1471,517 @@
    "key": "sector",
    "name": "A clear leading sector",
    "met": false,
-   "value": "XLP +13.5 pts vs SPY",
+   "value": "XLC +11.2 pts vs SPY",
    "threshold": "top sector beats SPY by 5+ pts over 20 days, top on 10 of the last 15 days",
-   "data_date": "2026-11-25",
-   "detail": "XLP was the top sector on 6 of the last 15 trading days",
+   "data_date": "2026-11-27",
+   "detail": "XLC was the top sector on 1 of the last 15 trading days",
    "stale": false,
    "spark": {
-    "label": "XLP return minus SPY over 20 days, pts",
+    "label": "XLC return minus SPY over 20 days, pts",
     "points": [
      [
-      "2026-05-27",
-      -3.462
-     ],
-     [
       "2026-05-28",
-      -4.8586
+      -4.8636
      ],
      [
       "2026-05-29",
-      -6.4689
+      -5.8544
      ],
      [
       "2026-06-01",
-      -7.4523
+      -6.0668
      ],
      [
       "2026-06-02",
-      -7.5992
+      -6.7279
      ],
      [
       "2026-06-03",
-      -5.2504
+      -7.2721
      ],
      [
       "2026-06-04",
-      -5.797
+      -7.1247
      ],
      [
       "2026-06-05",
-      -0.8696
+      -4.4971
      ],
      [
       "2026-06-08",
-      -0.349
+      -3.8739
      ],
      [
       "2026-06-09",
-      -0.2496
+      -3.6274
      ],
      [
       "2026-06-10",
-      3.1828
+      -2.6507
      ],
      [
       "2026-06-11",
-      1.7326
+      -2.8696
      ],
      [
       "2026-06-12",
-      1.0451
+      -4.1654
      ],
      [
       "2026-06-15",
-      -2.6794
+      -6.2852
      ],
      [
       "2026-06-16",
-      -2.8432
+      -5.3095
      ],
      [
       "2026-06-17",
-      -2.1124
+      -5.904
      ],
      [
       "2026-06-18",
-      -2.4067
+      -6.5281
      ],
      [
       "2026-06-22",
-      -2.5068
+      -7.2972
      ],
      [
       "2026-06-24",
-      3.729
+      -5.4978
      ],
      [
       "2026-06-25",
-      1.8332
+      -7.0488
      ],
      [
       "2026-06-26",
-      4.1728
+      -5.6094
      ],
      [
       "2026-06-29",
-      4.261
+      -4.7142
      ],
      [
       "2026-06-30",
-      3.2685
+      -5.7959
      ],
      [
       "2026-07-01",
-      4.0679
+      -1.5558
      ],
      [
       "2026-07-02",
-      5.1621
+      -0.9585
      ],
      [
       "2026-07-06",
-      3.734
+      -1.7986
      ],
      [
       "2026-07-07",
-      0.7688
+      -1.9621
      ],
      [
       "2026-07-08",
-      1.1981
+      -2.3067
      ],
      [
       "2026-07-09",
-      -2.6355
+      -2.864
      ],
      [
       "2026-07-10",
-      -5.2572
+      -3.5083
      ],
      [
       "2026-07-13",
-      -1.9173
+      -2.022
      ],
      [
       "2026-07-14",
-      -3.7422
+      -1.5395
      ],
      [
       "2026-07-15",
-      -1.9289
+      1.0686
      ],
      [
       "2026-07-16",
-      0.643
+      0.245
      ],
      [
       "2026-07-17",
-      1.938
+      1.0186
      ],
      [
       "2026-07-20",
-      3.2023
+      2.1195
      ],
      [
       "2026-07-21",
-      1.7651
+      2.4439
      ],
      [
       "2026-07-22",
-      -1.0969
+      -0.0861
      ],
      [
       "2026-07-23",
-      -2.1304
+      -1.7625
      ],
      [
       "2026-07-24",
-      -0.4042
+      0.0514
      ],
      [
       "2026-07-27",
-      -0.6182
+      0.0084
      ],
      [
       "2026-07-28",
-      3.2072
+      1.6781
      ],
      [
       "2026-07-29",
-      7.4823
+      4.5396
      ],
      [
       "2026-07-30",
-      3.1508
+      -2.3338
      ],
      [
       "2026-07-31",
-      -0.2315
+      -1.543
      ],
      [
       "2026-08-03",
-      0.0531
+      0.1748
      ],
      [
       "2026-08-04",
-      -2.558
+      -2.2402
      ],
      [
       "2026-08-05",
-      -2.1582
+      -1.9839
      ],
      [
       "2026-08-06",
-      0.0541
+      -1.6353
      ],
      [
       "2026-08-07",
-      -1.2366
+      -2.7747
      ],
      [
       "2026-08-10",
-      -2.7593
+      -2.9698
      ],
      [
       "2026-08-11",
-      -0.9688
+      -2.6528
      ],
      [
       "2026-08-12",
-      -0.4135
+      -5.0853
      ],
      [
       "2026-08-13",
-      -3.3964
+      -3.7066
      ],
      [
       "2026-08-14",
-      -3.39
+      -2.3678
      ],
      [
       "2026-08-17",
-      -4.3329
+      -4.1027
      ],
      [
       "2026-08-18",
-      -0.7536
+      -2.1529
      ],
      [
       "2026-08-19",
-      -0.3368
+      -0.9553
      ],
      [
       "2026-08-20",
-      -0.7724
+      1.7213
      ],
      [
       "2026-08-21",
-      -1.4146
+      1.1722
      ],
      [
       "2026-08-24",
-      -0.8502
+      1.0298
      ],
      [
       "2026-08-25",
-      -4.0015
+      -0.1807
      ],
      [
       "2026-08-26",
-      -6.2679
+      -2.1894
      ],
      [
       "2026-08-27",
-      -4.4216
+      0.5665
      ],
      [
       "2026-08-28",
-      -2.5175
+      1.4006
      ],
      [
       "2026-08-31",
-      -1.0966
+      -1.1302
      ],
      [
       "2026-09-01",
-      1.0976
+      0.2028
      ],
      [
       "2026-09-02",
-      0.8358
+      1.9995
      ],
      [
       "2026-09-03",
-      -0.4236
+      1.379
      ],
      [
       "2026-09-04",
-      -0.2374
+      1.0981
      ],
      [
       "2026-09-08",
-      -0.1942
+      0.8217
      ],
      [
       "2026-09-09",
-      -1.0798
+      1.814
      ],
      [
       "2026-09-10",
-      -0.8062
+      1.6446
      ],
      [
       "2026-09-11",
-      -1.5957
+      1.2423
      ],
      [
       "2026-09-14",
-      1.2188
+      5.3609
      ],
      [
       "2026-09-15",
-      -0.8509
+      4.5241
      ],
      [
       "2026-09-16",
-      -1.7575
+      3.4609
      ],
      [
       "2026-09-17",
-      -2.1449
+      1.5089
      ],
      [
       "2026-09-18",
-      -3.4304
+      -0.2503
      ],
      [
       "2026-09-21",
-      -7.2729
+      0.9348
      ],
      [
       "2026-09-22",
-      -4.9777
+      -0.5862
      ],
      [
       "2026-09-23",
-      -4.2974
+      -0.1897
      ],
      [
       "2026-09-24",
-      -3.0799
+      2.9143
      ],
      [
       "2026-09-25",
-      -3.8446
+      -0.206
      ],
      [
       "2026-09-28",
-      -2.6006
+      0.0174
      ],
      [
       "2026-09-29",
-      -3.9236
+      0.2967
      ],
      [
       "2026-09-30",
-      -5.0611
+      -0.8813
      ],
      [
       "2026-10-01",
-      -4.2207
+      -1.7725
      ],
      [
       "2026-10-02",
-      -4.3389
+      -1.3786
      ],
      [
       "2026-10-06",
-      -3.9687
+      -1.5202
      ],
      [
       "2026-10-07",
-      -3.1755
+      -1.4782
      ],
      [
       "2026-10-08",
-      -1.3206
+      -1.5356
      ],
      [
       "2026-10-09",
-      -1.4033
+      -3.7699
      ],
      [
       "2026-10-12",
-      -1.8713
+      -5.3438
      ],
      [
       "2026-10-13",
-      -1.7669
+      -4.1878
      ],
      [
       "2026-10-14",
-      1.6397
+      -3.9216
      ],
      [
       "2026-10-15",
-      3.0472
+      -1.0464
      ],
      [
       "2026-10-16",
-      6.3124
+      -0.3189
      ],
      [
       "2026-10-19",
-      7.3651
+      -3.1534
      ],
      [
       "2026-10-20",
-      6.6278
+      -2.3821
      ],
      [
       "2026-10-21",
-      4.9899
+      -3.8771
      ],
      [
       "2026-10-22",
-      10.5666
+      -5.3439
      ],
      [
       "2026-10-23",
-      9.0308
+      -5.1199
      ],
      [
       "2026-10-26",
-      6.9346
+      -6.5616
      ],
      [
       "2026-10-27",
-      5.7608
+      -7.7926
      ],
      [
       "2026-10-28",
-      6.4726
+      -8.3253
      ],
      [
       "2026-10-29",
-      9.0693
+      -8.6436
      ],
      [
       "2026-10-30",
-      12.848
+      -7.6366
      ],
      [
       "2026-11-02",
-      15.014
+      -7.2358
      ],
      [
       "2026-11-03",
-      11.9163
+      -5.9691
      ],
      [
       "2026-11-04",
-      13.8731
+      -4.323
      ],
      [
       "2026-11-05",
-      14.6748
+      -1.6089
      ],
      [
       "2026-11-06",
-      13.5297
+      0.4946
      ],
      [
       "2026-11-09",
-      10.9425
+      -0.4042
      ],
      [
       "2026-11-10",
-      11.735
+      -0.4152
      ],
      [
       "2026-11-11",
-      7.5352
+      -0.7312
      ],
      [
       "2026-11-12",
-      6.9538
+      -2.4393
      ],
      [
       "2026-11-13",
-      6.5618
+      -0.3141
      ],
      [
       "2026-11-16",
-      9.6418
+      0.491
      ],
      [
       "2026-11-17",
-      8.9883
+      0.2863
      ],
      [
       "2026-11-18",
-      10.2201
+      2.4369
      ],
      [
       "2026-11-19",
-      6.1504
+      1.9567
      ],
      [
       "2026-11-20",
-      11.7246
+      4.0381
      ],
      [
       "2026-11-23",
-      8.3799
+      5.3879
      ],
      [
       "2026-11-24",
-      12.0381
+      7.4506
      ],
      [
       "2026-11-25",
-      13.4879
+      9.3723
+     ],
+     [
+      "2026-11-27",
+      11.2133
      ]
     ],
     "threshold": 5.0
@@ -2009,11 +2009,6 @@
   }
  ],
  "market": [
-  [
-   "2024-10-30",
-   566.93,
-   -0.3
-  ],
   [
    "2024-10-31",
    555.81,
@@ -2346,7 +2341,7 @@
   ],
   [
    "2025-02-07",
-   589.2,
+   589.19,
    -1.47
   ],
   [
@@ -2361,7 +2356,7 @@
   ],
   [
    "2025-02-12",
-   591.74,
+   591.73,
    -1.05
   ],
   [
@@ -4608,23 +4603,28 @@
    "2026-11-25",
    716.7,
    -8.01
+  ],
+  [
+   "2026-11-27",
+   728.32,
+   -6.52
   ]
  ],
  "errors": {},
- "session": "before_open",
+ "session": "after_close",
  "news_scores": {
   "as_of": "2026-11-27",
   "window_days": 20,
   "macro": {
    "name": "Market overall",
-   "score": -11.03,
-   "tone": "strongly negative",
-   "stories": 146,
+   "score": -0.44,
+   "tone": "mixed or quiet",
+   "stories": 165,
    "reactions": {
     "confirmed": 34,
     "faded": 8,
     "muted": 62,
-    "pending": 42
+    "pending": 61
    },
    "top": [
     {
@@ -4668,27 +4668,27 @@
     }
    ],
    "channels": {
-    "geopolitics": -8.37,
-    "growth": 5.23,
-    "policy": -4.14,
-    "other": -3.34,
-    "earnings": 3.34,
-    "credit": -2.0,
-    "rates": -1.86,
+    "growth": 14.9,
+    "geopolitics": -12.99,
+    "earnings": 4.71,
+    "policy": -2.47,
+    "credit": -2.03,
+    "rates": -1.74,
+    "other": -0.94,
     "inflation": 0.1
    }
   },
   "lines": {
    "XLK": {
     "name": "Technology",
-    "score": -9.81,
+    "score": -7.61,
     "tone": "strongly negative",
-    "stories": 99,
+    "stories": 109,
     "reactions": {
      "confirmed": 56,
      "faded": 17,
      "muted": 0,
-     "pending": 26
+     "pending": 36
     },
     "top": [
      {
@@ -4731,34 +4731,21 @@
       "change": -0.54
      }
     ],
-    "excess_pct": -11.23,
+    "excess_pct": -9.81,
     "divergence": null
    },
    "XLF": {
     "name": "Financials",
-    "score": -2.55,
-    "tone": "negative",
-    "stories": 24,
+    "score": -0.51,
+    "tone": "mixed or quiet",
+    "stories": 22,
     "reactions": {
      "confirmed": 5,
      "faded": 7,
      "muted": 3,
-     "pending": 9
+     "pending": 7
     },
     "top": [
-     {
-      "kind": "report",
-      "title": "Turkey's capital markets catch cold from funds crisis - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNS3lROFVRYjM4YU8zM0VfZjVwMEVLZC1oNWtyUmRzZThnYkNwa28yZlNMRDhBaHAwMkdfQ0lObE1ZSjZEb1dMNzdORFdBSEI3aXZpRl9Rb2xOTEI2SklOellmVHVlVG1qT1BMM0JKdWhpX2NyRWowOVoxTnA4TnVOSDJuTURmd0xHR3VKakhHblU0M3NwVGpZQ0JZU0swbmZtcUxR?oc=5",
-      "source": "Reuters",
-      "published": "2026-11-26T18:50+00:00",
-      "headlines": 1,
-      "direction": "negative",
-      "strength": 2,
-      "points": -1.19,
-      "reaction": "pending",
-      "change": null
-     },
      {
       "kind": "report",
       "title": "Robinhood, JPMorgan, Other Financial Stocks Slump Amid Broad Market Rout",
@@ -4784,23 +4771,49 @@
       "points": -0.47,
       "reaction": "faded",
       "change": 1.0
+     },
+     {
+      "kind": "report",
+      "title": "Quants Unwind Bond Shorts as Stock Swoon Drives Traders to Safety",
+      "url": "https://finnhub.io/api/news?id=74f1755485c1cf87d375c420d01727395d2a7b9e00a6496d26357f524121ecf5",
+      "source": "Yahoo",
+      "published": "2026-11-24T19:08+00:00",
+      "headlines": 1,
+      "direction": "negative",
+      "strength": 1,
+      "points": -0.38,
+      "reaction": "faded",
+      "change": 1.31
      }
     ],
-    "excess_pct": 7.88,
-    "divergence": "bad_news_leading"
+    "excess_pct": 5.72,
+    "divergence": null
    },
    "XLE": {
     "name": "Energy",
-    "score": 8.06,
+    "score": 12.62,
     "tone": "strongly positive",
-    "stories": 25,
+    "stories": 32,
     "reactions": {
      "confirmed": 11,
      "faded": 4,
      "muted": 0,
-     "pending": 10
+     "pending": 17
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "Sector Update: Energy Stocks Rise Friday Afternoon",
+      "url": "https://finnhub.io/api/news?id=b59c85cc0dd16b1c9893d1569ad901efb3ce27956eeec186986fc2cfd657c58d",
+      "source": "Yahoo",
+      "published": "2026-11-27T17:44+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 2,
+      "points": 2.0,
+      "reaction": "pending",
+      "change": null
+     },
      {
       "kind": "report",
       "title": "Chevron Stocks Rise 1.06% as Brent Jumps 3.5% on Saudi Refinery Attack Claim",
@@ -4826,34 +4839,21 @@
       "points": 1.19,
       "reaction": "pending",
       "change": null
-     },
-     {
-      "kind": "report",
-      "title": "Earnings Surge Could Be A Game Changer For Chevron Stock (CVX)",
-      "url": "https://finnhub.io/api/news?id=e98768be5711b5be1205fc7dc154a8a77a207a09bfdbd1f3cada0d2a9e5253b5",
-      "source": "Yahoo",
-      "published": "2026-11-24T18:20+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 2,
-      "points": 1.0,
-      "reaction": "confirmed",
-      "change": 1.45
      }
     ],
-    "excess_pct": -3.83,
+    "excess_pct": -4.91,
     "divergence": "good_news_lagging"
    },
    "XLV": {
     "name": "Health care",
-    "score": 4.01,
+    "score": 4.51,
     "tone": "strongly positive",
-    "stories": 19,
+    "stories": 22,
     "reactions": {
      "confirmed": 7,
      "faded": 4,
      "muted": 2,
-     "pending": 6
+     "pending": 9
     },
     "top": [
      {
@@ -4896,21 +4896,47 @@
       "change": 3.44
      }
     ],
-    "excess_pct": 9.4,
+    "excess_pct": 5.42,
     "divergence": null
    },
    "XLY": {
     "name": "Consumer discretionary",
-    "score": 1.61,
-    "tone": "positive",
-    "stories": 23,
+    "score": 7.17,
+    "tone": "strongly positive",
+    "stories": 26,
     "reactions": {
      "confirmed": 3,
      "faded": 3,
      "muted": 9,
-     "pending": 8
+     "pending": 11
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "Amazon Stocks Climb 2.96% as Thanksgiving Online Spending Hits $7.1 Billion",
+      "url": "https://finnhub.io/api/news?id=874e6051410d724886c815fd1c0fdb6b4cbe8bbb5d334d4bed15e7d0e222b358",
+      "source": "Yahoo",
+      "published": "2026-11-27T19:09+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 2,
+      "points": 1.5,
+      "reaction": "pending",
+      "change": null
+     },
+     {
+      "kind": "report",
+      "title": "TSLA Stock Clocks Best Week In 18 Months: Tesla Reportedly Eyes Buying German Toolmaker Amid Cybercab, Optimus Scaling Plans",
+      "url": "https://finnhub.io/api/news?id=ca84633dd52240b00db7b72a75d92570875cda4eec12ac7da9ffc80aa5298d64",
+      "source": "Yahoo",
+      "published": "2026-11-27T19:55+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 2,
+      "points": 1.5,
+      "reaction": "pending",
+      "change": null
+     },
      {
       "kind": "report",
       "title": "Retailers Sanguine for Black Friday",
@@ -4923,40 +4949,14 @@
       "points": 0.94,
       "reaction": "muted",
       "change": 0.09
-     },
-     {
-      "kind": "report",
-      "title": "Retail turnarounds are taking hold just in time for the holiday season",
-      "url": "https://www.cnbc.com/2026/11/24/retail-turnarounds-holiday-season.html",
-      "source": "CNBC",
-      "published": "2026-11-24T18:21+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 2,
-      "points": 0.75,
-      "reaction": "confirmed",
-      "change": 1.16
-     },
-     {
-      "kind": "report",
-      "title": "Inflation has shoppers hunting for value. That bodes well for Black Friday",
-      "url": "https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html",
-      "source": "CNBC",
-      "published": "2026-11-27T11:00+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 1,
-      "points": 0.75,
-      "reaction": "pending",
-      "change": null
      }
     ],
-    "excess_pct": 9.07,
+    "excess_pct": 8.58,
     "divergence": null
    },
    "XLP": {
     "name": "Consumer staples",
-    "score": 3.71,
+    "score": 3.13,
     "tone": "positive",
     "stories": 11,
     "reactions": {
@@ -4972,7 +4972,7 @@
       "url": "https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html",
       "source": "CNBC",
       "published": "2026-11-27T11:00+00:00",
-      "headlines": 1,
+      "headlines": 2,
       "direction": "positive",
       "strength": 1,
       "points": 0.75,
@@ -4994,10 +4994,10 @@
      },
      {
       "kind": "report",
-      "title": "ETFs Bought $98.7 Million of Costco (COST) on Wednesday",
-      "url": "https://finnhub.io/api/news?id=eccef452538a1173a165570b80802140d50b0260612c3b0ddba58008057b1305",
+      "title": "Dogness Showcases New AI-Powered Pet Products at CIPS 2026, Highlighting Global Market Expansion",
+      "url": "https://finnhub.io/api/news?id=308ce35db96eefcac95a9b923466f0dc1949599388a98cb4ccf469303cac5786",
       "source": "Yahoo",
-      "published": "2026-11-27T11:01+00:00",
+      "published": "2026-11-27T13:30+00:00",
       "headlines": 1,
       "direction": "positive",
       "strength": 1,
@@ -5006,21 +5006,47 @@
       "change": null
      }
     ],
-    "excess_pct": 13.49,
+    "excess_pct": 10.44,
     "divergence": null
    },
    "XLI": {
     "name": "Industrials",
-    "score": 2.48,
-    "tone": "positive",
-    "stories": 28,
+    "score": 8.04,
+    "tone": "strongly positive",
+    "stories": 36,
     "reactions": {
      "confirmed": 8,
      "faded": 8,
      "muted": 6,
-     "pending": 6
+     "pending": 14
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "How Record Backlog Will Impact Caterpillar Stock Investors",
+      "url": "https://finnhub.io/api/news?id=26ccac3f82aea897e0937f474da6c20802495002efa6f87cc46cb4924f2233f1",
+      "source": "Yahoo",
+      "published": "2026-11-27T17:11+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 2,
+      "points": 2.0,
+      "reaction": "pending",
+      "change": null
+     },
+     {
+      "kind": "report",
+      "title": "RTX Unit Pratt & Whitney Wins $2.5 Billion Navy Contract",
+      "url": "https://finnhub.io/api/news?id=104bab81f65ed881d267ac66227ad28bfce1b7eabc9ea0992a1aae01c13e327f",
+      "source": "Yahoo",
+      "published": "2026-11-27T19:21+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 2,
+      "points": 2.0,
+      "reaction": "pending",
+      "change": null
+     },
      {
       "kind": "report",
       "title": "GE Wins Deal From Malaysia Aviation Group to Supply GEnx Engines",
@@ -5033,35 +5059,9 @@
       "points": 1.59,
       "reaction": "pending",
       "change": null
-     },
-     {
-      "kind": "report",
-      "title": "General Electric (GE) Lands First GEnx Engine Order From Malaysia Aviation Group",
-      "url": "https://finnhub.io/api/news?id=391241c433e1bef89f6a3bf38971bd135cc4b14aab561ad24ef856e65d677f99",
-      "source": "Yahoo",
-      "published": "2026-11-25T13:10+00:00",
-      "headlines": 2,
-      "direction": "positive",
-      "strength": 2,
-      "points": 1.26,
-      "reaction": "confirmed",
-      "change": 1.12
-     },
-     {
-      "kind": "report",
-      "title": "Boeing's Shares Rise on Fresh Orders Despite 2026 Losses",
-      "url": "https://finnhub.io/api/news?id=7181b6a25139c10a55d5a082eec82d7c2b1ddc1c71d8a3b82c4616eafb7e7480",
-      "source": "Yahoo",
-      "published": "2026-11-26T11:54+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 2,
-      "points": 1.19,
-      "reaction": "pending",
-      "change": null
      }
     ],
-    "excess_pct": 3.91,
+    "excess_pct": 2.65,
     "divergence": null
    },
    "XLB": {
@@ -5116,7 +5116,7 @@
       "change": 1.03
      }
     ],
-    "excess_pct": 5.95,
+    "excess_pct": 4.61,
     "divergence": null
    },
    "XLU": {
@@ -5171,21 +5171,34 @@
       "change": -3.23
      }
     ],
-    "excess_pct": 9.84,
+    "excess_pct": 6.7,
     "divergence": null
    },
    "XLRE": {
     "name": "Real estate",
-    "score": 0.74,
+    "score": 1.49,
     "tone": "mixed or quiet",
-    "stories": 8,
+    "stories": 9,
     "reactions": {
      "confirmed": 4,
      "faded": 3,
      "muted": 0,
-     "pending": 1
+     "pending": 2
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "Prologis Sells Lehigh Valley Warehouse to Fluidstack for $163M",
+      "url": "https://finnhub.io/api/news?id=fe1f471b3b1c61ef5c388f302c06a4c1f8bbd758ac0a414ef7ff193c35fe71d4",
+      "source": "Yahoo",
+      "published": "2026-11-27T18:34+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 1,
+      "points": 0.75,
+      "reaction": "pending",
+      "change": null
+     },
      {
       "kind": "report",
       "title": "American Tower (AMT) Prices New Euro Bonds, Is It Still 20% Undervalued?",
@@ -5211,36 +5224,36 @@
       "points": 0.3,
       "reaction": "faded",
       "change": -3.67
-     },
-     {
-      "kind": "report",
-      "title": "Uniti (UNIT) Stock Is Up 9.6% Today Without Company News",
-      "url": "https://finnhub.io/api/news?id=9c35fbfe0435d759475718911368856c6cd6c2ebccfca3dcb5fb8b8b55bda9fc",
-      "source": "Yahoo",
-      "published": "2026-11-24T20:30+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 1,
-      "points": 0.25,
-      "reaction": "confirmed",
-      "change": 1.79
      }
     ],
-    "excess_pct": 11.31,
+    "excess_pct": 7.84,
     "divergence": null
    },
    "XLC": {
     "name": "Communication services",
-    "score": 0.78,
+    "score": 0.72,
     "tone": "mixed or quiet",
-    "stories": 30,
+    "stories": 31,
     "reactions": {
      "confirmed": 7,
      "faded": 15,
      "muted": 0,
-     "pending": 8
+     "pending": 9
     },
     "top": [
+     {
+      "kind": "report",
+      "title": "Stock Market Today: Indexes Log Best Thanksgiving Week In 18 Years",
+      "url": "https://finnhub.io/api/news?id=126cc66e9d953c9bb16d9401242ac8190d5d0bd2982e39f54e833a14a4715a66",
+      "source": "Yahoo",
+      "published": "2026-11-27T19:19+00:00",
+      "headlines": 1,
+      "direction": "positive",
+      "strength": 1,
+      "points": 1.0,
+      "reaction": "pending",
+      "change": null
+     },
      {
       "kind": "report",
       "title": "How Meta is using Instagram to get an ad boost from its Muse personal AI agent",
@@ -5266,34 +5279,21 @@
       "points": 0.6,
       "reaction": "faded",
       "change": -1.14
-     },
-     {
-      "kind": "report",
-      "title": "SpaceX Stocks Rise 1.3% as FCC Approves 1 Million Orbital Data Center Satellites",
-      "url": "https://finnhub.io/api/news?id=d8fed1f936d21ab5dcf0c37ad2bc3fc5adf7e5a6b195b7175f3efb23276feb2b",
-      "source": "Yahoo",
-      "published": "2026-11-26T19:10+00:00",
-      "headlines": 1,
-      "direction": "positive",
-      "strength": 1,
-      "points": 0.6,
-      "reaction": "pending",
-      "change": null
      }
     ],
-    "excess_pct": 9.37,
+    "excess_pct": 11.53,
     "divergence": null
    },
    "SMH": {
     "name": "Semiconductors",
-    "score": -12.45,
+    "score": -4.38,
     "tone": "strongly negative",
-    "stories": 88,
+    "stories": 92,
     "reactions": {
      "confirmed": 46,
      "faded": 18,
      "muted": 0,
-     "pending": 24
+     "pending": 28
     },
     "top": [
      {
@@ -5336,62 +5336,62 @@
       "change": null
      }
     ],
-    "excess_pct": -18.38,
+    "excess_pct": -16.32,
     "divergence": null
    },
    "LAZR": {
     "name": "Photonics",
-    "score": -1.0,
+    "score": 0.56,
     "tone": "mixed or quiet",
-    "stories": 14,
+    "stories": 15,
     "reactions": {
      "confirmed": 9,
      "faded": 0,
      "muted": 0,
-     "pending": 5
+     "pending": 6
     },
     "top": [
      {
       "kind": "report",
-      "title": "Why MKS (MKSI) Stock Is Down Today: Chip Stocks Slide on AI Selloff",
-      "url": "https://finnhub.io/api/news?id=0ca0ce0fb52a888ba69c012e7151d544d346cfe95b03650659b589eed71e543a",
+      "title": "Coherent Jumps 12% as Optical Stocks Rebound From Wednesday\u2019s AI Selloff; Applied Optoelectronics and Lumentum Rise 7%",
+      "url": "https://finnhub.io/api/news?id=9532cb77ebe7bc819d9ded3fc36555a3ae63dc33a6cb1f108a7ebeaa615bb9a1",
       "source": "Yahoo",
-      "published": "2026-11-24T21:01+00:00",
+      "published": "2026-11-27T17:06+00:00",
       "headlines": 1,
-      "direction": "negative",
+      "direction": "positive",
       "strength": 2,
-      "points": -1.26,
-      "reaction": "confirmed",
-      "change": -1.39
+      "points": 1.5,
+      "reaction": "pending",
+      "change": null
      },
      {
       "kind": "report",
-      "title": "Coherent Sinks 10% Despite $15 Million Director Buy, Applied Optoelectronics Plunges 12% as AI Selloff Deepens; Lumentum Tumbles 10%",
-      "url": "https://finnhub.io/api/news?id=4db5e321c2f7c04f74845f3462b2ac0fb709fe0d3df109d6963b6b90a3188588",
+      "title": "Applied Optoelectronics and Lumentum Soar 22% as Jensen Huang\u2019s Return to NVIDIA Sparks AI Optics Rebound; Coherent Jumps 19%",
+      "url": "https://finnhub.io/api/news?id=0fa3bc2818ca19361123e599e12707b33f511b8aab21e842630f3de16cb49cc4",
       "source": "Yahoo",
-      "published": "2026-11-25T15:53+00:00",
+      "published": "2026-11-23T15:57+00:00",
       "headlines": 1,
-      "direction": "negative",
+      "direction": "positive",
       "strength": 2,
-      "points": -1.26,
+      "points": 0.79,
       "reaction": "confirmed",
-      "change": -1.39
+      "change": 12.58
      },
      {
       "kind": "report",
-      "title": "Sandisk Sinks 14% as Memory Stocks Give Back Nvidia\u2019s Huang Rally",
-      "url": "https://finnhub.io/api/news?id=e807449de607bb7c06ec05d29cf2131ca53dea8b14e876b86b171800331f2375",
+      "title": "Harmonic Stock Jumps 10.4% in Tech Rally, No Company News on Monday",
+      "url": "https://finnhub.io/api/news?id=38e1e00c4301e762e3702a4acdb59d8ee04aab8d54bc58c5c97614e2b08e275a",
       "source": "Yahoo",
-      "published": "2026-11-24T15:48+00:00",
-      "headlines": 3,
-      "direction": "negative",
+      "published": "2026-11-23T17:01+00:00",
+      "headlines": 1,
+      "direction": "positive",
       "strength": 2,
-      "points": -1.0,
+      "points": 0.79,
       "reaction": "confirmed",
-      "change": -10.0
+      "change": 12.58
      }
     ],
-    "excess_pct": -31.05,
+    "excess_pct": -24.72,
     "divergence": null
    }
   }
